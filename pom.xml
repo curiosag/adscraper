@@ -6,7 +6,8 @@
     <groupId>org.cg</groupId>
     <artifactId>adsniffer</artifactId>
     <version>0.1.0</version>
-
+    <packaging>jar</packaging>
+    
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -39,5 +40,5 @@
         </plugins>
     </build>
 
-    <packaging>war</packaging>
+
 </project>
