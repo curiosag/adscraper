@@ -1,10 +1,11 @@
-package hello;
+package app.data;
 
 import java.lang.reflect.Field;
-
+import org.springframework.data.annotation.Id;
 
 public class HistoryDetailItem {
 
+	@Id
 	private String id;
 
 	private int keyId;

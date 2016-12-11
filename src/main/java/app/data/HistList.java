@@ -1,4 +1,4 @@
-package hello;
+package app.data;
 
 import java.util.List;
 
