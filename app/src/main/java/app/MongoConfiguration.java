@@ -1,6 +1,5 @@
 package app;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.config.AbstractMongoConfiguration;
@@ -25,7 +24,6 @@ public class MongoConfiguration extends AbstractMongoConfiguration {
     public Mongo mongo() throws Exception {
     	String envUri = System.getenv().get("OPENSHIFT_MONGODB_DB_URL");
 
-    	
 		MongoClient client;
 		if (envUri != null)
 			client = new MongoClient(new MongoClientURI(envUri));
