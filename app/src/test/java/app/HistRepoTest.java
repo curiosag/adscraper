@@ -8,15 +8,15 @@ import org.junit.runner.RunWith;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import app.HistRepository;
 import app.data.UtilTest;
-
-
+import app.storage.HistRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@ContextConfiguration("/app-config-test.xml")
 public class HistRepoTest {
 
     @Autowired

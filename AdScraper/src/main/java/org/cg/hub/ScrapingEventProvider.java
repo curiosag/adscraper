@@ -1,0 +1,17 @@
+package org.cg.hub;
+
+import org.gwtTests.base.IScrapingEvent;
+
+public class ScrapingEventProvider {
+
+	private final static IScrapingEvent event = new IScrapingEvent(){
+
+		@Override
+		public void add(String type, String message, String url) {
+			throw new RuntimeException("scraping event not implemented");
+		}};
+	
+	public static IScrapingEvent get(){
+		return event;
+	}
+}

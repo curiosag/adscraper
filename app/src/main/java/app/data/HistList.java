@@ -2,6 +2,8 @@ package app.data;
 
 import java.util.List;
 
+import app.storage.HistoryDetailItem;
+
 public class HistList {
 	public List<HistoryDetailItem> items;
 

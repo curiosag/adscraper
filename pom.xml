@@ -15,11 +15,13 @@
 	</parent>
 
 	<modules>
+		<module>ftcShared</module>
+		<module>JavaCommon</module>
+		<module>expressionparser</module>
+		<module>AdScraperExpressionFilter</module>
+		<module>AdScraper</module>
         <module>app</module>
     </modules>
-
-    <name>adsniffer reactor</name>
-    <description>riders on the worm...</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

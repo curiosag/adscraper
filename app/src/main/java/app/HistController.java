@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import app.data.HistList;
 import app.data.UtilTest;
+import app.storage.HistRepository;
 
 @RestController
 public class HistController {

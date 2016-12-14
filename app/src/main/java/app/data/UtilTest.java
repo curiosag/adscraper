@@ -3,6 +3,8 @@ package app.data;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.storage.HistoryDetailItem;
+
 public class UtilTest {
 
 	public static List<HistoryDetailItem> createItems(int n) {

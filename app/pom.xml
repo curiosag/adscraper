@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.springframework</groupId>
-	<artifactId>adsnifferapp</artifactId>
+	<artifactId>adscraperspring</artifactId>
 	<version>0.1.0</version>
 	<packaging>jar</packaging>
 	<parent>
@@ -14,6 +14,21 @@
 	</parent>
 
 	<dependencies>
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.cg.ads</groupId>
+			<artifactId>AdScraperAbstract</artifactId>
+			<version>0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.cg.adscraper</groupId>
+			<artifactId>adscraper</artifactId>
+			<version>0.0.1</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
