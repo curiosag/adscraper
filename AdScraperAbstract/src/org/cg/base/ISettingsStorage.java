@@ -1,4 +1,4 @@
-package org.gwtTests.base;
+package org.cg.base;
 
 import java.util.AbstractMap;
 import java.util.List;

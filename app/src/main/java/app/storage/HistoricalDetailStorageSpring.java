@@ -1,20 +1,22 @@
 package app.storage;
 
 import org.cg.ads.advalues.ScrapedValues;
-import org.gwtTests.base.IHistoricalDetailStorage;
+import org.cg.base.IHistoricalDetailStorage;
+import org.springframework.context.annotation.Configuration;
 
-public class HistoricalDetailStorageMongo implements IHistoricalDetailStorage {
+@Configuration
+public class HistoricalDetailStorageSpring implements IHistoricalDetailStorage {
 
 	private int maxId = -1;
 
 	HistoryDetailItemRepository repo;
 
-	public HistoricalDetailStorageMongo(HistoryDetailItemRepository repo) {
+	public HistoricalDetailStorageSpring(HistoryDetailItemRepository repo) {
 		this.repo = repo;
 	}
-	
+
 	public void store(ScrapedValues ad) {
-		
+
 		repo.save(new HistoryDetailItem(getId(), ad));
 	}
 

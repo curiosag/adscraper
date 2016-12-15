@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.cg.ads.advalues.ScrapedValues;
 import org.cg.ads.advalues.ValueKind;
-import org.gwtTests.base.Check;
+import org.cg.base.Check;
 import org.jsoup.nodes.Element;
 
 public final class ValuesScraper {

@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
+import org.cg.base.Check;
+import org.cg.base.Log;
 import org.cg.common.util.CollectionUtil;
-import org.gwtTests.base.Check;
-import org.gwtTests.base.Log;
 
 import com.google.common.base.Optional;
 

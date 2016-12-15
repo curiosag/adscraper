@@ -1,9 +1,9 @@
 package org.cg.adscraper.factory;
 
-import org.gwtTests.base.IKeyTypeValueStorage;
-import org.gwtTests.base.IHistoricalDetailStorage;
-import org.gwtTests.base.IHistoryStorage;
-import org.gwtTests.base.ISettingsStorage;
+import org.cg.base.IHistoricalDetailStorage;
+import org.cg.base.IHistoryStorage;
+import org.cg.base.IKeyTypeValueStorage;
+import org.cg.base.ISettingsStorage;
 
 public interface IStorageFactory {
 	public IHistoricalDetailStorage getHistoricalDetailStorage();

@@ -2,8 +2,8 @@ package org.cg.scraping;
 
 import org.cg.ads.advalues.ScrapedValue;
 import org.cg.ads.advalues.ValueKind;
-import org.gwtTests.base.Check;
-import org.gwtTests.base.Log;
+import org.cg.base.Check;
+import org.cg.base.Log;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 

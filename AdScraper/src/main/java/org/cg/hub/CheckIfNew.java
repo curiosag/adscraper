@@ -1,7 +1,7 @@
 package org.cg.hub;
 
+import org.cg.base.Check;
 import org.cg.history.History;
-import org.gwtTests.base.Check;
 
 import com.google.common.base.Predicate;
 

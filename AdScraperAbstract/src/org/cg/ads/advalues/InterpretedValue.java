@@ -1,7 +1,8 @@
 package org.cg.ads.advalues;
 
 import java.text.DecimalFormat;
-import org.gwtTests.base.Log;
+
+import org.cg.base.Log;
 
 import com.google.common.base.Optional;
 

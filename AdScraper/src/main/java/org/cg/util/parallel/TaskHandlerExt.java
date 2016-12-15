@@ -3,10 +3,10 @@ package org.cg.util.parallel;
 import java.util.Collection;
 import java.util.concurrent.ExecutionException;
 
+import org.cg.base.Check;
+import org.cg.base.Const;
+import org.cg.base.Log;
 import org.cg.common.threading.Parallel.TaskHandler;
-import org.gwtTests.base.Check;
-import org.gwtTests.base.Const;
-import org.gwtTests.base.Log;
 
 import com.google.common.base.Optional;
 

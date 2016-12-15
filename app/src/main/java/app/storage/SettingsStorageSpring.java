@@ -4,8 +4,11 @@ import java.util.AbstractMap.SimpleImmutableEntry;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.gwtTests.base.ISettingsStorage;
+import org.cg.base.ISettingsStorage;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class SettingsStorageSpring implements ISettingsStorage {
 
 	KeyTypeValueItemRepository repo;
@@ -13,9 +16,14 @@ public class SettingsStorageSpring implements ISettingsStorage {
 	public SettingsStorageSpring(KeyTypeValueItemRepository repo) {
 		this.repo = repo;
 	}
-
+	
 	public void set(String key, String type, String value) {
-		repo.save(new KeyTypeValueItem(key, type, value));
+		KeyTypeValueItem item = repo.findByKeyAndType(key, type);
+		if (item != null)
+			item.setValue(value);
+		else
+			item = new KeyTypeValueItem(key, type, value);
+		repo.save(item);
 	}
 
 	private KeyTypeValueItem getItem(String settingKey) throws Exception {

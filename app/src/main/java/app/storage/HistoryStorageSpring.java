@@ -5,15 +5,17 @@ import java.util.List;
 
 import org.cg.ads.advalues.ScrapedValues;
 import org.cg.ads.advalues.ValueKind;
+import org.cg.base.HistoryItem;
+import org.cg.base.IHistoryStorage;
 import org.cg.common.check.Check;
-import org.gwtTests.base.HistoryItem;
-import org.gwtTests.base.IHistoryStorage;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class HistoryStorageSpring implements IHistoryStorage {
 
 	HistoryItemRepository repo;
-
-	public HistoryStorageSpring(HistoryItemRepository repo) {
+	
+	public HistoryStorageSpring(HistoryItemRepository repo){
 		this.repo = repo;
 	}
 	

@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
+import org.cg.base.Check;
 import org.cg.util.time.TimeUtil;
-import org.gwtTests.base.Check;
 import org.joda.time.DateTime;
 
 public class WeekDayDistribution {

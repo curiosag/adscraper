@@ -1,13 +1,15 @@
 package app.storage;
 
-import org.gwtTests.base.IKeyTypeValueStorage;
-import org.springframework.stereotype.Component;
+import org.cg.base.IKeyTypeValueStorage;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 
-@Component
+@Configuration
 public class KeyTypeValueStorageSpring implements IKeyTypeValueStorage {
 
 	String type;
 	String key;
+
 	KeyTypeValueItemRepository repo;
 
 	public KeyTypeValueStorageSpring(KeyTypeValueItemRepository repo) {
@@ -23,7 +25,7 @@ public class KeyTypeValueStorageSpring implements IKeyTypeValueStorage {
 	public void clearAll() {
 		repo.deleteAll();
 	}
-	
+
 	public void clear() {
 		KeyTypeValueItem item = getItem();
 		if (item != null)

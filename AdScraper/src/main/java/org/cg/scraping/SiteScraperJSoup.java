@@ -11,9 +11,9 @@ import org.jsoup.select.Elements;
 import org.cg.ads.advalues.ScrapedValue;
 import org.cg.ads.advalues.ScrapedValues;
 import org.cg.ads.advalues.ValueKind;
+import org.cg.base.*;
 import org.cg.util.http.HttpResult;
 import org.cg.util.http.HttpUtil;
-import org.gwtTests.base.*;
 
 import com.google.common.base.Predicate;
 

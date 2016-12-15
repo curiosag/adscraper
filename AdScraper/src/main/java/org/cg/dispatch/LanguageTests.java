@@ -3,7 +3,7 @@ package org.cg.dispatch;
 import static org.junit.Assert.*;
 
 import org.cg.ads.advalues.ValueKind;
-import org.gwtTests.base.LangId;
+import org.cg.base.LangId;
 import org.junit.Test;
 
 public class LanguageTests {

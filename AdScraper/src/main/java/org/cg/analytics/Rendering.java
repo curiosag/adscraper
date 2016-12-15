@@ -6,9 +6,8 @@ import java.util.List;
 import java.util.Map.Entry;
 
 import org.cg.analytics.WeekDayDistribution.aggItem;
+import org.cg.base.Check;
 import org.cg.common.util.StringUtil;
-import org.gwtTests.base.Check;
-
 import org.joda.time.DateTime;
 
 import com.google.common.base.Joiner;

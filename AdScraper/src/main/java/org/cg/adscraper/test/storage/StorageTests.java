@@ -13,9 +13,9 @@ import org.cg.ads.advalues.ScrapedValue;
 import org.cg.ads.advalues.ScrapedValues;
 import org.cg.ads.advalues.ValueKind;
 import org.cg.adscraper.factory.StorageFactory;
+import org.cg.base.Check;
+import org.cg.base.ISettingsStorage;
 import org.cg.history.History;
-import org.gwtTests.base.Check;
-import org.gwtTests.base.ISettingsStorage;
 
 public class StorageTests {
 

@@ -11,16 +11,17 @@ import java.util.Map;
 import org.cg.ads.advalues.ScrapedValues;
 import org.cg.ads.advalues.ValueKind;
 import org.cg.ads.filterlist.FilterList;
-import org.cg.adscraper.exprFilter.ExprParserAdScraper;
-import org.cg.adscraper.exprFilter.ResultAdScraper;
+//import org.cg.adscraper.exprFilter.ExprParserAdScraper;
+//import org.cg.adscraper.exprFilter.ResultAdScraper;
 import org.cg.adscraper.factory.StorageFactory;
+import org.cg.base.Check;
+import org.cg.base.Const;
+import org.cg.base.ISettings;
+import org.cg.base.ISettingsStorage;
+import org.cg.base.Log;
 import org.cg.common.util.CollectionUtil;
 import org.cg.util.debug.DebugUtilities;
-import org.gwtTests.base.Check;
-import org.gwtTests.base.Const;
-import org.gwtTests.base.ISettings;
-import org.gwtTests.base.ISettingsStorage;
-import org.gwtTests.base.Log;
+
 import com.google.common.base.Optional;
 
 public final class Settings implements ISettings {
@@ -128,10 +129,11 @@ public final class Settings implements ISettings {
 		values.set(ValueKind.phone, "phone");
 		values.set(ValueKind.description, "bb aa bb cc dd");
 
-		ResultAdScraper evalResult = (new ExprParserAdScraper(values, getFilterList())).eval(rule);
+/* 		ResultAdScraper evalResult = (new ExprParserAdScraper(values, getFilterList())).eval(rule);
+
 		if (evalResult.msg.length() > 0)
 			return String.format("Error evaluating dispatch rule '%s' \n", key) + evalResult.msg;
-
+*/
 		return null;
 	}
 

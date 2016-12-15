@@ -2,7 +2,7 @@ package org.cg.util.time;
 
 import static org.junit.Assert.*;
 
-import org.gwtTests.base.Log;
+import org.cg.base.Log;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;

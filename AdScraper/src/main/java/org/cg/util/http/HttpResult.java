@@ -1,6 +1,6 @@
 package org.cg.util.http;
 
-import static org.gwtTests.base.Idiom.*;
+import static org.cg.base.Idiom.*;
 
 import org.cg.ads.advalues.WithUrl;
 import org.jsoup.nodes.Document;

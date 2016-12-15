@@ -1,6 +1,6 @@
 package org.cg.hub;
 
-import org.gwtTests.base.IScrapingEvent;
+import org.cg.base.IScrapingEvent;
 
 public class ScrapingEventProvider {
 

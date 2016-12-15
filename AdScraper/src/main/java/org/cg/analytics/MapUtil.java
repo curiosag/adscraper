@@ -2,7 +2,7 @@ package org.cg.analytics;
 
 import java.util.Map;
 
-import org.gwtTests.base.Check;
+import org.cg.base.Check;
 
 public class MapUtil {
 	

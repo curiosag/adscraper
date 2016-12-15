@@ -5,8 +5,8 @@ import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.List;
 
-import org.gwtTests.base.Check;
-import org.gwtTests.base.Log;
+import org.cg.base.Check;
+import org.cg.base.Log;
 
 public final class ScrapedValues implements WithUrl<ScrapedValues> {
 

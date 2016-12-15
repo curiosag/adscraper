@@ -10,6 +10,7 @@ import java.util.List;
 
 import org.cg.ads.advalues.ScrapedValues;
 import org.cg.ads.advalues.ValueKind;
+import org.cg.base.*;
 import org.cg.common.threading.Parallel;
 import org.cg.common.threading.TaskHandlerExt;
 import org.cg.common.util.StringUtil;
@@ -17,7 +18,6 @@ import org.cg.dispatch.Dispatch;
 import org.cg.history.History;
 import org.cg.scraping.SiteScraper;
 import org.cg.scraping.SiteScraperFactory;
-import org.gwtTests.base.*;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Predicate;

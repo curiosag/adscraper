@@ -1,8 +1,8 @@
 package org.cg.scraping;
 
 import org.cg.ads.advalues.ValueKind;
-import org.gwtTests.base.Check;
-import org.gwtTests.base.Const;
+import org.cg.base.Check;
+import org.cg.base.Const;
 
 public final class SiteValueScrapersJobWohnen implements SiteValueScrapers  {
 

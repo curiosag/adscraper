@@ -5,8 +5,8 @@ import java.util.List;
 
 import org.cg.ads.advalues.ScrapedValues;
 import org.cg.ads.advalues.ValueKind;
+import org.cg.base.Check;
 import org.cg.history.History;
-import org.gwtTests.base.Check;
 
 import com.google.common.base.Function;
 

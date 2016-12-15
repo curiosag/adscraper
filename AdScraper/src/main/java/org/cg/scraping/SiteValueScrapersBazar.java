@@ -1,7 +1,7 @@
 package org.cg.scraping;
 
 import org.cg.ads.advalues.ValueKind;
-import org.gwtTests.base.Check;
+import org.cg.base.Check;
 
 public final class SiteValueScrapersBazar implements SiteValueScrapers {
 

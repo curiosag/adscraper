@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.gwtTests.base.Check;
+import org.cg.base.Check;
 
 import com.google.common.base.Optional;
 

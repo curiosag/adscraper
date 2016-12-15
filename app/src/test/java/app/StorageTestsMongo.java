@@ -13,12 +13,11 @@ import junit.framework.Assert;
 
 import org.cg.adscraper.factory.*;
 import org.cg.adscraper.test.storage.StorageTests;
-import org.gwtTests.base.IKeyTypeValueStorage;
+import org.cg.base.IKeyTypeValueStorage;
 
 @SuppressWarnings("deprecation")
 @RunWith(SpringRunner.class)
 @SpringBootTest
-
 @ContextConfiguration("/app-config-test.xml")
 public class StorageTestsMongo {
 

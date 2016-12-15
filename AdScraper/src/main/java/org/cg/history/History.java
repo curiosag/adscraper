@@ -6,9 +6,9 @@ import java.util.List;
 
 import org.cg.ads.advalues.ScrapedValues;
 import org.cg.adscraper.factory.StorageFactory;
-import org.gwtTests.base.Check;
-import org.gwtTests.base.IHistoricalDetailStorage;
-import org.gwtTests.base.IHistoryStorage;
+import org.cg.base.Check;
+import org.cg.base.IHistoricalDetailStorage;
+import org.cg.base.IHistoryStorage;
 
 public final class History {
 

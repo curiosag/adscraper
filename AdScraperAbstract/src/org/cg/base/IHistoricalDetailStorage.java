@@ -1,4 +1,4 @@
-package org.gwtTests.base;
+package org.cg.base;
 
 import org.cg.ads.advalues.ScrapedValues;
 

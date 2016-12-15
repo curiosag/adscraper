@@ -14,7 +14,7 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-import org.gwtTests.base.Check;
+import org.cg.base.Check;
 
 public final class SendMail {
 

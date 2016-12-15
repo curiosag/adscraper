@@ -4,7 +4,7 @@ import java.util.Dictionary;
 import java.util.Hashtable;
 
 import org.cg.ads.advalues.ValueKind;
-import org.gwtTests.base.LangId;
+import org.cg.base.LangId;
 
 public final class Language {
 

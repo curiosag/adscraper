@@ -5,13 +5,13 @@ import java.util.List;
 import org.cg.ads.advalues.ScrapedValue;
 import org.cg.ads.advalues.ScrapedValues;
 import org.cg.ads.advalues.ValueKind;
+import org.cg.base.Check;
+import org.cg.base.Const;
+import org.cg.base.LangId;
+import org.cg.base.Log;
 import org.cg.hub.Settings;
 import org.cg.util.debug.DebugUtilities;
 import org.cg.util.http.HttpUtil;
-import org.gwtTests.base.Check;
-import org.gwtTests.base.Const;
-import org.gwtTests.base.LangId;
-import org.gwtTests.base.Log;
 
 import com.google.common.collect.Lists;
 

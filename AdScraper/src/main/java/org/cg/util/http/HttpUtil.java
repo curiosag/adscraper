@@ -9,15 +9,16 @@ import java.net.HttpURLConnection;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.concurrent.ExecutionException;
+
+import static org.cg.base.Const.STACK_TRACE;
+import static org.cg.base.Idiom.*;
+
 import java.io.*;
 
-import org.gwtTests.base.*;
 import org.apache.commons.io.*;
 import org.cg.ads.advalues.WithUrl;
+import org.cg.base.*;
 import org.cg.util.parallel.Parallel;
-
-import static org.gwtTests.base.Idiom.*;
-import static org.gwtTests.base.Const.STACK_TRACE;
 
 ;
 

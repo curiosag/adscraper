@@ -7,9 +7,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import org.cg.ads.advalues.ScrapedValues;
 import org.cg.ads.filterlist.FilterList;
-import org.gwtTests.base.Const;
-import org.gwtTests.base.Log;
-import org.cg.adscraper.exprFilter.*;
+//import org.cg.adscraper.exprFilter.*;
+import org.cg.base.Const;
+import org.cg.base.Log;
 import org.cg.hub.Settings;
 
 import com.google.common.base.Optional;
@@ -47,10 +47,10 @@ public class Dispatch {
 
 	private void deliver(ScrapedValues ad) {
 		for (Target target : targets)
-			if (passesRules(ad, target.rules))
+		//	if (passesRules(ad, target.rules))
 				MailDelivery.sendMail(ad, target.email);
 	}
-
+	/*
 	public boolean passesRules(ScrapedValues v, Map<String, String> rules) {
 		for (Entry<String, String> r : rules.entrySet())
 			if (!passesRule(v, r.getKey(), r.getValue()))
@@ -71,7 +71,7 @@ public class Dispatch {
 			Log.warning(String.format("Error evaluating dispatch rule '%s' \n", rule) + evalResult.msg);
 
 		return evalResult.status.intValue() == 1;
-	}
+	} */
 
 	private List<Target> createTargets() {
 		List<Target> result = new LinkedList<Target>();
