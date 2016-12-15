@@ -3,14 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.cg.common</groupId>
 	<artifactId>JavaCommon</artifactId>
+		<version>0.1</version>
+
 	<properties>
 		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
 	</properties>
-	<parent>
-		<groupId>org.cg.ftc</groupId>
-		<artifactId>ftc</artifactId>
-		<version>0.1</version>
-	</parent>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
