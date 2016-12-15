@@ -8,14 +8,14 @@ import org.cg.base.ISettingsStorage;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class StorageFactory implements IStorageFactory {
+public class SpringStorageFactory implements IStorageFactory {
 
 	private HistoryStorageSpring historyStorageSpring;
 	private HistoricalDetailStorageSpring historicalDetailStorageSpring;
 	private KeyTypeValueStorageSpring keyTypeValueStorageSpring;
 	private SettingsStorageSpring settingsStorageSpring;
 
-	public StorageFactory(HistoryStorageSpring historyStorageSpring,
+	public SpringStorageFactory(HistoryStorageSpring historyStorageSpring,
 			HistoricalDetailStorageSpring historicalDetailStorageSpring,
 			KeyTypeValueStorageSpring keyTypeValueStorageSpring, SettingsStorageSpring settingsStorageSpring) {
 		this.historicalDetailStorageSpring = historicalDetailStorageSpring;
