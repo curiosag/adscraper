@@ -6,10 +6,16 @@
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="mongoTestConfiguration" class="app.storage.MongoTestConfiguration" />
-	<bean id="StorageFactory" class="app.storage.StorageFactory"/>
+	<bean id="StorageFactory" class="app.storage.SpringStorageFactory"/>
+	
 	<bean id="SettingsStorageSpring" class="app.storage.SettingsStorageSpring" />
 	<bean id="KeyTypeValueStorageSpring" class="app.storage.KeyTypeValueStorageSpring"/>
+	
 	<bean id="HistoryStorageSpring" class="app.storage.HistoryStorageSpring"/>
 	<bean id="HistoricalDetailStorageSpring" class="app.storage.HistoricalDetailStorageSpring"/>
+	<bean id="Repos" class="app.storage.Repos"/>
+	
+	<bean class="app.PostProcessor"/>
+	<bean class="app.server.CommandHandler"/>
 
 </beans>

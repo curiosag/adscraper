@@ -26,7 +26,8 @@ public class HistoryStorageSpring implements IHistoryStorage {
 	public List<HistoryItem> get(int count) {
 		Check.isTrue(count > 0);
 		List<HistoryItem> result = repo.findAll();
-		return result.subList(0, Math.min(count - 1, result.size() - 1));
+		int to = count == 0 || result.size() == 0 ? 0 : Math.min(count - 1, result.size() - 1);
+		return result.subList(0, to);
 	}
 
 }

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.cg.base.ISettingsStorage;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -20,7 +19,7 @@ public class SettingsStorageSpring implements ISettingsStorage {
 	public void set(String key, String type, String value) {
 		KeyTypeValueItem item = repo.findByKeyAndType(key, type);
 		if (item != null)
-			item.setValue(value);
+			item.value = value;
 		else
 			item = new KeyTypeValueItem(key, type, value);
 		repo.save(item);
@@ -36,14 +35,14 @@ public class SettingsStorageSpring implements ISettingsStorage {
 
 	
 	public String get(String settingKey) throws Exception {
-		return getItem(settingKey).getValue();
+		return getItem(settingKey).value;
 	}
 
 	public List<SimpleImmutableEntry<String, String>> getSettingsByType(String settingType) {
 		List<KeyTypeValueItem> items = repo.findByType(settingType);
 		ArrayList<SimpleImmutableEntry<String, String>> result = new ArrayList<SimpleImmutableEntry<String, String>>();
 		for (KeyTypeValueItem item : items) 
-			result.add(new SimpleImmutableEntry<String, String>(item.getKey(), item.getValue()));
+			result.add(new SimpleImmutableEntry<String, String>(item.key, item.value));
 		
 		return result;
 	}

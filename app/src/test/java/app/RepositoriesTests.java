@@ -1,0 +1,48 @@
+package app;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import app.storage.Repos;
+import app.storage.RepositoryItem;
+import junit.framework.Assert;
+
+import java.util.List;
+
+import org.cg.adscraper.factory.*;
+
+@SuppressWarnings("deprecation")
+@RunWith(SpringRunner.class)
+@SpringBootTest
+@ContextConfiguration("/app-config-test.xml")
+public class RepositoriesTests {
+
+	@Autowired
+	IStorageFactory factory;
+	@Autowired
+	Repos repos;
+
+	@Before
+	public void setUp() {
+		StorageFactory.setUp(factory);
+	}
+
+	@After
+	public void tearDown() {
+	}
+
+	@Test
+	public void testRepos() {
+		List<RepositoryItem> items = repos.getItems();
+		Assert.assertEquals(3, items.size());
+		for (RepositoryItem r : repos.getItems())
+			System.out.println(String.format("repo %s item type %s size %d", r.repo.getClass().getName(), r._class.getName(), r.size));
+	}
+
+}

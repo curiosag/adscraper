@@ -10,23 +10,23 @@ import org.springframework.data.annotation.Id;
 public class HistoryDetailItem {
 
 	@Id
-	private String id;
+	public String id;
 
-	private Date timestamp;
+	public Date timestamp;
 
-	private int keyId;
+	public int keyId;
 
-	private String url;
+	public String url;
 
-	private String location;
+	public String location;
 
-	private String prize;
+	public String prize;
 
-	private String size;
+	public String size;
 
-	private String title;
+	public String title;
 
-	private String description;
+	public String description;
 
 	public String getId() {
 		return id;
@@ -76,38 +76,6 @@ public class HistoryDetailItem {
 			throw new RuntimeException(e);
 		}
 
-	}
-
-	public String getUrl() {
-		return url;
-	}
-
-	public String getLocation() {
-		return location;
-	}
-
-	public String getPrize() {
-		return prize;
-	}
-
-	public String getSize() {
-		return size;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public int getKeyId() {
-		return keyId;
-	}
-
-	public Date getTimestamp() {
-		return timestamp;
 	}
 
 }

@@ -1,7 +1,6 @@
 package app.storage;
 
 import org.cg.base.IKeyTypeValueStorage;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -39,7 +38,7 @@ public class KeyTypeValueStorageSpring implements IKeyTypeValueStorage {
 	public String get() {
 		KeyTypeValueItem item = getItem();
 		if (item != null)
-			return item.getValue();
+			return item.value;
 		else
 			return null;
 	}
@@ -47,7 +46,7 @@ public class KeyTypeValueStorageSpring implements IKeyTypeValueStorage {
 	public void save(String value) {
 		KeyTypeValueItem item = getItem();
 		if (item != null)
-			item.setValue(value);
+			item.value = value;
 		else
 			item = new KeyTypeValueItem(key, type, value);
 		repo.save(item);
