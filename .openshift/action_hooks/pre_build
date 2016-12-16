@@ -16,9 +16,7 @@ if [ ! -d $m2dir ]; then
 	mkdir $m2dir
 fi
 
-rm $m2dir/tooolchains.xml
-
-cat > $m2dir/tooolchains.xml <<End-of-message
+cat > $m2dir/toooolchains.xml <<End-of-message
 <toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd">
  <!-- JDK toolchains -->
