@@ -9,6 +9,8 @@ if [ ! -d apache-maven-$version ]; then
   tar -zxf apache-maven-$version-bin.tar.gz
 fi
 
+exit 0
+
 #Download Java8 If not already installed
 if [ ! -d jdk1.8.0_05 ]; then
   if [ ! -e jdk-8u5-linux-x64.tar.gz ]; then	
