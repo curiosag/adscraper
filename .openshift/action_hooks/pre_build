@@ -44,7 +44,7 @@ cat > $m2dir/toolchains.xml <<End-of-message
  <toolchain>
    <type>jdk</type>
    <provides>
-     <version>1.7</version>
+     <version>1.1</version>
      <vendor>sun</vendor>
    </provides>
    <configuration>
