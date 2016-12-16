@@ -14,10 +14,9 @@ echo $(java -version)
 
 # but then also this had to be considered http://stackoverflow.com/questions/23894323/jdk-8-support-at-diy-cartridge-in-openshift
 
-#cd $OPENSHIFT_DATA_DIR
-#echo -e  "<settings>\n <localRepository>$OPENSHIFT_DATA_DIR/.m2/</localRepository>\n</settings>\n" > settings.xml
+cd $OPENSHIFT_DATA_DIR
+echo -e  "<settings>\n <localRepository>$OPENSHIFT_DATA_DIR/.m2/</localRepository>\n</settings>\n" > settings.xml
+$OPENSHIFT_DATA_DIR/apache-maven-$mvn_version/bin/mvn -f $OPENSHIFT_REPO_DIR/pom.xml clean package -s $OPENSHIFT_DATA_DIR/settings.xml
 
-#$OPENSHIFT_DATA_DIR/apache-maven-$mvn_version/bin/mvn -f $OPENSHIFT_REPO_DIR/pom.xml clean package -s $OPENSHIFT_DATA_DIR/settings.xml
-
-cd $OPENSHIFT_REPO_DIR
-mvn -X package -s .openshift/settings.xml -DskipTests=true
+#cd $OPENSHIFT_REPO_DIR
+#mvn -X package -s .openshift/settings.xml -DskipTests=true
