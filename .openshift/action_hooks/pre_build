@@ -17,13 +17,13 @@ if [ ! -d $m2dir ]; then
 fi
 
 cat > $m2dir/toolchains.xml <<End-of-message
-???<toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd">
  <!-- JDK toolchains -->
  <toolchain>
    <type>jdk</type>
    <provides>
-     <version>1.15</version>
+     <version>1.5</version>
      <vendor>sun</vendor>
    </provides>
    <configuration>
@@ -33,7 +33,7 @@ cat > $m2dir/toolchains.xml <<End-of-message
  <toolchain>
    <type>jdk</type>
    <provides>
-     <version>1.16</version>
+     <version>1.6</version>
      <vendor>sun</vendor>
    </provides>
    <configuration>
@@ -43,7 +43,7 @@ cat > $m2dir/toolchains.xml <<End-of-message
  <toolchain>
    <type>jdk</type>
    <provides>
-     <version>1.17</version>
+     <version>1.7</version>
      <vendor>sun</vendor>
    </provides>
    <configuration>
