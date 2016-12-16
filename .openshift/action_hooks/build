@@ -6,7 +6,7 @@
 
 mvn_version=3.3.9
 echo "build hook"
-exit 1
+exit 0
 #export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
 #export PATH=$JAVA_HOME/bin:$PATH
 
