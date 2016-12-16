@@ -1,5 +1,6 @@
 package app.server;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collector;
@@ -7,6 +8,8 @@ import java.util.stream.Collectors;
 
 import org.cg.base.Const;
 import org.cg.base.Log;
+import org.cg.common.io.FileUtil;
+import org.cg.common.util.CollectionUtil;
 import org.cg.common.util.StringUtil;
 import org.cg.dispatch.MailDelivery;
 import org.cg.history.History;
@@ -14,6 +17,7 @@ import org.cg.hub.Scraper;
 import org.cg.hub.Settings;
 import org.cg.rendering.ObjectRenderer;
 import org.cg.util.http.HttpUtil;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 
 import com.google.common.base.Throwables;
@@ -25,6 +29,9 @@ import app.storage.RepositoryItem;
 @Controller
 public class CommandHandler {
 
+	@Value("${logging.file}")
+	private String loggingFile;
+	
 	private String[] adminUserCommands = { "clip", "m", "set", "unset", "p", "x" };
 
 	private String[] adminUsers = { "curiosa.globunznik@gmail.com" };
@@ -54,9 +61,14 @@ public class CommandHandler {
 		System.out.println(String.format("cmd: '%s'",  input));
 		if (input == null || input.length() == 0 || input.equals(app.Const.NOCMD))
 			return "that's not a command";
-		
-		String cmd = cmdToken(input);
 
+		String[] tokens = input.split("\\s");
+		
+		String cmd = tokens[0];
+		String arg = null;
+		if (tokens.length > 1)
+			arg = tokens[1];
+			
 		try {
 			switch (cmd) {
 
@@ -88,7 +100,7 @@ public class CommandHandler {
 				return hdlKind();
 
 			case "l":
-				return "not implemented";
+				return hdlLog(arg, loggingFile);
 
 			case "m":
 				return MailDelivery.testMail();
@@ -136,6 +148,33 @@ public class CommandHandler {
 		}
 	}
 
+	
+	private String hdlLog(String arg, String loggingFile) {
+		if (loggingFile == null)
+			return "no log file defined";
+		
+		File f = new File(loggingFile);
+		if (! f.exists())
+			return "file does not exist: " + loggingFile;
+		
+		int num = 0;
+		try {
+		  num = Integer.valueOf(arg);
+		} catch (Exception e) {
+			num = 100;
+		}
+		
+		String[] lines = FileUtil.readFromFile(loggingFile).split("\n");
+		StringBuilder sb = new StringBuilder();
+		sb.append("<div class=\"log\">");
+		for (int i = 0; i < Math.min(num, lines.length); i++) {
+			sb.append(lines[(lines.length -1) - i]);
+			sb.append("<br/>");
+		}
+		sb.append("</div>");
+		return sb.toString();
+	}
+
 	private String hdlKind() {
 		return StringUtil.toCsv(repos.stream().map(x -> x._class.getSimpleName()).collect(Collectors.toList()), "\n");
 	}
@@ -160,10 +199,6 @@ public class CommandHandler {
 			result.add(t);
 		}
 		return result;
-	}
-
-	private String cmdToken(String cmdString) {
-		return cmdString.split("\\s")[0];
 	}
 
 	private String getHttp(String input) {

@@ -1,9 +1,6 @@
 
-table {
-	margin-right: auto;
-	border-collapse: collapse;
+table, th, td {
+    border: 10px solid black;
+    border-collapse: collapse;
 }
 
-table, th, td {
-    border: 1px solid black;
-}

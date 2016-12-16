@@ -33,7 +33,7 @@ public class RepositoriesTests {
 	@Before
 	public void setUp() {
 		StorageFactory.setUp(factory);
-		resetRepos(factory);
+		resetRepos(factory, repos);
 	}
 
 	@After
@@ -48,7 +48,8 @@ public class RepositoriesTests {
 			System.out.println(String.format("repo %s item type %s size %d", r.repo.getClass().getName(), r._class.getName(), r.size));
 	}
 	
-	private void resetRepos(IStorageFactory factory){
+	private void resetRepos(IStorageFactory factory, Repos r){
+		r.getItems().stream().forEach(x -> x.repo.deleteAll());
 		factory.getHistoricalDetailStorage().store(DebugUtilities.getTestAd());
 		factory.getHistoryStorage().store("ui", DebugUtilities.getTestAd());
 		factory.getSettingsStorage().set("k", "t", "v");

@@ -1,13 +1,26 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-<link type="text/css" rel="stylesheet" href="console.css"/>
+<link type="text/css" rel="stylesheet" href="console.css" />
 
 <title>***</title>
 
 <script src="dygraph-combined.js"></script>
+<style type="text/css">
+table.data, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	font-size: 10;
+	font-family: monospace;
+}
+
+div.log {
+	font-size: 10;
+	font-family: monospace;
+}
+</style>
 </head>
 
 <body>
@@ -22,22 +35,12 @@
 			application to display correctly.</div>
 	</noscript>
 
-	<table class="main" align="center">
-		<tr>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td>
-				<form>
-					<input type="text" name="cmd" autofocus="true" size="100"/><br/>
-				</form>
-			</td>
-		</tr>
-		<tr>
-			<td><p th:utext="${consoleReply}" /></td>
-		</tr>
-	</table>
+	&nbsp;
+	<br />
 
-
+	<form>
+		<input type="text" name="cmd" autofocus="true" size="100" /><br />
+	</form>
+	<p th:utext="${consoleReply}" />
 </body>
 </html>

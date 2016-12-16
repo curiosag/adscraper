@@ -19,6 +19,7 @@ public class ObjectRenderer {
 	private void renderTableRow(StringBuilder sb, Object o) throws IllegalArgumentException, IllegalAccessException {
 		sb.append(trOpen);
 		for (Field f : o.getClass().getDeclaredFields()) {
+			f.setAccessible(true);
 			String value = f.getType().getSimpleName();
 			if (f.getType().equals(String.class))
 				value = (String) f.get(o);
