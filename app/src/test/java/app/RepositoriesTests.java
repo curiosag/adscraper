@@ -15,7 +15,9 @@ import junit.framework.Assert;
 
 import java.util.List;
 
+import org.cg.ads.advalues.ScrapedValues;
 import org.cg.adscraper.factory.*;
+import org.cg.util.debug.DebugUtilities;
 
 @SuppressWarnings("deprecation")
 @RunWith(SpringRunner.class)
@@ -31,6 +33,7 @@ public class RepositoriesTests {
 	@Before
 	public void setUp() {
 		StorageFactory.setUp(factory);
+		resetRepos(factory);
 	}
 
 	@After
@@ -44,5 +47,11 @@ public class RepositoriesTests {
 		for (RepositoryItem r : repos.getItems())
 			System.out.println(String.format("repo %s item type %s size %d", r.repo.getClass().getName(), r._class.getName(), r.size));
 	}
-
+	
+	private void resetRepos(IStorageFactory factory){
+		factory.getHistoricalDetailStorage().store(DebugUtilities.getTestAd());
+		factory.getHistoryStorage().store("ui", DebugUtilities.getTestAd());
+		factory.getSettingsStorage().set("k", "t", "v");
+		factory.createKeyTypeValueStorage().of("t1", "v2").save("v1");
+	}
 }

@@ -19,7 +19,7 @@ import org.cg.base.IKeyTypeValueStorage;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ContextConfiguration("/app-config-test.xml")
-public class StorageTestsMongo {
+public class StorageTestsSpring {
 
 	StorageTests test = new StorageTests();
 	@Autowired
