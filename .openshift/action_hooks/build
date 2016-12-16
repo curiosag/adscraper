@@ -20,4 +20,4 @@ toolchains=$OPENSHIFT_DATA_DIR/.m2/toolchains.xml
 #$OPENSHIFT_DATA_DIR/apache-maven-$mvn_version/bin/mvn -f $OPENSHIFT_REPO_DIR/pom.xml clean package -s $OPENSHIFT_DATA_DIR/settings.xml --global-toolchains $toolchains
 
 cd $OPENSHIFT_REPO_DIR
-mvn -X package -s .openshift/settings.xml -DskipTests=true --global-toolchains $toolchains
+mvn -X package -s .openshift/settings.xml  --global-toolchains $toolchains -DskipTests=true
