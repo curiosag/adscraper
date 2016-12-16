@@ -9,7 +9,14 @@ version=3.3.9
 #  tar -zxf apache-maven-$version-bin.tar.gz
 #fi
 
-cat << EOF > .m2/toolchains.xml
+m2dir=~/app-root/data/.m2
+
+if [ ! -d $m2dir ]; then
+	echo "creating $m2dir"
+	mkdir $m2dir
+fi
+
+cat << EOF > $m2dir/toolchains.xml
 <toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd">
  <!-- JDK toolchains -->
