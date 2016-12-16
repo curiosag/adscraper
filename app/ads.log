@@ -683,3 +683,7 @@
 2016-12-16 20:11:32.440  INFO 19009 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
 2016-12-16 20:11:32.440  INFO 19009 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2016-12-16 20:11:32.443  INFO 19009 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 3 ms
+2016-12-16 20:13:12.152  INFO 19009 --- [pool-20-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-16 20:13:12.155  INFO 19009 --- [pool-20-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-16 20:13:12.156  INFO 19009 --- [pool-20-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-16 20:13:12.161  INFO 19009 --- [pool-20-thread-1] app.server.Scans                         : Running scan at 20:13:12
