@@ -14,7 +14,7 @@ m2dir=~/app-root/data/.m2
 if [ ! -d $m2dir ]; then
 	echo "creating $m2dir"
 	mkdir $m2dir
-fi
+
 
 cat > $m2dir/toolchains.xml <<End-of-message
 <toolchains xmlns=\"http://maven.apache.org/TOOLCHAINS/1.1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
@@ -42,4 +42,6 @@ cat > $m2dir/toolchains.xml <<End-of-message
  </toolchain>
 </toolchains>
 End-of-message
+
+fi
 
