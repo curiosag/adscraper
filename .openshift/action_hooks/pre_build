@@ -3,17 +3,35 @@ cd $OPENSHIFT_DATA_DIR
 version=3.3.9
 
 #Download Maven If not already installed
-if [ ! -d apache-maven-$version ]; then
-  echo "downloading apache-maven-$version"
-  wget http://www.eu.apache.org/dist/maven/maven-3/$version/binaries/apache-maven-$version-bin.tar.gz
-  tar -zxf apache-maven-$version-bin.tar.gz
-fi
+#if [ ! -d apache-maven-$version ]; then
+#  echo "downloading apache-maven-$version"
+#  wget http://www.eu.apache.org/dist/maven/maven-3/$version/binaries/apache-maven-$version-bin.tar.gz
+#  tar -zxf apache-maven-$version-bin.tar.gz
+#fi
 
-#Download Java8 If not already installed
-if [ ! -d jdk1.8.0_05 ]; then
-  if [ ! -e jdk-8u5-linux-x64.tar.gz ]; then	
-  echo "downloading jdk1.8.0_05"
-  	wget --no-check-certificate --no-cookies --header "Cookie:    oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u5-b13/jdk-8u5-linux-x64.tar.gz
-  fi
-  tar -zxf jdk-8u5-linux-x64.tar.gz
-fi
+cat << EOF > .m2/toolchains.xml
+<toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd">
+ <!-- JDK toolchains -->
+ <toolchain>
+   <type>jdk</type>
+   <provides>
+     <version>1.7</version>
+     <vendor>sun</vendor>
+   </provides>
+   <configuration>
+     <jdkHome>/etc/alternatives/java_sdk_1.7.0</jdkHome>
+   </configuration>
+ </toolchain>
+ <toolchain>
+   <type>jdk</type>
+   <provides>
+     <version>1.8</version>
+     <vendor>sun</vendor>
+   </provides>
+   <configuration>
+     <jdkHome>/etc/alternatives/java_sdk_1.8.0</jdkHome>
+   </configuration>
+ </toolchain>
+</toolchains>
+EOF
