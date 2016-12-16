@@ -31,6 +31,7 @@
 						</goals>
 						<configuration>
 							<tasks>
+								<echo>maven enviroment variables</echo>
 								<echo>[JAVA_HOME] ${env.JAVA_HOME}</echo>
 								<echo>[PATH] ${env.PATH}</echo>
 								<echo>[M2_HOME] ${env.M2_HOME}</echo>
