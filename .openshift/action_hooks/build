@@ -6,8 +6,12 @@
 
 mvn_version=3.3.9
 echo "build hook"
-export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
-export PATH=$JAVA_HOME/bin:$PATH
+#export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
+#export PATH=$JAVA_HOME/bin:$PATH
+
+export PATH=$OPENSHIFT_DATA_DIR/jdk1.8.0_05/bin:$PATH
+export JAVA_HOME="$OPENSHIFT_DATA_DIR/jdk1.8.0_05"
+
 echo $(java -version)
 
 # but then also this had to be considered http://stackoverflow.com/questions/23894323/jdk-8-support-at-diy-cartridge-in-openshift
