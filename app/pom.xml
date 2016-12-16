@@ -11,6 +11,29 @@
 		<artifactId>adsniffer</artifactId>
 		<version>0.1.0</version>
 	</parent>
+
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-toolchains-plugin</artifactId>
+			<version>1.1</version>
+			<executions>
+				<execution>
+					<goals>
+						<goal>toolchain</goal>
+					</goals>
+				</execution>
+			</executions>
+			<configuration>
+				<toolchains>
+					<jdk>
+						<version>1.8</version>
+						<vendor>sun</vendor>
+					</jdk>
+				</toolchains>
+			</configuration>
+		</plugin>
+	</plugins>
 	<dependencies>
 		<dependency>
 			<groupId>javax.persistence</groupId>
