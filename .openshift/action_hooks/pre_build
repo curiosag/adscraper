@@ -2,6 +2,7 @@
 cd $OPENSHIFT_DATA_DIR
 version=3.3.9
 
+# that was a hack to get maven use JAVA_HOME, the cleaner way was to supply toolchains (see below)
 #Download Maven If not already installed
 #if [ ! -d apache-maven-$version ]; then
 #  echo "downloading apache-maven-$version"
