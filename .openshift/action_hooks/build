@@ -4,6 +4,7 @@
 # has to be done using rhc env set, see http://stackoverflow.com/questions/35688756/openshift-diy-cartridige-with-tomcat-8-and-jdk-8-javahome-subscribe
 # like this: rhc env set JAVA_HOME=/etc/alternatives/java_sdk_1.8.0 -a diy
 
+mvn_version=3.3.9
 echo "build hook"
 export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
 export PATH=$JAVA_HOME/bin:$PATH
@@ -12,6 +13,6 @@ echo $(java -version)
 cd $OPENSHIFT_DATA_DIR
 echo -e  "<settings>\n <localRepository>$OPENSHIFT_DATA_DIR</localRepository>\n</settings>\n" > settings.xml
 
-$OPENSHIFT_DATA_DIR/apache-maven-3.3.3/bin/mvn -f $OPENSHIFT_REPO_DIR/pom.xml clean package -s $OPENSHIFT_DATA_DIR/settings.xml
+$OPENSHIFT_DATA_DIR/apache-maven-$mvn_version/bin/mvn -f $OPENSHIFT_REPO_DIR/pom.xml clean package -s $OPENSHIFT_DATA_DIR/settings.xml
 
 #mvn package -s .openshift/settings.xml -DskipTests=true
