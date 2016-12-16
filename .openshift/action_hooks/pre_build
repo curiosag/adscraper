@@ -1,9 +1,10 @@
 #!/bin/bash
 cd $OPENSHIFT_DATA_DIR
+version=3.3.9
 
 #Download Maven If not already installed
-if [ ! -d apache-maven-3.3.3 ]; then
-  echo "downloading apache-maven-3.3.3"
-  wget http://www.eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
-  tar -zxf apache-maven-3.3.3-bin.tar.gz
+if [ ! -d apache-maven-$version ]; then
+  echo "downloading apache-maven-$version"
+  wget http://www.eu.apache.org/dist/maven/maven-3/$version/binaries/apache-maven-$version-bin.tar.gz
+  tar -zxf apache-maven-$version-bin.tar.gz
 fi
