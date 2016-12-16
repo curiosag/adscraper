@@ -10,6 +10,8 @@ export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
 export PATH=$JAVA_HOME/bin:$PATH
 echo $(java -version)
 
+# but then also this had to be considered http://stackoverflow.com/questions/23894323/jdk-8-support-at-diy-cartridge-in-openshift
+
 cd $OPENSHIFT_DATA_DIR
 echo -e  "<settings>\n <localRepository>$OPENSHIFT_DATA_DIR</localRepository>\n</settings>\n" > settings.xml
 
