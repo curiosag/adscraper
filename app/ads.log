@@ -687,3 +687,7 @@
 2016-12-16 20:13:12.155  INFO 19009 --- [pool-20-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
 2016-12-16 20:13:12.156  INFO 19009 --- [pool-20-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
 2016-12-16 20:13:12.161  INFO 19009 --- [pool-20-thread-1] app.server.Scans                         : Running scan at 20:13:12
+2016-12-16 20:15:12.150  INFO 19009 --- [pool-20-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-16 20:15:12.151  INFO 19009 --- [pool-20-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-16 20:15:12.151  INFO 19009 --- [pool-20-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-16 20:15:12.153  INFO 19009 --- [pool-20-thread-1] app.server.Scans                         : Running scan at 20:15:12
