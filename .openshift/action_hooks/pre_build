@@ -16,9 +16,9 @@ if [ ! -d $m2dir ]; then
 	mkdir $m2dir
 fi
 
-cat << EOF > $m2dir/toolchains.xml
-<toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd">
+cat > $m2dir/toolchains.xml <<End-of-message
+<toolchains xmlns=\"http://maven.apache.org/TOOLCHAINS/1.1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+ xsi:schemaLocation=\"http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd\">
  <!-- JDK toolchains -->
  <toolchain>
    <type>jdk</type>
@@ -41,4 +41,5 @@ cat << EOF > $m2dir/toolchains.xml
    </configuration>
  </toolchain>
 </toolchains>
-EOF
+End-of-message
+
