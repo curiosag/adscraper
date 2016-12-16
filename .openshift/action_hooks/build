@@ -1,6 +1,9 @@
 #!/bin/bash
-export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
-export PATH=$JAVA_HOME/bin:$PATH
+# export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
+# won't work.
+# has to be done using rhc env set, see http://stackoverflow.com/questions/35688756/openshift-diy-cartridige-with-tomcat-8-and-jdk-8-javahome-subscribe
+# like this: rhc env set JAVA_HOME=/etc/alternatives/java_sdk_1.8.0 -a diy
+
 echo "set java home to $JAVA_HOME"
 cd $OPENSHIFT_REPO_DIR
 mvn package -s .openshift/settings.xml -DskipTests=true
