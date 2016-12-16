@@ -10,4 +10,4 @@ appVersion=0.1.0
 cd $OPENSHIFT_REPO_DIR
 #nohup java -jar app/target/adscraperspring-$appVersion.jar --server.port=${OPENSHIFT_DIY_PORT} --server.address=${OPENSHIFT_DIY_IP} &
 cd app
-nohup mvn spring-boot:run
+nohup mvn spring-boot:run -s $OPENSHIFT_REPO_DIR/.openshift/settings.xml
