@@ -1,10 +1,13 @@
 #!/bin/bash
 
-echo "start hook"
 export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
 export PATH=$JAVA_HOME/bin:$PATH
 
 echo $(java -version)
 
+appVersion=0.1.0
+
 cd $OPENSHIFT_REPO_DIR
-nohup java -jar app/target/*.jar --server.port=${OPENSHIFT_DIY_PORT} --server.address=${OPENSHIFT_DIY_IP} &
+#nohup java -jar app/target/adscraperspring-$appVersion.jar --server.port=${OPENSHIFT_DIY_PORT} --server.address=${OPENSHIFT_DIY_IP} &
+cd app
+nohup mvn spring-boot:run
