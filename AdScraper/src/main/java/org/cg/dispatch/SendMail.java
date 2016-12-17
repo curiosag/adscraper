@@ -14,6 +14,7 @@ import javax.mail.internet.MimeMultipart;
 import javax.mail.PasswordAuthentication;
 import org.cg.base.Check;
 import org.cg.base.MailSessionProperties;
+import org.cg.util.debug.LoggingOutputStream;
 
 public final class SendMail {
 
@@ -44,7 +45,7 @@ public final class SendMail {
 			}
 		  });
 		result.setDebug(properties.isDebug());
-		result.setDebugOut(System.err);
+		result.setDebugOut(System.out);
 		return result;
 	}
 	
