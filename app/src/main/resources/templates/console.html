@@ -9,16 +9,15 @@
 
 <script src="dygraph-combined.js"></script>
 <style type="text/css">
-table.data, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-	font-size: 10;
+html * {
 	font-family: monospace;
+	font-size: 10;
 }
 
-div.log {
-	font-size: 10;
-	font-family: monospace;
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 2px;
 }
 </style>
 </head>
@@ -39,7 +38,7 @@ div.log {
 	<br />
 
 	<form>
-		<input type="text" name="cmd" autofocus="true" size="100" /><br />
+		<input type="text" name="cmd" autofocus="autofocus" size="120" /><br />
 	</form>
 	<p th:utext="${consoleReply}" />
 </body>

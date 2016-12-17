@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 import org.cg.base.Const;
 import org.cg.base.Log;
+import org.cg.base.MailSessionProperties;
 import org.cg.common.io.FileUtil;
 import org.cg.common.util.CollectionUtil;
 import org.cg.common.util.StringUtil;
@@ -26,7 +27,6 @@ import app.storage.Repos;
 import app.storage.RepositoryItem;
 
 @SuppressWarnings("unused")
-@Controller
 public class CommandHandler {
 
 	@Value("${logging.file}")
@@ -37,6 +37,7 @@ public class CommandHandler {
 	private String[] adminUsers = { "curiosa.globunznik@gmail.com" };
 
 	private final List<RepositoryItem> repos;
+	private final MailSessionProperties mailSessionProperties;
 
 	private Collector<RepositoryItem, ?, List<RepositoryItem>> coll() {
 		return Collectors.toList();
@@ -46,8 +47,9 @@ public class CommandHandler {
 		return true;
 	}
 
-	public CommandHandler(Repos repos) {
+	public CommandHandler(Repos repos, MailSessionProperties mailSessionProperties) {
 		this.repos = repos.getItems();
+		this.mailSessionProperties = mailSessionProperties;
 	}
 
 	private boolean isAdminCmd(String cmd) {
@@ -103,10 +105,10 @@ public class CommandHandler {
 				return hdlLog(arg, loggingFile);
 
 			case "m":
-				return MailDelivery.testMail();
+				return new MailDelivery(mailSessionProperties).testMail();
 
 			case "f":
-				return MailDelivery.testFormat();
+				return new MailDelivery(mailSessionProperties).testFormat();
 
 			case "set":
 				return Settings.instance().set(input.substring(4));

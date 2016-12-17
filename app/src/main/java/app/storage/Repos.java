@@ -8,14 +8,12 @@ import org.cg.common.check.Check;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.support.Repositories;
 
-@Configuration
-@SuppressWarnings({ "rawtypes", "unchecked" })
 
+@SuppressWarnings({ "rawtypes", "unchecked" })
 public class Repos implements ApplicationContextAware {
 
 	ApplicationContext context;

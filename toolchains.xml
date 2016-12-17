@@ -1,5 +1,5 @@
-<toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance\"
- xsi:schemaLocation="http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd\">
+<toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd">
  <!-- JDK toolchains -->
  <toolchain>
    <type>jdk</type>
@@ -8,7 +8,7 @@
      <vendor>sun</vendor>
    </provides>
    <configuration>
-     <jdkHome>/usr/lib/jvm/java-8-oracle</jdkHome>
+     <jdkHome>/etc/alternatives/java_sdk_1.7.0</jdkHome>
    </configuration>
  </toolchain>
  <toolchain>
@@ -18,7 +18,7 @@
      <vendor>sun</vendor>
    </provides>
    <configuration>
-     <jdkHome>/usr/lib/jvm/java-8-oracle</jdkHome>
+     <jdkHome>/etc/alternatives/java_sdk_1.7.0</jdkHome>
    </configuration>
  </toolchain>
  <toolchain>
@@ -28,7 +28,7 @@
      <vendor>sun</vendor>
    </provides>
    <configuration>
-     <jdkHome>/usr/lib/jvm/java-8-oracle</jdkHome>
+     <jdkHome>/etc/alternatives/java_sdk_1.7.0</jdkHome>
    </configuration>
  </toolchain>
  <toolchain>
@@ -38,7 +38,7 @@
      <vendor>sun</vendor>
    </provides>
    <configuration>
-     <jdkHome>/usr/lib/jvm/java-8-oracle</jdkHome>
+     <jdkHome>/etc/alternatives/java_sdk_1.8.0</jdkHome>
    </configuration>
  </toolchain>
 </toolchains>

@@ -5,24 +5,12 @@
 	http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<import resource="mail-config.xml" />
-
-	<bean id="mongoTestConfiguration" class="app.storage.MongoTestConfiguration" />
 	<bean id="StorageFactory" class="app.storage.SpringStorageFactory" />
-
 	<bean id="SettingsStorageSpring" class="app.storage.SettingsStorageSpring" />
 	<bean id="KeyTypeValueStorageSpring" class="app.storage.KeyTypeValueStorageSpring" />
 
 	<bean id="HistoryStorageSpring" class="app.storage.HistoryStorageSpring" />
 	<bean id="HistoricalDetailStorageSpring" class="app.storage.HistoricalDetailStorageSpring" />
 	<bean id="Repos" class="app.storage.Repos" />
-
-	<bean class="app.PostProcessor" />
-	<bean class="app.server.CommandHandler" />
-
-	<bean id="testMailSession" class="org.cg.base.MailSessionProperties" parent="mailSession">
-		<property name="debug" value="true"/>
-	</bean>
-
-
+		
 </beans>

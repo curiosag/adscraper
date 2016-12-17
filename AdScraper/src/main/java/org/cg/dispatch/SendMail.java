@@ -1,8 +1,6 @@
 package org.cg.dispatch;
 
 import java.io.UnsupportedEncodingException;
-import java.util.Properties;
-
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Multipart;
@@ -13,14 +11,15 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-
+import javax.mail.PasswordAuthentication;
 import org.cg.base.Check;
+import org.cg.base.MailSessionProperties;
 
 public final class SendMail {
 
 	private static String[] toReplace = { "ß", "ö", "ä", "ü", "Ö", "Ä", "Ü" };
 	private static String[] replacement = { "ss", "oe", "ae", "ue", "OE", "AE",	"UE" };
-
+	
 	private static String normalizeString(String s) {
 		Check.notNull(s);
 		
@@ -30,7 +29,26 @@ public final class SendMail {
 		return result;
 	}
 
-	public final static synchronized void send(String adminEmail, String recipient,
+	private final Session session;
+
+	public SendMail(MailSessionProperties properties) {
+		session = auth(properties);
+	}
+	
+	private Session auth(final MailSessionProperties properties){
+		
+		Session result = Session.getInstance(properties.get(),
+		  new javax.mail.Authenticator() {
+			protected PasswordAuthentication getPasswordAuthentication() {
+				return new PasswordAuthentication(properties.username, properties.password);
+			}
+		  });
+		result.setDebug(properties.isDebug());
+		result.setDebugOut(System.err);
+		return result;
+	}
+	
+	public synchronized void send(String adminEmail, String recipient,
 			String from, String subject, String content, boolean asHtml)
 			throws UnsupportedEncodingException, AddressException,
 			MessagingException {
@@ -40,9 +58,6 @@ public final class SendMail {
 		Check.notEmpty(from);
 		Check.notEmpty(subject);
 		
-		Properties props = new Properties();
-		Session session = Session.getDefaultInstance(props, null);
-
 		Message msg = new MimeMessage(session);
 		msg.setFrom(new InternetAddress(adminEmail, from));
 		msg.addRecipient(Message.RecipientType.TO, new InternetAddress(

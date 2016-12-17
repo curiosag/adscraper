@@ -1,7 +1,7 @@
 package app;
 
 
-import org.junit.Assert;
+import org.cg.dispatch.MailDelivery;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,28 +11,21 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import app.data.UtilTest;
-import app.storage.HistRepository;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ContextConfiguration("/app-config-test.xml")
-public class HistRepoTest {
+public class MailTest {
 
     @Autowired
-    HistRepository repository;
+    org.cg.base.MailSessionProperties props;
 
     @Before
     public void setUp() {
-        repository.deleteAll();
     }
 
     @Test
-    public void setsIdOnSave() {
-
-    	repository.save(UtilTest.createItems(5));
-    	Assert.assertEquals(5, repository.count());
-        
+    public void setSend() {
+    	new MailDelivery(props).testMail();
     }
 
 }

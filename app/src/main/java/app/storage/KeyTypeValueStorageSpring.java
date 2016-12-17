@@ -1,9 +1,7 @@
 package app.storage;
 
 import org.cg.base.IKeyTypeValueStorage;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
 public class KeyTypeValueStorageSpring implements IKeyTypeValueStorage {
 
 	String type;

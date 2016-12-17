@@ -2,9 +2,7 @@ package app.storage;
 
 import org.cg.ads.advalues.ScrapedValues;
 import org.cg.base.IHistoricalDetailStorage;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
 public class HistoricalDetailStorageSpring implements IHistoricalDetailStorage {
 
 	private int maxId = -1;

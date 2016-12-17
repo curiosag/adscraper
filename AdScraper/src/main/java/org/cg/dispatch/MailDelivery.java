@@ -9,6 +9,7 @@ import org.cg.base.Check;
 import org.cg.base.Const;
 import org.cg.base.LangId;
 import org.cg.base.Log;
+import org.cg.base.MailSessionProperties;
 import org.cg.hub.Settings;
 import org.cg.util.debug.DebugUtilities;
 import org.cg.util.http.HttpUtil;
@@ -18,10 +19,16 @@ import com.google.common.collect.Lists;
 
 public final class MailDelivery {
 
-	private final static boolean asHtml = true;
-	private final static String sender = "curiosa.globunznik@gmail.com";
-
-	private static String bodyMailFormatted(ScrapedValues ad) {
+	private final boolean asHtml = true;
+	private final String sender;
+	private final SendMail sendMail;
+	
+	public MailDelivery(MailSessionProperties properties) {
+		sendMail = new SendMail(properties);
+		this.sender = properties.sender;
+	}
+	
+	private String bodyMailFormatted(ScrapedValues ad) {
 		Check.notNull(ad);
 
 		List<ValueKind> mandatoyElements = Lists.newArrayList(ValueKind.title, ValueKind.prize, ValueKind.size,
@@ -50,33 +57,33 @@ public final class MailDelivery {
 		return s.toString();
 	}
 
-	private static String headerFormatted(ScrapedValues ad) {
+	private String headerFormatted(ScrapedValues ad) {
 		Check.notNull(ad);
 
 		return String.format("%s EUR/%s m2 ", ad.valueOrDefault(ValueKind.prize), ad.valueOrDefault(ValueKind.size))
 				+ ad.valueOrDefault(ValueKind.title);
 	}
 
-	private static String bodySmsFormatted(ScrapedValues ad) {
+	private String bodySmsFormatted(ScrapedValues ad) {
 		Check.notNull(ad);
 
 		return String.format("Tel:%s %s", ad.valueOrDefault(ValueKind.phone), ad.valueOrDefault(ValueKind.description));
 	}
 
-	public final static String testMail() {
+	public final String testMail() {
 		Log.info(String.format("testMail. sender: %s, mailRecipient: %s, from: %s", sender, sender, "vom Grausewitz"));
-		MailDelivery.sendMail(DebugUtilities.getTestAd());
+		sendMail(DebugUtilities.getTestAd(), sender);
 		return "sent";
 	}
 
-	public final static String testFormat() {
+	public final String testFormat() {
 		ScrapedValues testAd = DebugUtilities.getTestAd();
 		return String
 				.format("<b>HEADER</b><br><br>%s<br><b><br>BODY SMS FORMATTED</b><br><br>%s<br><br><b>BODY MAIL FORMATTED</b><br>%ss",
 						headerFormatted(testAd), bodySmsFormatted(testAd), bodyMailFormatted(testAd));
 	}
 
-	public final static void sendMail(ScrapedValues ad) {
+	public final void sendMail(ScrapedValues ad) {
 		Check.notNull(ad);
 
 		List<String> mailIds = Settings.instance().getKeysByType(Const.SETTINGTYPE_MAIL);
@@ -89,13 +96,13 @@ public final class MailDelivery {
 
 	}
 
-	public static String sendMail(ScrapedValues ad, String mailRecipient) {
+	public String sendMail(ScrapedValues ad, String mailRecipient) {
 
 		String from = HttpUtil.baseUrl(ad.get(ValueKind.url).valueOrDefault()).replace("http://www.", "");
 		String result = null;
 		try {
 			Log.info("mail to " + mailRecipient + "ad von " + from + " " + headerFormatted(ad));
-			SendMail.send(sender, mailRecipient, "ad von " + from, headerFormatted(ad), bodyMailFormatted(ad), asHtml);
+			sendMail.send(sender, mailRecipient, "ad von " + from, headerFormatted(ad), bodyMailFormatted(ad), asHtml);
 		} catch (Exception e) {
 			result = e.getMessage() + "\n" + result;
 			Log.logException(e, !Const.ADD_STACK_TRACE);

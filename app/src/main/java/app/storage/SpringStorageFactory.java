@@ -5,9 +5,7 @@ import org.cg.base.IHistoricalDetailStorage;
 import org.cg.base.IHistoryStorage;
 import org.cg.base.IKeyTypeValueStorage;
 import org.cg.base.ISettingsStorage;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
 public class SpringStorageFactory implements IStorageFactory {
 
 	private HistoryStorageSpring historyStorageSpring;

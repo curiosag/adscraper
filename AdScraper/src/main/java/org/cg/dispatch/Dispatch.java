@@ -7,14 +7,27 @@ import java.util.Map;
 import java.util.Map.Entry;
 import org.cg.ads.advalues.ScrapedValues;
 import org.cg.ads.filterlist.FilterList;
+import org.cg.base.Check;
 //import org.cg.adscraper.exprFilter.*;
 import org.cg.base.Const;
 import org.cg.base.Log;
+import org.cg.base.MailSessionProperties;
 import org.cg.hub.Settings;
 
 import com.google.common.base.Optional;
 
 public class Dispatch {
+
+	private static MailDelivery delivery = null;
+
+	public static void setUp(MailSessionProperties mailSessionProperties) {
+		delivery = new MailDelivery(mailSessionProperties);
+	}
+
+	private MailDelivery getDelivery() {
+		Check.notNull(delivery);
+		return delivery;
+	}
 
 	private class Target {
 		public final String email;
@@ -27,7 +40,7 @@ public class Dispatch {
 		public void addRule(String id, String rule) {
 			rules.put(id, rule);
 		}
-	
+
 	}
 
 	private final List<Target> targets = new LinkedList<Target>();
@@ -47,38 +60,42 @@ public class Dispatch {
 
 	private void deliver(ScrapedValues ad) {
 		for (Target target : targets)
-		//	if (passesRules(ad, target.rules))
-				MailDelivery.sendMail(ad, target.email);
+			// if (passesRules(ad, target.rules))
+			getDelivery().sendMail(ad, target.email);
 	}
 	/*
-	public boolean passesRules(ScrapedValues v, Map<String, String> rules) {
-		for (Entry<String, String> r : rules.entrySet())
-			if (!passesRule(v, r.getKey(), r.getValue()))
-				return false;
-		return true;
-	}
-
-	private boolean passesRule(ScrapedValues v, String ruleId, String rule) {
-		if (rule.equals(cInvalidRule)) {
-			Log.warning(String.format("invalid rule id '%s'encountered. Check dispatch setup.", ruleId));
-			return false;
-		}
-		Log.info(String.format("about to try to evaluate rule '%s'", rule));
-		ResultAdScraper evalResult = (new ExprParserAdScraper(v, filters)).eval(rule);
-		Log.info(String.format("rule evaluated", ruleId));
-		
-		if (evalResult.msg.length() > 0)
-			Log.warning(String.format("Error evaluating dispatch rule '%s' \n", rule) + evalResult.msg);
-
-		return evalResult.status.intValue() == 1;
-	} */
+	 * public boolean passesRules(ScrapedValues v, Map<String, String> rules) {
+	 * for (Entry<String, String> r : rules.entrySet()) if (!passesRule(v,
+	 * r.getKey(), r.getValue())) return false; return true; }
+	 * 
+	 * private boolean passesRule(ScrapedValues v, String ruleId, String rule) {
+	 * if (rule.equals(cInvalidRule)) { Log.warning(String.
+	 * format("invalid rule id '%s'encountered. Check dispatch setup.",
+	 * ruleId)); return false; }
+	 * Log.info(String.format("about to try to evaluate rule '%s'", rule));
+	 * ResultAdScraper evalResult = (new ExprParserAdScraper(v,
+	 * filters)).eval(rule); Log.info(String.format("rule evaluated", ruleId));
+	 * 
+	 * if (evalResult.msg.length() > 0)
+	 * Log.warning(String.format("Error evaluating dispatch rule '%s' \n", rule)
+	 * + evalResult.msg);
+	 * 
+	 * return evalResult.status.intValue() == 1; }
+	 */
 
 	private List<Target> createTargets() {
 		List<Target> result = new LinkedList<Target>();
 
-		Map<String, String> mailIds = Settings.instance().createMappedSettings(Const.SETTINGTYPE_MAIL); // mailid -> emailAddress
-		Map<String, String> rules = Settings.instance().createMappedSettings(Const.SETTINGTYPE_RULE); // ruleId -> rule
-		Map<String, String> dispatches = Settings.instance().createMappedSettings(Const.SETTINGTYPE_DISPATCHRULE); // dispatchId -> dispatch definition
+		Map<String, String> mailIds = Settings.instance().createMappedSettings(Const.SETTINGTYPE_MAIL); // mailid
+																										// ->
+																										// emailAddress
+		Map<String, String> rules = Settings.instance().createMappedSettings(Const.SETTINGTYPE_RULE); // ruleId
+																										// ->
+																										// rule
+		Map<String, String> dispatches = Settings.instance().createMappedSettings(Const.SETTINGTYPE_DISPATCHRULE); // dispatchId
+																													// ->
+																													// dispatch
+																													// definition
 
 		for (Entry<String, String> d : dispatches.entrySet()) {
 			String[] ruleElements = d.getValue().split(";");
@@ -86,13 +103,15 @@ public class Dispatch {
 			if (ruleElements.length == 0)
 				Log.info(String.format("Settings empty for key %s", d.getKey()));
 			else {
-				Optional<String> mailAddress = Settings.instance().getMappedItem(ruleElements[0], mailIds, Const.SETTINGTYPE_MAIL);
+				Optional<String> mailAddress = Settings.instance().getMappedItem(ruleElements[0], mailIds,
+						Const.SETTINGTYPE_MAIL);
 				if (mailAddress.isPresent()) {
 					Target target = new Target(mailAddress.get());
 					result.add(target);
 					for (int i = 1; i < ruleElements.length; i++) {
 						String ruleId = ruleElements[i];
-						Optional<String> rule = Settings.instance().getMappedItem(ruleId, rules, Const.SETTINGTYPE_RULE);
+						Optional<String> rule = Settings.instance().getMappedItem(ruleId, rules,
+								Const.SETTINGTYPE_RULE);
 						if (rule.isPresent())
 							target.addRule(ruleId, rule.get());
 						else

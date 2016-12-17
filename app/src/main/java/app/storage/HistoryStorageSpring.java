@@ -8,9 +8,7 @@ import org.cg.ads.advalues.ValueKind;
 import org.cg.base.HistoryItem;
 import org.cg.base.IHistoryStorage;
 import org.cg.common.check.Check;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
 public class HistoryStorageSpring implements IHistoryStorage {
 
 	HistoryItemRepository repo;

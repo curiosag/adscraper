@@ -10,6 +10,7 @@ version=3.3.9
 #  tar -zxf apache-maven-$version-bin.tar.gz
 #fi
 
+# that's not necessary to do here, a residual item of putting toolchanins.xml there
 m2dir=~/app-root/data/.m2
 
 if [ ! -d $m2dir ]; then
@@ -17,51 +18,5 @@ if [ ! -d $m2dir ]; then
 	mkdir $m2dir
 fi
 
-cat > $m2dir/toolchains.xml <<End-of-message
-<toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd">
- <!-- JDK toolchains -->
- <toolchain>
-   <type>jdk</type>
-   <provides>
-     <version>1.5</version>
-     <vendor>sun</vendor>
-   </provides>
-   <configuration>
-     <jdkHome>/etc/alternatives/java_sdk_1.7.0</jdkHome>
-   </configuration>
- </toolchain>
- <toolchain>
-   <type>jdk</type>
-   <provides>
-     <version>1.6</version>
-     <vendor>sun</vendor>
-   </provides>
-   <configuration>
-     <jdkHome>/etc/alternatives/java_sdk_1.7.0</jdkHome>
-   </configuration>
- </toolchain>
- <toolchain>
-   <type>jdk</type>
-   <provides>
-     <version>1.7</version>
-     <vendor>sun</vendor>
-   </provides>
-   <configuration>
-     <jdkHome>/etc/alternatives/java_sdk_1.7.0</jdkHome>
-   </configuration>
- </toolchain>
- <toolchain>
-   <type>jdk</type>
-   <provides>
-     <version>1.8</version>
-     <vendor>sun</vendor>
-   </provides>
-   <configuration>
-     <jdkHome>/etc/alternatives/java_sdk_1.8.0</jdkHome>
-   </configuration>
- </toolchain>
-</toolchains>
-End-of-message
 
 

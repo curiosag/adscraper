@@ -14,7 +14,6 @@ echo $(java -version)
 
 # but then also this had to be considered http://stackoverflow.com/questions/23894323/jdk-8-support-at-diy-cartridge-in-openshift
 
-toolchains=$OPENSHIFT_DATA_DIR/.m2/toolchains.xml
 
 # i did experiments with an alternative version of MVN which actually uses JAVA_HOME, but then using toolchains was the way
 #cd $OPENSHIFT_DATA_DIR
@@ -22,4 +21,4 @@ toolchains=$OPENSHIFT_DATA_DIR/.m2/toolchains.xml
 #$OPENSHIFT_DATA_DIR/apache-maven-$mvn_version/bin/mvn -f $OPENSHIFT_REPO_DIR/pom.xml clean package -s $OPENSHIFT_DATA_DIR/settings.xml --global-toolchains $toolchains
 
 cd $OPENSHIFT_REPO_DIR
-mvn package -s .openshift/settings.xml  --toolchains $toolchains -DskipTests=true # pre-installed maven has no --global-toolchains option
+mvn package -s .openshift/settings.xml  --toolchains toolchains.xml -DskipTests=true # pre-installed maven has no --global-toolchains option

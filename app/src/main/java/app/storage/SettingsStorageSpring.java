@@ -5,9 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.cg.base.ISettingsStorage;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
 public class SettingsStorageSpring implements ISettingsStorage {
 
 	KeyTypeValueItemRepository repo;

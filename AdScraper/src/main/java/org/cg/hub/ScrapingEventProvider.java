@@ -8,7 +8,7 @@ public class ScrapingEventProvider {
 
 		@Override
 		public void add(String type, String message, String url) {
-			throw new RuntimeException("scraping event not implemented");
+			
 		}};
 	
 	public static IScrapingEvent get(){

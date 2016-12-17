@@ -15,7 +15,8 @@ public class ObjectRenderer {
 	private static final String tableOpen = "<table>\n";
 	private static final String tableClose = "</table>\n";
 	private static final String td = "<td>%s</td>";
-
+	private static final String th = "<th>%s</th>";
+	
 	private void renderTableRow(StringBuilder sb, Object o) throws IllegalArgumentException, IllegalAccessException {
 		sb.append(trOpen);
 		for (Field f : o.getClass().getDeclaredFields()) {
@@ -33,12 +34,27 @@ public class ObjectRenderer {
 		sb.append(trClose);
 	}
 
+	private void renderTableHeader(StringBuilder sb, Object o) throws IllegalArgumentException, IllegalAccessException {
+		sb.append(trOpen);
+		for (Field f : o.getClass().getDeclaredFields()) {
+			f.setAccessible(true);
+			sb.append(String.format(th, f.getName()));
+		}
+		sb.append(trClose);
+	}
+	
 	public String renderTable(@SuppressWarnings("rawtypes") List l) {
 		StringBuilder sb = new StringBuilder();
+		boolean headerAdded = false;
 		sb.append(tableOpen);
 		try {
-			for (Object o : l)
+			for (Object o : l){
+				if (! headerAdded){
+					renderTableHeader(sb, o);
+					headerAdded = true;
+				}
 				renderTableRow(sb, o);
+			}
 		} catch (Exception e) {
 			return e.getMessage() + '\n' + ExceptionUtils.getStackTrace(e);
 		}
