@@ -1,5 +1,6 @@
 package app;
 
+import org.apache.commons.logging.LogFactory;
 import org.cg.adscraper.factory.StorageFactory;
 import org.cg.common.io.logging.DelegatingOutputStream;
 import org.cg.common.io.logging.OnLineWritten;
@@ -53,8 +54,7 @@ public class Application {
 			OnLineWritten redirect = new OnLineWritten() {
 				@Override
 				public void notify(String value) {
-					java.util.logging.Logger.getGlobal().info(value);
-				}
+					LogFactory.getLog("r").info(value);				}
 			};
 
 			System.setOut(DelegatingOutputStream.createPrintStream(System.out, redirect));
