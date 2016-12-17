@@ -10349,3 +10349,1299 @@ c3AwWW9PN2ZlNGlE
 2016-12-17 20:14:31.568  INFO 31502 --- [pool-1-thread-1] r                                        : 2016-12-17 20:14:31.568  INFO 31502 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:14:31
 
 2016-12-17 20:14:31.568  INFO 31502 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:14:31
+2016-12-17 20:27:09.055  INFO 32195 --- [restartedMain] app.Application                          : Starting Application on sp-W271ELQ with PID 32195 (/home/sp/dev/tool/eclipse/wsspring/adsniffer/app/target/classes started by sp in /home/sp/dev/tool/eclipse/wsspring/adsniffer/app)
+2016-12-17 20:27:09.083  INFO 32195 --- [restartedMain] app.Application                          : No active profile set, falling back to default profiles: default
+2016-12-17 20:27:10.987  INFO 32195 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ec03b3: startup date [Sat Dec 17 20:27:10 CET 2016]; root of context hierarchy
+2016-12-17 20:27:14.003  INFO 32195 --- [restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [app-config.xml]
+2016-12-17 20:27:14.375  INFO 32195 --- [restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [mail-config.xml]
+2016-12-17 20:27:14.454  INFO 32195 --- [restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [commonConfig.xml]
+2016-12-17 20:27:14.515  INFO 32195 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'mongoConfiguration' with a different definition: replacing [Generic bean: class [app.storage.MongoConfiguration]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/home/sp/dev/tool/eclipse/wsspring/adsniffer/app/target/classes/app/storage/MongoConfiguration.class]] with [Generic bean: class [app.storage.MongoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [app-config.xml]]
+2016-12-17 20:27:16.756  INFO 32195 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-12-17 20:27:16.813  INFO 32195 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-17 20:27:16.814  INFO 32195 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-12-17 20:27:17.097  INFO 32195 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-17 20:27:17.098  INFO 32195 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6144 ms
+2016-12-17 20:27:17.348  INFO 32195 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-17 20:27:17.355  INFO 32195 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-17 20:27:17.356  INFO 32195 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-17 20:27:17.357  INFO 32195 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-17 20:27:17.360  INFO 32195 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-17 20:27:17.733  INFO 32195 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-17 20:27:17.921  INFO 32195 --- [cluster-ClusterId{value='58559195721c9f7dc33abadd', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:349}] to 127.0.0.1:27017
+2016-12-17 20:27:17.924  INFO 32195 --- [cluster-ClusterId{value='58559195721c9f7dc33abadd', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=2584982}
+2016-12-17 20:27:18.540  INFO 32195 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:350}] to 127.0.0.1:27017
+2016-12-17 20:27:19.355  INFO 32195 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ec03b3: startup date [Sat Dec 17 20:27:10 CET 2016]; root of context hierarchy
+2016-12-17 20:27:19.428  INFO 32195 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hist]}" onto public app.data.HistList app.HistController.greeting(java.lang.String)
+2016-12-17 20:27:19.430  INFO 32195 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String app.HomeController.index(org.springframework.ui.ModelMap)
+2016-12-17 20:27:19.431  INFO 32195 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stat]}" onto public java.lang.String app.server.StatisticsController.greeting(java.lang.String,java.lang.String)
+2016-12-17 20:27:19.432  INFO 32195 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/console]}" onto public java.lang.String app.server.WebConsoleController.greeting(java.lang.String,org.springframework.ui.Model)
+2016-12-17 20:27:19.434  INFO 32195 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-17 20:27:19.435  INFO 32195 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-17 20:27:19.485  INFO 32195 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-17 20:27:19.485  INFO 32195 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-17 20:27:19.603  INFO 32195 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-17 20:27:20.498  INFO 32195 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2016-12-17 20:27:20.574  INFO 32195 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-17 20:27:20.603  INFO 32195 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-12-17 20:27:20.791  INFO 32195 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-12-17 20:27:20.874  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:27:20.873  INFO 32195 --- [  restartedMain] app.Application                          : Started Application in 13.778 seconds (JVM running for 16.574)
+
+2016-12-17 20:27:20.873  INFO 32195 --- [restartedMain] app.Application                          : Started Application in 13.778 seconds (JVM running for 16.574)
+2016-12-17 20:27:27.739  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 2016-12-17 20:27:27.738  INFO 32195 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+
+2016-12-17 20:27:27.738  INFO 32195 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-12-17 20:27:27.739  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 2016-12-17 20:27:27.739  INFO 32195 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+
+2016-12-17 20:27:27.739  INFO 32195 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-12-17 20:27:27.783  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 2016-12-17 20:27:27.777  INFO 32195 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
+
+2016-12-17 20:27:27.777  INFO 32195 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
+2016-12-17 20:27:27.854  INFO 32195 --- [http-nio-8080-exec-1] r                                        : cmd: 'm'2016-12-17 20:27:27.853  INFO 32195 --- [nio-8080-exec-1] r                                        : cmd: 'm'
+
+2016-12-17 20:27:27.853  INFO 32195 --- [http-nio-8080-exec-1] r                                        : cmd: 'm'
+2016-12-17 20:27:27.856  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG: setDebug: JavaMail version 1.4ea2016-12-17 20:27:27.856  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG: setDebug: JavaMail version 1.4ea
+
+2016-12-17 20:27:27.856  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG: setDebug: JavaMail version 1.4ea
+2016-12-17 20:27:27.869  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 2016-12-17 20:27:27.869  INFO 32195 --- [nio-8080-exec-1] adScraper                                : testMail. sender: curiosa.globunznik@gmail.com, mailRecipient: curiosa.globunznik@gmail.com, from: vom Grausewitz
+
+2016-12-17 20:27:27.869  INFO 32195 --- [http-nio-8080-exec-1] adScraper                                : testMail. sender: curiosa.globunznik@gmail.com, mailRecipient: curiosa.globunznik@gmail.com, from: vom Grausewitz
+2016-12-17 20:27:27.929  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 2016-12-17 20:27:27.928  INFO 32195 --- [nio-8080-exec-1] adScraper                                : mail to curiosa.globunznik@gmail.comad von nowhere.com 1234,- EUR/1 m2 m2 title
+
+2016-12-17 20:27:27.928  INFO 32195 --- [http-nio-8080-exec-1] adScraper                                : mail to curiosa.globunznik@gmail.comad von nowhere.com 1234,- EUR/1 m2 m2 title
+2016-12-17 20:27:28.178  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG: getProvider() returning javax.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Sun Microsystems, Inc]2016-12-17 20:27:28.177  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG: getProvider() returning javax.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Sun Microsystems, Inc]
+
+2016-12-17 20:27:28.177  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG: getProvider() returning javax.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Sun Microsystems, Inc]
+2016-12-17 20:27:28.242  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: useEhlo true, useAuth true2016-12-17 20:27:28.241  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: useEhlo true, useAuth true
+
+2016-12-17 20:27:28.241  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: useEhlo true, useAuth true
+2016-12-17 20:27:28.243  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: useEhlo true, useAuth true2016-12-17 20:27:28.242  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: useEhlo true, useAuth true
+
+2016-12-17 20:27:28.242  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: useEhlo true, useAuth true
+2016-12-17 20:27:28.243  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: trying to connect to host "smtp.googlemail.com", port 465, isSSL false2016-12-17 20:27:28.243  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: trying to connect to host "smtp.googlemail.com", port 465, isSSL false
+
+2016-12-17 20:27:28.243  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: trying to connect to host "smtp.googlemail.com", port 465, isSSL false
+2016-12-17 20:27:29.326  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 220 smtp.googlemail.com ESMTP f3sm9263267wmf.10 - gsmtp
+2016-12-17 20:27:29.325  INFO 32195 --- [nio-8080-exec-1] r                                        : 220 smtp.googlemail.com ESMTP f3sm9263267wmf.10 - gsmtp
+
+
+2016-12-17 20:27:29.325  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 220 smtp.googlemail.com ESMTP f3sm9263267wmf.10 - gsmtp
+
+2016-12-17 20:27:29.326  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: connected to host "smtp.googlemail.com", port: 465
+2016-12-17 20:27:29.326  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: connected to host "smtp.googlemail.com", port: 465
+
+
+2016-12-17 20:27:29.326  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: connected to host "smtp.googlemail.com", port: 465
+
+2016-12-17 20:27:29.328  INFO 32195 --- [http-nio-8080-exec-1] r                                        : EHLO sp-W271ELQ
+2016-12-17 20:27:29.327  INFO 32195 --- [nio-8080-exec-1] r                                        : EHLO sp-W271ELQ
+
+
+2016-12-17 20:27:29.327  INFO 32195 --- [http-nio-8080-exec-1] r                                        : EHLO sp-W271ELQ
+
+2016-12-17 20:27:29.365  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 250-smtp.googlemail.com at your service, [217.149.166.206]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+2016-12-17 20:27:29.365  INFO 32195 --- [nio-8080-exec-1] r                                        : 250-smtp.googlemail.com at your service, [217.149.166.206]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+
+2016-12-17 20:27:29.365  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 250-smtp.googlemail.com at your service, [217.149.166.206]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+2016-12-17 20:27:29.365  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "SIZE", arg "35882577"2016-12-17 20:27:29.365  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "SIZE", arg "35882577"
+
+2016-12-17 20:27:29.365  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "SIZE", arg "35882577"
+2016-12-17 20:27:29.365  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "8BITMIME", arg ""2016-12-17 20:27:29.365  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "8BITMIME", arg ""
+
+2016-12-17 20:27:29.365  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "8BITMIME", arg ""
+2016-12-17 20:27:29.366  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "AUTH", arg "LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH"2016-12-17 20:27:29.366  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "AUTH", arg "LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH"
+
+2016-12-17 20:27:29.366  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "AUTH", arg "LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH"
+2016-12-17 20:27:29.366  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""2016-12-17 20:27:29.366  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+
+2016-12-17 20:27:29.366  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+2016-12-17 20:27:29.367  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "PIPELINING", arg ""2016-12-17 20:27:29.367  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "PIPELINING", arg ""
+
+2016-12-17 20:27:29.367  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "PIPELINING", arg ""
+2016-12-17 20:27:29.367  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "CHUNKING", arg ""2016-12-17 20:27:29.367  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "CHUNKING", arg ""
+
+2016-12-17 20:27:29.367  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "CHUNKING", arg ""
+2016-12-17 20:27:29.367  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "SMTPUTF8", arg ""2016-12-17 20:27:29.367  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "SMTPUTF8", arg ""
+
+2016-12-17 20:27:29.367  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "SMTPUTF8", arg ""
+2016-12-17 20:27:29.367  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Attempt to authenticate2016-12-17 20:27:29.367  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Attempt to authenticate
+
+2016-12-17 20:27:29.367  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Attempt to authenticate
+2016-12-17 20:27:29.368  INFO 32195 --- [http-nio-8080-exec-1] r                                        : AUTH LOGIN
+2016-12-17 20:27:29.368  INFO 32195 --- [nio-8080-exec-1] r                                        : AUTH LOGIN
+
+
+2016-12-17 20:27:29.368  INFO 32195 --- [http-nio-8080-exec-1] r                                        : AUTH LOGIN
+
+2016-12-17 20:27:29.401  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 334 VXNlcm5hbWU6
+2016-12-17 20:27:29.400  INFO 32195 --- [nio-8080-exec-1] r                                        : 334 VXNlcm5hbWU6
+
+
+2016-12-17 20:27:29.400  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 334 VXNlcm5hbWU6
+
+2016-12-17 20:27:29.401  INFO 32195 --- [http-nio-8080-exec-1] r                                        : Y3VyaW9zYS5nbG9idW56bmlrQGdtYWlsLmNvbQ==
+2016-12-17 20:27:29.401  INFO 32195 --- [nio-8080-exec-1] r                                        : Y3VyaW9zYS5nbG9idW56bmlrQGdtYWlsLmNvbQ==
+
+
+2016-12-17 20:27:29.401  INFO 32195 --- [http-nio-8080-exec-1] r                                        : Y3VyaW9zYS5nbG9idW56bmlrQGdtYWlsLmNvbQ==
+
+2016-12-17 20:27:29.435  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 334 UGFzc3dvcmQ6
+2016-12-17 20:27:29.435  INFO 32195 --- [nio-8080-exec-1] r                                        : 334 UGFzc3dvcmQ6
+
+
+2016-12-17 20:27:29.435  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 334 UGFzc3dvcmQ6
+
+2016-12-17 20:27:29.435  INFO 32195 --- [http-nio-8080-exec-1] r                                        : c3AwWW9PN2ZlNGlE
+2016-12-17 20:27:29.435  INFO 32195 --- [nio-8080-exec-1] r                                        : c3AwWW9PN2ZlNGlE
+
+
+2016-12-17 20:27:29.435  INFO 32195 --- [http-nio-8080-exec-1] r                                        : c3AwWW9PN2ZlNGlE
+
+2016-12-17 20:27:29.528  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 235 2.7.0 Accepted
+2016-12-17 20:27:29.528  INFO 32195 --- [nio-8080-exec-1] r                                        : 235 2.7.0 Accepted
+
+
+2016-12-17 20:27:29.528  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 235 2.7.0 Accepted
+
+2016-12-17 20:27:29.531  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: use8bit false2016-12-17 20:27:29.531  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: use8bit false
+
+2016-12-17 20:27:29.531  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: use8bit false
+2016-12-17 20:27:29.532  INFO 32195 --- [http-nio-8080-exec-1] r                                        : MAIL FROM:<curiosa.globunznik@gmail.com>
+2016-12-17 20:27:29.532  INFO 32195 --- [nio-8080-exec-1] r                                        : MAIL FROM:<curiosa.globunznik@gmail.com>
+
+
+2016-12-17 20:27:29.532  INFO 32195 --- [http-nio-8080-exec-1] r                                        : MAIL FROM:<curiosa.globunznik@gmail.com>
+
+2016-12-17 20:27:29.569  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 250 2.1.0 OK f3sm9263267wmf.10 - gsmtp
+2016-12-17 20:27:29.568  INFO 32195 --- [nio-8080-exec-1] r                                        : 250 2.1.0 OK f3sm9263267wmf.10 - gsmtp
+
+
+2016-12-17 20:27:29.568  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 250 2.1.0 OK f3sm9263267wmf.10 - gsmtp
+
+2016-12-17 20:27:29.569  INFO 32195 --- [http-nio-8080-exec-1] r                                        : RCPT TO:<curiosa.globunznik@gmail.com>
+2016-12-17 20:27:29.569  INFO 32195 --- [nio-8080-exec-1] r                                        : RCPT TO:<curiosa.globunznik@gmail.com>
+
+
+2016-12-17 20:27:29.569  INFO 32195 --- [http-nio-8080-exec-1] r                                        : RCPT TO:<curiosa.globunznik@gmail.com>
+
+2016-12-17 20:27:29.603  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 250 2.1.5 OK f3sm9263267wmf.10 - gsmtp
+2016-12-17 20:27:29.603  INFO 32195 --- [nio-8080-exec-1] r                                        : 250 2.1.5 OK f3sm9263267wmf.10 - gsmtp
+
+
+2016-12-17 20:27:29.603  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 250 2.1.5 OK f3sm9263267wmf.10 - gsmtp
+
+2016-12-17 20:27:29.604  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Verified Addresses2016-12-17 20:27:29.604  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Verified Addresses
+
+2016-12-17 20:27:29.604  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Verified Addresses
+2016-12-17 20:27:29.604  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP:   curiosa.globunznik@gmail.com2016-12-17 20:27:29.604  INFO 32195 --- [nio-8080-exec-1] r                                        : DEBUG SMTP:   curiosa.globunznik@gmail.com
+
+2016-12-17 20:27:29.604  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP:   curiosa.globunznik@gmail.com
+2016-12-17 20:27:29.605  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DATA
+2016-12-17 20:27:29.605  INFO 32195 --- [nio-8080-exec-1] r                                        : DATA
+
+
+2016-12-17 20:27:29.605  INFO 32195 --- [http-nio-8080-exec-1] r                                        : DATA
+
+2016-12-17 20:27:29.674  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 354  Go ahead f3sm9263267wmf.10 - gsmtp
+2016-12-17 20:27:29.673  INFO 32195 --- [nio-8080-exec-1] r                                        : 354  Go ahead f3sm9263267wmf.10 - gsmtp
+
+
+2016-12-17 20:27:29.673  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 354  Go ahead f3sm9263267wmf.10 - gsmtp
+
+2016-12-17 20:27:29.678  INFO 32195 --- [http-nio-8080-exec-1] r                                        : From: "ad von nowhere.com" <curiosa.globunznik@gmail.com>
+To: curiosa.globunznik@gmail.com
+Message-ID: <282445032.01482002848175.JavaMail.sp@sp-W271ELQ>
+Subject: 1234,- EUR/1 m2 m2 title
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_0_731161916.1482002848086"
+
+------=_Part_0_731161916.1482002848086
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<table><a href = http://www.nowhere.com>http://www.nowhere.com </a><br><b>Beschreibung:</b>niiiiiice flaht!<br><b>Preis:</b>1234,-<br><b>Groesse:</b>1 m2<br><b>Titel:</b>title<br><b>Kontakt:</b>contact person<br><b>Telefon:</b>0699-123456<br><b>Zimmer:</b>1024<br></table><br><br><b>Zusatzinfo:</b>zusatzinfo2<br><b>Kaution:</b>vieeel kaution<br><b>Zusatzinfo:</b>zusatzinfo1<br><b>Zusatzinfo:</b>zusatzinfo3<br><b>Ort:</b>somewhere<br><b>Befristung:</b>befristed oder nicht<br><b>Zustand:</b>state<br><b>Heizung:</b>hot or cold<br><b>Bautyp:</b>bautyp<br><b>detailLink:</b>http://www.nowhere.com/detail<br><b>Agent:</b>agency<br><b>timestamp:</b>Sat Dec 17 20:27:27 CET 2016<br><b>url:</b>http://www.nowhere.com<br><br><br>
+------=_Part_0_731161916.1482002848086--
+
+.
+2016-12-17 20:27:29.677  INFO 32195 --- [nio-8080-exec-1] r                                        : From: "ad von nowhere.com" <curiosa.globunznik@gmail.com>
+To: curiosa.globunznik@gmail.com
+Message-ID: <282445032.01482002848175.JavaMail.sp@sp-W271ELQ>
+Subject: 1234,- EUR/1 m2 m2 title
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_0_731161916.1482002848086"
+
+------=_Part_0_731161916.1482002848086
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<table><a href = http://www.nowhere.com>http://www.nowhere.com </a><br><b>Beschreibung:</b>niiiiiice flaht!<br><b>Preis:</b>1234,-<br><b>Groesse:</b>1 m2<br><b>Titel:</b>title<br><b>Kontakt:</b>contact person<br><b>Telefon:</b>0699-123456<br><b>Zimmer:</b>1024<br></table><br><br><b>Zusatzinfo:</b>zusatzinfo2<br><b>Kaution:</b>vieeel kaution<br><b>Zusatzinfo:</b>zusatzinfo1<br><b>Zusatzinfo:</b>zusatzinfo3<br><b>Ort:</b>somewhere<br><b>Befristung:</b>befristed oder nicht<br><b>Zustand:</b>state<br><b>Heizung:</b>hot or cold<br><b>Bautyp:</b>bautyp<br><b>detailLink:</b>http://www.nowhere.com/detail<br><b>Agent:</b>agency<br><b>timestamp:</b>Sat Dec 17 20:27:27 CET 2016<br><b>url:</b>http://www.nowhere.com<br><br><br>
+------=_Part_0_731161916.1482002848086--
+
+.
+
+
+2016-12-17 20:27:29.677  INFO 32195 --- [http-nio-8080-exec-1] r                                        : From: "ad von nowhere.com" <curiosa.globunznik@gmail.com>
+To: curiosa.globunznik@gmail.com
+Message-ID: <282445032.01482002848175.JavaMail.sp@sp-W271ELQ>
+Subject: 1234,- EUR/1 m2 m2 title
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_0_731161916.1482002848086"
+
+------=_Part_0_731161916.1482002848086
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<table><a href = http://www.nowhere.com>http://www.nowhere.com </a><br><b>Beschreibung:</b>niiiiiice flaht!<br><b>Preis:</b>1234,-<br><b>Groesse:</b>1 m2<br><b>Titel:</b>title<br><b>Kontakt:</b>contact person<br><b>Telefon:</b>0699-123456<br><b>Zimmer:</b>1024<br></table><br><br><b>Zusatzinfo:</b>zusatzinfo2<br><b>Kaution:</b>vieeel kaution<br><b>Zusatzinfo:</b>zusatzinfo1<br><b>Zusatzinfo:</b>zusatzinfo3<br><b>Ort:</b>somewhere<br><b>Befristung:</b>befristed oder nicht<br><b>Zustand:</b>state<br><b>Heizung:</b>hot or cold<br><b>Bautyp:</b>bautyp<br><b>detailLink:</b>http://www.nowhere.com/detail<br><b>Agent:</b>agency<br><b>timestamp:</b>Sat Dec 17 20:27:27 CET 2016<br><b>url:</b>http://www.nowhere.com<br><br><br>
+------=_Part_0_731161916.1482002848086--
+
+.
+
+2016-12-17 20:27:30.498  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 250 2.0.0 OK 1482002850 f3sm9263267wmf.10 - gsmtp
+2016-12-17 20:27:30.498  INFO 32195 --- [nio-8080-exec-1] r                                        : 250 2.0.0 OK 1482002850 f3sm9263267wmf.10 - gsmtp
+
+
+2016-12-17 20:27:30.498  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 250 2.0.0 OK 1482002850 f3sm9263267wmf.10 - gsmtp
+
+2016-12-17 20:27:30.499  INFO 32195 --- [http-nio-8080-exec-1] r                                        : QUIT
+2016-12-17 20:27:30.499  INFO 32195 --- [nio-8080-exec-1] r                                        : QUIT
+
+
+2016-12-17 20:27:30.499  INFO 32195 --- [http-nio-8080-exec-1] r                                        : QUIT
+
+2016-12-17 20:27:30.532  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 221 2.0.0 closing connection f3sm9263267wmf.10 - gsmtp
+2016-12-17 20:27:30.532  INFO 32195 --- [nio-8080-exec-1] r                                        : 221 2.0.0 closing connection f3sm9263267wmf.10 - gsmtp
+
+
+2016-12-17 20:27:30.532  INFO 32195 --- [http-nio-8080-exec-1] r                                        : 221 2.0.0 closing connection f3sm9263267wmf.10 - gsmtp
+
+2016-12-17 20:27:31.621  INFO 32195 --- [http-nio-8080-exec-2] r                                        : cmd: 'noCmd'2016-12-17 20:27:31.621  INFO 32195 --- [nio-8080-exec-2] r                                        : cmd: 'noCmd'
+
+2016-12-17 20:27:31.621  INFO 32195 --- [http-nio-8080-exec-2] r                                        : cmd: 'noCmd'
+2016-12-17 20:27:33.451  INFO 32195 --- [http-nio-8080-exec-4] r                                        : cmd: 'm'2016-12-17 20:27:33.450  INFO 32195 --- [nio-8080-exec-4] r                                        : cmd: 'm'
+
+2016-12-17 20:27:33.450  INFO 32195 --- [http-nio-8080-exec-4] r                                        : cmd: 'm'
+2016-12-17 20:27:33.453  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG: setDebug: JavaMail version 1.4ea2016-12-17 20:27:33.453  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG: setDebug: JavaMail version 1.4ea
+
+2016-12-17 20:27:33.453  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG: setDebug: JavaMail version 1.4ea
+2016-12-17 20:27:33.454  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 2016-12-17 20:27:33.454  INFO 32195 --- [nio-8080-exec-4] adScraper                                : testMail. sender: curiosa.globunznik@gmail.com, mailRecipient: curiosa.globunznik@gmail.com, from: vom Grausewitz
+
+2016-12-17 20:27:33.454  INFO 32195 --- [http-nio-8080-exec-4] adScraper                                : testMail. sender: curiosa.globunznik@gmail.com, mailRecipient: curiosa.globunznik@gmail.com, from: vom Grausewitz
+2016-12-17 20:27:33.455  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 2016-12-17 20:27:33.455  INFO 32195 --- [nio-8080-exec-4] adScraper                                : mail to curiosa.globunznik@gmail.comad von nowhere.com 1234,- EUR/1 m2 m2 title
+
+2016-12-17 20:27:33.455  INFO 32195 --- [http-nio-8080-exec-4] adScraper                                : mail to curiosa.globunznik@gmail.comad von nowhere.com 1234,- EUR/1 m2 m2 title
+2016-12-17 20:27:33.458  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG: getProvider() returning javax.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Sun Microsystems, Inc]2016-12-17 20:27:33.458  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG: getProvider() returning javax.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Sun Microsystems, Inc]
+
+2016-12-17 20:27:33.458  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG: getProvider() returning javax.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Sun Microsystems, Inc]
+2016-12-17 20:27:33.458  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: useEhlo true, useAuth true2016-12-17 20:27:33.458  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG SMTP: useEhlo true, useAuth true
+
+2016-12-17 20:27:33.458  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: useEhlo true, useAuth true
+2016-12-17 20:27:33.459  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: useEhlo true, useAuth true2016-12-17 20:27:33.459  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG SMTP: useEhlo true, useAuth true
+
+2016-12-17 20:27:33.459  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: useEhlo true, useAuth true
+2016-12-17 20:27:33.459  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: trying to connect to host "smtp.googlemail.com", port 465, isSSL false2016-12-17 20:27:33.459  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG SMTP: trying to connect to host "smtp.googlemail.com", port 465, isSSL false
+
+2016-12-17 20:27:33.459  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: trying to connect to host "smtp.googlemail.com", port 465, isSSL false
+2016-12-17 20:27:33.647  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 220 smtp.googlemail.com ESMTP q7sm12683091wjh.9 - gsmtp
+2016-12-17 20:27:33.647  INFO 32195 --- [nio-8080-exec-4] r                                        : 220 smtp.googlemail.com ESMTP q7sm12683091wjh.9 - gsmtp
+
+
+2016-12-17 20:27:33.647  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 220 smtp.googlemail.com ESMTP q7sm12683091wjh.9 - gsmtp
+
+2016-12-17 20:27:33.648  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: connected to host "smtp.googlemail.com", port: 465
+2016-12-17 20:27:33.648  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG SMTP: connected to host "smtp.googlemail.com", port: 465
+
+
+2016-12-17 20:27:33.648  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: connected to host "smtp.googlemail.com", port: 465
+
+2016-12-17 20:27:33.648  INFO 32195 --- [http-nio-8080-exec-4] r                                        : EHLO sp-W271ELQ
+2016-12-17 20:27:33.648  INFO 32195 --- [nio-8080-exec-4] r                                        : EHLO sp-W271ELQ
+
+
+2016-12-17 20:27:33.648  INFO 32195 --- [http-nio-8080-exec-4] r                                        : EHLO sp-W271ELQ
+
+2016-12-17 20:27:33.685  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 250-smtp.googlemail.com at your service, [217.149.166.206]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+2016-12-17 20:27:33.684  INFO 32195 --- [nio-8080-exec-4] r                                        : 250-smtp.googlemail.com at your service, [217.149.166.206]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+
+2016-12-17 20:27:33.684  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 250-smtp.googlemail.com at your service, [217.149.166.206]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+2016-12-17 20:27:33.685  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "SIZE", arg "35882577"2016-12-17 20:27:33.685  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "SIZE", arg "35882577"
+
+2016-12-17 20:27:33.685  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "SIZE", arg "35882577"
+2016-12-17 20:27:33.685  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "8BITMIME", arg ""2016-12-17 20:27:33.685  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "8BITMIME", arg ""
+
+2016-12-17 20:27:33.685  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "8BITMIME", arg ""
+2016-12-17 20:27:33.685  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "AUTH", arg "LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH"2016-12-17 20:27:33.685  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "AUTH", arg "LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH"
+
+2016-12-17 20:27:33.685  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "AUTH", arg "LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH"
+2016-12-17 20:27:33.685  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""2016-12-17 20:27:33.685  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+
+2016-12-17 20:27:33.685  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+2016-12-17 20:27:33.685  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "PIPELINING", arg ""2016-12-17 20:27:33.685  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "PIPELINING", arg ""
+
+2016-12-17 20:27:33.685  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "PIPELINING", arg ""
+2016-12-17 20:27:33.686  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "CHUNKING", arg ""2016-12-17 20:27:33.686  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "CHUNKING", arg ""
+
+2016-12-17 20:27:33.686  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "CHUNKING", arg ""
+2016-12-17 20:27:33.686  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "SMTPUTF8", arg ""2016-12-17 20:27:33.686  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "SMTPUTF8", arg ""
+
+2016-12-17 20:27:33.686  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Found extension "SMTPUTF8", arg ""
+2016-12-17 20:27:33.686  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Attempt to authenticate2016-12-17 20:27:33.686  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG SMTP: Attempt to authenticate
+
+2016-12-17 20:27:33.686  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Attempt to authenticate
+2016-12-17 20:27:33.686  INFO 32195 --- [http-nio-8080-exec-4] r                                        : AUTH LOGIN
+2016-12-17 20:27:33.686  INFO 32195 --- [nio-8080-exec-4] r                                        : AUTH LOGIN
+
+
+2016-12-17 20:27:33.686  INFO 32195 --- [http-nio-8080-exec-4] r                                        : AUTH LOGIN
+
+2016-12-17 20:27:33.719  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 334 VXNlcm5hbWU6
+2016-12-17 20:27:33.718  INFO 32195 --- [nio-8080-exec-4] r                                        : 334 VXNlcm5hbWU6
+
+
+2016-12-17 20:27:33.718  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 334 VXNlcm5hbWU6
+
+2016-12-17 20:27:33.719  INFO 32195 --- [http-nio-8080-exec-4] r                                        : Y3VyaW9zYS5nbG9idW56bmlrQGdtYWlsLmNvbQ==
+2016-12-17 20:27:33.719  INFO 32195 --- [nio-8080-exec-4] r                                        : Y3VyaW9zYS5nbG9idW56bmlrQGdtYWlsLmNvbQ==
+
+
+2016-12-17 20:27:33.719  INFO 32195 --- [http-nio-8080-exec-4] r                                        : Y3VyaW9zYS5nbG9idW56bmlrQGdtYWlsLmNvbQ==
+
+2016-12-17 20:27:33.752  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 334 UGFzc3dvcmQ6
+2016-12-17 20:27:33.752  INFO 32195 --- [nio-8080-exec-4] r                                        : 334 UGFzc3dvcmQ6
+
+
+2016-12-17 20:27:33.752  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 334 UGFzc3dvcmQ6
+
+2016-12-17 20:27:33.752  INFO 32195 --- [http-nio-8080-exec-4] r                                        : c3AwWW9PN2ZlNGlE
+2016-12-17 20:27:33.752  INFO 32195 --- [nio-8080-exec-4] r                                        : c3AwWW9PN2ZlNGlE
+
+
+2016-12-17 20:27:33.752  INFO 32195 --- [http-nio-8080-exec-4] r                                        : c3AwWW9PN2ZlNGlE
+
+2016-12-17 20:27:33.879  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 235 2.7.0 Accepted
+2016-12-17 20:27:33.879  INFO 32195 --- [nio-8080-exec-4] r                                        : 235 2.7.0 Accepted
+
+
+2016-12-17 20:27:33.879  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 235 2.7.0 Accepted
+
+2016-12-17 20:27:33.879  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: use8bit false2016-12-17 20:27:33.879  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG SMTP: use8bit false
+
+2016-12-17 20:27:33.879  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: use8bit false
+2016-12-17 20:27:33.880  INFO 32195 --- [http-nio-8080-exec-4] r                                        : MAIL FROM:<curiosa.globunznik@gmail.com>
+2016-12-17 20:27:33.879  INFO 32195 --- [nio-8080-exec-4] r                                        : MAIL FROM:<curiosa.globunznik@gmail.com>
+
+
+2016-12-17 20:27:33.879  INFO 32195 --- [http-nio-8080-exec-4] r                                        : MAIL FROM:<curiosa.globunznik@gmail.com>
+
+2016-12-17 20:27:33.915  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 250 2.1.0 OK q7sm12683091wjh.9 - gsmtp
+2016-12-17 20:27:33.914  INFO 32195 --- [nio-8080-exec-4] r                                        : 250 2.1.0 OK q7sm12683091wjh.9 - gsmtp
+
+
+2016-12-17 20:27:33.914  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 250 2.1.0 OK q7sm12683091wjh.9 - gsmtp
+
+2016-12-17 20:27:33.915  INFO 32195 --- [http-nio-8080-exec-4] r                                        : RCPT TO:<curiosa.globunznik@gmail.com>
+2016-12-17 20:27:33.915  INFO 32195 --- [nio-8080-exec-4] r                                        : RCPT TO:<curiosa.globunznik@gmail.com>
+
+
+2016-12-17 20:27:33.915  INFO 32195 --- [http-nio-8080-exec-4] r                                        : RCPT TO:<curiosa.globunznik@gmail.com>
+
+2016-12-17 20:27:33.948  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 250 2.1.5 OK q7sm12683091wjh.9 - gsmtp
+2016-12-17 20:27:33.948  INFO 32195 --- [nio-8080-exec-4] r                                        : 250 2.1.5 OK q7sm12683091wjh.9 - gsmtp
+
+
+2016-12-17 20:27:33.948  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 250 2.1.5 OK q7sm12683091wjh.9 - gsmtp
+
+2016-12-17 20:27:33.948  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Verified Addresses2016-12-17 20:27:33.948  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG SMTP: Verified Addresses
+
+2016-12-17 20:27:33.948  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP: Verified Addresses
+2016-12-17 20:27:33.948  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP:   curiosa.globunznik@gmail.com2016-12-17 20:27:33.948  INFO 32195 --- [nio-8080-exec-4] r                                        : DEBUG SMTP:   curiosa.globunznik@gmail.com
+
+2016-12-17 20:27:33.948  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DEBUG SMTP:   curiosa.globunznik@gmail.com
+2016-12-17 20:27:33.949  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DATA
+2016-12-17 20:27:33.948  INFO 32195 --- [nio-8080-exec-4] r                                        : DATA
+
+
+2016-12-17 20:27:33.948  INFO 32195 --- [http-nio-8080-exec-4] r                                        : DATA
+
+2016-12-17 20:27:34.025  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 354  Go ahead q7sm12683091wjh.9 - gsmtp
+2016-12-17 20:27:34.021  INFO 32195 --- [nio-8080-exec-4] r                                        : 354  Go ahead q7sm12683091wjh.9 - gsmtp
+
+
+2016-12-17 20:27:34.021  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 354  Go ahead q7sm12683091wjh.9 - gsmtp
+
+2016-12-17 20:27:34.027  INFO 32195 --- [http-nio-8080-exec-4] r                                        : From: "ad von nowhere.com" <curiosa.globunznik@gmail.com>
+To: curiosa.globunznik@gmail.com
+Message-ID: <2018044839.11482002853457.JavaMail.sp@sp-W271ELQ>
+Subject: 1234,- EUR/1 m2 m2 title
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_1_1155856254.1482002853456"
+
+------=_Part_1_1155856254.1482002853456
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<table><a href = http://www.nowhere.com>http://www.nowhere.com </a><br><b>Beschreibung:</b>niiiiiice flaht!<br><b>Preis:</b>1234,-<br><b>Groesse:</b>1 m2<br><b>Titel:</b>title<br><b>Kontakt:</b>contact person<br><b>Telefon:</b>0699-123456<br><b>Zimmer:</b>1024<br></table><br><br><b>Zusatzinfo:</b>zusatzinfo2<br><b>Kaution:</b>vieeel kaution<br><b>Zusatzinfo:</b>zusatzinfo1<br><b>Zusatzinfo:</b>zusatzinfo3<br><b>Ort:</b>somewhere<br><b>Befristung:</b>befristed oder nicht<br><b>Zustand:</b>state<br><b>Heizung:</b>hot or cold<br><b>Bautyp:</b>bautyp<br><b>detailLink:</b>http://www.nowhere.com/detail<br><b>Agent:</b>agency<br><b>timestamp:</b>Sat Dec 17 20:27:33 CET 2016<br><b>url:</b>http://www.nowhere.com<br><br><br>
+------=_Part_1_1155856254.1482002853456--
+
+.
+2016-12-17 20:27:34.027  INFO 32195 --- [nio-8080-exec-4] r                                        : From: "ad von nowhere.com" <curiosa.globunznik@gmail.com>
+To: curiosa.globunznik@gmail.com
+Message-ID: <2018044839.11482002853457.JavaMail.sp@sp-W271ELQ>
+Subject: 1234,- EUR/1 m2 m2 title
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_1_1155856254.1482002853456"
+
+------=_Part_1_1155856254.1482002853456
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<table><a href = http://www.nowhere.com>http://www.nowhere.com </a><br><b>Beschreibung:</b>niiiiiice flaht!<br><b>Preis:</b>1234,-<br><b>Groesse:</b>1 m2<br><b>Titel:</b>title<br><b>Kontakt:</b>contact person<br><b>Telefon:</b>0699-123456<br><b>Zimmer:</b>1024<br></table><br><br><b>Zusatzinfo:</b>zusatzinfo2<br><b>Kaution:</b>vieeel kaution<br><b>Zusatzinfo:</b>zusatzinfo1<br><b>Zusatzinfo:</b>zusatzinfo3<br><b>Ort:</b>somewhere<br><b>Befristung:</b>befristed oder nicht<br><b>Zustand:</b>state<br><b>Heizung:</b>hot or cold<br><b>Bautyp:</b>bautyp<br><b>detailLink:</b>http://www.nowhere.com/detail<br><b>Agent:</b>agency<br><b>timestamp:</b>Sat Dec 17 20:27:33 CET 2016<br><b>url:</b>http://www.nowhere.com<br><br><br>
+------=_Part_1_1155856254.1482002853456--
+
+.
+
+
+2016-12-17 20:27:34.027  INFO 32195 --- [http-nio-8080-exec-4] r                                        : From: "ad von nowhere.com" <curiosa.globunznik@gmail.com>
+To: curiosa.globunznik@gmail.com
+Message-ID: <2018044839.11482002853457.JavaMail.sp@sp-W271ELQ>
+Subject: 1234,- EUR/1 m2 m2 title
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_1_1155856254.1482002853456"
+
+------=_Part_1_1155856254.1482002853456
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<table><a href = http://www.nowhere.com>http://www.nowhere.com </a><br><b>Beschreibung:</b>niiiiiice flaht!<br><b>Preis:</b>1234,-<br><b>Groesse:</b>1 m2<br><b>Titel:</b>title<br><b>Kontakt:</b>contact person<br><b>Telefon:</b>0699-123456<br><b>Zimmer:</b>1024<br></table><br><br><b>Zusatzinfo:</b>zusatzinfo2<br><b>Kaution:</b>vieeel kaution<br><b>Zusatzinfo:</b>zusatzinfo1<br><b>Zusatzinfo:</b>zusatzinfo3<br><b>Ort:</b>somewhere<br><b>Befristung:</b>befristed oder nicht<br><b>Zustand:</b>state<br><b>Heizung:</b>hot or cold<br><b>Bautyp:</b>bautyp<br><b>detailLink:</b>http://www.nowhere.com/detail<br><b>Agent:</b>agency<br><b>timestamp:</b>Sat Dec 17 20:27:33 CET 2016<br><b>url:</b>http://www.nowhere.com<br><br><br>
+------=_Part_1_1155856254.1482002853456--
+
+.
+
+2016-12-17 20:27:34.810  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 250 2.0.0 OK 1482002854 q7sm12683091wjh.9 - gsmtp
+2016-12-17 20:27:34.809  INFO 32195 --- [nio-8080-exec-4] r                                        : 250 2.0.0 OK 1482002854 q7sm12683091wjh.9 - gsmtp
+
+
+2016-12-17 20:27:34.809  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 250 2.0.0 OK 1482002854 q7sm12683091wjh.9 - gsmtp
+
+2016-12-17 20:27:34.810  INFO 32195 --- [http-nio-8080-exec-4] r                                        : QUIT
+2016-12-17 20:27:34.810  INFO 32195 --- [nio-8080-exec-4] r                                        : QUIT
+
+
+2016-12-17 20:27:34.810  INFO 32195 --- [http-nio-8080-exec-4] r                                        : QUIT
+
+2016-12-17 20:27:34.843  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 221 2.0.0 closing connection q7sm12683091wjh.9 - gsmtp
+2016-12-17 20:27:34.843  INFO 32195 --- [nio-8080-exec-4] r                                        : 221 2.0.0 closing connection q7sm12683091wjh.9 - gsmtp
+
+
+2016-12-17 20:27:34.843  INFO 32195 --- [http-nio-8080-exec-4] r                                        : 221 2.0.0 closing connection q7sm12683091wjh.9 - gsmtp
+
+2016-12-17 20:27:34.935  INFO 32195 --- [http-nio-8080-exec-5] r                                        : cmd: 'noCmd'2016-12-17 20:27:34.935  INFO 32195 --- [nio-8080-exec-5] r                                        : cmd: 'noCmd'
+
+2016-12-17 20:27:34.935  INFO 32195 --- [http-nio-8080-exec-5] r                                        : cmd: 'noCmd'
+2016-12-17 20:27:38.644  INFO 32195 --- [http-nio-8080-exec-7] r                                        : cmd: 'l'2016-12-17 20:27:38.644  INFO 32195 --- [nio-8080-exec-7] r                                        : cmd: 'l'
+
+2016-12-17 20:27:38.644  INFO 32195 --- [http-nio-8080-exec-7] r                                        : cmd: 'l'
+2016-12-17 20:27:38.831  INFO 32195 --- [http-nio-8080-exec-8] r                                        : cmd: 'noCmd'2016-12-17 20:27:38.830  INFO 32195 --- [nio-8080-exec-8] r                                        : cmd: 'noCmd'
+
+2016-12-17 20:27:38.830  INFO 32195 --- [http-nio-8080-exec-8] r                                        : cmd: 'noCmd'
+2016-12-17 20:29:20.662  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:29:20.661  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:29:20.661  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:29:20.664  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:29:20.664  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:29:20.664  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:29:20.665  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:29:20.665  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:29:20.665  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:29:20.755  INFO 32195 --- [pool-2-thread-1] r                                        : 2016-12-17 20:29:20.753  INFO 32195 --- [pool-2-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:29:20.753  INFO 32195 --- [pool-2-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:29:23.795  INFO 32195 --- [pool-2-thread-1] r                                        : 2016-12-17 20:29:23.795  INFO 32195 --- [pool-2-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:29:23.795  INFO 32195 --- [pool-2-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:29:23.869  INFO 32195 --- [pool-2-thread-1] r                                        : 2016-12-17 20:29:23.869  INFO 32195 --- [pool-2-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:29:23.869  INFO 32195 --- [pool-2-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:29:23.872  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:29:23.870  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:29:23
+
+2016-12-17 20:29:23.870  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:29:23
+2016-12-17 20:31:20.631  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:31:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:31:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:31:20.635  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:31:20.635  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:31:20.635  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:31:20.636  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:31:20.635  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:31:20.635  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:31:20.645  INFO 32195 --- [pool-4-thread-1] r                                        : 2016-12-17 20:31:20.644  INFO 32195 --- [pool-4-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:31:20.644  INFO 32195 --- [pool-4-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:31:22.494  INFO 32195 --- [pool-4-thread-1] r                                        : 2016-12-17 20:31:22.494  INFO 32195 --- [pool-4-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:31:22.494  INFO 32195 --- [pool-4-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:31:22.502  INFO 32195 --- [pool-4-thread-1] r                                        : 2016-12-17 20:31:22.502  INFO 32195 --- [pool-4-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:31:22.502  INFO 32195 --- [pool-4-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:31:22.502  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:31:22.502  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:31:22
+
+2016-12-17 20:31:22.502  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:31:22
+2016-12-17 20:33:20.629  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:33:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:33:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:33:20.632  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:33:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:33:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:33:20.633  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:33:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:33:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:33:20.636  INFO 32195 --- [pool-6-thread-1] r                                        : 2016-12-17 20:33:20.636  INFO 32195 --- [pool-6-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:33:20.636  INFO 32195 --- [pool-6-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:33:22.415  INFO 32195 --- [pool-6-thread-1] r                                        : 2016-12-17 20:33:22.412  INFO 32195 --- [pool-6-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:33:22.412  INFO 32195 --- [pool-6-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:33:22.443  INFO 32195 --- [pool-6-thread-1] r                                        : 2016-12-17 20:33:22.443  INFO 32195 --- [pool-6-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:33:22.443  INFO 32195 --- [pool-6-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:33:22.444  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:33:22.444  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:33:22
+
+2016-12-17 20:33:22.444  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:33:22
+2016-12-17 20:35:20.629  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:35:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:35:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:35:20.632  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:35:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:35:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:35:20.632  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:35:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:35:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:35:20.645  INFO 32195 --- [pool-8-thread-1] r                                        : 2016-12-17 20:35:20.645  INFO 32195 --- [pool-8-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:35:20.645  INFO 32195 --- [pool-8-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:35:22.438  INFO 32195 --- [pool-8-thread-1] r                                        : 2016-12-17 20:35:22.438  INFO 32195 --- [pool-8-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:35:22.438  INFO 32195 --- [pool-8-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:35:22.448  INFO 32195 --- [pool-8-thread-1] r                                        : 2016-12-17 20:35:22.448  INFO 32195 --- [pool-8-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:35:22.448  INFO 32195 --- [pool-8-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:35:22.448  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:35:22.448  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:35:22
+
+2016-12-17 20:35:22.448  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:35:22
+2016-12-17 20:37:20.629  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:37:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:37:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:37:20.632  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:37:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:37:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:37:20.632  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:37:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:37:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:37:20.635  INFO 32195 --- [pool-10-thread-1] r                                        : 2016-12-17 20:37:20.635  INFO 32195 --- [ool-10-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:37:20.635  INFO 32195 --- [pool-10-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:37:22.432  INFO 32195 --- [pool-10-thread-1] r                                        : 2016-12-17 20:37:22.431  INFO 32195 --- [ool-10-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:37:22.431  INFO 32195 --- [pool-10-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:37:22.437  INFO 32195 --- [pool-10-thread-1] r                                        : 2016-12-17 20:37:22.437  INFO 32195 --- [ool-10-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:37:22.437  INFO 32195 --- [pool-10-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:37:22.437  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:37:22.437  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:37:22
+
+2016-12-17 20:37:22.437  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:37:22
+2016-12-17 20:39:20.630  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:39:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:39:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:39:20.632  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:39:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:39:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:39:20.633  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:39:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:39:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:39:20.639  INFO 32195 --- [pool-12-thread-1] r                                        : 2016-12-17 20:39:20.639  INFO 32195 --- [ool-12-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:39:20.639  INFO 32195 --- [pool-12-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:39:22.421  INFO 32195 --- [pool-12-thread-1] r                                        : 2016-12-17 20:39:22.416  INFO 32195 --- [ool-12-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:39:22.416  INFO 32195 --- [pool-12-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:39:22.427  INFO 32195 --- [pool-12-thread-1] r                                        : 2016-12-17 20:39:22.427  INFO 32195 --- [ool-12-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:39:22.427  INFO 32195 --- [pool-12-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:39:22.427  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:39:22.427  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:39:22
+
+2016-12-17 20:39:22.427  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:39:22
+2016-12-17 20:41:20.629  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:41:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:41:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:41:20.632  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:41:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:41:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:41:20.632  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:41:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:41:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:41:20.636  INFO 32195 --- [pool-14-thread-1] r                                        : 2016-12-17 20:41:20.635  INFO 32195 --- [ool-14-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:41:20.635  INFO 32195 --- [pool-14-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:41:22.194  INFO 32195 --- [pool-14-thread-1] r                                        : 2016-12-17 20:41:22.194  INFO 32195 --- [ool-14-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:41:22.194  INFO 32195 --- [pool-14-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:41:22.207  INFO 32195 --- [pool-14-thread-1] r                                        : 2016-12-17 20:41:22.207  INFO 32195 --- [ool-14-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:41:22.207  INFO 32195 --- [pool-14-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:41:22.207  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:41:22.207  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:41:22
+
+2016-12-17 20:41:22.207  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:41:22
+2016-12-17 20:43:20.629  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:43:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:43:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:43:20.631  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:43:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:43:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:43:20.632  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:43:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:43:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:43:20.635  INFO 32195 --- [pool-16-thread-1] r                                        : 2016-12-17 20:43:20.634  INFO 32195 --- [ool-16-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:43:20.634  INFO 32195 --- [pool-16-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:43:22.260  INFO 32195 --- [pool-16-thread-1] r                                        : 2016-12-17 20:43:22.259  INFO 32195 --- [ool-16-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:43:22.259  INFO 32195 --- [pool-16-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:43:22.264  INFO 32195 --- [pool-16-thread-1] r                                        : 2016-12-17 20:43:22.264  INFO 32195 --- [ool-16-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:43:22.264  INFO 32195 --- [pool-16-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:43:22.264  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:43:22.264  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:43:22
+
+2016-12-17 20:43:22.264  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:43:22
+2016-12-17 20:45:20.629  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:45:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:45:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:45:20.632  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:45:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:45:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:45:20.632  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:45:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:45:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:45:20.636  INFO 32195 --- [pool-18-thread-1] r                                        : 2016-12-17 20:45:20.636  INFO 32195 --- [ool-18-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:45:20.636  INFO 32195 --- [pool-18-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:45:22.772  INFO 32195 --- [pool-18-thread-1] r                                        : 2016-12-17 20:45:22.772  INFO 32195 --- [ool-18-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:45:22.772  INFO 32195 --- [pool-18-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:45:22.788  INFO 32195 --- [pool-18-thread-1] r                                        : 2016-12-17 20:45:22.782  INFO 32195 --- [ool-18-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:45:22.782  INFO 32195 --- [pool-18-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:45:22.789  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:45:22.789  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:45:22
+
+2016-12-17 20:45:22.789  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:45:22
+2016-12-17 20:47:20.630  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:47:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:47:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:47:20.634  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:47:20.633  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:47:20.633  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:47:20.634  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:47:20.634  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:47:20.634  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:47:20.641  INFO 32195 --- [pool-20-thread-1] r                                        : 2016-12-17 20:47:20.641  INFO 32195 --- [ool-20-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:47:20.641  INFO 32195 --- [pool-20-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:47:23.031  INFO 32195 --- [pool-20-thread-1] r                                        : 2016-12-17 20:47:23.028  INFO 32195 --- [ool-20-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:47:23.028  INFO 32195 --- [pool-20-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:47:23.039  INFO 32195 --- [pool-20-thread-1] r                                        : 2016-12-17 20:47:23.039  INFO 32195 --- [ool-20-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:47:23.039  INFO 32195 --- [pool-20-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:47:23.039  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:47:23.039  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:47:23
+
+2016-12-17 20:47:23.039  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:47:23
+2016-12-17 20:49:20.629  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:49:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:49:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:49:20.632  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:49:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:49:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:49:20.632  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:49:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:49:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:49:20.635  INFO 32195 --- [pool-22-thread-1] r                                        : 2016-12-17 20:49:20.635  INFO 32195 --- [ool-22-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:49:20.635  INFO 32195 --- [pool-22-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:49:22.505  INFO 32195 --- [pool-22-thread-1] r                                        : 2016-12-17 20:49:22.505  INFO 32195 --- [ool-22-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:49:22.505  INFO 32195 --- [pool-22-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:49:22.578  INFO 32195 --- [pool-22-thread-1] r                                        : 2016-12-17 20:49:22.578  INFO 32195 --- [ool-22-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:49:22.578  INFO 32195 --- [pool-22-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:49:22.578  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:49:22.578  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:49:22
+
+2016-12-17 20:49:22.578  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:49:22
+2016-12-17 20:51:20.629  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:51:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:51:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:51:20.631  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:51:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:51:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:51:20.631  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:51:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:51:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:51:20.641  INFO 32195 --- [pool-24-thread-1] r                                        : 2016-12-17 20:51:20.641  INFO 32195 --- [ool-24-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:51:20.641  INFO 32195 --- [pool-24-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:51:21.931  INFO 32195 --- [pool-24-thread-1] r                                        : 2016-12-17 20:51:21.930  INFO 32195 --- [ool-24-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:51:21.930  INFO 32195 --- [pool-24-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:51:21.941  INFO 32195 --- [pool-24-thread-1] r                                        : 2016-12-17 20:51:21.941  INFO 32195 --- [ool-24-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:51:21.941  INFO 32195 --- [pool-24-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:51:21.941  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:51:21.941  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:51:21
+
+2016-12-17 20:51:21.941  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:51:21
+2016-12-17 20:53:20.628  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:53:20.628  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:53:20.628  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:53:20.631  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:53:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:53:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:53:20.631  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:53:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:53:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:53:20.633  INFO 32195 --- [pool-26-thread-1] r                                        : 2016-12-17 20:53:20.633  INFO 32195 --- [ool-26-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:53:20.633  INFO 32195 --- [pool-26-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:53:22.634  INFO 32195 --- [pool-26-thread-1] r                                        : 2016-12-17 20:53:22.633  INFO 32195 --- [ool-26-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:53:22.633  INFO 32195 --- [pool-26-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:53:22.638  INFO 32195 --- [pool-26-thread-1] r                                        : 2016-12-17 20:53:22.638  INFO 32195 --- [ool-26-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:53:22.638  INFO 32195 --- [pool-26-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:53:22.639  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:53:22.639  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:53:22
+
+2016-12-17 20:53:22.639  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:53:22
+2016-12-17 20:55:20.629  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:55:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:55:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:55:20.631  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:55:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:55:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:55:20.632  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:55:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:55:20.632  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:55:20.638  INFO 32195 --- [pool-28-thread-1] r                                        : 2016-12-17 20:55:20.637  INFO 32195 --- [ool-28-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:55:20.637  INFO 32195 --- [pool-28-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:55:22.838  INFO 32195 --- [pool-28-thread-1] r                                        : 2016-12-17 20:55:22.838  INFO 32195 --- [ool-28-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:55:22.838  INFO 32195 --- [pool-28-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:55:22.842  INFO 32195 --- [pool-28-thread-1] r                                        : 2016-12-17 20:55:22.842  INFO 32195 --- [ool-28-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:55:22.842  INFO 32195 --- [pool-28-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:55:22.842  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:55:22.842  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:55:22
+
+2016-12-17 20:55:22.842  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:55:22
+2016-12-17 20:57:20.631  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:57:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:57:20.631  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:57:20.633  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:57:20.633  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:57:20.633  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:57:20.633  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:57:20.633  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:57:20.633  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:57:20.636  INFO 32195 --- [pool-30-thread-1] r                                        : 2016-12-17 20:57:20.636  INFO 32195 --- [ool-30-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:57:20.636  INFO 32195 --- [pool-30-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:57:22.360  INFO 32195 --- [pool-30-thread-1] r                                        : 2016-12-17 20:57:22.360  INFO 32195 --- [ool-30-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:57:22.360  INFO 32195 --- [pool-30-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:57:22.369  INFO 32195 --- [pool-30-thread-1] r                                        : 2016-12-17 20:57:22.369  INFO 32195 --- [ool-30-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:57:22.369  INFO 32195 --- [pool-30-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:57:22.370  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:57:22.370  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:57:22
+
+2016-12-17 20:57:22.370  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:57:22
+2016-12-17 20:59:20.635  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:59:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:59:20.629  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:59:20.640  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:59:20.640  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:59:20.640  INFO 32195 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:59:20.641  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:59:20.640  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:59:20.640  INFO 32195 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:59:20.649  INFO 32195 --- [pool-32-thread-1] r                                        : 2016-12-17 20:59:20.648  INFO 32195 --- [ool-32-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:59:20.648  INFO 32195 --- [pool-32-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:59:22.818  INFO 32195 --- [pool-32-thread-1] r                                        : 2016-12-17 20:59:22.818  INFO 32195 --- [ool-32-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:59:22.818  INFO 32195 --- [pool-32-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:59:22.823  INFO 32195 --- [pool-32-thread-1] r                                        : 2016-12-17 20:59:22.822  INFO 32195 --- [ool-32-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:59:22.822  INFO 32195 --- [pool-32-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:59:22.823  INFO 32195 --- [pool-1-thread-1] r                                        : 2016-12-17 20:59:22.823  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:59:22
+
+2016-12-17 20:59:22.823  INFO 32195 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:59:22
+2016-12-17 20:59:31.387  INFO 32195 --- [Thread-5] r                                        : 2016-12-17 20:59:31.386  INFO 32195 --- [       Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ec03b3: startup date [Sat Dec 17 20:27:10 CET 2016]; root of context hierarchy
+
+2016-12-17 20:59:31.386  INFO 32195 --- [Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ec03b3: startup date [Sat Dec 17 20:27:10 CET 2016]; root of context hierarchy
+2016-12-17 20:59:31.396  INFO 32195 --- [Thread-5] r                                        : 2016-12-17 20:59:31.394  INFO 32195 --- [       Thread-5] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+
+2016-12-17 20:59:31.394  INFO 32195 --- [Thread-5] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-12-17 20:59:31.398  INFO 32195 --- [Thread-5] r                                        : 2016-12-17 20:59:31.398  INFO 32195 --- [       Thread-5] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:350}] to 127.0.0.1:27017 because the pool has been closed.
+
+2016-12-17 20:59:31.398  INFO 32195 --- [Thread-5] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:350}] to 127.0.0.1:27017 because the pool has been closed.
+2016-12-17 20:59:31.736  INFO 32195 --- [restartedMain] r                                        :   .   ____          _            __ _ _2016-12-17 20:59:31.736  INFO 32195 --- [  restartedMain] r                                        :   .   ____          _            __ _ _
+
+2016-12-17 20:59:31.736  INFO 32195 --- [restartedMain] r                                        :   .   ____          _            __ _ _
+2016-12-17 20:59:31.736  INFO 32195 --- [restartedMain] r                                        :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \2016-12-17 20:59:31.736  INFO 32195 --- [  restartedMain] r                                        :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+
+2016-12-17 20:59:31.736  INFO 32195 --- [restartedMain] r                                        :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2016-12-17 20:59:31.736  INFO 32195 --- [restartedMain] r                                        : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \2016-12-17 20:59:31.736  INFO 32195 --- [  restartedMain] r                                        : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+
+2016-12-17 20:59:31.736  INFO 32195 --- [restartedMain] r                                        : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2016-12-17 20:59:31.736  INFO 32195 --- [restartedMain] r                                        :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )2016-12-17 20:59:31.736  INFO 32195 --- [  restartedMain] r                                        :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+
+2016-12-17 20:59:31.736  INFO 32195 --- [restartedMain] r                                        :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2016-12-17 20:59:31.736  INFO 32195 --- [restartedMain] r                                        :   '  |____| .__|_| |_|_| |_\__, | / / / /2016-12-17 20:59:31.736  INFO 32195 --- [  restartedMain] r                                        :   '  |____| .__|_| |_|_| |_\__, | / / / /
+
+2016-12-17 20:59:31.736  INFO 32195 --- [restartedMain] r                                        :   '  |____| .__|_| |_|_| |_\__, | / / / /
+2016-12-17 20:59:31.736  INFO 32195 --- [restartedMain] r                                        :  =========|_|==============|___/=/_/_/_/2016-12-17 20:59:31.736  INFO 32195 --- [  restartedMain] r                                        :  =========|_|==============|___/=/_/_/_/
+
+2016-12-17 20:59:31.736  INFO 32195 --- [restartedMain] r                                        :  =========|_|==============|___/=/_/_/_/
+2016-12-17 20:59:31.737  INFO 32195 --- [restartedMain] r                                        :  :: Spring Boot ::        (v1.4.2.RELEASE)2016-12-17 20:59:31.736  INFO 32195 --- [  restartedMain] r                                        :  :: Spring Boot ::        (v1.4.2.RELEASE)
+
+2016-12-17 20:59:31.736  INFO 32195 --- [restartedMain] r                                        :  :: Spring Boot ::        (v1.4.2.RELEASE)
+2016-12-17 20:59:31.744  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:31.744  INFO 32195 --- [  restartedMain] app.Application                          : Starting Application on sp-W271ELQ with PID 32195 (/home/sp/dev/tool/eclipse/wsspring/adsniffer/app/target/classes started by sp in /home/sp/dev/tool/eclipse/wsspring/adsniffer/app)
+
+2016-12-17 20:59:31.744  INFO 32195 --- [restartedMain] app.Application                          : Starting Application on sp-W271ELQ with PID 32195 (/home/sp/dev/tool/eclipse/wsspring/adsniffer/app/target/classes started by sp in /home/sp/dev/tool/eclipse/wsspring/adsniffer/app)
+2016-12-17 20:59:31.744  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:31.744  INFO 32195 --- [  restartedMain] app.Application                          : No active profile set, falling back to default profiles: default
+
+2016-12-17 20:59:31.744  INFO 32195 --- [restartedMain] app.Application                          : No active profile set, falling back to default profiles: default
+2016-12-17 20:59:31.762  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:31.761  INFO 32195 --- [  restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7a505c79: startup date [Sat Dec 17 20:59:31 CET 2016]; root of context hierarchy
+
+2016-12-17 20:59:31.761  INFO 32195 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7a505c79: startup date [Sat Dec 17 20:59:31 CET 2016]; root of context hierarchy
+2016-12-17 20:59:32.730  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:32.730  INFO 32195 --- [  restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [app-config.xml]
+
+2016-12-17 20:59:32.730  INFO 32195 --- [restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [app-config.xml]
+2016-12-17 20:59:32.757  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:32.756  INFO 32195 --- [  restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [mail-config.xml]
+
+2016-12-17 20:59:32.756  INFO 32195 --- [restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [mail-config.xml]
+2016-12-17 20:59:32.788  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:32.787  INFO 32195 --- [  restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [commonConfig.xml]
+
+2016-12-17 20:59:32.787  INFO 32195 --- [restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [commonConfig.xml]
+2016-12-17 20:59:32.812  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:32.809  INFO 32195 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'mongoConfiguration' with a different definition: replacing [Generic bean: class [app.storage.MongoConfiguration]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/home/sp/dev/tool/eclipse/wsspring/adsniffer/app/target/classes/app/storage/MongoConfiguration.class]] with [Generic bean: class [app.storage.MongoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [app-config.xml]]
+
+2016-12-17 20:59:32.809  INFO 32195 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'mongoConfiguration' with a different definition: replacing [Generic bean: class [app.storage.MongoConfiguration]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/home/sp/dev/tool/eclipse/wsspring/adsniffer/app/target/classes/app/storage/MongoConfiguration.class]] with [Generic bean: class [app.storage.MongoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [app-config.xml]]
+2016-12-17 20:59:33.215  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:33.215  INFO 32195 --- [  restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+
+2016-12-17 20:59:33.215  INFO 32195 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-12-17 20:59:33.217  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:33.217  INFO 32195 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+
+2016-12-17 20:59:33.217  INFO 32195 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-17 20:59:33.218  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:33.218  INFO 32195 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+
+2016-12-17 20:59:33.218  INFO 32195 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-12-17 20:59:33.228  INFO 32195 --- [localhost-startStop-1] r                                        : 2016-12-17 20:59:33.228  INFO 32195 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+
+2016-12-17 20:59:33.228  INFO 32195 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-17 20:59:33.229  INFO 32195 --- [localhost-startStop-1] r                                        : 2016-12-17 20:59:33.228  INFO 32195 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1467 ms
+
+2016-12-17 20:59:33.228  INFO 32195 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1467 ms
+2016-12-17 20:59:33.284  INFO 32195 --- [localhost-startStop-1] r                                        : 2016-12-17 20:59:33.283  INFO 32195 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+
+2016-12-17 20:59:33.283  INFO 32195 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-17 20:59:33.285  INFO 32195 --- [localhost-startStop-1] r                                        : 2016-12-17 20:59:33.285  INFO 32195 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+
+2016-12-17 20:59:33.285  INFO 32195 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-17 20:59:33.285  INFO 32195 --- [localhost-startStop-1] r                                        : 2016-12-17 20:59:33.285  INFO 32195 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+
+2016-12-17 20:59:33.285  INFO 32195 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-17 20:59:33.285  INFO 32195 --- [localhost-startStop-1] r                                        : 2016-12-17 20:59:33.285  INFO 32195 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+
+2016-12-17 20:59:33.285  INFO 32195 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-17 20:59:33.285  INFO 32195 --- [localhost-startStop-1] r                                        : 2016-12-17 20:59:33.285  INFO 32195 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+
+2016-12-17 20:59:33.285  INFO 32195 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-17 20:59:33.340  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:33.339  INFO 32195 --- [  restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+
+2016-12-17 20:59:33.339  INFO 32195 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-17 20:59:33.343  INFO 32195 --- [cluster-ClusterId{value='58559925721c9f7dc33abade', description='null'}-127.0.0.1:27017] r                                        : 2016-12-17 20:59:33.342  INFO 32195 --- [127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:351}] to 127.0.0.1:27017
+
+2016-12-17 20:59:33.342  INFO 32195 --- [cluster-ClusterId{value='58559925721c9f7dc33abade', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:351}] to 127.0.0.1:27017
+2016-12-17 20:59:33.343  INFO 32195 --- [cluster-ClusterId{value='58559925721c9f7dc33abade', description='null'}-127.0.0.1:27017] r                                        : 2016-12-17 20:59:33.343  INFO 32195 --- [127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=252882}
+
+2016-12-17 20:59:33.343  INFO 32195 --- [cluster-ClusterId{value='58559925721c9f7dc33abade', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=252882}
+2016-12-17 20:59:33.608  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:33.608  INFO 32195 --- [  restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:352}] to 127.0.0.1:27017
+
+2016-12-17 20:59:33.608  INFO 32195 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:352}] to 127.0.0.1:27017
+2016-12-17 20:59:33.988  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:33.988  INFO 32195 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7a505c79: startup date [Sat Dec 17 20:59:31 CET 2016]; root of context hierarchy
+
+2016-12-17 20:59:33.988  INFO 32195 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7a505c79: startup date [Sat Dec 17 20:59:31 CET 2016]; root of context hierarchy
+2016-12-17 20:59:33.997  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:33.997  INFO 32195 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hist]}" onto public app.data.HistList app.HistController.greeting(java.lang.String)
+
+2016-12-17 20:59:33.997  INFO 32195 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hist]}" onto public app.data.HistList app.HistController.greeting(java.lang.String)
+2016-12-17 20:59:33.997  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:33.997  INFO 32195 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String app.HomeController.index(org.springframework.ui.ModelMap)
+
+2016-12-17 20:59:33.997  INFO 32195 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String app.HomeController.index(org.springframework.ui.ModelMap)
+2016-12-17 20:59:33.998  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:33.998  INFO 32195 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stat]}" onto public java.lang.String app.server.StatisticsController.greeting(java.lang.String,java.lang.String)
+
+2016-12-17 20:59:33.998  INFO 32195 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stat]}" onto public java.lang.String app.server.StatisticsController.greeting(java.lang.String,java.lang.String)
+2016-12-17 20:59:33.998  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:33.998  INFO 32195 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/console]}" onto public java.lang.String app.server.WebConsoleController.greeting(java.lang.String,org.springframework.ui.Model)
+
+2016-12-17 20:59:33.998  INFO 32195 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/console]}" onto public java.lang.String app.server.WebConsoleController.greeting(java.lang.String,org.springframework.ui.Model)
+2016-12-17 20:59:34.004  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:34.004  INFO 32195 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+
+2016-12-17 20:59:34.004  INFO 32195 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-17 20:59:34.004  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:34.004  INFO 32195 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+
+2016-12-17 20:59:34.004  INFO 32195 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-17 20:59:34.013  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:34.013  INFO 32195 --- [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+
+2016-12-17 20:59:34.013  INFO 32195 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-17 20:59:34.013  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:34.013  INFO 32195 --- [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+
+2016-12-17 20:59:34.013  INFO 32195 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-17 20:59:34.034  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:34.034  INFO 32195 --- [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+
+2016-12-17 20:59:34.034  INFO 32195 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-17 20:59:34.156  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:34.156  INFO 32195 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+
+2016-12-17 20:59:34.156  INFO 32195 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2016-12-17 20:59:34.261  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:34.261  INFO 32195 --- [  restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+
+2016-12-17 20:59:34.261  INFO 32195 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-17 20:59:34.274  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:34.274  INFO 32195 --- [  restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+
+2016-12-17 20:59:34.274  INFO 32195 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-12-17 20:59:34.301  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:34.301  INFO 32195 --- [  restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+
+2016-12-17 20:59:34.301  INFO 32195 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-12-17 20:59:34.425  INFO 32195 --- [restartedMain] r                                        : DEBUG: setDebug: JavaMail version 1.4ea2016-12-17 20:59:34.425  INFO 32195 --- [  restartedMain] r                                        : DEBUG: setDebug: JavaMail version 1.4ea
+
+2016-12-17 20:59:34.425  INFO 32195 --- [restartedMain] r                                        : DEBUG: setDebug: JavaMail version 1.4ea
+2016-12-17 20:59:34.428  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:34.428  INFO 32195 --- [  restartedMain] app.Application                          : Started Application in 2.742 seconds (JVM running for 1950.129)
+
+2016-12-17 20:59:34.428  INFO 32195 --- [restartedMain] r                                        : 2016-12-17 20:59:34.428  INFO 32195 --- [  restartedMain] app.Application                          : Started Application in 2.742 seconds (JVM running for 1950.129)
+
+2016-12-17 20:59:34.428  INFO 32195 --- [restartedMain] app.Application                          : Started Application in 2.742 seconds (JVM running for 1950.129)
+2016-12-17 20:59:47.213  INFO 32195 --- [Thread-13] r                                        : 2016-12-17 20:59:47.210  INFO 32195 --- [      Thread-13] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7a505c79: startup date [Sat Dec 17 20:59:31 CET 2016]; root of context hierarchy
+
+2016-12-17 20:59:47.213  INFO 32195 --- [Thread-13] r                                        : 2016-12-17 20:59:47.210  INFO 32195 --- [      Thread-13] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7a505c79: startup date [Sat Dec 17 20:59:31 CET 2016]; root of context hierarchy
+
+2016-12-17 20:59:47.210  INFO 32195 --- [Thread-13] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7a505c79: startup date [Sat Dec 17 20:59:31 CET 2016]; root of context hierarchy
+2016-12-17 20:59:47.218  INFO 32195 --- [Thread-13] r                                        : 2016-12-17 20:59:47.218  INFO 32195 --- [      Thread-13] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+
+2016-12-17 20:59:47.218  INFO 32195 --- [Thread-13] r                                        : 2016-12-17 20:59:47.218  INFO 32195 --- [      Thread-13] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+
+2016-12-17 20:59:47.218  INFO 32195 --- [Thread-13] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-12-17 20:59:47.219  INFO 32195 --- [Thread-13] r                                        : 2016-12-17 20:59:47.219  INFO 32195 --- [      Thread-13] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:4, serverValue:352}] to 127.0.0.1:27017 because the pool has been closed.
+
+2016-12-17 20:59:47.219  INFO 32195 --- [Thread-13] r                                        : 2016-12-17 20:59:47.219  INFO 32195 --- [      Thread-13] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:4, serverValue:352}] to 127.0.0.1:27017 because the pool has been closed.
+
+2016-12-17 20:59:47.219  INFO 32195 --- [Thread-13] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:4, serverValue:352}] to 127.0.0.1:27017 because the pool has been closed.
+2016-12-17 21:00:08.409  INFO 32491 --- [restartedMain] app.Application                          : Starting Application on sp-W271ELQ with PID 32491 (/home/sp/dev/tool/eclipse/wsspring/adsniffer/app/target/classes started by sp in /home/sp/dev/tool/eclipse/wsspring/adsniffer/app)
+2016-12-17 21:00:08.416  INFO 32491 --- [restartedMain] app.Application                          : No active profile set, falling back to default profiles: default
+2016-12-17 21:00:09.540  INFO 32491 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ec03b3: startup date [Sat Dec 17 21:00:09 CET 2016]; root of context hierarchy
+2016-12-17 21:00:11.856  INFO 32491 --- [restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [app-config.xml]
+2016-12-17 21:00:12.163  INFO 32491 --- [restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [mail-config.xml]
+2016-12-17 21:00:12.219  INFO 32491 --- [restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [commonConfig.xml]
+2016-12-17 21:00:12.256  INFO 32491 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'mongoConfiguration' with a different definition: replacing [Generic bean: class [app.storage.MongoConfiguration]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/home/sp/dev/tool/eclipse/wsspring/adsniffer/app/target/classes/app/storage/MongoConfiguration.class]] with [Generic bean: class [app.storage.MongoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [app-config.xml]]
+2016-12-17 21:00:14.282  INFO 32491 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-12-17 21:00:14.390  INFO 32491 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-17 21:00:14.391  INFO 32491 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-12-17 21:00:14.628  INFO 32491 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-17 21:00:14.629  INFO 32491 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5114 ms
+2016-12-17 21:00:14.908  INFO 32491 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-17 21:00:14.914  INFO 32491 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-17 21:00:14.915  INFO 32491 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-17 21:00:14.916  INFO 32491 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-17 21:00:14.919  INFO 32491 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-17 21:00:15.281  INFO 32491 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-17 21:00:15.486  INFO 32491 --- [cluster-ClusterId{value='5855994f721c9f7eeb795ad7', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:353}] to 127.0.0.1:27017
+2016-12-17 21:00:15.492  INFO 32491 --- [cluster-ClusterId{value='5855994f721c9f7eeb795ad7', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=1271343}
+2016-12-17 21:00:16.013  INFO 32491 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:354}] to 127.0.0.1:27017
+2016-12-17 21:00:16.630  INFO 32491 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ec03b3: startup date [Sat Dec 17 21:00:09 CET 2016]; root of context hierarchy
+2016-12-17 21:00:16.733  INFO 32491 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hist]}" onto public app.data.HistList app.HistController.greeting(java.lang.String)
+2016-12-17 21:00:16.736  INFO 32491 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String app.HomeController.index(org.springframework.ui.ModelMap)
+2016-12-17 21:00:16.737  INFO 32491 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stat]}" onto public java.lang.String app.server.StatisticsController.greeting(java.lang.String,java.lang.String)
+2016-12-17 21:00:16.738  INFO 32491 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/console]}" onto public java.lang.String app.server.WebConsoleController.greeting(java.lang.String,org.springframework.ui.Model)
+2016-12-17 21:00:16.742  INFO 32491 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-17 21:00:16.743  INFO 32491 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-17 21:00:16.809  INFO 32491 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-17 21:00:16.809  INFO 32491 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-17 21:00:16.872  INFO 32491 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-17 21:00:17.964  INFO 32491 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2016-12-17 21:00:18.039  INFO 32491 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-17 21:00:18.055  INFO 32491 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-12-17 21:00:18.185  INFO 32491 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-12-17 21:00:18.251  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:00:18.237  INFO 32491 --- [  restartedMain] app.Application                          : Started Application in 11.295 seconds (JVM running for 12.992)
+
+2016-12-17 21:00:18.237  INFO 32491 --- [restartedMain] app.Application                          : Started Application in 11.295 seconds (JVM running for 12.992)
+2016-12-17 21:00:24.608  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 2016-12-17 21:00:24.607  INFO 32491 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+
+2016-12-17 21:00:24.607  INFO 32491 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-12-17 21:00:24.608  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 2016-12-17 21:00:24.608  INFO 32491 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+
+2016-12-17 21:00:24.608  INFO 32491 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-12-17 21:00:24.636  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 2016-12-17 21:00:24.636  INFO 32491 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+
+2016-12-17 21:00:24.636  INFO 32491 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2016-12-17 21:00:24.795  INFO 32491 --- [http-nio-8080-exec-1] r                                        : cmd: 'm'2016-12-17 21:00:24.794  INFO 32491 --- [nio-8080-exec-1] r                                        : cmd: 'm'
+
+2016-12-17 21:00:24.794  INFO 32491 --- [http-nio-8080-exec-1] r                                        : cmd: 'm'
+2016-12-17 21:00:24.797  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG: setDebug: JavaMail version 1.4ea2016-12-17 21:00:24.797  INFO 32491 --- [nio-8080-exec-1] r                                        : DEBUG: setDebug: JavaMail version 1.4ea
+
+2016-12-17 21:00:24.797  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG: setDebug: JavaMail version 1.4ea
+2016-12-17 21:00:24.799  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 2016-12-17 21:00:24.799  INFO 32491 --- [nio-8080-exec-1] adScraper                                : testMail. sender: curiosa.globunznik@gmail.com, mailRecipient: curiosa.globunznik@gmail.com, from: vom Grausewitz
+
+2016-12-17 21:00:24.799  INFO 32491 --- [http-nio-8080-exec-1] adScraper                                : testMail. sender: curiosa.globunznik@gmail.com, mailRecipient: curiosa.globunznik@gmail.com, from: vom Grausewitz
+2016-12-17 21:00:24.847  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 2016-12-17 21:00:24.847  INFO 32491 --- [nio-8080-exec-1] adScraper                                : mail to curiosa.globunznik@gmail.comad von nowhere.com 1234,- EUR/1 m2 m2 title
+
+2016-12-17 21:00:24.847  INFO 32491 --- [http-nio-8080-exec-1] adScraper                                : mail to curiosa.globunznik@gmail.comad von nowhere.com 1234,- EUR/1 m2 m2 title
+2016-12-17 21:00:25.172  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG: getProvider() returning javax.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Sun Microsystems, Inc]2016-12-17 21:00:25.171  INFO 32491 --- [nio-8080-exec-1] r                                        : DEBUG: getProvider() returning javax.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Sun Microsystems, Inc]
+
+2016-12-17 21:00:25.171  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG: getProvider() returning javax.mail.Provider[TRANSPORT,smtp,com.sun.mail.smtp.SMTPTransport,Sun Microsystems, Inc]
+2016-12-17 21:00:25.287  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: useEhlo true, useAuth false2016-12-17 21:00:25.274  INFO 32491 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: useEhlo true, useAuth false
+
+2016-12-17 21:00:25.274  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: useEhlo true, useAuth false
+2016-12-17 21:00:25.289  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: trying to connect to host "aspmx.l.google.com", port 25, isSSL false2016-12-17 21:00:25.289  INFO 32491 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: trying to connect to host "aspmx.l.google.com", port 25, isSSL false
+
+2016-12-17 21:00:25.289  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: trying to connect to host "aspmx.l.google.com", port 25, isSSL false
+2016-12-17 21:00:25.378  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 220 mx.google.com ESMTP u15si9005262wmu.53 - gsmtp
+2016-12-17 21:00:25.378  INFO 32491 --- [nio-8080-exec-1] r                                        : 220 mx.google.com ESMTP u15si9005262wmu.53 - gsmtp
+
+
+2016-12-17 21:00:25.378  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 220 mx.google.com ESMTP u15si9005262wmu.53 - gsmtp
+
+2016-12-17 21:00:25.379  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: connected to host "aspmx.l.google.com", port: 25
+2016-12-17 21:00:25.379  INFO 32491 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: connected to host "aspmx.l.google.com", port: 25
+
+
+2016-12-17 21:00:25.379  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: connected to host "aspmx.l.google.com", port: 25
+
+2016-12-17 21:00:25.381  INFO 32491 --- [http-nio-8080-exec-1] r                                        : EHLO sp-W271ELQ
+2016-12-17 21:00:25.380  INFO 32491 --- [nio-8080-exec-1] r                                        : EHLO sp-W271ELQ
+
+
+2016-12-17 21:00:25.380  INFO 32491 --- [http-nio-8080-exec-1] r                                        : EHLO sp-W271ELQ
+
+2016-12-17 21:00:25.415  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 250-mx.google.com at your service, [217.149.166.206]
+250-SIZE 157286400
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+2016-12-17 21:00:25.414  INFO 32491 --- [nio-8080-exec-1] r                                        : 250-mx.google.com at your service, [217.149.166.206]
+250-SIZE 157286400
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+
+2016-12-17 21:00:25.414  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 250-mx.google.com at your service, [217.149.166.206]
+250-SIZE 157286400
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+2016-12-17 21:00:25.416  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "SIZE", arg "157286400"2016-12-17 21:00:25.415  INFO 32491 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "SIZE", arg "157286400"
+
+2016-12-17 21:00:25.415  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "SIZE", arg "157286400"
+2016-12-17 21:00:25.416  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "8BITMIME", arg ""2016-12-17 21:00:25.416  INFO 32491 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "8BITMIME", arg ""
+
+2016-12-17 21:00:25.416  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "8BITMIME", arg ""
+2016-12-17 21:00:25.417  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "STARTTLS", arg ""2016-12-17 21:00:25.416  INFO 32491 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "STARTTLS", arg ""
+
+2016-12-17 21:00:25.416  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "STARTTLS", arg ""
+2016-12-17 21:00:25.417  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""2016-12-17 21:00:25.417  INFO 32491 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+
+2016-12-17 21:00:25.417  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "ENHANCEDSTATUSCODES", arg ""
+2016-12-17 21:00:25.418  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "PIPELINING", arg ""2016-12-17 21:00:25.418  INFO 32491 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "PIPELINING", arg ""
+
+2016-12-17 21:00:25.418  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "PIPELINING", arg ""
+2016-12-17 21:00:25.419  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "CHUNKING", arg ""2016-12-17 21:00:25.419  INFO 32491 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "CHUNKING", arg ""
+
+2016-12-17 21:00:25.419  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "CHUNKING", arg ""
+2016-12-17 21:00:25.419  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "SMTPUTF8", arg ""2016-12-17 21:00:25.419  INFO 32491 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "SMTPUTF8", arg ""
+
+2016-12-17 21:00:25.419  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Found extension "SMTPUTF8", arg ""
+2016-12-17 21:00:25.426  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: use8bit false2016-12-17 21:00:25.426  INFO 32491 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: use8bit false
+
+2016-12-17 21:00:25.426  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: use8bit false
+2016-12-17 21:00:25.428  INFO 32491 --- [http-nio-8080-exec-1] r                                        : MAIL FROM:<curiosa.globunznik@gmail.com>
+2016-12-17 21:00:25.427  INFO 32491 --- [nio-8080-exec-1] r                                        : MAIL FROM:<curiosa.globunznik@gmail.com>
+
+
+2016-12-17 21:00:25.427  INFO 32491 --- [http-nio-8080-exec-1] r                                        : MAIL FROM:<curiosa.globunznik@gmail.com>
+
+2016-12-17 21:00:25.464  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 250 2.1.0 OK u15si9005262wmu.53 - gsmtp
+2016-12-17 21:00:25.463  INFO 32491 --- [nio-8080-exec-1] r                                        : 250 2.1.0 OK u15si9005262wmu.53 - gsmtp
+
+
+2016-12-17 21:00:25.463  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 250 2.1.0 OK u15si9005262wmu.53 - gsmtp
+
+2016-12-17 21:00:25.466  INFO 32491 --- [http-nio-8080-exec-1] r                                        : RCPT TO:<curiosa.globunznik@gmail.com>
+2016-12-17 21:00:25.466  INFO 32491 --- [nio-8080-exec-1] r                                        : RCPT TO:<curiosa.globunznik@gmail.com>
+
+
+2016-12-17 21:00:25.466  INFO 32491 --- [http-nio-8080-exec-1] r                                        : RCPT TO:<curiosa.globunznik@gmail.com>
+
+2016-12-17 21:00:25.588  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 250 2.1.5 OK u15si9005262wmu.53 - gsmtp
+2016-12-17 21:00:25.588  INFO 32491 --- [nio-8080-exec-1] r                                        : 250 2.1.5 OK u15si9005262wmu.53 - gsmtp
+
+
+2016-12-17 21:00:25.588  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 250 2.1.5 OK u15si9005262wmu.53 - gsmtp
+
+2016-12-17 21:00:25.589  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Verified Addresses2016-12-17 21:00:25.589  INFO 32491 --- [nio-8080-exec-1] r                                        : DEBUG SMTP: Verified Addresses
+
+2016-12-17 21:00:25.589  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP: Verified Addresses
+2016-12-17 21:00:25.589  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP:   curiosa.globunznik@gmail.com2016-12-17 21:00:25.589  INFO 32491 --- [nio-8080-exec-1] r                                        : DEBUG SMTP:   curiosa.globunznik@gmail.com
+
+2016-12-17 21:00:25.589  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DEBUG SMTP:   curiosa.globunznik@gmail.com
+2016-12-17 21:00:25.590  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DATA
+2016-12-17 21:00:25.590  INFO 32491 --- [nio-8080-exec-1] r                                        : DATA
+
+
+2016-12-17 21:00:25.590  INFO 32491 --- [http-nio-8080-exec-1] r                                        : DATA
+
+2016-12-17 21:00:25.622  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 354  Go ahead u15si9005262wmu.53 - gsmtp
+2016-12-17 21:00:25.622  INFO 32491 --- [nio-8080-exec-1] r                                        : 354  Go ahead u15si9005262wmu.53 - gsmtp
+
+
+2016-12-17 21:00:25.622  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 354  Go ahead u15si9005262wmu.53 - gsmtp
+
+2016-12-17 21:00:25.626  INFO 32491 --- [http-nio-8080-exec-1] r                                        : From: "ad von nowhere.com" <curiosa.globunznik@gmail.com>
+To: curiosa.globunznik@gmail.com
+Message-ID: <1301300765.01482004825167.JavaMail.sp@sp-W271ELQ>
+Subject: 1234,- EUR/1 m2 m2 title
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_0_1905634202.1482004825046"
+
+------=_Part_0_1905634202.1482004825046
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<table><a href = http://www.nowhere.com>http://www.nowhere.com </a><br><b>Kontakt:</b>contact person<br><b>Zimmer:</b>1024<br><b>Preis:</b>1234,-<br><b>Groesse:</b>1 m2<br><b>Beschreibung:</b>niiiiiice flaht!<br><b>Titel:</b>title<br><b>Telefon:</b>0699-123456<br></table><br><br><b>Zusatzinfo:</b>zusatzinfo1<br><b>detailLink:</b>http://www.nowhere.com/detail<br><b>Kaution:</b>vieeel kaution<br><b>Bautyp:</b>bautyp<br><b>Heizung:</b>hot or cold<br><b>url:</b>http://www.nowhere.com<br><b>Befristung:</b>befristed oder nicht<br><b>Agent:</b>agency<br><b>Ort:</b>somewhere<br><b>Zusatzinfo:</b>zusatzinfo3<br><b>Zusatzinfo:</b>zusatzinfo2<br><b>timestamp:</b>Sat Dec 17 21:00:24 CET 2016<br><b>Zustand:</b>state<br><br><br>
+------=_Part_0_1905634202.1482004825046--
+
+.
+2016-12-17 21:00:25.625  INFO 32491 --- [nio-8080-exec-1] r                                        : From: "ad von nowhere.com" <curiosa.globunznik@gmail.com>
+To: curiosa.globunznik@gmail.com
+Message-ID: <1301300765.01482004825167.JavaMail.sp@sp-W271ELQ>
+Subject: 1234,- EUR/1 m2 m2 title
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_0_1905634202.1482004825046"
+
+------=_Part_0_1905634202.1482004825046
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<table><a href = http://www.nowhere.com>http://www.nowhere.com </a><br><b>Kontakt:</b>contact person<br><b>Zimmer:</b>1024<br><b>Preis:</b>1234,-<br><b>Groesse:</b>1 m2<br><b>Beschreibung:</b>niiiiiice flaht!<br><b>Titel:</b>title<br><b>Telefon:</b>0699-123456<br></table><br><br><b>Zusatzinfo:</b>zusatzinfo1<br><b>detailLink:</b>http://www.nowhere.com/detail<br><b>Kaution:</b>vieeel kaution<br><b>Bautyp:</b>bautyp<br><b>Heizung:</b>hot or cold<br><b>url:</b>http://www.nowhere.com<br><b>Befristung:</b>befristed oder nicht<br><b>Agent:</b>agency<br><b>Ort:</b>somewhere<br><b>Zusatzinfo:</b>zusatzinfo3<br><b>Zusatzinfo:</b>zusatzinfo2<br><b>timestamp:</b>Sat Dec 17 21:00:24 CET 2016<br><b>Zustand:</b>state<br><br><br>
+------=_Part_0_1905634202.1482004825046--
+
+.
+
+
+2016-12-17 21:00:25.625  INFO 32491 --- [http-nio-8080-exec-1] r                                        : From: "ad von nowhere.com" <curiosa.globunznik@gmail.com>
+To: curiosa.globunznik@gmail.com
+Message-ID: <1301300765.01482004825167.JavaMail.sp@sp-W271ELQ>
+Subject: 1234,- EUR/1 m2 m2 title
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_0_1905634202.1482004825046"
+
+------=_Part_0_1905634202.1482004825046
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<table><a href = http://www.nowhere.com>http://www.nowhere.com </a><br><b>Kontakt:</b>contact person<br><b>Zimmer:</b>1024<br><b>Preis:</b>1234,-<br><b>Groesse:</b>1 m2<br><b>Beschreibung:</b>niiiiiice flaht!<br><b>Titel:</b>title<br><b>Telefon:</b>0699-123456<br></table><br><br><b>Zusatzinfo:</b>zusatzinfo1<br><b>detailLink:</b>http://www.nowhere.com/detail<br><b>Kaution:</b>vieeel kaution<br><b>Bautyp:</b>bautyp<br><b>Heizung:</b>hot or cold<br><b>url:</b>http://www.nowhere.com<br><b>Befristung:</b>befristed oder nicht<br><b>Agent:</b>agency<br><b>Ort:</b>somewhere<br><b>Zusatzinfo:</b>zusatzinfo3<br><b>Zusatzinfo:</b>zusatzinfo2<br><b>timestamp:</b>Sat Dec 17 21:00:24 CET 2016<br><b>Zustand:</b>state<br><br><br>
+------=_Part_0_1905634202.1482004825046--
+
+.
+
+2016-12-17 21:00:25.714  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 250 2.0.0 OK 1482004825 u15si9005262wmu.53 - gsmtp
+2016-12-17 21:00:25.714  INFO 32491 --- [nio-8080-exec-1] r                                        : 250 2.0.0 OK 1482004825 u15si9005262wmu.53 - gsmtp
+
+
+2016-12-17 21:00:25.714  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 250 2.0.0 OK 1482004825 u15si9005262wmu.53 - gsmtp
+
+2016-12-17 21:00:25.715  INFO 32491 --- [http-nio-8080-exec-1] r                                        : QUIT
+2016-12-17 21:00:25.715  INFO 32491 --- [nio-8080-exec-1] r                                        : QUIT
+
+
+2016-12-17 21:00:25.715  INFO 32491 --- [http-nio-8080-exec-1] r                                        : QUIT
+
+2016-12-17 21:00:25.747  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 221 2.0.0 closing connection u15si9005262wmu.53 - gsmtp
+2016-12-17 21:00:25.747  INFO 32491 --- [nio-8080-exec-1] r                                        : 221 2.0.0 closing connection u15si9005262wmu.53 - gsmtp
+
+
+2016-12-17 21:00:25.747  INFO 32491 --- [http-nio-8080-exec-1] r                                        : 221 2.0.0 closing connection u15si9005262wmu.53 - gsmtp
+
+2016-12-17 21:00:26.459  INFO 32491 --- [http-nio-8080-exec-2] r                                        : cmd: 'noCmd'2016-12-17 21:00:26.459  INFO 32491 --- [nio-8080-exec-2] r                                        : cmd: 'noCmd'
+
+2016-12-17 21:00:26.459  INFO 32491 --- [http-nio-8080-exec-2] r                                        : cmd: 'noCmd'
+2016-12-17 21:00:28.440  INFO 32491 --- [http-nio-8080-exec-4] r                                        : cmd: 'l'2016-12-17 21:00:28.436  INFO 32491 --- [nio-8080-exec-4] r                                        : cmd: 'l'
+
+2016-12-17 21:00:28.436  INFO 32491 --- [http-nio-8080-exec-4] r                                        : cmd: 'l'
+2016-12-17 21:00:29.117  INFO 32491 --- [http-nio-8080-exec-5] r                                        : cmd: 'noCmd'2016-12-17 21:00:29.117  INFO 32491 --- [nio-8080-exec-5] r                                        : cmd: 'noCmd'
+
+2016-12-17 21:00:29.117  INFO 32491 --- [http-nio-8080-exec-5] r                                        : cmd: 'noCmd'
