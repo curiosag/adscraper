@@ -10286,3 +10286,66 @@ c3AwWW9PN2ZlNGlE
 2016-12-17 20:08:33.637  INFO 31502 --- [pool-1-thread-1] r                                        : 2016-12-17 20:08:33.636  INFO 31502 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:08:33
 
 2016-12-17 20:08:33.636  INFO 31502 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:08:33
+2016-12-17 20:10:30.091  INFO 31502 --- [pool-1-thread-1] r                                        : 2016-12-17 20:10:30.091  INFO 31502 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:10:30.091  INFO 31502 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:10:30.172  INFO 31502 --- [pool-1-thread-1] r                                        : 2016-12-17 20:10:30.172  INFO 31502 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:10:30.172  INFO 31502 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:10:30.173  INFO 31502 --- [pool-1-thread-1] r                                        : 2016-12-17 20:10:30.173  INFO 31502 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:10:30.173  INFO 31502 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:10:30.298  INFO 31502 --- [pool-6-thread-1] r                                        : 2016-12-17 20:10:30.298  INFO 31502 --- [pool-6-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:10:30.298  INFO 31502 --- [pool-6-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:10:33.374  INFO 31502 --- [pool-6-thread-1] r                                        : 2016-12-17 20:10:33.374  INFO 31502 --- [pool-6-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:10:33.374  INFO 31502 --- [pool-6-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:10:34.504  INFO 31502 --- [pool-6-thread-1] r                                        : 2016-12-17 20:10:34.503  INFO 31502 --- [pool-6-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:10:34.503  INFO 31502 --- [pool-6-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:10:34.504  INFO 31502 --- [pool-1-thread-1] r                                        : 2016-12-17 20:10:34.504  INFO 31502 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:10:34
+
+2016-12-17 20:10:34.504  INFO 31502 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:10:34
+2016-12-17 20:12:29.843  INFO 31502 --- [pool-1-thread-1] r                                        : 2016-12-17 20:12:29.843  INFO 31502 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:12:29.843  INFO 31502 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:12:29.846  INFO 31502 --- [pool-1-thread-1] r                                        : 2016-12-17 20:12:29.845  INFO 31502 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:12:29.845  INFO 31502 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:12:29.846  INFO 31502 --- [pool-1-thread-1] r                                        : 2016-12-17 20:12:29.846  INFO 31502 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:12:29.846  INFO 31502 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:12:29.850  INFO 31502 --- [pool-8-thread-1] r                                        : 2016-12-17 20:12:29.849  INFO 31502 --- [pool-8-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:12:29.849  INFO 31502 --- [pool-8-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:12:31.933  INFO 31502 --- [pool-8-thread-1] r                                        : 2016-12-17 20:12:31.933  INFO 31502 --- [pool-8-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:12:31.933  INFO 31502 --- [pool-8-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:12:31.942  INFO 31502 --- [pool-8-thread-1] r                                        : 2016-12-17 20:12:31.942  INFO 31502 --- [pool-8-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:12:31.942  INFO 31502 --- [pool-8-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:12:31.943  INFO 31502 --- [pool-1-thread-1] r                                        : 2016-12-17 20:12:31.942  INFO 31502 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:12:31
+
+2016-12-17 20:12:31.942  INFO 31502 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:12:31
+2016-12-17 20:14:29.843  INFO 31502 --- [pool-1-thread-1] r                                        : 2016-12-17 20:14:29.843  INFO 31502 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 20:14:29.843  INFO 31502 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 20:14:29.845  INFO 31502 --- [pool-1-thread-1] r                                        : 2016-12-17 20:14:29.845  INFO 31502 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 20:14:29.845  INFO 31502 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 20:14:29.845  INFO 31502 --- [pool-1-thread-1] r                                        : 2016-12-17 20:14:29.845  INFO 31502 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 20:14:29.845  INFO 31502 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 20:14:29.849  INFO 31502 --- [pool-10-thread-1] r                                        : 2016-12-17 20:14:29.849  INFO 31502 --- [ool-10-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 20:14:29.849  INFO 31502 --- [pool-10-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 20:14:31.564  INFO 31502 --- [pool-10-thread-1] r                                        : 2016-12-17 20:14:31.564  INFO 31502 --- [ool-10-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 20:14:31.564  INFO 31502 --- [pool-10-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 20:14:31.568  INFO 31502 --- [pool-10-thread-1] r                                        : 2016-12-17 20:14:31.568  INFO 31502 --- [ool-10-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 20:14:31.568  INFO 31502 --- [pool-10-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 20:14:31.568  INFO 31502 --- [pool-1-thread-1] r                                        : 2016-12-17 20:14:31.568  INFO 31502 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:14:31
+
+2016-12-17 20:14:31.568  INFO 31502 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 20:14:31
