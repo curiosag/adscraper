@@ -11645,3 +11645,249 @@ Content-Transfer-Encoding: 7bit
 2016-12-17 21:00:29.117  INFO 32491 --- [http-nio-8080-exec-5] r                                        : cmd: 'noCmd'2016-12-17 21:00:29.117  INFO 32491 --- [nio-8080-exec-5] r                                        : cmd: 'noCmd'
 
 2016-12-17 21:00:29.117  INFO 32491 --- [http-nio-8080-exec-5] r                                        : cmd: 'noCmd'
+2016-12-17 21:02:18.120  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:02:18.114  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 21:02:18.114  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 21:02:18.125  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:02:18.125  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 21:02:18.125  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 21:02:18.128  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:02:18.126  INFO 32491 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 21:02:18.126  INFO 32491 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 21:02:18.215  INFO 32491 --- [pool-2-thread-1] r                                        : 2016-12-17 21:02:18.215  INFO 32491 --- [pool-2-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 21:02:18.215  INFO 32491 --- [pool-2-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 21:02:20.206  INFO 32491 --- [pool-2-thread-1] r                                        : 2016-12-17 21:02:20.206  INFO 32491 --- [pool-2-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 21:02:20.206  INFO 32491 --- [pool-2-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 21:02:20.293  INFO 32491 --- [pool-2-thread-1] r                                        : 2016-12-17 21:02:20.293  INFO 32491 --- [pool-2-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 21:02:20.293  INFO 32491 --- [pool-2-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 21:02:20.318  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:02:20.294  INFO 32491 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 21:02:20
+
+2016-12-17 21:02:20.294  INFO 32491 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 21:02:20
+2016-12-17 21:04:18.138  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:04:18.137  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 21:04:18.137  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 21:04:18.156  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:04:18.155  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 21:04:18.155  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 21:04:18.156  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:04:18.156  INFO 32491 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 21:04:18.156  INFO 32491 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 21:04:18.163  INFO 32491 --- [pool-4-thread-1] r                                        : 2016-12-17 21:04:18.162  INFO 32491 --- [pool-4-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 21:04:18.162  INFO 32491 --- [pool-4-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 21:04:20.118  INFO 32491 --- [pool-4-thread-1] r                                        : 2016-12-17 21:04:20.118  INFO 32491 --- [pool-4-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 21:04:20.118  INFO 32491 --- [pool-4-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 21:04:20.136  INFO 32491 --- [pool-4-thread-1] r                                        : 2016-12-17 21:04:20.136  INFO 32491 --- [pool-4-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 21:04:20.136  INFO 32491 --- [pool-4-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 21:04:20.137  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:04:20.137  INFO 32491 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 21:04:20
+
+2016-12-17 21:04:20.137  INFO 32491 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 21:04:20
+2016-12-17 21:06:18.082  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:06:18.082  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 21:06:18.082  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 21:06:18.086  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:06:18.086  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 21:06:18.086  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 21:06:18.086  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:06:18.086  INFO 32491 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 21:06:18.086  INFO 32491 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 21:06:18.090  INFO 32491 --- [pool-6-thread-1] r                                        : 2016-12-17 21:06:18.090  INFO 32491 --- [pool-6-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 21:06:18.090  INFO 32491 --- [pool-6-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 21:06:19.731  INFO 32491 --- [pool-6-thread-1] r                                        : 2016-12-17 21:06:19.730  INFO 32491 --- [pool-6-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 21:06:19.730  INFO 32491 --- [pool-6-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 21:06:19.761  INFO 32491 --- [pool-6-thread-1] r                                        : 2016-12-17 21:06:19.761  INFO 32491 --- [pool-6-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 21:06:19.761  INFO 32491 --- [pool-6-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 21:06:19.761  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:06:19.761  INFO 32491 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 21:06:19
+
+2016-12-17 21:06:19.761  INFO 32491 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 21:06:19
+2016-12-17 21:08:18.082  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:08:18.082  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 21:08:18.082  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 21:08:18.086  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:08:18.085  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 21:08:18.085  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 21:08:18.086  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:08:18.086  INFO 32491 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 21:08:18.086  INFO 32491 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 21:08:18.092  INFO 32491 --- [pool-8-thread-1] r                                        : 2016-12-17 21:08:18.092  INFO 32491 --- [pool-8-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 21:08:18.092  INFO 32491 --- [pool-8-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 21:08:20.263  INFO 32491 --- [pool-8-thread-1] r                                        : 2016-12-17 21:08:20.262  INFO 32491 --- [pool-8-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 21:08:20.262  INFO 32491 --- [pool-8-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 21:08:20.271  INFO 32491 --- [pool-8-thread-1] r                                        : 2016-12-17 21:08:20.270  INFO 32491 --- [pool-8-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 21:08:20.270  INFO 32491 --- [pool-8-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 21:08:20.273  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:08:20.273  INFO 32491 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 21:08:20
+
+2016-12-17 21:08:20.273  INFO 32491 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 21:08:20
+2016-12-17 21:10:18.082  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:10:18.082  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 21:10:18.082  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 21:10:18.085  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:10:18.085  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 21:10:18.085  INFO 32491 --- [pool-1-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-17 21:10:18.085  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:10:18.085  INFO 32491 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+
+2016-12-17 21:10:18.085  INFO 32491 --- [pool-1-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-17 21:10:18.089  INFO 32491 --- [pool-10-thread-1] r                                        : 2016-12-17 21:10:18.088  INFO 32491 --- [ool-10-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+
+2016-12-17 21:10:18.088  INFO 32491 --- [pool-10-thread-1] adScraper                                : scraping urlId bazar.klu.zi url http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0
+2016-12-17 21:10:20.228  INFO 32491 --- [pool-10-thread-1] r                                        : 2016-12-17 21:10:20.228  INFO 32491 --- [ool-10-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+
+2016-12-17 21:10:20.228  INFO 32491 --- [pool-10-thread-1] adScraper                                : found 0 new ads for bazar.klu.zi
+2016-12-17 21:10:20.232  INFO 32491 --- [pool-10-thread-1] r                                        : 2016-12-17 21:10:20.232  INFO 32491 --- [ool-10-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+
+2016-12-17 21:10:20.232  INFO 32491 --- [pool-10-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-17 21:10:20.234  INFO 32491 --- [pool-1-thread-1] r                                        : 2016-12-17 21:10:20.233  INFO 32491 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 21:10:20
+
+2016-12-17 21:10:20.233  INFO 32491 --- [pool-1-thread-1] app.server.Scans                         : Running scan at 21:10:20
+2016-12-17 21:11:39.446  INFO 32491 --- [Thread-5] r                                        : 2016-12-17 21:11:39.446  INFO 32491 --- [       Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ec03b3: startup date [Sat Dec 17 21:00:09 CET 2016]; root of context hierarchy
+
+2016-12-17 21:11:39.446  INFO 32491 --- [Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1ec03b3: startup date [Sat Dec 17 21:00:09 CET 2016]; root of context hierarchy
+2016-12-17 21:11:39.454  INFO 32491 --- [Thread-5] r                                        : 2016-12-17 21:11:39.453  INFO 32491 --- [       Thread-5] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+
+2016-12-17 21:11:39.453  INFO 32491 --- [Thread-5] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-12-17 21:11:39.594  INFO 32491 --- [Thread-5] r                                        : 2016-12-17 21:11:39.594  INFO 32491 --- [       Thread-5] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:354}] to 127.0.0.1:27017 because the pool has been closed.
+
+2016-12-17 21:11:39.594  INFO 32491 --- [Thread-5] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:354}] to 127.0.0.1:27017 because the pool has been closed.
+2016-12-17 21:11:41.192  INFO 32491 --- [restartedMain] r                                        :   .   ____          _            __ _ _2016-12-17 21:11:41.192  INFO 32491 --- [  restartedMain] r                                        :   .   ____          _            __ _ _
+
+2016-12-17 21:11:41.192  INFO 32491 --- [restartedMain] r                                        :   .   ____          _            __ _ _
+2016-12-17 21:11:41.192  INFO 32491 --- [restartedMain] r                                        :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \2016-12-17 21:11:41.192  INFO 32491 --- [  restartedMain] r                                        :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+
+2016-12-17 21:11:41.192  INFO 32491 --- [restartedMain] r                                        :  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2016-12-17 21:11:41.192  INFO 32491 --- [restartedMain] r                                        : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \2016-12-17 21:11:41.192  INFO 32491 --- [  restartedMain] r                                        : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+
+2016-12-17 21:11:41.192  INFO 32491 --- [restartedMain] r                                        : ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2016-12-17 21:11:41.192  INFO 32491 --- [restartedMain] r                                        :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )2016-12-17 21:11:41.192  INFO 32491 --- [  restartedMain] r                                        :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+
+2016-12-17 21:11:41.192  INFO 32491 --- [restartedMain] r                                        :  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2016-12-17 21:11:41.192  INFO 32491 --- [restartedMain] r                                        :   '  |____| .__|_| |_|_| |_\__, | / / / /2016-12-17 21:11:41.192  INFO 32491 --- [  restartedMain] r                                        :   '  |____| .__|_| |_|_| |_\__, | / / / /
+
+2016-12-17 21:11:41.192  INFO 32491 --- [restartedMain] r                                        :   '  |____| .__|_| |_|_| |_\__, | / / / /
+2016-12-17 21:11:41.193  INFO 32491 --- [restartedMain] r                                        :  =========|_|==============|___/=/_/_/_/2016-12-17 21:11:41.193  INFO 32491 --- [  restartedMain] r                                        :  =========|_|==============|___/=/_/_/_/
+
+2016-12-17 21:11:41.193  INFO 32491 --- [restartedMain] r                                        :  =========|_|==============|___/=/_/_/_/
+2016-12-17 21:11:41.193  INFO 32491 --- [restartedMain] r                                        :  :: Spring Boot ::        (v1.4.2.RELEASE)2016-12-17 21:11:41.193  INFO 32491 --- [  restartedMain] r                                        :  :: Spring Boot ::        (v1.4.2.RELEASE)
+
+2016-12-17 21:11:41.193  INFO 32491 --- [restartedMain] r                                        :  :: Spring Boot ::        (v1.4.2.RELEASE)
+2016-12-17 21:11:41.217  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:41.217  INFO 32491 --- [  restartedMain] app.Application                          : Starting Application on sp-W271ELQ with PID 32491 (/home/sp/dev/tool/eclipse/wsspring/adsniffer/app/target/classes started by sp in /home/sp/dev/tool/eclipse/wsspring/adsniffer/app)
+
+2016-12-17 21:11:41.217  INFO 32491 --- [restartedMain] app.Application                          : Starting Application on sp-W271ELQ with PID 32491 (/home/sp/dev/tool/eclipse/wsspring/adsniffer/app/target/classes started by sp in /home/sp/dev/tool/eclipse/wsspring/adsniffer/app)
+2016-12-17 21:11:41.218  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:41.217  INFO 32491 --- [  restartedMain] app.Application                          : No active profile set, falling back to default profiles: default
+
+2016-12-17 21:11:41.217  INFO 32491 --- [restartedMain] app.Application                          : No active profile set, falling back to default profiles: default
+2016-12-17 21:11:41.247  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:41.246  INFO 32491 --- [  restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f9696f6: startup date [Sat Dec 17 21:11:41 CET 2016]; root of context hierarchy
+
+2016-12-17 21:11:41.246  INFO 32491 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f9696f6: startup date [Sat Dec 17 21:11:41 CET 2016]; root of context hierarchy
+2016-12-17 21:11:42.983  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:42.982  INFO 32491 --- [  restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [app-config.xml]
+
+2016-12-17 21:11:42.982  INFO 32491 --- [restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [app-config.xml]
+2016-12-17 21:11:43.116  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:43.109  INFO 32491 --- [  restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [mail-config.xml]
+
+2016-12-17 21:11:43.109  INFO 32491 --- [restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [mail-config.xml]
+2016-12-17 21:11:43.167  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:43.167  INFO 32491 --- [  restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [commonConfig.xml]
+
+2016-12-17 21:11:43.167  INFO 32491 --- [restartedMain] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [commonConfig.xml]
+2016-12-17 21:11:43.197  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:43.196  INFO 32491 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'mongoConfiguration' with a different definition: replacing [Generic bean: class [app.storage.MongoConfiguration]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/home/sp/dev/tool/eclipse/wsspring/adsniffer/app/target/classes/app/storage/MongoConfiguration.class]] with [Generic bean: class [app.storage.MongoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [app-config.xml]]
+
+2016-12-17 21:11:43.196  INFO 32491 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'mongoConfiguration' with a different definition: replacing [Generic bean: class [app.storage.MongoConfiguration]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/home/sp/dev/tool/eclipse/wsspring/adsniffer/app/target/classes/app/storage/MongoConfiguration.class]] with [Generic bean: class [app.storage.MongoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [app-config.xml]]
+2016-12-17 21:11:44.245  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:44.245  INFO 32491 --- [  restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+
+2016-12-17 21:11:44.245  INFO 32491 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-12-17 21:11:44.246  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:44.245  INFO 32491 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+
+2016-12-17 21:11:44.245  INFO 32491 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-17 21:11:44.246  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:44.246  INFO 32491 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+
+2016-12-17 21:11:44.246  INFO 32491 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-12-17 21:11:44.271  INFO 32491 --- [localhost-startStop-1] r                                        : 2016-12-17 21:11:44.271  INFO 32491 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+
+2016-12-17 21:11:44.271  INFO 32491 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-17 21:11:44.272  INFO 32491 --- [localhost-startStop-1] r                                        : 2016-12-17 21:11:44.272  INFO 32491 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3026 ms
+
+2016-12-17 21:11:44.272  INFO 32491 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3026 ms
+2016-12-17 21:11:44.353  INFO 32491 --- [localhost-startStop-1] r                                        : 2016-12-17 21:11:44.353  INFO 32491 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+
+2016-12-17 21:11:44.353  INFO 32491 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-17 21:11:44.354  INFO 32491 --- [localhost-startStop-1] r                                        : 2016-12-17 21:11:44.354  INFO 32491 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+
+2016-12-17 21:11:44.354  INFO 32491 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-17 21:11:44.354  INFO 32491 --- [localhost-startStop-1] r                                        : 2016-12-17 21:11:44.354  INFO 32491 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+
+2016-12-17 21:11:44.354  INFO 32491 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-17 21:11:44.354  INFO 32491 --- [localhost-startStop-1] r                                        : 2016-12-17 21:11:44.354  INFO 32491 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+
+2016-12-17 21:11:44.354  INFO 32491 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-17 21:11:44.355  INFO 32491 --- [localhost-startStop-1] r                                        : 2016-12-17 21:11:44.354  INFO 32491 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+
+2016-12-17 21:11:44.354  INFO 32491 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-17 21:11:44.389  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:44.389  INFO 32491 --- [  restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+
+2016-12-17 21:11:44.389  INFO 32491 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-17 21:11:44.419  INFO 32491 --- [cluster-ClusterId{value='58559c00721c9f7eeb795ad8', description='null'}-127.0.0.1:27017] r                                        : 2016-12-17 21:11:44.419  INFO 32491 --- [127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:355}] to 127.0.0.1:27017
+
+2016-12-17 21:11:44.419  INFO 32491 --- [cluster-ClusterId{value='58559c00721c9f7eeb795ad8', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:355}] to 127.0.0.1:27017
+2016-12-17 21:11:44.421  INFO 32491 --- [cluster-ClusterId{value='58559c00721c9f7eeb795ad8', description='null'}-127.0.0.1:27017] r                                        : 2016-12-17 21:11:44.421  INFO 32491 --- [127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=942122}
+
+2016-12-17 21:11:44.421  INFO 32491 --- [cluster-ClusterId{value='58559c00721c9f7eeb795ad8', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=942122}
+2016-12-17 21:11:44.589  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:44.588  INFO 32491 --- [  restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:356}] to 127.0.0.1:27017
+
+2016-12-17 21:11:44.588  INFO 32491 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:356}] to 127.0.0.1:27017
+2016-12-17 21:11:44.931  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:44.931  INFO 32491 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f9696f6: startup date [Sat Dec 17 21:11:41 CET 2016]; root of context hierarchy
+
+2016-12-17 21:11:44.931  INFO 32491 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f9696f6: startup date [Sat Dec 17 21:11:41 CET 2016]; root of context hierarchy
+2016-12-17 21:11:44.954  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:44.954  INFO 32491 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hist]}" onto public app.data.HistList app.HistController.greeting(java.lang.String)
+
+2016-12-17 21:11:44.954  INFO 32491 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hist]}" onto public app.data.HistList app.HistController.greeting(java.lang.String)
+2016-12-17 21:11:44.955  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:44.955  INFO 32491 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String app.HomeController.index(org.springframework.ui.ModelMap)
+
+2016-12-17 21:11:44.955  INFO 32491 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String app.HomeController.index(org.springframework.ui.ModelMap)
+2016-12-17 21:11:44.957  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:44.956  INFO 32491 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stat]}" onto public java.lang.String app.server.StatisticsController.greeting(java.lang.String,java.lang.String)
+
+2016-12-17 21:11:44.956  INFO 32491 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stat]}" onto public java.lang.String app.server.StatisticsController.greeting(java.lang.String,java.lang.String)
+2016-12-17 21:11:44.957  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:44.957  INFO 32491 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/console]}" onto public java.lang.String app.server.WebConsoleController.greeting(java.lang.String,org.springframework.ui.Model)
+
+2016-12-17 21:11:44.957  INFO 32491 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/console]}" onto public java.lang.String app.server.WebConsoleController.greeting(java.lang.String,org.springframework.ui.Model)
+2016-12-17 21:11:44.959  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:44.959  INFO 32491 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+
+2016-12-17 21:11:44.959  INFO 32491 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-17 21:11:44.966  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:44.960  INFO 32491 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+
+2016-12-17 21:11:44.960  INFO 32491 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-17 21:11:44.977  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:44.975  INFO 32491 --- [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+
+2016-12-17 21:11:44.975  INFO 32491 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-17 21:11:44.978  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:44.978  INFO 32491 --- [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+
+2016-12-17 21:11:44.978  INFO 32491 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-17 21:11:44.997  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:44.996  INFO 32491 --- [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+
+2016-12-17 21:11:44.996  INFO 32491 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-17 21:11:45.097  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:45.097  INFO 32491 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+
+2016-12-17 21:11:45.097  INFO 32491 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2016-12-17 21:11:45.155  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:45.155  INFO 32491 --- [  restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+
+2016-12-17 21:11:45.155  INFO 32491 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-17 21:11:45.168  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:45.168  INFO 32491 --- [  restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+
+2016-12-17 21:11:45.168  INFO 32491 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2016-12-17 21:11:45.172  INFO 32491 --- [restartedMain] r                                        : 2016-12-17 21:11:45.172  INFO 32491 --- [  restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+
+2016-12-17 21:11:45.172  INFO 32491 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-12-17 21:11:45.211  INFO 32491 --- [pool-12-thread-1] r                                        : 2016-12-17 21:11:45.211  INFO 32491 --- [ool-12-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+
+2016-12-17 21:11:45.211  INFO 32491 --- [pool-12-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-17 21:11:45.218  INFO 32491 --- [pool-12-thread-1] r                                        : 2016-12-17 21:11:45.217  INFO 32491 --- [ool-12-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+
+2016-12-17 21:11:45.217  INFO 32491 --- [pool-12-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
