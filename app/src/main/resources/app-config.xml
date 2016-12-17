@@ -12,7 +12,7 @@
 
 	<bean id="mailSessionDev" class="org.cg.base.MailSessionProperties"
 		parent="mailSession">
-		<property name="debug" value="false" />
+		<property name="debug" value="true" />
 	</bean>
 
 	<bean class="app.server.CommandHandler" />
