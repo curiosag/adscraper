@@ -18904,3 +18904,32 @@ prize: 400
 2016-12-18 11:58:16.746  INFO 5944 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
 2016-12-18 11:58:16.746  INFO 5944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2016-12-18 11:58:16.759  INFO 5944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2016-12-18 12:00:04.464  INFO 5944 --- [pool-30-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-18 12:00:04.467  INFO 5944 --- [pool-30-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-18 12:00:04.467  INFO 5944 --- [pool-30-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-18 12:00:04.476  INFO 5944 --- [pool-31-thread-1] adScraper                                : scraping urlId w.baz.wo url http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-18 12:00:04.476  INFO 5944 --- [pool-31-thread-2] adScraper                                : scraping urlId w.baz.zi url http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-18 12:00:04.480  INFO 5944 --- [pool-31-thread-2] global                                   : creating bulk type: null key: null object: app.storage.KeyTypeValueStorageSpring@3d8a28c3
+2016-12-18 12:00:04.480  INFO 5944 --- [pool-31-thread-1] global                                   : creating bulk type: null key: null object: app.storage.KeyTypeValueStorageSpring@28ae3305
+2016-12-18 12:00:07.779  INFO 5944 --- [pool-31-thread-2] adScraper                                : found 0 new ads for w.baz.zi
+2016-12-18 12:00:07.779  INFO 5944 --- [pool-31-thread-2] global                                   : storing bulk type: HistoryBulkItem.w.baz.zi key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@3d8a28c3
+2016-12-18 12:00:07.793  INFO 5944 --- [pool-31-thread-2] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-18 12:00:08.331  INFO 5944 --- [pool-31-thread-1] adScraper                                : found 0 new ads for w.baz.wo
+2016-12-18 12:00:08.331  INFO 5944 --- [pool-31-thread-1] global                                   : storing bulk type: HistoryBulkItem.w.baz.wo key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@28ae3305
+2016-12-18 12:00:08.335  INFO 5944 --- [pool-31-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-18 12:00:08.335  INFO 5944 --- [pool-30-thread-1] app.server.Scans                         : Running scan at 12:00:08
+2016-12-18 12:02:04.464  INFO 5944 --- [pool-30-thread-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-18 12:02:04.467  INFO 5944 --- [pool-30-thread-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-18 12:02:04.467  INFO 5944 --- [pool-30-thread-1] adScraper                                : using excluded terms: [0049-, @gmail, stunde, hobbyr, prober, gemeinschaft, woche, sommer, ferien, pendler, student, tausch, zwischen, suche, mitbewohner, vormerksch, gemeinde]
+2016-12-18 12:02:04.470  INFO 5944 --- [pool-34-thread-1] adScraper                                : scraping urlId w.baz.wo url http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-18 12:02:04.471  INFO 5944 --- [pool-34-thread-2] adScraper                                : scraping urlId w.baz.zi url http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-18 12:02:07.802  INFO 5944 --- [pool-34-thread-1] adScraper                                : found 0 new ads for w.baz.wo
+2016-12-18 12:02:07.802  INFO 5944 --- [pool-34-thread-1] global                                   : storing bulk type: HistoryBulkItem.w.baz.wo key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@28ae3305
+2016-12-18 12:02:07.806  INFO 5944 --- [pool-34-thread-1] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-18 12:02:08.871  INFO 5944 --- [pool-34-thread-2] adScraper                                : found 0 new ads for w.baz.zi
+2016-12-18 12:02:08.871  INFO 5944 --- [pool-34-thread-2] global                                   : storing bulk type: HistoryBulkItem.w.baz.zi key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@3d8a28c3
+2016-12-18 12:02:08.875  INFO 5944 --- [pool-34-thread-2] adScraper                                : about to deliver 0 ads considering defined rules
+2016-12-18 12:02:08.875  INFO 5944 --- [pool-30-thread-1] app.server.Scans                         : Running scan at 12:02:08
+2016-12-18 12:02:37.806  INFO 5944 --- [Thread-18] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@557f1592: startup date [Sun Dec 18 11:58:02 CET 2016]; root of context hierarchy
+2016-12-18 12:02:37.817  INFO 5944 --- [Thread-18] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-12-18 12:02:37.818  INFO 5944 --- [Thread-18] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:6, serverValue:42}] to 127.0.0.1:27017 because the pool has been closed.
