@@ -23,13 +23,17 @@ public final class HistoryRingBuffer {
 		return new HistoryRingBuffer(urlId);
 	}
 
+	private String getKey(String urlId){
+		return entityKind + "." + urlId;
+	}
+	
 	private HistoryRingBuffer() {
 		super();
 	}
 
 	private HistoryRingBuffer(String urlId) {
 		this();
-		storage = StorageFactory.get().createKeyTypeValueStorage().of(urlId, entityKind);
+		storage = StorageFactory.get().createKeyTypeValueStorage().of(entityKind, getKey(urlId));
 		cache = load(MAX_HISTORY_ITEMS);
 	}
 

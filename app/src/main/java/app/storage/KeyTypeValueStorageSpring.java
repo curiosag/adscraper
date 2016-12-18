@@ -1,5 +1,7 @@
 package app.storage;
 
+import java.util.logging.Logger;
+
 import org.cg.base.IKeyTypeValueStorage;
 
 public class KeyTypeValueStorageSpring implements IKeyTypeValueStorage {
@@ -10,6 +12,7 @@ public class KeyTypeValueStorageSpring implements IKeyTypeValueStorage {
 	KeyTypeValueItemRepository repo;
 
 	public KeyTypeValueStorageSpring(KeyTypeValueItemRepository repo) {
+		Logger.getGlobal().info(String.format("creating bulk type: %s key: %s object: %s", key, type, toString()));
 		this.repo = repo;
 	}
 
@@ -42,6 +45,7 @@ public class KeyTypeValueStorageSpring implements IKeyTypeValueStorage {
 	}
 
 	public void save(String value) {
+		Logger.getGlobal().info(String.format("storing bulk type: %s key: %s object: %s", key, type, toString()));
 		KeyTypeValueItem item = getItem();
 		if (item != null)
 			item.value = value;

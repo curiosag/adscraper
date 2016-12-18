@@ -111,11 +111,11 @@ public class CommandHandler {
 				return new MailDelivery(mailSessionProperties).testFormat();
 
 			case "set":
-				return Settings.instance().set(input.substring(4));
+				return Settings.instance().set(input.substring(4)) + "<br/><br/>" + getSettingsView();
 
 			case "unset": {
 				Settings.instance().del(input.substring(6));
-				return "ok";
+				return getSettingsView();
 			}
 
 			case "p":
@@ -151,6 +151,10 @@ public class CommandHandler {
 	}
 
 	
+	private String getSettingsView() {
+		return hdlView("KeyTypeValueItem");
+	}
+
 	private String hdlLog(String arg, String loggingFile) {
 		if (loggingFile == null)
 			return "no log file defined";

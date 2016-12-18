@@ -50,7 +50,7 @@ public class StorageTestsSpring {
 		test.testSettingsByType();
 	}
 	
-	@Test
+	//@Test
 	public void testBigValue(){
 		test.testSettingsByType();
 		IKeyTypeValueStorage fat = StorageFactory.get().createKeyTypeValueStorage().of("fatUrls", "fatUrlsKey");

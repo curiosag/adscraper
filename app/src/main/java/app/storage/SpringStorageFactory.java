@@ -6,19 +6,17 @@ import org.cg.base.IHistoryStorage;
 import org.cg.base.IKeyTypeValueStorage;
 import org.cg.base.ISettingsStorage;
 
-public class SpringStorageFactory implements IStorageFactory {
+public abstract class SpringStorageFactory implements IStorageFactory {
 
 	private HistoryStorageSpring historyStorageSpring;
 	private HistoricalDetailStorageSpring historicalDetailStorageSpring;
-	private KeyTypeValueStorageSpring keyTypeValueStorageSpring;
 	private SettingsStorageSpring settingsStorageSpring;
 
 	public SpringStorageFactory(HistoryStorageSpring historyStorageSpring,
 			HistoricalDetailStorageSpring historicalDetailStorageSpring,
-			KeyTypeValueStorageSpring keyTypeValueStorageSpring, SettingsStorageSpring settingsStorageSpring) {
+			SettingsStorageSpring settingsStorageSpring) {
 		this.historicalDetailStorageSpring = historicalDetailStorageSpring;
 		this.historyStorageSpring = historyStorageSpring;
-		this.keyTypeValueStorageSpring = keyTypeValueStorageSpring;
 		this.settingsStorageSpring = settingsStorageSpring;
 	}
 
@@ -33,9 +31,9 @@ public class SpringStorageFactory implements IStorageFactory {
 	}
 
 	@Override
-	public IKeyTypeValueStorage createKeyTypeValueStorage() {
-		return keyTypeValueStorageSpring;
-	}
+	public abstract IKeyTypeValueStorage createKeyTypeValueStorage();
+	// a lookup method injection, since a new instance is neededper call, see commonConfig.xml
+	// http://docs.spring.io/spring/docs/3.0.0.M3/reference/html/ch04s03.html#beans-factory-method-injection
 
 	@Override
 	public ISettingsStorage getSettingsStorage() {
