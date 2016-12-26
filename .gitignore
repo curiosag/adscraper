@@ -1,4 +1,6 @@
+/target/*
 target
+/.metadata/*
 .metadata
 *.iml
 *.ipr
