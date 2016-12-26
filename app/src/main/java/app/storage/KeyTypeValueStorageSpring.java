@@ -12,11 +12,12 @@ public class KeyTypeValueStorageSpring implements IKeyTypeValueStorage {
 	KeyTypeValueItemRepository repo;
 
 	public KeyTypeValueStorageSpring(KeyTypeValueItemRepository repo) {
-		Logger.getGlobal().info(String.format("creating bulk type: %s key: %s object: %s", key, type, toString()));
 		this.repo = repo;
 	}
 
 	public IKeyTypeValueStorage of(String type, String key) {
+		Logger.getGlobal().info(String.format("creating bulk type: %s key: %s object: %s", key, type, toString()));
+		
 		this.type = type;
 		this.key = key;
 		return this;
