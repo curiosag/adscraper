@@ -97,7 +97,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.cg.ads</groupId>
-			<artifactId>springintegration</artifactId>
+			<artifactId>integrationbyspring</artifactId>
 			<version>0.0.1</version>
 		</dependency>
 		<dependency>

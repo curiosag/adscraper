@@ -451,3 +451,53 @@ INFO: HibernatePlugin Started
 2016-12-26 15:36:59,622  WARN [Java indexing] - ScalaProject - Project AdScraperExpressionFilter runs on platform default installation.
 2016-12-26 15:37:08,657  WARN [Java indexing] - ScalaProject - Project expressionparser has platform default sourceLevel.
 2016-12-26 15:37:08,657  WARN [Java indexing] - ScalaProject - Project expressionparser runs on platform default installation.
+2016-12-26 18:54:36,316  WARN [Worker-108] - ScalaProject - Project expressionparser has platform default sourceLevel.
+2016-12-26 18:54:36,340  WARN [Worker-108] - ScalaProject - Project expressionparser runs on platform default installation.
+2016-12-26 18:54:36,850  WARN [Worker-108] - ScalaProject - Project expressionparser has platform default sourceLevel.
+2016-12-26 18:54:36,850  WARN [Worker-108] - ScalaProject - Project expressionparser runs on platform default installation.
+2016-12-26 18:54:40,707  WARN [Worker-108] - ScalaProject - Project AdScraperExpressionFilter has platform default sourceLevel.
+2016-12-26 18:54:40,707  WARN [Worker-108] - ScalaProject - Project AdScraperExpressionFilter runs on platform default installation.
+2016-12-26 18:54:40,715  WARN [Worker-108] - ScalaProject - Project AdScraperExpressionFilter has platform default sourceLevel.
+2016-12-26 18:54:40,715  WARN [Worker-108] - ScalaProject - Project AdScraperExpressionFilter runs on platform default installation.
+2016-12-26 18:54:42,655  WARN [Worker-106] - ScalaProject - Project expressionparser has platform default sourceLevel.
+2016-12-26 18:54:42,656  WARN [Worker-106] - ScalaProject - Project expressionparser runs on platform default installation.
+2016-12-26 19:29:57,172  WARN [Worker-126] - ScalaProject - Project expressionparser has platform default sourceLevel.
+2016-12-26 19:29:57,271  WARN [Worker-126] - ScalaProject - Project expressionparser runs on platform default installation.
+2016-12-26 19:30:59,972  WARN [Worker-125] - ScalaProject - Project AdScraperExpressionFilter has platform default sourceLevel.
+2016-12-26 19:30:59,973  WARN [Worker-125] - ScalaProject - Project AdScraperExpressionFilter runs on platform default installation.
+2016-12-26 19:31:10,318  WARN [Worker-108] - ScalaProject - Project expressionparser has platform default sourceLevel.
+2016-12-26 19:31:10,318  WARN [Worker-108] - ScalaProject - Project expressionparser runs on platform default installation.
+2016-12-26 19:31:13,535  WARN [Worker-123] - ScalaProject - Project AdScraperExpressionFilter has platform default sourceLevel.
+2016-12-26 19:31:13,535  WARN [Worker-123] - ScalaProject - Project AdScraperExpressionFilter runs on platform default installation.
+2016-12-26 19:31:14,811  WARN [Worker-122] - ScalaProject - Project expressionparser has platform default sourceLevel.
+2016-12-26 19:31:14,814  WARN [Worker-122] - ScalaProject - Project expressionparser runs on platform default installation.
+2016-12-26 19:31:15,171  WARN [Worker-122] - ScalaProject - Project AdScraperExpressionFilter has platform default sourceLevel.
+2016-12-26 19:31:15,171  WARN [Worker-122] - ScalaProject - Project AdScraperExpressionFilter runs on platform default installation.
+2016-12-26 19:31:20,787  WARN [Worker-125] - ScalaProject - Project expressionparser has platform default sourceLevel.
+2016-12-26 19:31:20,794  WARN [Worker-125] - ScalaProject - Project expressionparser runs on platform default installation.
+2016-12-26 19:31:21,076  WARN [Worker-125] - ScalaProject - Project AdScraperExpressionFilter has platform default sourceLevel.
+2016-12-26 19:31:21,077  WARN [Worker-125] - ScalaProject - Project AdScraperExpressionFilter runs on platform default installation.
+2016-12-26 19:35:44,105  WARN [Worker-128] - ScalaProject - Project expressionparser has platform default sourceLevel.
+2016-12-26 19:35:44,146  WARN [Worker-128] - ScalaProject - Project expressionparser runs on platform default installation.
+2016-12-26 19:35:52,926  WARN [Worker-129] - ScalaProject - Project AdScraperExpressionFilter has platform default sourceLevel.
+2016-12-26 19:35:52,927  WARN [Worker-129] - ScalaProject - Project AdScraperExpressionFilter runs on platform default installation.
+2016-12-26 19:35:58,758  WARN [Worker-123] - ScalaProject - Project expressionparser has platform default sourceLevel.
+2016-12-26 19:35:58,758  WARN [Worker-123] - ScalaProject - Project expressionparser runs on platform default installation.
+2016-12-26 19:35:59,900  WARN [Worker-129] - ScalaProject - Project AdScraperExpressionFilter has platform default sourceLevel.
+2016-12-26 19:35:59,900  WARN [Worker-129] - ScalaProject - Project AdScraperExpressionFilter runs on platform default installation.
+2016-12-26 19:38:00,466  WARN [Worker-122] - ScalaProject - Project expressionparser has platform default sourceLevel.
+2016-12-26 19:38:00,466  WARN [Worker-122] - ScalaProject - Project expressionparser runs on platform default installation.
+2016-12-26 19:38:00,785  WARN [Worker-122] - ScalaProject - Project AdScraperExpressionFilter has platform default sourceLevel.
+2016-12-26 19:38:00,785  WARN [Worker-122] - ScalaProject - Project AdScraperExpressionFilter runs on platform default installation.
+2016-12-26 19:47:29,898  WARN [Worker-118] - ScalaProject - Project expressionparser has platform default sourceLevel.
+2016-12-26 19:47:29,949  WARN [Worker-118] - ScalaProject - Project expressionparser runs on platform default installation.
+2016-12-26 19:47:41,065  WARN [Worker-128] - ScalaProject - Project AdScraperExpressionFilter has platform default sourceLevel.
+2016-12-26 19:47:41,066  WARN [Worker-128] - ScalaProject - Project AdScraperExpressionFilter runs on platform default installation.
+2016-12-26 19:47:46,078  WARN [Worker-131] - ScalaProject - Project expressionparser has platform default sourceLevel.
+2016-12-26 19:47:46,079  WARN [Worker-131] - ScalaProject - Project expressionparser runs on platform default installation.
+2016-12-26 19:47:46,628  WARN [Worker-124] - ScalaProject - Project AdScraperExpressionFilter has platform default sourceLevel.
+2016-12-26 19:47:46,628  WARN [Worker-124] - ScalaProject - Project AdScraperExpressionFilter runs on platform default installation.
+2016-12-26 19:56:49,278  WARN [Worker-127] - ScalaProject - Project expressionparser has platform default sourceLevel.
+2016-12-26 19:56:49,279  WARN [Worker-127] - ScalaProject - Project expressionparser runs on platform default installation.
+2016-12-26 19:56:49,653  WARN [Worker-127] - ScalaProject - Project AdScraperExpressionFilter has platform default sourceLevel.
+2016-12-26 19:56:49,653  WARN [Worker-127] - ScalaProject - Project AdScraperExpressionFilter runs on platform default installation.

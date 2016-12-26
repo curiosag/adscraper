@@ -5,7 +5,7 @@
 	http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<import resource="scanner-config.xml" />
+	<import resource="classpath*:scanner-config.xml" />
 
 	<bean id="SettingsStorageSpring" class="app.storage.SettingsStorageSpring" />
 	
