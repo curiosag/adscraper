@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.springframework</groupId>
 
-	<artifactId>adsniffer</artifactId>
+	<artifactId>ads</artifactId>
 	<version>0.1.0</version>
 	<packaging>pom</packaging>
 
@@ -21,7 +21,8 @@
 		<module>expressionparser</module>
 		<module>AdScraperExpressionFilter</module>
 		<module>AdScraper</module>
-        <module>app</module>
+		<module>SpringIntegration</module>
+        <module>adscraperApp</module>
     </modules>
 
     <properties>

@@ -7,5 +7,5 @@ echo $(java -version)
 
 
 cd $OPENSHIFT_REPO_DIR
-nohup java -jar app/target/*.jar --server.port=${OPENSHIFT_DIY_PORT} --server.address=${OPENSHIFT_DIY_IP} &> sysout.txt &
+nohup java -jar adscraperApp/target/*.jar --server.port=${OPENSHIFT_DIY_PORT} --server.address=${OPENSHIFT_DIY_IP} &> sysout.txt &
 

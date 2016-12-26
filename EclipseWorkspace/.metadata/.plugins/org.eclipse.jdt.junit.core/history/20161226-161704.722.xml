@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="app" project="adscraperApp" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="app.RepositoriesTests" time="0.707">
+    <testcase name="testRepos" classname="app.RepositoriesTests" time="0.708"/>
+  </testsuite>
+  <testsuite name="app.MailTest" time="0.974">
+    <testcase name="setSend" classname="app.MailTest" time="0.974"/>
+  </testsuite>
+  <testsuite name="app.StorageTestsSpring" time="0.376">
+    <testcase name="testSettings" classname="app.StorageTestsSpring" time="0.25"/>
+    <testcase name="testSettingsByType" classname="app.StorageTestsSpring" time="0.039"/>
+    <testcase name="testHistoryBulkStorage" classname="app.StorageTestsSpring" time="0.087"/>
+  </testsuite>
+</testrun>

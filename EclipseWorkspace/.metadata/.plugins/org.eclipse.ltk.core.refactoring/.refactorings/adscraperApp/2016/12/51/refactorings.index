@@ -1,0 +1,67 @@
+1481710975688	Delete element
+1481718981081	Copy compilation unit
+1481720395865	Rename type 'StorageTests'
+1481722575118	Encapsulate field 'value'
+1481722594938	Encapsulate field 'type'
+1481722598307	Encapsulate field 'key'
+1481722703452	Rename type 'BulkStorageRepository'
+1481723396125	Extract method 'getItem'
+1481724979582	Rename type 'StorageFactory'
+1481726950532	Rename package 'storage'
+1481727619014	Move compilation unit
+1481727813212	Copy compilation unit
+1481728910296	Encapsulate field 'timestamp'
+1481729253603	Copy compilation unit
+1481730709681	Move compilation units
+1481730738799	Move compilation units
+1481731326609	Delete element
+1481732683202	Rename type 'HistoryStorageMongo'
+1481732688689	Rename type 'BulkStorageMongo'
+1481732694542	Rename type 'SettingsStorageMongo'
+1481735165753	Rename type 'BulkStorageSpring'
+1481735696430	Move compilation units
+1481735929795	Copy compilation unit
+1481737174312	Rename resource 'appconfig.xml'
+1481737296019	Copy file
+1481737852628	Delete element
+1481738378763	Copy file
+1481743274249	Rename type 'HistoricalDetailStorageMongo'
+1481743415759	Rename type 'StorageFactoryMongo'
+1481744148498	Delete element
+1481744278623	Delete element
+1481744301252	Rename type 'StorageFactorySpring'
+1481793000544	Rename package 'app.servlet'
+1481794363462	Copy compilation unit
+1481794374804	Delete element
+1481794387927	Copy compilation unit
+1481794398522	Rename type 'HistController'
+1481796509648	Rename type 'StorageFactory'
+1481797834893	Delete element
+1481797848183	Rename resource 'GwtTests.html'
+1481797879087	Rename resource 'GwtTests.css'
+1481797931575	Rename resource 'Console.html'
+1481798184389	Copy compilation unit
+1481798196023	Rename type 'GreetingController'
+1481798240453	Rename resource 'Console.jsp'
+1481798552157	Rename resource 'Console.html'
+1481798563443	Rename resource 'Console.css'
+1481799551342	Delete element
+1481799556607	Delete element
+1481799585184	Rename resource 'Statistics.html'
+1481820219813	Copy compilation unit
+1481824023844	Rename type 'Repositories'
+1481824057852	Rename type 'Repositories_'
+1481824068441	Delete element
+1481824077745	Rename type 'Repo'
+1481825200064	Rename local variable 'result'
+1481898795200	Rename type 'StorageTestsMongo'
+1481964100954	Move file
+1481964861244	Delete element
+1481968897501	Rename type 'HistRepoTest'
+1481977310016	Copy file
+1481977349822	Copy file
+1481993933911	Rename type 'EmbeddedServletContainerFactory'
+1481994072287	Delete element
+1481995840166	Delete element
+1481996757915	Delete elements
+1481997022228	Delete element
