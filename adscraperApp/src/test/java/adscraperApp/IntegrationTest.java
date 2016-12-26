@@ -19,9 +19,6 @@ import org.cg.ads.SystemEntryGateway;
 public class IntegrationTest {
 	
 	@Autowired
-	ScanScheduler s;
-	
-	@Autowired
 	SystemEntryGateway entry;
 	
 	@Before
