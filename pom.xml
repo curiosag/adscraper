@@ -21,7 +21,7 @@
 		<module>expressionparser</module>
 		<module>AdScraperExpressionFilter</module>
 		<module>AdScraper</module>
-		<module>SpringIntegration</module>
+		<module>IntegrationBySpring</module>
         <module>adscraperApp</module>
     </modules>
 
