@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -17,7 +18,7 @@ import org.cg.util.http.HttpUtil;
 
 import com.google.common.base.Predicate;
 
-public final class SiteScraperJSoup implements SiteScraper {
+public final class SiteScraperJSoup implements SiteScraper, IMasterPageScraper, IDetailPageScraper {
 
 	private SiteValueScrapers extractions;
 
@@ -46,7 +47,8 @@ public final class SiteScraperJSoup implements SiteScraper {
 		return get(url, canProcessDetail, Integer.MAX_VALUE);
 	}
 
-	public final Collection<ScrapedValues> get(String url, Predicate<ScrapedValues> canProcessDetail, int numberSamples) {
+	public final Collection<ScrapedValues> get(String url, Predicate<ScrapedValues> canProcessDetail,
+			int numberSamples) {
 		Check.notNull(url);
 		Check.notNull(canProcessDetail);
 
@@ -137,6 +139,28 @@ public final class SiteScraperJSoup implements SiteScraper {
 			urlSuffix = "/" + urlSuffix;
 
 		return ScrapedValue.create(ValueKind.url, HttpUtil.baseUrl(url) + urlSuffix);
+	}
+
+	@Override
+	public void addDetails(ScrapedValues current, String html) {
+		extractorAdDetails().apply(Jsoup.parse(html, "UTF-8"), current);
+
+	}
+
+	@Override
+	public List<ScrapedValues> getMasterList(String url, String html) {
+		Document doc = Jsoup.parse(html, "UTF-8");
+
+		List<ScrapedValues> result = new ArrayList<ScrapedValues>();
+
+		for (Element e : doc.select(masterListSelector())){
+			ScrapedValues currentValues = extractorAdList().apply(e, new ScrapedValues());
+			addDetailLink(url, e, currentValues);
+			result.add(currentValues);
+		}
+		
+		return result;
+
 	}
 
 }

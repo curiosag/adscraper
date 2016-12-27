@@ -70,6 +70,16 @@ public final class Scraper {
 						excludedTerms);
 	}
 
+	public List<ExecuteScrapingCommand> getScrapings(String[] excludedTerms) {
+		List<ExecuteScrapingCommand> result = new ArrayList<ExecuteScrapingCommand>();
+
+		for (SimpleImmutableEntry<String, String> setting : Settings.instance()
+				.getSettingsByType(Const.SETTINGTYPE_URL))
+			result.add(new ExecuteScrapingCommand(this, setting.getKey(), setting.getValue(), excludedTerms));
+
+		return result;
+	}
+
 	public final void execute() {
 
 		if (Settings.instance().get(Const.SETTING_SWITCH_SUSPENDED).or("").length() > 0) {
@@ -80,12 +90,7 @@ public final class Scraper {
 		String[] excludedTerms = Settings.instance().get("neg").or(excludedTermsSubstandard).split(listDelimiter);
 		Log.info("using excluded terms: " + Arrays.toString(excludedTerms));
 
-		List<ExecuteScrapingCommand> siteScrapings = new ArrayList<ExecuteScrapingCommand>();
-
-		for (SimpleImmutableEntry<String, String> setting : Settings.instance().getSettingsByType(Const.SETTINGTYPE_URL))
-			siteScrapings.add(new ExecuteScrapingCommand(this, setting.getKey(), setting.getValue(), excludedTerms));
-
-		execute(Const.CONCURRENT, siteScrapings);
+		execute(Const.CONCURRENT, getScrapings(excludedTerms));
 	}
 
 	private void execute(boolean concurrent, List<ExecuteScrapingCommand> commands) {

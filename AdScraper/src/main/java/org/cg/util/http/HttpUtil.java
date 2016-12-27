@@ -100,7 +100,7 @@ public final class HttpUtil {
 			return null;
 		}
 	}
-
+	
 	public final static Document getJsoupDoc(String url) {
 		Check.notEmpty(url);
 

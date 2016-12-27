@@ -1,6 +1,5 @@
-/target/*
 target
-/.metadata/*
+.recommenders
 .metadata
 *.iml
 *.ipr

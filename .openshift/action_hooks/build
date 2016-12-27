@@ -22,6 +22,4 @@ echo $(java -version)
 
 cd $OPENSHIFT_REPO_DIR
 
-echo "am in directory " $(pwd)
-
 mvn package -s .openshift/settings.xml  --toolchains toolchains.xml -DskipTests=true # pre-installed maven has no --global-toolchains option

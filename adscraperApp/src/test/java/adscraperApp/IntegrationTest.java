@@ -9,8 +9,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import org.cg.ads.ScanScheduler;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.cg.ads.SystemEntryGateway;
+import org.cg.ads.integration.ScrapingBaseUrl;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -31,7 +34,14 @@ public class IntegrationTest {
 	
 	@Test
 	public void test(){
-		entry.trigger("hi!");
+		
+	  	List<ScrapingBaseUrl> items = new ArrayList<ScrapingBaseUrl>();
+	  	items.add(new ScrapingBaseUrl("1", "http://localhost"));
+	  	items.add(new ScrapingBaseUrl("2", "http://sniffbazar.appspot.com/statData"));
+	  	items.add(new ScrapingBaseUrl("3", "http://localhost"));
+	  	items.add(new ScrapingBaseUrl("4", "http://sniffbazar.appspot.com/statData"));
+	  	
+    	entry.trigger(items);
 		try {
 			Thread.sleep(20000);
 		} catch (InterruptedException e) {

@@ -116,7 +116,7 @@
 			<version>0.1</version>
 		</dependency>
 		<dependency>
-			<groupId>org.cg.adscraper</groupId>
+			<groupId>org.cg.ads</groupId>
 			<artifactId>adscraper</artifactId>
 			<version>0.0.1</version>
 		</dependency>

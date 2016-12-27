@@ -4502,3 +4502,696 @@ Caused by: java.io.FileNotFoundException: /home/sp/dev/tool/eclipse/wsspring/ads
 2016-12-26 20:11:01.354  INFO 26771 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
 2016-12-26 20:11:01.360  INFO 26771 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService
 2016-12-26 20:11:01.362  INFO 26771 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2016-12-26 21:55:35.152  INFO 30295 --- [main] adscraperApp.IntegrationTest             : Starting IntegrationTest on sp-W271ELQ with PID 30295 (started by sp in /home/sp/dev/tool/eclipse/wsspring/adsniffer/adscraperApp)
+2016-12-26 21:55:35.157  INFO 30295 --- [main] adscraperApp.IntegrationTest             : No active profile set, falling back to default profiles: default
+2016-12-26 21:55:36.036  INFO 30295 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [app-config-test.xml]
+2016-12-26 21:55:36.421  INFO 30295 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [mail-config.xml]
+2016-12-26 21:55:36.504  INFO 30295 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [commonConfig.xml]
+2016-12-26 21:55:36.561  INFO 30295 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from URL [file:/home/sp/dev/tool/eclipse/wsspring/adsniffer/IntegrationBySpring/target/classes/scanner-config.xml]
+2016-12-26 21:55:37.125  INFO 30295 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.6.RELEASE/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 21:55:37.126  INFO 30295 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 21:55:37.131  INFO 30295 --- [main] o.s.i.config.IntegrationRegistrar        : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2016-12-26 21:55:37.170  INFO 30295 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-26 21:55:37.220  INFO 30295 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-26 21:55:37.235  INFO 30295 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7dc3712: startup date [Mon Dec 26 21:55:37 CET 2016]; root of context hierarchy
+2016-12-26 21:55:38.027  INFO 30295 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2016-12-26 21:55:38.029  INFO 30295 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2016-12-26 21:55:38.220  INFO 30295 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 
+2016-12-26 21:55:38.316  INFO 30295 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.6.RELEASE/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 21:55:38.317  INFO 30295 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 21:55:38.542  INFO 30295 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'taskScheduler'
+2016-12-26 21:55:39.732  INFO 30295 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 21:55:39.791  INFO 30295 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 21:55:40.147  INFO 30295 --- [cluster-ClusterId{value='586183cb721c9f76576f1fe3', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:138}] to 127.0.0.1:27017
+2016-12-26 21:55:40.148  INFO 30295 --- [cluster-ClusterId{value='586183cb721c9f76576f1fe4', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:139}] to 127.0.0.1:27017
+2016-12-26 21:55:40.150  INFO 30295 --- [cluster-ClusterId{value='586183cb721c9f76576f1fe4', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=667031}
+2016-12-26 21:55:40.151  INFO 30295 --- [cluster-ClusterId{value='586183cb721c9f76576f1fe3', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=3046464}
+2016-12-26 21:55:40.695  INFO 30295 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 21:55:40.715  INFO 30295 --- [cluster-ClusterId{value='586183cc721c9f76576f1fe5', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:140}] to 127.0.0.1:27017
+2016-12-26 21:55:40.716  INFO 30295 --- [cluster-ClusterId{value='586183cc721c9f76576f1fe5', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=858037}
+2016-12-26 21:55:40.724  INFO 30295 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 21:55:40.736  INFO 30295 --- [cluster-ClusterId{value='586183cc721c9f76576f1fe6', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:141}] to 127.0.0.1:27017
+2016-12-26 21:55:40.738  INFO 30295 --- [cluster-ClusterId{value='586183cc721c9f76576f1fe6', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=798590}
+2016-12-26 21:55:40.791  INFO 30295 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 21:55:40.811  INFO 30295 --- [cluster-ClusterId{value='586183cc721c9f76576f1fe7', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:142}] to 127.0.0.1:27017
+2016-12-26 21:55:40.816  INFO 30295 --- [cluster-ClusterId{value='586183cc721c9f76576f1fe7', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=4432791}
+2016-12-26 21:55:41.153  INFO 30295 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-12-26 21:55:41.154  INFO 30295 --- [main] ProxyFactoryBean$MethodInvocationGateway : started systemEntryGateway
+2016-12-26 21:55:41.154  INFO 30295 --- [main] GatewayCompletableFutureProxyFactoryBean : started systemEntryGateway
+2016-12-26 21:55:41.155  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {filter} as a subscriber to the 'systemEntry' channel
+2016-12-26 21:55:41.158  INFO 30295 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 1 subscriber(s).
+2016-12-26 21:55:41.158  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2016-12-26 21:55:41.158  INFO 30295 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#0
+2016-12-26 21:55:41.159  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'logPrematureMessages' channel
+2016-12-26 21:55:41.159  INFO 30295 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 1 subscriber(s).
+2016-12-26 21:55:41.159  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2016-12-26 21:55:41.159  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {splitter:splitter} as a subscriber to the 'systemEntryAfterStartup' channel
+2016-12-26 21:55:41.159  INFO 30295 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntryAfterStartup' has 1 subscriber(s).
+2016-12-26 21:55:41.159  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started splitter
+2016-12-26 21:55:41.160  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:requestLoggingChannel.adapter} as a subscriber to the 'requestLoggingChannel' channel
+2016-12-26 21:55:41.160  INFO 30295 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.requestLoggingChannel' has 1 subscriber(s).
+2016-12-26 21:55:41.160  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started requestLoggingChannel.adapter
+2016-12-26 21:55:41.160  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {http:outbound-gateway:html} as a subscriber to the 'jobsChannel' channel
+2016-12-26 21:55:41.160  INFO 30295 --- [main] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.jobsChannel' has 1 subscriber(s).
+2016-12-26 21:55:41.160  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started html
+2016-12-26 21:55:41.162  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:loghtmlResponseChannel.adapter} as a subscriber to the 'loghtmlResponseChannel' channel
+2016-12-26 21:55:41.163  INFO 30295 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.loghtmlResponseChannel' has 1 subscriber(s).
+2016-12-26 21:55:41.164  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started loghtmlResponseChannel.adapter
+2016-12-26 21:55:41.166  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:logResyncedHtmlResponseChannel.adapter} as a subscriber to the 'logResyncedHtmlResponseChannel' channel
+2016-12-26 21:55:41.166  INFO 30295 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logResyncedHtmlResponseChannel' has 1 subscriber(s).
+2016-12-26 21:55:41.167  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started logResyncedHtmlResponseChannel.adapter
+2016-12-26 21:55:41.167  INFO 30295 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#1
+2016-12-26 21:55:41.167  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'resyncedHtmlResponseChannel' channel
+2016-12-26 21:55:41.168  INFO 30295 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.resyncedHtmlResponseChannel' has 1 subscriber(s).
+2016-12-26 21:55:41.168  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2016-12-26 21:55:41.168  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2016-12-26 21:55:41.168  INFO 30295 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 1 subscriber(s).
+2016-12-26 21:55:41.168  INFO 30295 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2016-12-26 21:55:41.168  INFO 30295 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 1073741823
+2016-12-26 21:55:41.170  INFO 30295 --- [main] o.s.i.endpoint.PollingConsumer           : started org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2016-12-26 21:55:41.179  INFO 30295 --- [main] adscraperApp.IntegrationTest             : Started IntegrationTest in 6.998 seconds (JVM running for 8.934)
+2016-12-26 21:55:41.538  INFO 30295 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7dc3712: startup date [Mon Dec 26 21:55:37 CET 2016]; root of context hierarchy
+2016-12-26 21:55:41.540  INFO 30295 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 1073741823
+2016-12-26 21:55:41.550  INFO 30295 --- [Thread-2] o.s.i.endpoint.PollingConsumer           : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2016-12-26 21:55:41.551  INFO 30295 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-12-26 21:55:41.552  INFO 30295 --- [Thread-2] ProxyFactoryBean$MethodInvocationGateway : stopped systemEntryGateway
+2016-12-26 21:55:41.552  INFO 30295 --- [Thread-2] GatewayCompletableFutureProxyFactoryBean : stopped systemEntryGateway
+2016-12-26 21:55:41.552  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {filter} as a subscriber to the 'systemEntry' channel
+2016-12-26 21:55:41.553  INFO 30295 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 0 subscriber(s).
+2016-12-26 21:55:41.554  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2016-12-26 21:55:41.554  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'logPrematureMessages' channel
+2016-12-26 21:55:41.554  INFO 30295 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 0 subscriber(s).
+2016-12-26 21:55:41.554  INFO 30295 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#0
+2016-12-26 21:55:41.554  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2016-12-26 21:55:41.554  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {splitter:splitter} as a subscriber to the 'systemEntryAfterStartup' channel
+2016-12-26 21:55:41.555  INFO 30295 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntryAfterStartup' has 0 subscriber(s).
+2016-12-26 21:55:41.555  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped splitter
+2016-12-26 21:55:41.555  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:requestLoggingChannel.adapter} as a subscriber to the 'requestLoggingChannel' channel
+2016-12-26 21:55:41.555  INFO 30295 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.requestLoggingChannel' has 0 subscriber(s).
+2016-12-26 21:55:41.556  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped requestLoggingChannel.adapter
+2016-12-26 21:55:41.556  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {http:outbound-gateway:html} as a subscriber to the 'jobsChannel' channel
+2016-12-26 21:55:41.556  INFO 30295 --- [Thread-2] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.jobsChannel' has 0 subscriber(s).
+2016-12-26 21:55:41.556  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped html
+2016-12-26 21:55:41.556  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:loghtmlResponseChannel.adapter} as a subscriber to the 'loghtmlResponseChannel' channel
+2016-12-26 21:55:41.556  INFO 30295 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.loghtmlResponseChannel' has 0 subscriber(s).
+2016-12-26 21:55:41.557  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped loghtmlResponseChannel.adapter
+2016-12-26 21:55:41.557  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:logResyncedHtmlResponseChannel.adapter} as a subscriber to the 'logResyncedHtmlResponseChannel' channel
+2016-12-26 21:55:41.557  INFO 30295 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logResyncedHtmlResponseChannel' has 0 subscriber(s).
+2016-12-26 21:55:41.557  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped logResyncedHtmlResponseChannel.adapter
+2016-12-26 21:55:41.557  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'resyncedHtmlResponseChannel' channel
+2016-12-26 21:55:41.557  INFO 30295 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.resyncedHtmlResponseChannel' has 0 subscriber(s).
+2016-12-26 21:55:41.557  INFO 30295 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#1
+2016-12-26 21:55:41.557  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2016-12-26 21:55:41.558  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2016-12-26 21:55:41.558  INFO 30295 --- [Thread-2] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 0 subscriber(s).
+2016-12-26 21:55:41.558  INFO 30295 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
+2016-12-26 21:55:41.566  INFO 30295 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2016-12-26 21:55:41.567  INFO 30295 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService
+2016-12-26 21:59:29.446  INFO 30404 --- [main] adscraperApp.IntegrationTest             : Starting IntegrationTest on sp-W271ELQ with PID 30404 (started by sp in /home/sp/dev/tool/eclipse/wsspring/adsniffer/adscraperApp)
+2016-12-26 21:59:29.448  INFO 30404 --- [main] adscraperApp.IntegrationTest             : No active profile set, falling back to default profiles: default
+2016-12-26 21:59:29.951  INFO 30404 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [app-config-test.xml]
+2016-12-26 21:59:30.216  INFO 30404 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [mail-config.xml]
+2016-12-26 21:59:30.291  INFO 30404 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [commonConfig.xml]
+2016-12-26 21:59:30.343  INFO 30404 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from URL [file:/home/sp/dev/tool/eclipse/wsspring/adsniffer/IntegrationBySpring/target/classes/scanner-config.xml]
+2016-12-26 21:59:30.721  INFO 30404 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.6.RELEASE/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 21:59:30.722  INFO 30404 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 21:59:30.727  INFO 30404 --- [main] o.s.i.config.IntegrationRegistrar        : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2016-12-26 21:59:30.750  INFO 30404 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-26 21:59:30.791  INFO 30404 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-26 21:59:30.803  INFO 30404 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7dc3712: startup date [Mon Dec 26 21:59:30 CET 2016]; root of context hierarchy
+2016-12-26 21:59:31.309  INFO 30404 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2016-12-26 21:59:31.310  INFO 30404 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2016-12-26 21:59:31.430  INFO 30404 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 
+2016-12-26 21:59:31.527  INFO 30404 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.6.RELEASE/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 21:59:31.528  INFO 30404 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 21:59:31.684  INFO 30404 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'taskScheduler'
+2016-12-26 21:59:32.355  INFO 30404 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 21:59:32.385  INFO 30404 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 21:59:32.481  INFO 30404 --- [cluster-ClusterId{value='586184b4721c9f76c41a8d93', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:143}] to 127.0.0.1:27017
+2016-12-26 21:59:32.482  INFO 30404 --- [cluster-ClusterId{value='586184b4721c9f76c41a8d94', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:144}] to 127.0.0.1:27017
+2016-12-26 21:59:32.486  INFO 30404 --- [cluster-ClusterId{value='586184b4721c9f76c41a8d93', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=4810061}
+2016-12-26 21:59:32.490  INFO 30404 --- [cluster-ClusterId{value='586184b4721c9f76c41a8d94', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=4366992}
+2016-12-26 21:59:32.941  INFO 30404 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 21:59:32.952  INFO 30404 --- [cluster-ClusterId{value='586184b4721c9f76c41a8d95', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:145}] to 127.0.0.1:27017
+2016-12-26 21:59:32.953  INFO 30404 --- [cluster-ClusterId{value='586184b4721c9f76c41a8d95', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=495686}
+2016-12-26 21:59:32.956  INFO 30404 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 21:59:32.965  INFO 30404 --- [cluster-ClusterId{value='586184b4721c9f76c41a8d96', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:146}] to 127.0.0.1:27017
+2016-12-26 21:59:32.966  INFO 30404 --- [cluster-ClusterId{value='586184b4721c9f76c41a8d96', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=753108}
+2016-12-26 21:59:32.996  INFO 30404 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 21:59:33.000  INFO 30404 --- [cluster-ClusterId{value='586184b4721c9f76c41a8d97', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:147}] to 127.0.0.1:27017
+2016-12-26 21:59:33.001  INFO 30404 --- [cluster-ClusterId{value='586184b4721c9f76c41a8d97', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=481619}
+2016-12-26 21:59:33.264  INFO 30404 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-12-26 21:59:33.264  INFO 30404 --- [main] ProxyFactoryBean$MethodInvocationGateway : started systemEntryGateway
+2016-12-26 21:59:33.265  INFO 30404 --- [main] GatewayCompletableFutureProxyFactoryBean : started systemEntryGateway
+2016-12-26 21:59:33.265  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {filter} as a subscriber to the 'systemEntry' channel
+2016-12-26 21:59:33.265  INFO 30404 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 1 subscriber(s).
+2016-12-26 21:59:33.266  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2016-12-26 21:59:33.266  INFO 30404 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#0
+2016-12-26 21:59:33.266  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'logPrematureMessages' channel
+2016-12-26 21:59:33.266  INFO 30404 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 1 subscriber(s).
+2016-12-26 21:59:33.266  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2016-12-26 21:59:33.267  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {splitter:splitter} as a subscriber to the 'systemEntryAfterStartup' channel
+2016-12-26 21:59:33.267  INFO 30404 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntryAfterStartup' has 1 subscriber(s).
+2016-12-26 21:59:33.267  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started splitter
+2016-12-26 21:59:33.267  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:requestLoggingChannel.adapter} as a subscriber to the 'requestLoggingChannel' channel
+2016-12-26 21:59:33.267  INFO 30404 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.requestLoggingChannel' has 1 subscriber(s).
+2016-12-26 21:59:33.267  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started requestLoggingChannel.adapter
+2016-12-26 21:59:33.267  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {http:outbound-gateway:html} as a subscriber to the 'jobsChannel' channel
+2016-12-26 21:59:33.268  INFO 30404 --- [main] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.jobsChannel' has 1 subscriber(s).
+2016-12-26 21:59:33.268  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started html
+2016-12-26 21:59:33.268  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:loghtmlResponseChannel.adapter} as a subscriber to the 'loghtmlResponseChannel' channel
+2016-12-26 21:59:33.268  INFO 30404 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.loghtmlResponseChannel' has 1 subscriber(s).
+2016-12-26 21:59:33.268  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started loghtmlResponseChannel.adapter
+2016-12-26 21:59:33.268  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:logResyncedHtmlResponseChannel.adapter} as a subscriber to the 'logResyncedHtmlResponseChannel' channel
+2016-12-26 21:59:33.268  INFO 30404 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logResyncedHtmlResponseChannel' has 1 subscriber(s).
+2016-12-26 21:59:33.268  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started logResyncedHtmlResponseChannel.adapter
+2016-12-26 21:59:33.269  INFO 30404 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#1
+2016-12-26 21:59:33.269  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'resyncedHtmlResponseChannel' channel
+2016-12-26 21:59:33.269  INFO 30404 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.resyncedHtmlResponseChannel' has 1 subscriber(s).
+2016-12-26 21:59:33.269  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2016-12-26 21:59:33.269  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2016-12-26 21:59:33.269  INFO 30404 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 1 subscriber(s).
+2016-12-26 21:59:33.269  INFO 30404 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2016-12-26 21:59:33.270  INFO 30404 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 1073741823
+2016-12-26 21:59:33.272  INFO 30404 --- [main] o.s.i.endpoint.PollingConsumer           : started org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2016-12-26 21:59:33.280  INFO 30404 --- [main] adscraperApp.IntegrationTest             : Started IntegrationTest in 4.838 seconds (JVM running for 6.101)
+2016-12-26 21:59:33.357  INFO 30404 --- [main] o.s.integration.handler.LoggingHandler   : job: u1 1 in thread: 1
+2016-12-26 21:59:33.360  INFO 30404 --- [main] o.s.integration.handler.LoggingHandler   : job: u2 2 in thread: 1
+2016-12-26 21:59:33.365  INFO 30404 --- [main] o.s.integration.handler.LoggingHandler   : job: u2 3 in thread: 1
+2016-12-26 21:59:33.368  INFO 30404 --- [main] o.s.integration.handler.LoggingHandler   : job: u2 4 in thread: 1
+2016-12-26 21:59:38.000  INFO 30404 --- [executor-4] o.s.integration.handler.LoggingHandler   : hopefully async job: !DOCTYPE html> in thread: 30
+2016-12-26 21:59:38.007  INFO 30404 --- [executor-1] o.s.integration.handler.LoggingHandler   : hopefully async job: !DOCTYPE html> in thread: 27
+2016-12-26 21:59:38.000  INFO 30404 --- [executor-2] o.s.integration.handler.LoggingHandler   : hopefully async job: !DOCTYPE html> in thread: 28
+2016-12-26 21:59:38.011  INFO 30404 --- [task-scheduler-3] o.s.integration.handler.LoggingHandler   : maybe resynced job: <!DOCTYPE html> in thread: 32
+2016-12-26 21:59:38.016  INFO 30404 --- [executor-3] o.s.integration.handler.LoggingHandler   : hopefully async job: !DOCTYPE html> in thread: 29
+2016-12-26 21:59:38.026  INFO 30404 --- [task-scheduler-3] o.s.integration.handler.LoggingHandler   : maybe resynced job: <!DOCTYPE html> in thread: 32
+2016-12-26 21:59:38.029  INFO 30404 --- [task-scheduler-3] o.s.integration.handler.LoggingHandler   : maybe resynced job: <!DOCTYPE html> in thread: 32
+2016-12-26 21:59:38.031  INFO 30404 --- [task-scheduler-3] o.s.integration.handler.LoggingHandler   : maybe resynced job: <!DOCTYPE html> in thread: 32
+2016-12-26 21:59:53.394  INFO 30404 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7dc3712: startup date [Mon Dec 26 21:59:30 CET 2016]; root of context hierarchy
+2016-12-26 21:59:53.399  INFO 30404 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 1073741823
+2016-12-26 21:59:53.410  INFO 30404 --- [Thread-2] o.s.i.endpoint.PollingConsumer           : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2016-12-26 21:59:53.410  INFO 30404 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-12-26 21:59:53.410  INFO 30404 --- [Thread-2] ProxyFactoryBean$MethodInvocationGateway : stopped systemEntryGateway
+2016-12-26 21:59:53.411  INFO 30404 --- [Thread-2] GatewayCompletableFutureProxyFactoryBean : stopped systemEntryGateway
+2016-12-26 21:59:53.411  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {filter} as a subscriber to the 'systemEntry' channel
+2016-12-26 21:59:53.411  INFO 30404 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 0 subscriber(s).
+2016-12-26 21:59:53.411  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2016-12-26 21:59:53.411  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'logPrematureMessages' channel
+2016-12-26 21:59:53.412  INFO 30404 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 0 subscriber(s).
+2016-12-26 21:59:53.412  INFO 30404 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#0
+2016-12-26 21:59:53.412  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2016-12-26 21:59:53.412  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {splitter:splitter} as a subscriber to the 'systemEntryAfterStartup' channel
+2016-12-26 21:59:53.413  INFO 30404 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntryAfterStartup' has 0 subscriber(s).
+2016-12-26 21:59:53.413  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped splitter
+2016-12-26 21:59:53.413  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:requestLoggingChannel.adapter} as a subscriber to the 'requestLoggingChannel' channel
+2016-12-26 21:59:53.413  INFO 30404 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.requestLoggingChannel' has 0 subscriber(s).
+2016-12-26 21:59:53.413  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped requestLoggingChannel.adapter
+2016-12-26 21:59:53.414  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {http:outbound-gateway:html} as a subscriber to the 'jobsChannel' channel
+2016-12-26 21:59:53.414  INFO 30404 --- [Thread-2] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.jobsChannel' has 0 subscriber(s).
+2016-12-26 21:59:53.414  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped html
+2016-12-26 21:59:53.414  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:loghtmlResponseChannel.adapter} as a subscriber to the 'loghtmlResponseChannel' channel
+2016-12-26 21:59:53.416  INFO 30404 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.loghtmlResponseChannel' has 0 subscriber(s).
+2016-12-26 21:59:53.417  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped loghtmlResponseChannel.adapter
+2016-12-26 21:59:53.417  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:logResyncedHtmlResponseChannel.adapter} as a subscriber to the 'logResyncedHtmlResponseChannel' channel
+2016-12-26 21:59:53.419  INFO 30404 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logResyncedHtmlResponseChannel' has 0 subscriber(s).
+2016-12-26 21:59:53.419  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped logResyncedHtmlResponseChannel.adapter
+2016-12-26 21:59:53.419  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'resyncedHtmlResponseChannel' channel
+2016-12-26 21:59:53.421  INFO 30404 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.resyncedHtmlResponseChannel' has 0 subscriber(s).
+2016-12-26 21:59:53.421  INFO 30404 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#1
+2016-12-26 21:59:53.422  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2016-12-26 21:59:53.422  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2016-12-26 21:59:53.426  INFO 30404 --- [Thread-2] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 0 subscriber(s).
+2016-12-26 21:59:53.426  INFO 30404 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
+2016-12-26 21:59:53.433  INFO 30404 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2016-12-26 21:59:53.435  INFO 30404 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService
+2016-12-26 22:03:27.654  INFO 30552 --- [main] adscraperApp.IntegrationTest             : Starting IntegrationTest on sp-W271ELQ with PID 30552 (started by sp in /home/sp/dev/tool/eclipse/wsspring/adsniffer/adscraperApp)
+2016-12-26 22:03:27.655  INFO 30552 --- [main] adscraperApp.IntegrationTest             : No active profile set, falling back to default profiles: default
+2016-12-26 22:03:28.192  INFO 30552 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [app-config-test.xml]
+2016-12-26 22:03:28.397  INFO 30552 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [mail-config.xml]
+2016-12-26 22:03:28.486  INFO 30552 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [commonConfig.xml]
+2016-12-26 22:03:28.527  INFO 30552 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from URL [file:/home/sp/dev/tool/eclipse/wsspring/adsniffer/IntegrationBySpring/target/classes/scanner-config.xml]
+2016-12-26 22:03:28.923  INFO 30552 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.6.RELEASE/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 22:03:28.924  INFO 30552 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 22:03:28.931  INFO 30552 --- [main] o.s.i.config.IntegrationRegistrar        : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2016-12-26 22:03:28.955  INFO 30552 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-26 22:03:28.997  INFO 30552 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-26 22:03:29.007  INFO 30552 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7dc3712: startup date [Mon Dec 26 22:03:29 CET 2016]; root of context hierarchy
+2016-12-26 22:03:29.483  INFO 30552 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2016-12-26 22:03:29.484  INFO 30552 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2016-12-26 22:03:29.611  INFO 30552 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 
+2016-12-26 22:03:29.705  INFO 30552 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.6.RELEASE/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 22:03:29.706  INFO 30552 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 22:03:29.830  INFO 30552 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'taskScheduler'
+2016-12-26 22:03:30.476  INFO 30552 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 22:03:30.506  INFO 30552 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 22:03:30.580  INFO 30552 --- [cluster-ClusterId{value='586185a2721c9f775871765b', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:149}] to 127.0.0.1:27017
+2016-12-26 22:03:30.583  INFO 30552 --- [cluster-ClusterId{value='586185a2721c9f775871765b', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=2142196}
+2016-12-26 22:03:30.600  INFO 30552 --- [cluster-ClusterId{value='586185a2721c9f775871765c', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:148}] to 127.0.0.1:27017
+2016-12-26 22:03:30.601  INFO 30552 --- [cluster-ClusterId{value='586185a2721c9f775871765c', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=556219}
+2016-12-26 22:03:30.991  INFO 30552 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 22:03:30.995  INFO 30552 --- [cluster-ClusterId{value='586185a2721c9f775871765d', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:150}] to 127.0.0.1:27017
+2016-12-26 22:03:30.996  INFO 30552 --- [cluster-ClusterId{value='586185a2721c9f775871765d', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=567257}
+2016-12-26 22:03:31.008  INFO 30552 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 22:03:31.029  INFO 30552 --- [cluster-ClusterId{value='586185a3721c9f775871765e', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:151}] to 127.0.0.1:27017
+2016-12-26 22:03:31.031  INFO 30552 --- [cluster-ClusterId{value='586185a3721c9f775871765e', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=1302031}
+2016-12-26 22:03:31.049  INFO 30552 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 22:03:31.058  INFO 30552 --- [cluster-ClusterId{value='586185a3721c9f775871765f', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:152}] to 127.0.0.1:27017
+2016-12-26 22:03:31.059  INFO 30552 --- [cluster-ClusterId{value='586185a3721c9f775871765f', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=481198}
+2016-12-26 22:03:31.329  INFO 30552 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-12-26 22:03:31.330  INFO 30552 --- [main] ProxyFactoryBean$MethodInvocationGateway : started systemEntryGateway
+2016-12-26 22:03:31.330  INFO 30552 --- [main] GatewayCompletableFutureProxyFactoryBean : started systemEntryGateway
+2016-12-26 22:03:31.330  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {filter} as a subscriber to the 'systemEntry' channel
+2016-12-26 22:03:31.330  INFO 30552 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 1 subscriber(s).
+2016-12-26 22:03:31.331  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2016-12-26 22:03:31.331  INFO 30552 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#0
+2016-12-26 22:03:31.331  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'logPrematureMessages' channel
+2016-12-26 22:03:31.331  INFO 30552 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 1 subscriber(s).
+2016-12-26 22:03:31.331  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2016-12-26 22:03:31.331  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {splitter:splitter} as a subscriber to the 'systemEntryAfterStartup' channel
+2016-12-26 22:03:31.331  INFO 30552 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntryAfterStartup' has 1 subscriber(s).
+2016-12-26 22:03:31.331  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started splitter
+2016-12-26 22:03:31.332  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:requestLoggingChannel.adapter} as a subscriber to the 'requestLoggingChannel' channel
+2016-12-26 22:03:31.332  INFO 30552 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.requestLoggingChannel' has 1 subscriber(s).
+2016-12-26 22:03:31.332  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started requestLoggingChannel.adapter
+2016-12-26 22:03:31.332  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {http:outbound-gateway:html} as a subscriber to the 'jobsChannel' channel
+2016-12-26 22:03:31.332  INFO 30552 --- [main] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.jobsChannel' has 1 subscriber(s).
+2016-12-26 22:03:31.332  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started html
+2016-12-26 22:03:31.332  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:loghtmlResponseChannel.adapter} as a subscriber to the 'loghtmlResponseChannel' channel
+2016-12-26 22:03:31.332  INFO 30552 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.loghtmlResponseChannel' has 1 subscriber(s).
+2016-12-26 22:03:31.332  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started loghtmlResponseChannel.adapter
+2016-12-26 22:03:31.333  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:logResyncedHtmlResponseChannel.adapter} as a subscriber to the 'logResyncedHtmlResponseChannel' channel
+2016-12-26 22:03:31.333  INFO 30552 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logResyncedHtmlResponseChannel' has 1 subscriber(s).
+2016-12-26 22:03:31.333  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started logResyncedHtmlResponseChannel.adapter
+2016-12-26 22:03:31.333  INFO 30552 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#1
+2016-12-26 22:03:31.333  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'resyncedHtmlResponseChannel' channel
+2016-12-26 22:03:31.333  INFO 30552 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.resyncedHtmlResponseChannel' has 1 subscriber(s).
+2016-12-26 22:03:31.333  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2016-12-26 22:03:31.333  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2016-12-26 22:03:31.333  INFO 30552 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 1 subscriber(s).
+2016-12-26 22:03:31.333  INFO 30552 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2016-12-26 22:03:31.333  INFO 30552 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 1073741823
+2016-12-26 22:03:31.336  INFO 30552 --- [main] o.s.i.endpoint.PollingConsumer           : started org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2016-12-26 22:03:31.345  INFO 30552 --- [main] adscraperApp.IntegrationTest             : Started IntegrationTest in 4.256 seconds (JVM running for 5.215)
+2016-12-26 22:03:31.435  INFO 30552 --- [main] o.s.integration.handler.LoggingHandler   : job: 1 http://localhost in thread: 1
+2016-12-26 22:03:31.439  INFO 30552 --- [main] o.s.integration.handler.LoggingHandler   : job: 2 sniffbazar.appspot.com/statData in thread: 1
+2016-12-26 22:03:31.442  INFO 30552 --- [main] o.s.integration.handler.LoggingHandler   : job: 3 http://localhost in thread: 1
+2016-12-26 22:03:31.444  INFO 30552 --- [main] o.s.integration.handler.LoggingHandler   : job: 4 sniffbazar.appspot.com/statData in thread: 1
+2016-12-26 22:03:31.492 ERROR 30552 --- [executor-3] o.s.integration.handler.LoggingHandler   : org.springframework.messaging.MessageHandlingException: HTTP request execution failed for URI [url]; nested exception is java.lang.IllegalArgumentException: URI is not absolute
+	at org.springframework.integration.http.outbound.HttpRequestExecutingMessageHandler.handleRequestMessage(HttpRequestExecutingMessageHandler.java:409)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:109)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:116)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:148)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.access$000(UnicastingDispatcher.java:53)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher$3.run(UnicastingDispatcher.java:129)
+	at org.springframework.integration.util.ErrorHandlingTaskExecutor$1.run(ErrorHandlingTaskExecutor.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: URI is not absolute
+	at java.net.URI.toURL(URI.java:1088)
+	at org.springframework.http.client.SimpleClientHttpRequestFactory.createRequest(SimpleClientHttpRequestFactory.java:137)
+	at org.springframework.http.client.support.HttpAccessor.createRequest(HttpAccessor.java:77)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:648)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:628)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:549)
+	at org.springframework.integration.http.outbound.HttpRequestExecutingMessageHandler.handleRequestMessage(HttpRequestExecutingMessageHandler.java:382)
+	... 10 more
+
+2016-12-26 22:03:31.493 ERROR 30552 --- [executor-4] o.s.integration.handler.LoggingHandler   : org.springframework.messaging.MessageHandlingException: HTTP request execution failed for URI [url]; nested exception is java.lang.IllegalArgumentException: URI is not absolute
+	at org.springframework.integration.http.outbound.HttpRequestExecutingMessageHandler.handleRequestMessage(HttpRequestExecutingMessageHandler.java:409)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:109)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:116)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:148)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.access$000(UnicastingDispatcher.java:53)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher$3.run(UnicastingDispatcher.java:129)
+	at org.springframework.integration.util.ErrorHandlingTaskExecutor$1.run(ErrorHandlingTaskExecutor.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: URI is not absolute
+	at java.net.URI.toURL(URI.java:1088)
+	at org.springframework.http.client.SimpleClientHttpRequestFactory.createRequest(SimpleClientHttpRequestFactory.java:137)
+	at org.springframework.http.client.support.HttpAccessor.createRequest(HttpAccessor.java:77)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:648)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:628)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:549)
+	at org.springframework.integration.http.outbound.HttpRequestExecutingMessageHandler.handleRequestMessage(HttpRequestExecutingMessageHandler.java:382)
+	... 10 more
+
+2016-12-26 22:03:31.496 ERROR 30552 --- [executor-1] o.s.integration.handler.LoggingHandler   : org.springframework.messaging.MessageHandlingException: HTTP request execution failed for URI [url]; nested exception is java.lang.IllegalArgumentException: URI is not absolute
+	at org.springframework.integration.http.outbound.HttpRequestExecutingMessageHandler.handleRequestMessage(HttpRequestExecutingMessageHandler.java:409)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:109)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:116)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:148)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.access$000(UnicastingDispatcher.java:53)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher$3.run(UnicastingDispatcher.java:129)
+	at org.springframework.integration.util.ErrorHandlingTaskExecutor$1.run(ErrorHandlingTaskExecutor.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: URI is not absolute
+	at java.net.URI.toURL(URI.java:1088)
+	at org.springframework.http.client.SimpleClientHttpRequestFactory.createRequest(SimpleClientHttpRequestFactory.java:137)
+	at org.springframework.http.client.support.HttpAccessor.createRequest(HttpAccessor.java:77)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:648)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:628)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:549)
+	at org.springframework.integration.http.outbound.HttpRequestExecutingMessageHandler.handleRequestMessage(HttpRequestExecutingMessageHandler.java:382)
+	... 10 more
+
+2016-12-26 22:03:31.497 ERROR 30552 --- [executor-2] o.s.integration.handler.LoggingHandler   : org.springframework.messaging.MessageHandlingException: HTTP request execution failed for URI [url]; nested exception is java.lang.IllegalArgumentException: URI is not absolute
+	at org.springframework.integration.http.outbound.HttpRequestExecutingMessageHandler.handleRequestMessage(HttpRequestExecutingMessageHandler.java:409)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:109)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:116)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:148)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.access$000(UnicastingDispatcher.java:53)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher$3.run(UnicastingDispatcher.java:129)
+	at org.springframework.integration.util.ErrorHandlingTaskExecutor$1.run(ErrorHandlingTaskExecutor.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: URI is not absolute
+	at java.net.URI.toURL(URI.java:1088)
+	at org.springframework.http.client.SimpleClientHttpRequestFactory.createRequest(SimpleClientHttpRequestFactory.java:137)
+	at org.springframework.http.client.support.HttpAccessor.createRequest(HttpAccessor.java:77)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:648)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:628)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:549)
+	at org.springframework.integration.http.outbound.HttpRequestExecutingMessageHandler.handleRequestMessage(HttpRequestExecutingMessageHandler.java:382)
+	... 10 more
+
+2016-12-26 22:03:51.469  INFO 30552 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7dc3712: startup date [Mon Dec 26 22:03:29 CET 2016]; root of context hierarchy
+2016-12-26 22:03:51.478  INFO 30552 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 1073741823
+2016-12-26 22:03:51.484  INFO 30552 --- [Thread-2] o.s.i.endpoint.PollingConsumer           : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2016-12-26 22:03:51.484  INFO 30552 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-12-26 22:03:51.485  INFO 30552 --- [Thread-2] ProxyFactoryBean$MethodInvocationGateway : stopped systemEntryGateway
+2016-12-26 22:03:51.485  INFO 30552 --- [Thread-2] GatewayCompletableFutureProxyFactoryBean : stopped systemEntryGateway
+2016-12-26 22:03:51.485  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {filter} as a subscriber to the 'systemEntry' channel
+2016-12-26 22:03:51.485  INFO 30552 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 0 subscriber(s).
+2016-12-26 22:03:51.485  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2016-12-26 22:03:51.485  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'logPrematureMessages' channel
+2016-12-26 22:03:51.486  INFO 30552 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 0 subscriber(s).
+2016-12-26 22:03:51.486  INFO 30552 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#0
+2016-12-26 22:03:51.486  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2016-12-26 22:03:51.486  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {splitter:splitter} as a subscriber to the 'systemEntryAfterStartup' channel
+2016-12-26 22:03:51.486  INFO 30552 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntryAfterStartup' has 0 subscriber(s).
+2016-12-26 22:03:51.486  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped splitter
+2016-12-26 22:03:51.486  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:requestLoggingChannel.adapter} as a subscriber to the 'requestLoggingChannel' channel
+2016-12-26 22:03:51.486  INFO 30552 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.requestLoggingChannel' has 0 subscriber(s).
+2016-12-26 22:03:51.487  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped requestLoggingChannel.adapter
+2016-12-26 22:03:51.487  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {http:outbound-gateway:html} as a subscriber to the 'jobsChannel' channel
+2016-12-26 22:03:51.487  INFO 30552 --- [Thread-2] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.jobsChannel' has 0 subscriber(s).
+2016-12-26 22:03:51.487  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped html
+2016-12-26 22:03:51.487  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:loghtmlResponseChannel.adapter} as a subscriber to the 'loghtmlResponseChannel' channel
+2016-12-26 22:03:51.487  INFO 30552 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.loghtmlResponseChannel' has 0 subscriber(s).
+2016-12-26 22:03:51.487  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped loghtmlResponseChannel.adapter
+2016-12-26 22:03:51.488  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:logResyncedHtmlResponseChannel.adapter} as a subscriber to the 'logResyncedHtmlResponseChannel' channel
+2016-12-26 22:03:51.490  INFO 30552 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logResyncedHtmlResponseChannel' has 0 subscriber(s).
+2016-12-26 22:03:51.490  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped logResyncedHtmlResponseChannel.adapter
+2016-12-26 22:03:51.492  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'resyncedHtmlResponseChannel' channel
+2016-12-26 22:03:51.493  INFO 30552 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.resyncedHtmlResponseChannel' has 0 subscriber(s).
+2016-12-26 22:03:51.495  INFO 30552 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#1
+2016-12-26 22:03:51.498  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2016-12-26 22:03:51.498  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2016-12-26 22:03:51.498  INFO 30552 --- [Thread-2] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 0 subscriber(s).
+2016-12-26 22:03:51.500  INFO 30552 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
+2016-12-26 22:03:51.515  INFO 30552 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2016-12-26 22:03:51.518  INFO 30552 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService
+2016-12-26 22:08:21.521  INFO 30669 --- [main] adscraperApp.IntegrationTest             : Starting IntegrationTest on sp-W271ELQ with PID 30669 (started by sp in /home/sp/dev/tool/eclipse/wsspring/adsniffer/adscraperApp)
+2016-12-26 22:08:21.523  INFO 30669 --- [main] adscraperApp.IntegrationTest             : No active profile set, falling back to default profiles: default
+2016-12-26 22:08:22.044  INFO 30669 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [app-config-test.xml]
+2016-12-26 22:08:22.265  INFO 30669 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [mail-config.xml]
+2016-12-26 22:08:22.297  INFO 30669 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [commonConfig.xml]
+2016-12-26 22:08:22.342  INFO 30669 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from URL [file:/home/sp/dev/tool/eclipse/wsspring/adsniffer/IntegrationBySpring/target/classes/scanner-config.xml]
+2016-12-26 22:08:22.681  INFO 30669 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.6.RELEASE/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 22:08:22.682  INFO 30669 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 22:08:22.686  INFO 30669 --- [main] o.s.i.config.IntegrationRegistrar        : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2016-12-26 22:08:22.708  INFO 30669 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-26 22:08:22.738  INFO 30669 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-26 22:08:22.747  INFO 30669 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7dc3712: startup date [Mon Dec 26 22:08:22 CET 2016]; root of context hierarchy
+2016-12-26 22:08:23.237  INFO 30669 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2016-12-26 22:08:23.238  INFO 30669 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2016-12-26 22:08:23.349  INFO 30669 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 
+2016-12-26 22:08:23.413  INFO 30669 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.6.RELEASE/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 22:08:23.414  INFO 30669 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 22:08:23.530  INFO 30669 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'taskScheduler'
+2016-12-26 22:08:24.112  INFO 30669 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 22:08:24.141  INFO 30669 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 22:08:24.220  INFO 30669 --- [cluster-ClusterId{value='586186c8721c9f77cd82ca87', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:153}] to 127.0.0.1:27017
+2016-12-26 22:08:24.224  INFO 30669 --- [cluster-ClusterId{value='586186c8721c9f77cd82ca87', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=2808357}
+2016-12-26 22:08:24.237  INFO 30669 --- [cluster-ClusterId{value='586186c8721c9f77cd82ca86', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:154}] to 127.0.0.1:27017
+2016-12-26 22:08:24.242  INFO 30669 --- [cluster-ClusterId{value='586186c8721c9f77cd82ca86', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=4754103}
+2016-12-26 22:08:24.659  INFO 30669 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 22:08:24.662  INFO 30669 --- [cluster-ClusterId{value='586186c8721c9f77cd82ca88', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:155}] to 127.0.0.1:27017
+2016-12-26 22:08:24.664  INFO 30669 --- [cluster-ClusterId{value='586186c8721c9f77cd82ca88', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=600506}
+2016-12-26 22:08:24.675  INFO 30669 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 22:08:24.680  INFO 30669 --- [cluster-ClusterId{value='586186c8721c9f77cd82ca89', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:156}] to 127.0.0.1:27017
+2016-12-26 22:08:24.681  INFO 30669 --- [cluster-ClusterId{value='586186c8721c9f77cd82ca89', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=496294}
+2016-12-26 22:08:24.716  INFO 30669 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 22:08:24.720  INFO 30669 --- [cluster-ClusterId{value='586186c8721c9f77cd82ca8a', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:157}] to 127.0.0.1:27017
+2016-12-26 22:08:24.721  INFO 30669 --- [cluster-ClusterId{value='586186c8721c9f77cd82ca8a', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=450331}
+2016-12-26 22:08:25.035  INFO 30669 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-12-26 22:08:25.036  INFO 30669 --- [main] ProxyFactoryBean$MethodInvocationGateway : started systemEntryGateway
+2016-12-26 22:08:25.036  INFO 30669 --- [main] GatewayCompletableFutureProxyFactoryBean : started systemEntryGateway
+2016-12-26 22:08:25.037  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {filter} as a subscriber to the 'systemEntry' channel
+2016-12-26 22:08:25.037  INFO 30669 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 1 subscriber(s).
+2016-12-26 22:08:25.037  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2016-12-26 22:08:25.038  INFO 30669 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#0
+2016-12-26 22:08:25.038  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'logPrematureMessages' channel
+2016-12-26 22:08:25.038  INFO 30669 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 1 subscriber(s).
+2016-12-26 22:08:25.038  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2016-12-26 22:08:25.038  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {splitter:splitter} as a subscriber to the 'systemEntryAfterStartup' channel
+2016-12-26 22:08:25.038  INFO 30669 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntryAfterStartup' has 1 subscriber(s).
+2016-12-26 22:08:25.039  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started splitter
+2016-12-26 22:08:25.039  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:requestLoggingChannel.adapter} as a subscriber to the 'requestLoggingChannel' channel
+2016-12-26 22:08:25.039  INFO 30669 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.requestLoggingChannel' has 1 subscriber(s).
+2016-12-26 22:08:25.039  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started requestLoggingChannel.adapter
+2016-12-26 22:08:25.039  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {http:outbound-gateway:html} as a subscriber to the 'jobsChannel' channel
+2016-12-26 22:08:25.039  INFO 30669 --- [main] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.jobsChannel' has 1 subscriber(s).
+2016-12-26 22:08:25.039  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started html
+2016-12-26 22:08:25.040  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:loghtmlResponseChannel.adapter} as a subscriber to the 'loghtmlResponseChannel' channel
+2016-12-26 22:08:25.040  INFO 30669 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.loghtmlResponseChannel' has 1 subscriber(s).
+2016-12-26 22:08:25.040  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started loghtmlResponseChannel.adapter
+2016-12-26 22:08:25.040  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:logResyncedHtmlResponseChannel.adapter} as a subscriber to the 'logResyncedHtmlResponseChannel' channel
+2016-12-26 22:08:25.040  INFO 30669 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logResyncedHtmlResponseChannel' has 1 subscriber(s).
+2016-12-26 22:08:25.040  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started logResyncedHtmlResponseChannel.adapter
+2016-12-26 22:08:25.040  INFO 30669 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#1
+2016-12-26 22:08:25.040  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'resyncedHtmlResponseChannel' channel
+2016-12-26 22:08:25.040  INFO 30669 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.resyncedHtmlResponseChannel' has 1 subscriber(s).
+2016-12-26 22:08:25.041  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2016-12-26 22:08:25.041  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2016-12-26 22:08:25.041  INFO 30669 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 1 subscriber(s).
+2016-12-26 22:08:25.041  INFO 30669 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2016-12-26 22:08:25.041  INFO 30669 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 1073741823
+2016-12-26 22:08:25.044  INFO 30669 --- [main] o.s.i.endpoint.PollingConsumer           : started org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2016-12-26 22:08:25.052  INFO 30669 --- [main] adscraperApp.IntegrationTest             : Started IntegrationTest in 4.33 seconds (JVM running for 5.37)
+2016-12-26 22:08:25.161  INFO 30669 --- [main] o.s.integration.handler.LoggingHandler   : job: 1 http://localhost in thread: 1
+2016-12-26 22:08:25.179  INFO 30669 --- [main] o.s.integration.handler.LoggingHandler   : job: 2 sniffbazar.appspot.com/statData in thread: 1
+2016-12-26 22:08:25.203  INFO 30669 --- [main] o.s.integration.handler.LoggingHandler   : job: 3 http://localhost in thread: 1
+2016-12-26 22:08:25.218  INFO 30669 --- [main] o.s.integration.handler.LoggingHandler   : job: 4 sniffbazar.appspot.com/statData in thread: 1
+2016-12-26 22:08:25.249 ERROR 30669 --- [executor-4] o.s.integration.handler.LoggingHandler   : org.springframework.messaging.MessageHandlingException: HTTP request execution failed for URI [sniffbazar.appspot.com/statData]; nested exception is java.lang.IllegalArgumentException: URI is not absolute
+	at org.springframework.integration.http.outbound.HttpRequestExecutingMessageHandler.handleRequestMessage(HttpRequestExecutingMessageHandler.java:409)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:109)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:116)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:148)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.access$000(UnicastingDispatcher.java:53)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher$3.run(UnicastingDispatcher.java:129)
+	at org.springframework.integration.util.ErrorHandlingTaskExecutor$1.run(ErrorHandlingTaskExecutor.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: URI is not absolute
+	at java.net.URI.toURL(URI.java:1088)
+	at org.springframework.http.client.SimpleClientHttpRequestFactory.createRequest(SimpleClientHttpRequestFactory.java:137)
+	at org.springframework.http.client.support.HttpAccessor.createRequest(HttpAccessor.java:77)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:648)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:628)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:549)
+	at org.springframework.integration.http.outbound.HttpRequestExecutingMessageHandler.handleRequestMessage(HttpRequestExecutingMessageHandler.java:382)
+	... 10 more
+
+2016-12-26 22:08:25.250 ERROR 30669 --- [executor-2] o.s.integration.handler.LoggingHandler   : org.springframework.messaging.MessageHandlingException: HTTP request execution failed for URI [sniffbazar.appspot.com/statData]; nested exception is java.lang.IllegalArgumentException: URI is not absolute
+	at org.springframework.integration.http.outbound.HttpRequestExecutingMessageHandler.handleRequestMessage(HttpRequestExecutingMessageHandler.java:409)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:109)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:116)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:148)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.access$000(UnicastingDispatcher.java:53)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher$3.run(UnicastingDispatcher.java:129)
+	at org.springframework.integration.util.ErrorHandlingTaskExecutor$1.run(ErrorHandlingTaskExecutor.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: URI is not absolute
+	at java.net.URI.toURL(URI.java:1088)
+	at org.springframework.http.client.SimpleClientHttpRequestFactory.createRequest(SimpleClientHttpRequestFactory.java:137)
+	at org.springframework.http.client.support.HttpAccessor.createRequest(HttpAccessor.java:77)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:648)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:628)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:549)
+	at org.springframework.integration.http.outbound.HttpRequestExecutingMessageHandler.handleRequestMessage(HttpRequestExecutingMessageHandler.java:382)
+	... 10 more
+
+2016-12-26 22:08:26.468  INFO 30669 --- [executor-1] o.s.integration.handler.LoggingHandler   : hopefully async job: !DOCTYPE html> in thread: 27
+2016-12-26 22:08:26.467  INFO 30669 --- [executor-3] o.s.integration.handler.LoggingHandler   : hopefully async job: !DOCTYPE html> in thread: 29
+2016-12-26 22:08:26.476  INFO 30669 --- [task-scheduler-2] o.s.integration.handler.LoggingHandler   : maybe resynced job: <!DOCTYPE html> in thread: 31
+2016-12-26 22:08:26.485  INFO 30669 --- [task-scheduler-2] o.s.integration.handler.LoggingHandler   : maybe resynced job: <!DOCTYPE html> in thread: 31
+2016-12-26 22:08:45.244  INFO 30669 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7dc3712: startup date [Mon Dec 26 22:08:22 CET 2016]; root of context hierarchy
+2016-12-26 22:08:45.257  INFO 30669 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 1073741823
+2016-12-26 22:08:45.261  INFO 30669 --- [Thread-2] o.s.i.endpoint.PollingConsumer           : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2016-12-26 22:08:45.263  INFO 30669 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-12-26 22:08:45.264  INFO 30669 --- [Thread-2] ProxyFactoryBean$MethodInvocationGateway : stopped systemEntryGateway
+2016-12-26 22:08:45.264  INFO 30669 --- [Thread-2] GatewayCompletableFutureProxyFactoryBean : stopped systemEntryGateway
+2016-12-26 22:08:45.267  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {filter} as a subscriber to the 'systemEntry' channel
+2016-12-26 22:08:45.267  INFO 30669 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 0 subscriber(s).
+2016-12-26 22:08:45.267  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2016-12-26 22:08:45.269  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'logPrematureMessages' channel
+2016-12-26 22:08:45.269  INFO 30669 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 0 subscriber(s).
+2016-12-26 22:08:45.269  INFO 30669 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#0
+2016-12-26 22:08:45.270  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2016-12-26 22:08:45.272  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {splitter:splitter} as a subscriber to the 'systemEntryAfterStartup' channel
+2016-12-26 22:08:45.273  INFO 30669 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntryAfterStartup' has 0 subscriber(s).
+2016-12-26 22:08:45.273  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped splitter
+2016-12-26 22:08:45.273  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:requestLoggingChannel.adapter} as a subscriber to the 'requestLoggingChannel' channel
+2016-12-26 22:08:45.273  INFO 30669 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.requestLoggingChannel' has 0 subscriber(s).
+2016-12-26 22:08:45.273  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped requestLoggingChannel.adapter
+2016-12-26 22:08:45.274  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {http:outbound-gateway:html} as a subscriber to the 'jobsChannel' channel
+2016-12-26 22:08:45.275  INFO 30669 --- [Thread-2] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.jobsChannel' has 0 subscriber(s).
+2016-12-26 22:08:45.276  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped html
+2016-12-26 22:08:45.276  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:loghtmlResponseChannel.adapter} as a subscriber to the 'loghtmlResponseChannel' channel
+2016-12-26 22:08:45.277  INFO 30669 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.loghtmlResponseChannel' has 0 subscriber(s).
+2016-12-26 22:08:45.279  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped loghtmlResponseChannel.adapter
+2016-12-26 22:08:45.280  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:logResyncedHtmlResponseChannel.adapter} as a subscriber to the 'logResyncedHtmlResponseChannel' channel
+2016-12-26 22:08:45.280  INFO 30669 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logResyncedHtmlResponseChannel' has 0 subscriber(s).
+2016-12-26 22:08:45.280  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped logResyncedHtmlResponseChannel.adapter
+2016-12-26 22:08:45.280  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'resyncedHtmlResponseChannel' channel
+2016-12-26 22:08:45.281  INFO 30669 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.resyncedHtmlResponseChannel' has 0 subscriber(s).
+2016-12-26 22:08:45.282  INFO 30669 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#1
+2016-12-26 22:08:45.282  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2016-12-26 22:08:45.283  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2016-12-26 22:08:45.284  INFO 30669 --- [Thread-2] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 0 subscriber(s).
+2016-12-26 22:08:45.285  INFO 30669 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
+2016-12-26 22:08:45.293  INFO 30669 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2016-12-26 22:08:45.296  INFO 30669 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService
+2016-12-26 22:09:15.934  INFO 30789 --- [main] adscraperApp.IntegrationTest             : Starting IntegrationTest on sp-W271ELQ with PID 30789 (started by sp in /home/sp/dev/tool/eclipse/wsspring/adsniffer/adscraperApp)
+2016-12-26 22:09:15.935  INFO 30789 --- [main] adscraperApp.IntegrationTest             : No active profile set, falling back to default profiles: default
+2016-12-26 22:09:16.421  INFO 30789 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [app-config-test.xml]
+2016-12-26 22:09:16.741  INFO 30789 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [mail-config.xml]
+2016-12-26 22:09:16.784  INFO 30789 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [commonConfig.xml]
+2016-12-26 22:09:16.817  INFO 30789 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from URL [file:/home/sp/dev/tool/eclipse/wsspring/adsniffer/IntegrationBySpring/target/classes/scanner-config.xml]
+2016-12-26 22:09:17.363  INFO 30789 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.6.RELEASE/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 22:09:17.364  INFO 30789 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 22:09:17.371  INFO 30789 --- [main] o.s.i.config.IntegrationRegistrar        : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2016-12-26 22:09:17.391  INFO 30789 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-26 22:09:17.429  INFO 30789 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-26 22:09:17.444  INFO 30789 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7dc3712: startup date [Mon Dec 26 22:09:17 CET 2016]; root of context hierarchy
+2016-12-26 22:09:17.932  INFO 30789 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2016-12-26 22:09:17.935  INFO 30789 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2016-12-26 22:09:18.052  INFO 30789 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 
+2016-12-26 22:09:18.123  INFO 30789 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.6.RELEASE/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 22:09:18.124  INFO 30789 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-26 22:09:18.314  INFO 30789 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'taskScheduler'
+2016-12-26 22:09:19.083  INFO 30789 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 22:09:19.114  INFO 30789 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 22:09:19.178  INFO 30789 --- [cluster-ClusterId{value='586186ff721c9f78457e44d9', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:158}] to 127.0.0.1:27017
+2016-12-26 22:09:19.185  INFO 30789 --- [cluster-ClusterId{value='586186ff721c9f78457e44d9', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=6155414}
+2016-12-26 22:09:19.250  INFO 30789 --- [cluster-ClusterId{value='586186ff721c9f78457e44da', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:159}] to 127.0.0.1:27017
+2016-12-26 22:09:19.253  INFO 30789 --- [cluster-ClusterId{value='586186ff721c9f78457e44da', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=2296766}
+2016-12-26 22:09:19.769  INFO 30789 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 22:09:19.779  INFO 30789 --- [cluster-ClusterId{value='586186ff721c9f78457e44db', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:160}] to 127.0.0.1:27017
+2016-12-26 22:09:19.780  INFO 30789 --- [cluster-ClusterId{value='586186ff721c9f78457e44db', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=988938}
+2016-12-26 22:09:19.796  INFO 30789 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 22:09:19.803  INFO 30789 --- [cluster-ClusterId{value='586186ff721c9f78457e44dc', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:161}] to 127.0.0.1:27017
+2016-12-26 22:09:19.804  INFO 30789 --- [cluster-ClusterId{value='586186ff721c9f78457e44dc', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=543255}
+2016-12-26 22:09:19.871  INFO 30789 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-26 22:09:19.984  INFO 30789 --- [cluster-ClusterId{value='586186ff721c9f78457e44dd', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:162}] to 127.0.0.1:27017
+2016-12-26 22:09:19.985  INFO 30789 --- [cluster-ClusterId{value='586186ff721c9f78457e44dd', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=603598}
+2016-12-26 22:09:20.214  INFO 30789 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-12-26 22:09:20.215  INFO 30789 --- [main] ProxyFactoryBean$MethodInvocationGateway : started systemEntryGateway
+2016-12-26 22:09:20.215  INFO 30789 --- [main] GatewayCompletableFutureProxyFactoryBean : started systemEntryGateway
+2016-12-26 22:09:20.215  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {filter} as a subscriber to the 'systemEntry' channel
+2016-12-26 22:09:20.216  INFO 30789 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 1 subscriber(s).
+2016-12-26 22:09:20.216  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2016-12-26 22:09:20.216  INFO 30789 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#0
+2016-12-26 22:09:20.217  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'logPrematureMessages' channel
+2016-12-26 22:09:20.217  INFO 30789 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 1 subscriber(s).
+2016-12-26 22:09:20.217  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2016-12-26 22:09:20.217  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {splitter:splitter} as a subscriber to the 'systemEntryAfterStartup' channel
+2016-12-26 22:09:20.217  INFO 30789 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntryAfterStartup' has 1 subscriber(s).
+2016-12-26 22:09:20.217  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started splitter
+2016-12-26 22:09:20.217  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:requestLoggingChannel.adapter} as a subscriber to the 'requestLoggingChannel' channel
+2016-12-26 22:09:20.218  INFO 30789 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.requestLoggingChannel' has 1 subscriber(s).
+2016-12-26 22:09:20.218  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started requestLoggingChannel.adapter
+2016-12-26 22:09:20.218  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {http:outbound-gateway:html} as a subscriber to the 'jobsChannel' channel
+2016-12-26 22:09:20.218  INFO 30789 --- [main] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.jobsChannel' has 1 subscriber(s).
+2016-12-26 22:09:20.218  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started html
+2016-12-26 22:09:20.218  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:loghtmlResponseChannel.adapter} as a subscriber to the 'loghtmlResponseChannel' channel
+2016-12-26 22:09:20.219  INFO 30789 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.loghtmlResponseChannel' has 1 subscriber(s).
+2016-12-26 22:09:20.219  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started loghtmlResponseChannel.adapter
+2016-12-26 22:09:20.219  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:logResyncedHtmlResponseChannel.adapter} as a subscriber to the 'logResyncedHtmlResponseChannel' channel
+2016-12-26 22:09:20.219  INFO 30789 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logResyncedHtmlResponseChannel' has 1 subscriber(s).
+2016-12-26 22:09:20.219  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started logResyncedHtmlResponseChannel.adapter
+2016-12-26 22:09:20.219  INFO 30789 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#1
+2016-12-26 22:09:20.219  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'resyncedHtmlResponseChannel' channel
+2016-12-26 22:09:20.220  INFO 30789 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.resyncedHtmlResponseChannel' has 1 subscriber(s).
+2016-12-26 22:09:20.220  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2016-12-26 22:09:20.220  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2016-12-26 22:09:20.220  INFO 30789 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 1 subscriber(s).
+2016-12-26 22:09:20.220  INFO 30789 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2016-12-26 22:09:20.220  INFO 30789 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 1073741823
+2016-12-26 22:09:20.223  INFO 30789 --- [main] o.s.i.endpoint.PollingConsumer           : started org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2016-12-26 22:09:20.231  INFO 30789 --- [main] adscraperApp.IntegrationTest             : Started IntegrationTest in 4.957 seconds (JVM running for 6.277)
+2016-12-26 22:09:20.292  INFO 30789 --- [main] o.s.integration.handler.LoggingHandler   : job: 1 http://localhost in thread: 1
+2016-12-26 22:09:20.294  INFO 30789 --- [main] o.s.integration.handler.LoggingHandler   : job: 2 http://sniffbazar.appspot.com/statData in thread: 1
+2016-12-26 22:09:20.297  INFO 30789 --- [main] o.s.integration.handler.LoggingHandler   : job: 3 http://localhost in thread: 1
+2016-12-26 22:09:20.302  INFO 30789 --- [main] o.s.integration.handler.LoggingHandler   : job: 4 http://sniffbazar.appspot.com/statData in thread: 1
+2016-12-26 22:09:20.820  INFO 30789 --- [executor-4] o.s.integration.handler.LoggingHandler   : hopefully async job: "byDay":{"cols in thread: 30
+2016-12-26 22:09:20.825  INFO 30789 --- [task-scheduler-1] o.s.integration.handler.LoggingHandler   : maybe resynced job: {"byDay":{"cols in thread: 25
+2016-12-26 22:09:20.835  INFO 30789 --- [executor-2] o.s.integration.handler.LoggingHandler   : hopefully async job: "byDay":{"cols in thread: 28
+2016-12-26 22:09:20.848  INFO 30789 --- [task-scheduler-1] o.s.integration.handler.LoggingHandler   : maybe resynced job: {"byDay":{"cols in thread: 25
+2016-12-26 22:09:21.367  INFO 30789 --- [executor-1] o.s.integration.handler.LoggingHandler   : hopefully async job: !DOCTYPE html> in thread: 27
+2016-12-26 22:09:21.380  INFO 30789 --- [task-scheduler-2] o.s.integration.handler.LoggingHandler   : maybe resynced job: <!DOCTYPE html> in thread: 31
+2016-12-26 22:09:21.429  INFO 30789 --- [executor-3] o.s.integration.handler.LoggingHandler   : hopefully async job: !DOCTYPE html> in thread: 29
+2016-12-26 22:09:21.431  INFO 30789 --- [task-scheduler-2] o.s.integration.handler.LoggingHandler   : maybe resynced job: <!DOCTYPE html> in thread: 31
+2016-12-26 22:09:40.327  INFO 30789 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7dc3712: startup date [Mon Dec 26 22:09:17 CET 2016]; root of context hierarchy
+2016-12-26 22:09:40.332  INFO 30789 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 1073741823
+2016-12-26 22:09:40.340  INFO 30789 --- [Thread-2] o.s.i.endpoint.PollingConsumer           : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2016-12-26 22:09:40.340  INFO 30789 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-12-26 22:09:40.342  INFO 30789 --- [Thread-2] ProxyFactoryBean$MethodInvocationGateway : stopped systemEntryGateway
+2016-12-26 22:09:40.343  INFO 30789 --- [Thread-2] GatewayCompletableFutureProxyFactoryBean : stopped systemEntryGateway
+2016-12-26 22:09:40.345  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {filter} as a subscriber to the 'systemEntry' channel
+2016-12-26 22:09:40.347  INFO 30789 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 0 subscriber(s).
+2016-12-26 22:09:40.348  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2016-12-26 22:09:40.348  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'logPrematureMessages' channel
+2016-12-26 22:09:40.352  INFO 30789 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 0 subscriber(s).
+2016-12-26 22:09:40.352  INFO 30789 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#0
+2016-12-26 22:09:40.353  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2016-12-26 22:09:40.353  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {splitter:splitter} as a subscriber to the 'systemEntryAfterStartup' channel
+2016-12-26 22:09:40.353  INFO 30789 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntryAfterStartup' has 0 subscriber(s).
+2016-12-26 22:09:40.353  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped splitter
+2016-12-26 22:09:40.353  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:requestLoggingChannel.adapter} as a subscriber to the 'requestLoggingChannel' channel
+2016-12-26 22:09:40.354  INFO 30789 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.requestLoggingChannel' has 0 subscriber(s).
+2016-12-26 22:09:40.354  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped requestLoggingChannel.adapter
+2016-12-26 22:09:40.354  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {http:outbound-gateway:html} as a subscriber to the 'jobsChannel' channel
+2016-12-26 22:09:40.355  INFO 30789 --- [Thread-2] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.jobsChannel' has 0 subscriber(s).
+2016-12-26 22:09:40.355  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped html
+2016-12-26 22:09:40.355  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:loghtmlResponseChannel.adapter} as a subscriber to the 'loghtmlResponseChannel' channel
+2016-12-26 22:09:40.357  INFO 30789 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.loghtmlResponseChannel' has 0 subscriber(s).
+2016-12-26 22:09:40.357  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped loghtmlResponseChannel.adapter
+2016-12-26 22:09:40.357  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:logResyncedHtmlResponseChannel.adapter} as a subscriber to the 'logResyncedHtmlResponseChannel' channel
+2016-12-26 22:09:40.358  INFO 30789 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logResyncedHtmlResponseChannel' has 0 subscriber(s).
+2016-12-26 22:09:40.360  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped logResyncedHtmlResponseChannel.adapter
+2016-12-26 22:09:40.360  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'resyncedHtmlResponseChannel' channel
+2016-12-26 22:09:40.362  INFO 30789 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.resyncedHtmlResponseChannel' has 0 subscriber(s).
+2016-12-26 22:09:40.362  INFO 30789 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#1
+2016-12-26 22:09:40.362  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2016-12-26 22:09:40.362  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2016-12-26 22:09:40.362  INFO 30789 --- [Thread-2] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 0 subscriber(s).
+2016-12-26 22:09:40.363  INFO 30789 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
+2016-12-26 22:09:40.372  INFO 30789 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2016-12-26 22:09:40.375  INFO 30789 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService
