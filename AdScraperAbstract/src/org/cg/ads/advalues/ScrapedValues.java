@@ -25,7 +25,7 @@ public final class ScrapedValues implements WithUrl<ScrapedValues> {
 	public final boolean isEmpty() {
 		return values.isEmpty();
 	}
-
+	
 	public final boolean has(ValueKind id) {
 		Check.notNull(id);
 

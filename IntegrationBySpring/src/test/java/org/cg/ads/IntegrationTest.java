@@ -11,36 +11,40 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 import org.cg.ads.SystemEntryGateway;
 import org.cg.ads.integration.ScrapingBaseUrl;
+import org.cg.ads.mock.MockStorageFactory;
+import org.cg.adscraper.factory.StorageFactory;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ContextConfiguration("classpath*:scanner-config.xml")
 
 public class IntegrationTest {
-	
+
 	@Autowired
 	SystemEntryGateway entry;
-	
+
 	@Before
 	public void setUp() {
+		StorageFactory.setUp(new MockStorageFactory());
 	}
 
 	@After
 	public void tearDown() {
 	}
-	
+
 	@Test
-	public void test(){
-	  	List<ScrapingBaseUrl> items = new ArrayList<ScrapingBaseUrl>();
-	  	items.add(new ScrapingBaseUrl("1", "http://localhost"));
-	  	items.add(new ScrapingBaseUrl("2", "http://sniffbazar.appspot.com/statData"));
-	  	items.add(new ScrapingBaseUrl("3", "http://localhost"));
-	  	items.add(new ScrapingBaseUrl("4", "http://sniffbazar.appspot.com/statData"));
-	  	
-    	entry.trigger(items);
+	public void test() {
+		List<ScrapingBaseUrl> items = new ArrayList<ScrapingBaseUrl>();
+		items.add(new ScrapingBaseUrl("urlErr", "http://www.nowhere.nix"));
+
+		IntStream.range(0, 1).forEach(x -> items.add(new ScrapingBaseUrl(String.format("url%s", x),
+				"http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0")));
+
+		entry.trigger(items);
 		try {
 			Thread.sleep(20000);
 		} catch (InterruptedException e) {
@@ -48,5 +52,4 @@ public class IntegrationTest {
 		}
 	}
 
-	
 }

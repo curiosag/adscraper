@@ -4,7 +4,7 @@ import org.cg.base.Check;
 
 import com.google.common.base.Optional;
 
-public final class ScrapedValue {
+public class ScrapedValue {
 
 	private ValueKind id;
 	private Optional<String> rawValue;

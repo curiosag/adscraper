@@ -3,7 +3,6 @@ package org.cg.scraping;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.cg.ads.advalues.ScrapedValues;
 import org.cg.base.Check;
 
 import com.google.common.base.Optional;

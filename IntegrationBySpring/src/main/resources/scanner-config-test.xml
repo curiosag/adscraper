@@ -97,7 +97,7 @@
 
 	<int:service-activator input-channel="htmlResponseChannel"
 		output-channel="resyncedHtmlResponseChannel" expression="payload">
-		<int:poller receive-timeout="500" fixed-rate="10" />
+		<int:poller receive-timeout="500" fixed-rate="1000" /> <!-- <<< different threads for different polls!!!! -->
 	</int:service-activator>
 
 	<int:channel id="resyncedHtmlResponseChannel">
