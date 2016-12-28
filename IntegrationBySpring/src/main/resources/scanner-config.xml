@@ -21,6 +21,7 @@
 		http://www.springframework.org/schema/integration/mongodb http://www.springframework.org/schema/integration/mongodb/spring-integration-mongodb.xsd
 		http://www.springframework.org/schema/util		http://www.springframework.org/schema/util/spring-util.xsd">
 
+
 	<context:component-scan base-package="org.cg.ads" />
 
 	<task:executor id="executor" pool-size="5" />
@@ -31,20 +32,29 @@
 	<bean id="spelBridge" class="org.cg.ads.integration.SpelBridge" />
 	<bean id="nullChannel" class="org.springframework.integration.channel.NullChannel" />
 
-	<bean id="sentinelBypassingRouter" class="org.cg.ads.integration.SentinelBypassingRouter">
-		<constructor-arg index="0" value="getPageForUrlChannel" />
-	</bean>
-<!--
-PingBackMassageHandler
+	<!-- that's the way to access enviromnemt variables -->
+	<!-- but not the way to delay the pingback -->
+	<!-- int:delayer id="delayer" default-delay="3000" expression="@configurationProperties['httpTimeout']" 
+		/> -->
 
-	<int:router id="bypassSentinelsForHttpRequests" input-channel="getPageForUrlChannelPriorityFiltered"
-	    ref="sentinelBypassingRouter" method="route"
-		default-output-channel="httpErrorChannel">
-	</int:router>
--->
+	<bean id="appProperties"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:application.properties" />
+	</bean>
+
+
+	<int:service-activator input-channel="pingBackChannel">
+		<description>returns the received message as is to the replyChannel in
+			the message header, given there is one
+		</description>
+		<bean class="org.cg.ads.integration.PingBackMassageHandler">
+			<constructor-arg index="0" value="${httpTimeout}" />
+		</bean>
+
+	</int:service-activator>
 
 	<int:recipient-list-router input-channel="getPageForUrlChannelPriorityFiltered">
-		<int:recipient channel="getPageForUrlChannel"
+		<int:recipient channel="pingBackChannel"
 			selector-expression="headers[priority] == 0" />
 		<int:recipient channel="getPageForUrlChannel"
 			selector-expression="headers[priority] > 0" />
@@ -82,9 +92,6 @@ PingBackMassageHandler
 	<int:chain id="scrapeMasterList" input-channel="systemEntryAfterStartup"
 		output-channel="scrapeMasterListResultChannel">
 
-		<int:service-activator ref="logActivator"
-			method="logMessage" />
-
 		<int:header-enricher>
 			<int:header name="urlId" expression="payload.id" />
 			<int:header name="baseUrl" expression="payload.url" />
@@ -95,7 +102,7 @@ PingBackMassageHandler
 
 		<int:transformer id="packPayloadForEnrichmentByAdMainPageHttpRequest"
 			expression="new org.cg.ads.integration.PayloadEnrichmentTarget(payload)" />
-		<int:enricher id="getPageForUrl" request-channel="getPageForUrlChannelPriorityFiltered"
+		<int:enricher id="getPageForUrlEnricher" request-channel="getPageForUrlChannelPriorityFiltered"
 			error-channel="httpErrorChannel" request-payload-expression="headers['baseUrl']">
 			<int:property name="added" expression="payload" />
 		</int:enricher>
@@ -122,9 +129,11 @@ PingBackMassageHandler
 		<int:service-activator ref="logActivator"
 			method="logMessage" />
 
-		<int:filter id="filterForDetailUrlPresent" expression="! headers['detailUrl'].equals('')" />
+		<int:filter id="filterForDetailUrlPresent"
+			expression="headers['priority'] == 0 or ! headers['detailUrl'].equals('')" />
+
 		<int:filter id="filterForUrlsNotYetScraped"
-			expression="! T(org.cg.history.History).instance().find(headers['urlId'], headers['detailUrl'])" />
+			expression="headers['priority'] == 0 or ! T(org.cg.history.History).instance().find(headers['urlId'], headers['detailUrl'])" />
 
 		<int:transformer id="packPayloadForEnrichmentByAdDetailPageHttpRequest"
 			expression="new org.cg.ads.integration.PayloadEnrichmentTarget(payload)" />
@@ -136,24 +145,36 @@ PingBackMassageHandler
 		<!-- (ScrapedValues, String) -> ScrapedValues (with more properties) -->
 		<int:transformer
 			expression="@spelBridge.scrapeDetails(headers['detailUrl'], payload.base, payload.added)" />
+
 	</int:chain>
 
-	<int:publish-subscribe-channel id="scrapeResultChannel"
-		apply-sequence="true" ignore-failures="true" />
+	<int:recipient-list-router input-channel="scrapeResultChannel"
+		ignore-send-failures="true">
+		<int:recipient channel="scrapeResultSyncChannel" />
+		<int:recipient channel="removeSentinelsChannel" />
+		<!--int:recipient channel="aggretationChannel" /-->
+	</int:recipient-list-router>
 
-	<int:bridge input-channel="scrapeResultChannel"
-		output-channel="scrapeResultSyncChannel" />
+	<int:publish-subscribe-channel id="scrapeResultChannel"
+		ignore-failures="true" />
+
 	<int:channel id="scrapeResultSyncChannel">
-		<int:queue capacity="200" />
+		<int:priority-queue capacity="200" />
 	</int:channel>
 
 	<int:chain input-channel="scrapeResultSyncChannel">
-		<int:poller receive-timeout="500" fixed-rate="20000" />
+		<int:poller receive-timeout="500" fixed-rate="10000" /> <!-- each poll may run in different thread -->
 		<int:transformer
 			expression="'result - thread '.concat(T(Thread).currentThread().id).concat(' ') + payload.toString()" />
 		<int-stream:stdout-channel-adapter
 			id="consoleOut" append-newline="true" />
 	</int:chain>
+
+	<int:filter id="removeSentinels" expression="headers['priority'] > 0"
+		input-channel="removeSentinelsChannel" output-channel="desentinalizedscrapeResultChannel" />
+
+	<int:publish-subscribe-channel id="desentinalizedscrapeResultChannel"
+		ignore-failures="true" />
 
 	<int:transformer input-channel="httpErrorChannel"
 		output-channel="logChannel" expression="'httpError:' + payload.toString()" />
@@ -165,10 +186,12 @@ PingBackMassageHandler
 		output-channel="logChannel"
 		expression="'didnt wait for server to start, discarded: ' + payload.toString()" />
 
-	<int:service-activator input-channel="scrapeResultChannel"
-		output-channel="nullChannel" id="storeInHistory" ref="spelBridge"
-		method="historyStorage" />
+	<int:chain input-channel="desentinalizedscrapeResultChannel"
+		output-channel="nullChannel">
 
+		<int:service-activator id="storeInHistory" ref="spelBridge"
+			method="historyStorage" />
+	</int:chain>
 
 	<int:chain input-channel="scrapeResultChannel"
 		output-channel="nullChannel">
@@ -188,4 +211,20 @@ PingBackMassageHandler
 			method="logMessage" />
 	</int:chain>
 
+
+<!--int:aggregator id=""myAggregator"  
+        auto-startup="false"  
+        input-channel="aggretationChannel"  
+        output-channel="outputChannel"  
+        discard-channel="nullChannel"  
+        
+        correlation-strategy-expression="headers['urlId']"  12
+
+        release-strategy-expression="size() == 5"  (17)
+
+        expire-groups-upon-completion="false"  (18)
+        empty-group-min-timeout="60000"  (19)
+
+ >  
+</aggregator -->
 </beans>

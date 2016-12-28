@@ -15,9 +15,12 @@ public class SpelBridge {
 	private final static ScrapedValues sentinel = createSentinel();
 	private static final String SENTINEL = "sentinel";
 
-	public static List<ScrapedValues> scrapeMasterList(String url, String html) {
-		if (SENTINEL.equals(url))
+	//@Value("${httpTimeout}")
+	
+	public List<ScrapedValues> scrapeMasterList(String url, String html) {
+		if (SENTINEL.equals(url)){
 			return Arrays.asList(sentinel);
+		}
 		else
 			return SiteScraperFactory.getMasterPageScraper(url).getMasterList(url, html);
 	};
@@ -25,7 +28,7 @@ public class SpelBridge {
 	private static ScrapedValues createSentinel() {
 		ScrapedValues result = new ScrapedValues();
 		result.add(ScrapedValue.create(ValueKind.url, SENTINEL));
-		return null;
+		return result;
 	}
 
 	public ScrapedValues scrapeDetails(String url, ScrapedValues current, String html) {
