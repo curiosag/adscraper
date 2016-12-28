@@ -44,6 +44,8 @@ public class IntegrationTest {
 		IntStream.range(0, 1).forEach(x -> items.add(new ScrapingBaseUrl(String.format("url%s", x),
 				"http://www.bazar.at/klagenfurt-zimmer-wgs-anzeigen,dir,1,cId,16,fc,48,loc,48,tp,0")));
 
+		items.add(new ScrapingBaseUrl("sentinel", "sentinel"));
+		
 		entry.trigger(items);
 		try {
 			Thread.sleep(20000);
