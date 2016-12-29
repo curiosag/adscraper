@@ -58,8 +58,8 @@ public class IntegrationTest {
 
 		items.add(new ScrapingBaseUrl("sentinel", "sentinel"));
 
-		// items.add(new
-		// ScrapingBaseUrl("motorradlUrl","http://www.bazar.at/wien-brigittenau-motorraeder-mopeds-quads-anzeigen,dir,1,cId,8,fc,125,loc,125,o,1,tp,0"));
+		 items.add(new
+		 ScrapingBaseUrl("motorradlUrl","http://www.bazar.at/wien-brigittenau-motorraeder-mopeds-quads-anzeigen,dir,1,cId,8,fc,125,loc,125,o,1,tp,0"));
 
 		entry.trigger(items);
 
