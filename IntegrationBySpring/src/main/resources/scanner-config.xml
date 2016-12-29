@@ -33,22 +33,28 @@
 	<bean id="nullChannel" class="org.springframework.integration.channel.NullChannel" />
 
 	<!-- that's the way to access enviromnemt variables -->
-	<!-- but not the way to delay the pingback -->
-	<!-- int:delayer id="delayer" default-delay="3000" expression="@configurationProperties['httpTimeout']" 
+	<!-- but not the way to delay the pingback, seems the receiving thread is 
+		gone when the message finally gets delivered -->
+	<!-- <int:delayer id="delayer" input-channel="pingBackChannel" output-channel="do_pingBackChannel" 
+		default-delay="3000" expression="@configurationProperties['ads.httpTimeout']" 
 		/> -->
+
 
 	<bean id="appProperties"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location" value="classpath:application.properties" />
 	</bean>
 
-
 	<int:service-activator input-channel="pingBackChannel">
 		<description>returns the received message as is to the replyChannel in
-			the message header, given there is one
+			the message header, given there is one. the message gets delayed
+			until the common http timeout, but still it could be that a 0
+			priority message arrives before others. say, until the 0 priority
+			message's timeout only other massages get processed that time out
+			too, but later on some succeed
 		</description>
 		<bean class="org.cg.ads.integration.PingBackMassageHandler">
-			<constructor-arg index="0" value="${httpTimeout}" />
+			<constructor-arg index="0" value="${ads.httpTimeout}" />
 		</bean>
 
 	</int:service-activator>
@@ -60,14 +66,10 @@
 			selector-expression="headers[priority] > 0" />
 	</int:recipient-list-router>
 
-
-	<int:service-activator input-channel="bypassPageForUrlChannel"
-		ref="logActivator" method="logMessage" />
-
 	<int-http:outbound-gateway id="html" url="{url}"
 		request-channel="getPageForUrlChannel" http-method="GET"
 		expected-response-type="java.lang.String" charset="UTF-8"
-		reply-timeout="20000">
+		reply-timeout="${ads.httpTimeout}">
 		<int-http:uri-variable name="url" expression="payload" />
 	</int-http:outbound-gateway>
 
@@ -152,7 +154,7 @@
 		ignore-send-failures="true">
 		<int:recipient channel="scrapeResultSyncChannel" />
 		<int:recipient channel="removeSentinelsChannel" />
-		<!--int:recipient channel="aggretationChannel" /-->
+		<!--int:recipient channel="aggretationChannel" / -->
 	</int:recipient-list-router>
 
 	<int:publish-subscribe-channel id="scrapeResultChannel"
@@ -212,19 +214,8 @@
 	</int:chain>
 
 
-<!--int:aggregator id=""myAggregator"  
-        auto-startup="false"  
-        input-channel="aggretationChannel"  
-        output-channel="outputChannel"  
-        discard-channel="nullChannel"  
-        
-        correlation-strategy-expression="headers['urlId']"  12
-
-        release-strategy-expression="size() == 5"  (17)
-
-        expire-groups-upon-completion="false"  (18)
-        empty-group-min-timeout="60000"  (19)
-
- >  
-</aggregator -->
+	<!--int:aggregator id=""myAggregator" auto-startup="false" input-channel="aggretationChannel" 
+		output-channel="outputChannel" discard-channel="nullChannel" correlation-strategy-expression="headers['urlId']" 
+		12 release-strategy-expression="size() == 5" (17) expire-groups-upon-completion="false" 
+		(18) empty-group-min-timeout="60000" (19) > </aggregator -->
 </beans>
