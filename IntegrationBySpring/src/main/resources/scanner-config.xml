@@ -167,7 +167,7 @@
 		ignore-send-failures="true">
 		<int:recipient channel="scrapeResultSyncChannel" />
 		<int:recipient channel="removeSentinelsChannel" />
-		<!--int:recipient channel="aggretationChannel" / -->
+		<int:recipient channel="aggretationChannel" />
 	</int:recipient-list-router>
 
 	<int:publish-subscribe-channel id="scrapeResultChannel"
@@ -226,8 +226,13 @@
 			method="logMessage" />
 	</int:chain>
 
-	<!--int:aggregator id=""myAggregator" auto-startup="false" input-channel="aggretationChannel" 
-		output-channel="outputChannel" discard-channel="nullChannel" correlation-strategy-expression="headers['urlId']" 
-		12 release-strategy-expression="size() == 5" (17) expire-groups-upon-completion="false" 
-		(18) empty-group-min-timeout="60000" (19) > </aggregator -->
+	<int:chain input-channel="aggretationChannel" output-channel="logChannel">
+		<int:aggregator id="demoAgg" discard-channel="nullChannel"
+			group-timeout="${ads.httpTimeout} * 5" expire-groups-upon-completion="false">
+		</int:aggregator>
+		<int:header-enricher>
+			<int:header name="_groupSize" expression="payload.size()" />
+		</int:header-enricher>
+	</int:chain>
+
 </beans>

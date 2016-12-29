@@ -2,6 +2,8 @@ package org.cg.ads.integration;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Stream;
 
 import org.cg.ads.advalues.ScrapedValue;
 import org.cg.ads.advalues.ScrapedValues;
@@ -9,19 +11,21 @@ import org.cg.ads.advalues.ValueKind;
 import org.cg.history.History;
 import org.cg.scraping.SiteScraperFactory;
 import org.springframework.messaging.Message;
+import org.springframework.messaging.MessageHeaders;
+
+import com.google.common.base.Optional;
 
 public class SpelBridge {
 
 	private final static ScrapedValues sentinel = createSentinel();
 	private static final String SENTINEL = "sentinel";
 
-	//@Value("${httpTimeout}")
-	
+	// @Value("${httpTimeout}")
+
 	public List<ScrapedValues> scrapeMasterList(String url, String html) {
-		if (SENTINEL.equals(url)){
+		if (SENTINEL.equals(url)) {
 			return Arrays.asList(sentinel);
-		}
-		else
+		} else
 			return SiteScraperFactory.getMasterPageScraper(url).getMasterList(url, html);
 	};
 
@@ -45,5 +49,5 @@ public class SpelBridge {
 		History.instance().add(message.getHeaders().get("urlId").toString(), message.getPayload());
 		return message;
 	}
-
+	
 }
