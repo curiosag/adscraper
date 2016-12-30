@@ -14,7 +14,6 @@ import javax.mail.internet.MimeMultipart;
 import javax.mail.PasswordAuthentication;
 import org.cg.base.Check;
 import org.cg.base.MailSessionProperties;
-import org.cg.util.debug.LoggingOutputStream;
 
 public final class SendMail {
 

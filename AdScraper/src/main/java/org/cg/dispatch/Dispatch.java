@@ -18,13 +18,13 @@ import com.google.common.base.Optional;
 
 public class Dispatch {
 
-	private static MailDelivery delivery = null;
+	private static IMailDelivery delivery = null;
 
-	public static void setUp(MailSessionProperties mailSessionProperties) {
-		delivery = new MailDelivery(mailSessionProperties);
+	public static void setUp(IMailDelivery d) {
+		delivery = d;
 	}
 
-	private MailDelivery getDelivery() {
+	private IMailDelivery getDelivery() {
 		Check.notNull(delivery);
 		return delivery;
 	}
@@ -58,7 +58,7 @@ public class Dispatch {
 			deliver(ad);
 	}
 
-	private void deliver(ScrapedValues ad) {
+	public void deliver(ScrapedValues ad) {
 		for (Target target : targets)
 			// if (passesRules(ad, target.rules))
 			getDelivery().sendMail(ad, target.email);

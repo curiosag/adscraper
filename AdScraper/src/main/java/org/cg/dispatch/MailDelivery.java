@@ -17,16 +17,17 @@ import org.cg.util.http.HttpUtil;
 import com.google.common.collect.Lists;
 
 
-public final class MailDelivery {
+public final class MailDelivery implements IMailDelivery {
 
 	private final boolean asHtml = true;
 	private final String sender;
-	private final SendMail sendMail;
+	private SendMail sendMail;
 	
 	public MailDelivery(MailSessionProperties properties) {
-		sendMail = new SendMail(properties);
 		this.sender = properties.sender;
+		this.sendMail = new SendMail(properties);
 	}
+	
 	
 	private String bodyMailFormatted(ScrapedValues ad) {
 		Check.notNull(ad);
@@ -83,6 +84,10 @@ public final class MailDelivery {
 						headerFormatted(testAd), bodySmsFormatted(testAd), bodyMailFormatted(testAd));
 	}
 
+	/* (non-Javadoc)
+	 * @see org.cg.dispatch.IMailDelivery#sendMail(org.cg.ads.advalues.ScrapedValues)
+	 */
+	
 	public final void sendMail(ScrapedValues ad) {
 		Check.notNull(ad);
 
@@ -95,7 +100,8 @@ public final class MailDelivery {
 			sendMail(ad, Settings.instance().get(mailId).get());
 
 	}
-
+	
+	@Override
 	public String sendMail(ScrapedValues ad, String mailRecipient) {
 
 		String from = HttpUtil.baseUrl(ad.get(ValueKind.url).valueOrDefault()).replace("http://www.", "");

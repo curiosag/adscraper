@@ -24,7 +24,7 @@
 
 	<context:component-scan base-package="org.cg.ads" />
 
-	<task:executor id="executor" pool-size="5" />
+	<task:executor id="executor" pool-size="15" />
 
 	<bean id="serverStartupListener" class="org.cg.ads.integration.ServerStartupListener" />
 	<bean id="siteScraperFactory" class="org.cg.scraping.SiteScraperFactory" />
@@ -45,27 +45,6 @@
 		<property name="location" value="classpath:application.properties" />
 	</bean>
 
-	<int:service-activator input-channel="pingBackChannel">
-		<description>returns the received message as is to the replyChannel in
-			the message header, given there is one. the message gets delayed
-			until the common http timeout, but still it could be that a 0
-			priority message arrives before others. say, until the 0 priority
-			message's timeout only other massages get processed that time out
-			too, but later on some succeed
-		</description>
-		<bean class="org.cg.ads.integration.PingBackMassageHandler">
-			<constructor-arg index="0" value="${ads.httpTimeout}" />
-		</bean>
-
-	</int:service-activator>
-
-	<int:recipient-list-router input-channel="getPageForUrlChannelPriorityFiltered">
-		<int:recipient channel="pingBackChannel"
-			selector-expression="headers[priority] == 0" />
-		<int:recipient channel="getPageForUrlChannel"
-			selector-expression="headers[priority] > 0" />
-	</int:recipient-list-router>
-
 	<int-http:outbound-gateway id="html" url="{url}"
 		request-channel="getPageForUrlChannel" http-method="GET"
 		expected-response-type="java.lang.String" charset="UTF-8"
@@ -82,10 +61,6 @@
 		output-channel="systemEntryAfterStartup">
 		<int:filter ref="serverStartupListener" discard-channel="logPrematureMessages" />
 		<int:splitter expression="payload" />
-		<int:header-enricher>
-			<int:header name="_split1" expression="'split # 1'" />
-			<int:priority expression="payload.toString().contains('sentinel') ? 0 : 1" />
-		</int:header-enricher>
 	</int:chain>
 
 	<int:channel id="systemEntryAfterStartup">
@@ -98,18 +73,16 @@
 		<int:header-enricher>
 			<int:header name="urlId" expression="payload.id" />
 			<int:header name="baseUrl" expression="payload.url" />
+			<int:header name="isInitialRun" expression="payload.isInitialRun" />
+			<int:header name="negTerms" expression="payload.negTerms" />
 		</int:header-enricher>
-
-		<int:service-activator ref="logActivator"
-			method="logMessage" />
-
 
 		<!-- actually there's no need to enrich/transform with id and url in header, 
 			but it makes reuse of http gateway possible -->
 
 		<int:transformer id="packPayloadForEnrichmentByAdMainPageHttpRequest"
 			expression="new org.cg.ads.integration.PayloadEnrichmentTarget(payload)" />
-		<int:enricher id="getPageForUrlEnricher" request-channel="getPageForUrlChannelPriorityFiltered"
+		<int:enricher id="getPageForUrlEnricher" request-channel="getPageForUrlChannel"
 			error-channel="httpErrorChannel" request-payload-expression="headers['baseUrl']">
 			<int:property name="added" expression="payload" />
 		</int:enricher>
@@ -121,7 +94,6 @@
 		<int:splitter expression="payload" />
 
 		<int:header-enricher>
-			<int:header name="_split2" expression="'split # 2'" />
 			<int:header name="detailUrl"
 				expression="payload.has(T(org.cg.ads.advalues.ValueKind).url) ? payload.valueOrDefault(T(org.cg.ads.advalues.ValueKind).url) : '' " />
 		</int:header-enricher>
@@ -140,19 +112,15 @@
 				expression="payload.has(T(org.cg.ads.advalues.ValueKind).url) ? payload.valueOrDefault(T(org.cg.ads.advalues.ValueKind).url) : '' " />
 		</int:header-enricher>
 
-		<int:service-activator ref="logActivator"
-			method="logMessage" />
-
-		<int:filter id="filterForDetailUrlPresent"
-			expression="headers['priority'] == 0 or ! headers['detailUrl'].equals('')" />
+		<int:filter id="filterForDetailUrlPresent" expression="! headers['detailUrl'].equals('')" />
 
 		<int:filter id="filterForUrlsNotYetScraped"
-			expression="headers['priority'] == 0 or ! T(org.cg.history.History).instance().find(headers['urlId'], headers['detailUrl'])" />
+			expression="! T(org.cg.history.History).instance().find(headers['urlId'], headers['detailUrl'])" />
 
 		<int:transformer id="packPayloadForEnrichmentByAdDetailPageHttpRequest"
 			expression="new org.cg.ads.integration.PayloadEnrichmentTarget(payload)" />
 
-		<int:enricher id="getPageForDetailUrl" request-channel="getPageForUrlChannelPriorityFiltered"
+		<int:enricher id="getPageForDetailUrl" request-channel="getPageForUrlChannel"
 			error-channel="httpErrorChannel" request-payload-expression="headers['detailUrl']">
 			<int:property name="added" expression="payload" />
 		</int:enricher>
@@ -162,34 +130,31 @@
 			expression="@spelBridge.scrapeDetails(headers['detailUrl'], payload.base, payload.added)" />
 
 	</int:chain>
-
 	<int:recipient-list-router input-channel="scrapeResultChannel"
 		ignore-send-failures="true">
-		<int:recipient channel="scrapeResultSyncChannel" />
-		<int:recipient channel="removeSentinelsChannel" />
-		<int:recipient channel="aggretationChannel" />
+		<int:recipient channel="scrapeResultQueue" />
+		<int:recipient channel="historyChannel" />
 	</int:recipient-list-router>
 
-	<int:publish-subscribe-channel id="scrapeResultChannel"
-		ignore-failures="true" />
-
-	<int:channel id="scrapeResultSyncChannel">
-		<int:priority-queue capacity="200" />
+	<int:channel id="scrapeResultQueue">
+		<int:queue capacity="2000" />
 	</int:channel>
 
-	<int:chain input-channel="scrapeResultSyncChannel">
-		<int:poller receive-timeout="500" fixed-rate="10000" /> <!-- each poll may run in different thread -->
-		<int:transformer
-			expression="'result - thread '.concat(T(Thread).currentThread().id).concat(' ') + payload.toString()" />
-		<int-stream:stdout-channel-adapter
-			id="consoleOut" append-newline="true" />
+	<int:chain input-channel="scrapeResultQueue" output-channel="logChannel">
+		<int:poller receive-timeout="500" fixed-rate="5000" /> <!-- each poll may run in different thread -->
+
+		<int:filter expression="! headers['isInitialRun']" />
+		<int:filter expression="! @spelBridge.containsAny(#root, headers['negTerms'])" />
+
+		<int:service-activator ref="spelBridge" method="sendMail" />
+
+		<int:aggregator id="countResolved" discard-channel="nullChannel"
+			group-timeout="${ads.httpTimeout}" expire-groups-upon-completion="true">
+		</int:aggregator>
+
+		<int:transformer expression="payload.size() + ' sent for ' + headers['urlId']"/>
+
 	</int:chain>
-
-	<int:filter id="removeSentinels" expression="headers['priority'] > 0"
-		input-channel="removeSentinelsChannel" output-channel="desentinalizedscrapeResultChannel" />
-
-	<int:publish-subscribe-channel id="desentinalizedscrapeResultChannel"
-		ignore-failures="true" />
 
 	<int:transformer input-channel="httpErrorChannel"
 		output-channel="logChannel" expression="'httpError:' + payload.toString()" />
@@ -201,19 +166,10 @@
 		output-channel="logChannel"
 		expression="'didnt wait for server to start, discarded: ' + payload.toString()" />
 
-	<int:chain input-channel="desentinalizedscrapeResultChannel"
-		output-channel="nullChannel">
+	<int:chain input-channel="historyChannel" output-channel="nullChannel">
 
 		<int:service-activator id="storeInHistory" ref="spelBridge"
 			method="historyStorage" />
-	</int:chain>
-
-	<int:chain input-channel="scrapeResultChannel"
-		output-channel="nullChannel">
-		<int:filter expression="@spelBridge.valid(payload)"
-			discard-channel="invalidAdsChannel" />
-
-		<!-- dispatch here -->
 	</int:chain>
 
 	<int:channel id="logChannel">
@@ -221,18 +177,11 @@
 	</int:channel>
 
 	<int:chain input-channel="logChannel" output-channel="nullChannel">
-		<int:poller receive-timeout="500" fixed-rate="1000" />
+		<int:poller receive-timeout="500" fixed-rate="100000" />
 		<int:service-activator ref="logActivator"
 			method="logMessage" />
+
 	</int:chain>
 
-	<int:chain input-channel="aggretationChannel" output-channel="logChannel">
-		<int:aggregator id="demoAgg" discard-channel="nullChannel"
-			group-timeout="${ads.httpTimeout} * 5" expire-groups-upon-completion="false">
-		</int:aggregator>
-		<int:header-enricher>
-			<int:header name="_groupSize" expression="payload.size()" />
-		</int:header-enricher>
-	</int:chain>
 
 </beans>

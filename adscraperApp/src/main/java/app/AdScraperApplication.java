@@ -1,10 +1,8 @@
 package app;
 
 import org.apache.commons.logging.LogFactory;
-import org.cg.adscraper.factory.StorageFactory;
 import org.cg.common.io.logging.DelegatingOutputStream;
 import org.cg.common.io.logging.OnLineWritten;
-import org.cg.dispatch.Dispatch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -15,15 +13,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
-import org.springframework.scheduling.annotation.EnableScheduling;
-
-import app.storage.SpringStorageFactory;
 
 @ImportResource("classpath:app-config.xml")
 @ComponentScan
 @EnableAutoConfiguration
-@EnableScheduling
-public class Application {
+public class AdScraperApplication {
 
 	@Autowired
 	EmbeddedServletContainerFactory serv;
@@ -32,7 +26,7 @@ public class Application {
 	String forkSystemOutput;
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(AdScraperApplication.class, args);
 	}
 
 	@Bean
@@ -41,8 +35,6 @@ public class Application {
 			@Override
 			public void run(String... args) throws Exception {
 				{
-					StorageFactory.setUp(ctx.getBean(SpringStorageFactory.class));
-					Dispatch.setUp(ctx.getBean(org.cg.base.MailSessionProperties.class));
 					forkSystemOutput();
 				}
 			}

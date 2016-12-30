@@ -11,7 +11,7 @@
 	<bean id="mongoConfiguration" class="app.storage.MongoConfiguration" />
 
 	<bean id="mailSessionDev" class="org.cg.base.MailSessionProperties"
-		parent="mailSession">
+		parent="mailSessionProperties">
 		<property name="debug" value="false" />
 	</bean>
 

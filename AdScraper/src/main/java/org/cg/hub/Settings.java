@@ -28,11 +28,11 @@ public final class Settings implements ISettings {
 
 	static Settings _instance = null;
 	private final ISettingsStorage settingsStorage;
-	
+
 	public Settings() {
 		settingsStorage = StorageFactory.get().getSettingsStorage();
 	}
-	
+
 	public final static synchronized Settings instance() {
 		if (_instance == null) {
 			_instance = new Settings();
@@ -40,7 +40,9 @@ public final class Settings implements ISettings {
 		return _instance;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.cg.hub.ISettings#get(java.lang.String)
 	 */
 	@Override
@@ -50,14 +52,16 @@ public final class Settings implements ISettings {
 		String settingValue = "";
 		try {
 			settingValue = settingsStorage.get(settingName);
-		} catch (Exception e) { // TODO proper exception
+		} catch (Exception e) { 
 			Log.info("Setting '" + settingName + "' not set: " + e.getMessage());
 			return Optional.absent();
 		}
 		return Optional.of(settingValue);
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.cg.hub.ISettings#getKeysByType(java.lang.String)
 	 */
 	@Override
@@ -65,12 +69,16 @@ public final class Settings implements ISettings {
 		Check.notEmpty(keyType);
 
 		List<String> result = new LinkedList<String>();
-		for (SimpleImmutableEntry<String, String> setting : settingsStorage.getSettingsByType(keyType))
-			result.add(setting.getKey());
+		List<SimpleImmutableEntry<String, String>> settings = settingsStorage.getSettingsByType(keyType);
+		if (settings != null)
+			for (SimpleImmutableEntry<String, String> setting : settings)
+				result.add(setting.getKey());
 		return result;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.cg.hub.ISettings#getSettingsByType(java.lang.String)
 	 */
 	@Override
@@ -80,7 +88,9 @@ public final class Settings implements ISettings {
 		return settingsStorage.getSettingsByType(keyType);
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.cg.hub.ISettings#set(java.lang.String)
 	 */
 	@Override
@@ -105,8 +115,11 @@ public final class Settings implements ISettings {
 		return set(key, type, val);
 	}
 
-	/* (non-Javadoc)
-	 * @see org.cg.hub.ISettings#set(java.lang.String, java.lang.String, java.lang.String)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.cg.hub.ISettings#set(java.lang.String, java.lang.String,
+	 * java.lang.String)
 	 */
 	@Override
 	public final String set(String key, String type, String value) {
@@ -129,15 +142,20 @@ public final class Settings implements ISettings {
 		values.set(ValueKind.phone, "phone");
 		values.set(ValueKind.description, "bb aa bb cc dd");
 
-/* 		ResultAdScraper evalResult = (new ExprParserAdScraper(values, getFilterList())).eval(rule);
-
-		if (evalResult.msg.length() > 0)
-			return String.format("Error evaluating dispatch rule '%s' \n", key) + evalResult.msg;
-*/
+		/*
+		 * ResultAdScraper evalResult = (new ExprParserAdScraper(values,
+		 * getFilterList())).eval(rule);
+		 * 
+		 * if (evalResult.msg.length() > 0) return
+		 * String.format("Error evaluating dispatch rule '%s' \n", key) +
+		 * evalResult.msg;
+		 */
 		return null;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.cg.hub.ISettings#del(java.lang.String)
 	 */
 	@Override
@@ -162,8 +180,11 @@ public final class Settings implements ISettings {
 		return filters;
 	}
 
-	/* (non-Javadoc)
-	 * @see org.cg.hub.ISettings#getMappedItem(java.lang.String, java.util.Map, java.lang.String)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.cg.hub.ISettings#getMappedItem(java.lang.String, java.util.Map,
+	 * java.lang.String)
 	 */
 	@Override
 	public Optional<String> getMappedItem(String key, Map<String, String> map, String mapDescription) {
@@ -174,7 +195,9 @@ public final class Settings implements ISettings {
 		return result;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.cg.hub.ISettings#createMappedSettings(java.lang.String)
 	 */
 	@Override

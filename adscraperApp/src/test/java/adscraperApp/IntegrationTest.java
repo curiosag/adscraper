@@ -36,10 +36,10 @@ public class IntegrationTest {
 	public void test(){
 		
 	  	List<ScrapingBaseUrl> items = new ArrayList<ScrapingBaseUrl>();
-	  	items.add(new ScrapingBaseUrl("1", "http://localhost"));
-	  	items.add(new ScrapingBaseUrl("2", "http://sniffbazar.appspot.com/statData"));
-	  	items.add(new ScrapingBaseUrl("3", "http://localhost"));
-	  	items.add(new ScrapingBaseUrl("4", "http://sniffbazar.appspot.com/statData"));
+
+	  	items.add(new ScrapingBaseUrl("motorradlUrl",
+				"http://www.bazar.at/wien-brigittenau-motorraeder-mopeds-quads-anzeigen,dir,1,cId,8,fc,125,loc,125,o,1,tp,0", false, new ArrayList<String>()));
+
 	  	
     	entry.trigger(items);
 		try {
