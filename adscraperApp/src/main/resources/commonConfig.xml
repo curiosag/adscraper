@@ -25,7 +25,7 @@
 
 	<task:scheduled-tasks scheduler="scanScheduler">
 		<task:scheduled ref="scanRunner" method="run"
-			fixed-delay="120000" initial-delay="10000"/>
+			fixed-delay="120000" initial-delay="20000"/>
 	</task:scheduled-tasks>
 
 </beans>
