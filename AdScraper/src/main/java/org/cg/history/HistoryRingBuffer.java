@@ -14,19 +14,22 @@ public final class HistoryRingBuffer {
 	private static final int MAX_HISTORY_ITEMS = 90;
 	private final String entityKind = "HistoryBulkItem";
 	private List<String> cache;
-	
+
 	private IKeyTypeValueStorage storage;
 
 	public static HistoryRingBuffer create(String urlId) {
 		Check.notEmpty(urlId);
-		
+
 		return new HistoryRingBuffer(urlId);
 	}
 
-	private String getKey(String urlId){
-		return entityKind + "." + urlId;
+	private String getKey(String urlId) {
+		if (urlId.startsWith(urlId))
+			return urlId;
+		else
+			return entityKind + "." + urlId;
 	}
-	
+
 	private HistoryRingBuffer() {
 		super();
 	}
@@ -62,21 +65,21 @@ public final class HistoryRingBuffer {
 
 	public final void store(List<ScrapedValues> ads) {
 		Check.notNull(ads);
-		
+
 		for (ScrapedValues values : ads)
 			store(values);
 	}
 
 	public final void store(ScrapedValues ad) {
 		Check.notNull(ad);
-		
+
 		cache.add(0, ad.get(ValueKind.url).valueOrDefault());
 	}
 
 	private List<String> load(int limit) {
 		List<String> history = new ArrayList<String>();
 		String historyCsv = storage.get();
-		
+
 		if (historyCsv != null) {
 			String[] items = historyCsv.split(URL_DELIMITER);
 
@@ -99,7 +102,7 @@ public final class HistoryRingBuffer {
 
 	public final boolean find(String url) {
 		Check.notEmpty(url);
-		
+
 		return cache.indexOf(url) >= 0;
 	}
 

@@ -65,6 +65,9 @@
 
 	<int:channel id="systemEntryAfterStartup">
 		<int:dispatcher task-executor="executor" />
+		<int:interceptors>
+			<int:wire-tap channel="logEntryElements" />
+		</int:interceptors>
 	</int:channel>
 
 	<int:chain id="scrapeMasterList" input-channel="systemEntryAfterStartup"
@@ -140,48 +143,71 @@
 		<int:queue capacity="2000" />
 	</int:channel>
 
-	<int:chain input-channel="scrapeResultQueue" output-channel="logChannel">
+	<int:chain id="checkAndDeliver" input-channel="scrapeResultQueue"
+		output-channel="logPayloadChannel">
+
 		<int:poller receive-timeout="500" fixed-rate="5000" /> <!-- each poll may run in different thread -->
 
-		<int:filter expression="! headers['isInitialRun']" />
-		<int:filter expression="! @spelBridge.containsAny(#root, headers['negTerms'])" />
+		<int:filter expression="! headers['isInitialRun']"
+			discard-channel="logInitialRun" />
+		<int:filter expression="! @spelBridge.containsAny(#this, headers['negTerms'])"
+			discard-channel="discardedAdsChannel" />
 
 		<int:service-activator ref="spelBridge" method="sendMail" />
 
-		<int:aggregator id="countResolved" discard-channel="nullChannel"
-			group-timeout="${ads.httpTimeout}" expire-groups-upon-completion="true">
+		<int:transformer expression="'sent mail for:' + headers['detailUrl']" />
+		<int:service-activator ref="logActivator"
+			method="logPayload" />
+
+		<int:aggregator id="countResolved" discard-channel="logLateMessages"
+			group-timeout="${ads.scanInterval}" expire-groups-upon-completion="false"
+			send-partial-result-on-expiry="true">
 		</int:aggregator>
 
-		<int:transformer expression="payload.size() + ' sent for ' + headers['urlId']"/>
+		<int:transformer
+			expression="payload.size() + ' mail sent for ' + headers['urlId']" />
+
+		<int:service-activator ref="spelBridge" method="flushResources" />
 
 	</int:chain>
 
-	<int:transformer input-channel="httpErrorChannel"
-		output-channel="logChannel" expression="'httpError:' + payload.toString()" />
+	<int:transformer input-channel="logEntryElements"
+		output-channel="logPayloadChannel"
+		expression="T(String).format('Scanning urlid %s %s', payload.id, payload.url)" />
 
-	<int:transformer input-channel="invalidAdsChannel"
-		output-channel="logChannel" expression="'discarded invalid ad: '.concat(headers['detailUrl'])" />
+	<int:transformer input-channel="httpErrorChannel"
+		output-channel="logMessageChannel" expression="'httpError:' + payload.toString()" />
+
+	<int:transformer input-channel="discardedAdsChannel"
+		output-channel="logPayloadChannel"
+		expression="'discarded, contained neg term: '.concat(headers['detailUrl'])" />
+
+	<int:transformer input-channel="logInitialRun"
+		output-channel="logPayloadChannel"
+		expression="'all discarded in initial scan: '.concat(headers['detailUrl'])" />
 
 	<int:transformer input-channel="logPrematureMessages"
-		output-channel="logChannel"
+		output-channel="logPayloadChannel"
 		expression="'didnt wait for server to start, discarded: ' + payload.toString()" />
 
-	<int:chain input-channel="historyChannel" output-channel="nullChannel">
+	<!-- there should't ever be any late messages of this kind due to http timeout -->
+	<int:transformer input-channel="logLateMessages"
+		output-channel="logPayloadChannel"
+		expression="'arrived too late for goup statistics: ' + headers['detailUrl']" />
 
+	<int:chain input-channel="historyChannel" output-channel="nullChannel">
 		<int:service-activator id="storeInHistory" ref="spelBridge"
 			method="historyStorage" />
 	</int:chain>
 
-	<int:channel id="logChannel">
-		<int:queue capacity="2000" />
-	</int:channel>
-
-	<int:chain input-channel="logChannel" output-channel="nullChannel">
-		<int:poller receive-timeout="500" fixed-rate="100000" />
+	<int:chain input-channel="logMessageChannel" output-channel="nullChannel">
 		<int:service-activator ref="logActivator"
 			method="logMessage" />
-
 	</int:chain>
 
+	<int:chain input-channel="logPayloadChannel" output-channel="nullChannel">
+		<int:service-activator ref="logActivator"
+			method="logPayload" />
+	</int:chain>
 
 </beans>

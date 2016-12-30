@@ -18,6 +18,7 @@ import org.cg.hub.Scraper;
 import org.cg.hub.Settings;
 import org.cg.rendering.ObjectRenderer;
 import org.cg.util.http.HttpUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 
@@ -31,6 +32,9 @@ public class CommandHandler {
 
 	@Value("${logging.file}")
 	private String loggingFile;
+	
+	@Autowired
+	ScanRunner scanRunner;
 	
 	private String[] adminUserCommands = { "clip", "m", "set", "unset", "p", "x" };
 
@@ -136,8 +140,8 @@ public class CommandHandler {
 				return "not implemented";
 
 			case "x": {
-				new Scraper().execute();
-				return "Executed scan";
+				scanRunner.run();
+				return "Triggered scan";
 			}
 
 			default:

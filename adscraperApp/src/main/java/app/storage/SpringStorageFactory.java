@@ -32,7 +32,7 @@ public abstract class SpringStorageFactory implements IStorageFactory {
 
 	@Override
 	public abstract IKeyTypeValueStorage createKeyTypeValueStorage();
-	// a lookup method injection, since a new instance is neededper call, see commonConfig.xml
+	// a lookup method injection, since a new instance is needed per call, see commonConfig.xml
 	// http://docs.spring.io/spring/docs/3.0.0.M3/reference/html/ch04s03.html#beans-factory-method-injection
 
 	@Override

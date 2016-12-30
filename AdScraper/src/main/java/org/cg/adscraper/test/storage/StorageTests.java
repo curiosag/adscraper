@@ -16,6 +16,7 @@ import org.cg.adscraper.factory.StorageFactory;
 import org.cg.base.Check;
 import org.cg.base.ISettingsStorage;
 import org.cg.history.History;
+import org.junit.Assert;
 
 public class StorageTests {
 
@@ -37,6 +38,8 @@ public class StorageTests {
 		Check.isTrue(StorageFactory.isSet());
 		
 		History h = History.instance();
+		Assert.assertEquals(0, h.size("url1"));
+		
 		ArrayList<ScrapedValues> adsUrl1 = new ArrayList<ScrapedValues>();
 		adsUrl1.add(createAdWrapper("a"));
 		adsUrl1.add(createAdWrapper("b"));
@@ -48,6 +51,8 @@ public class StorageTests {
 		String urlId2 = "url2";
 		
 		h.add(urlId1, adsUrl1);
+		Assert.assertEquals(2, h.size("url1"));
+		
 		h.flush(urlId1);
 
 		h.add(urlId2, adsUrl2);
@@ -61,8 +66,11 @@ public class StorageTests {
 		assertFalse(h.find(urlId1, "c"));
 
 		h.clip(urlId1, 1);
+		assertEquals(1, h.size(urlId1));
 		h.flush(urlId1);
 		h.reset();
+		
+		assertEquals(1, h.size(urlId1));
 		
 		assertFalse(h.find(urlId1, "b"));
 		assertTrue(h.find(urlId1, "a"));

@@ -15,4 +15,12 @@ public class LogActivator {
 		
 		return message;
 	}
+	
+	public Message<?> logPayload(final Message<?> message) {
+		LOG.info(message.getPayload().toString());
+		return message;
+	}
+
+
+	
 }

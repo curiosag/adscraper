@@ -19,4 +19,8 @@
 		<constructor-arg index="6" value="none" /> <!-- security -->
 	</bean>
 	<bean id="mailDelivery" class="org.cg.dispatch.MailDelivery" scope="prototype"/>
+	<bean id="mailDeliveryFactory" class="app.server.MailDeliveryFactory">
+		<lookup-method name="createMailDelivery" bean="mailDelivery" />
+	</bean>
+	
 </beans>
