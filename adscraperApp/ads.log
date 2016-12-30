@@ -18589,3 +18589,446 @@ Caused by: org.xml.sax.SAXParseException: cvc-complex-type.2.4.a: Invalid conten
 2016-12-30 20:50:27.493  INFO 11189 --- [task-scheduler-3] .s.i.a.AbstractCorrelatingMessageHandler : Expiring MessageGroup with correlationKey[9ae6d5b9-a9bc-871a-797f-590b16450489]
 2016-12-30 20:50:27.495  INFO 11189 --- [task-scheduler-3] global                                   : storing bulk type: w.baz.wo key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@39beee69
 2016-12-30 20:50:27.502  INFO 11189 --- [task-scheduler-3] org.cg.ads.integration.LogActivator      : 1 mail sent for w.baz.wo
+2016-12-30 20:52:25.742  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : *** scaning at 20:52:25 ***************************************
+2016-12-30 20:52:25.747  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-30 20:52:25.753  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-30 20:52:25.754  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : excluding ads containing any of: 
+2016-12-30 20:52:25.757  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : Running scan for 2 base urls
+2016-12-30 20:52:25.759  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.wo http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-30 20:52:25.765  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.zi http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-30 20:54:25.769  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : *** scaning at 20:54:25 ***************************************
+2016-12-30 20:54:25.771  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-30 20:54:25.773  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-30 20:54:25.773  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : excluding ads containing any of: 
+2016-12-30 20:54:25.775  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : Running scan for 2 base urls
+2016-12-30 20:54:25.778  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.wo http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-30 20:54:25.781  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.zi http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-30 20:56:25.786  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : *** scaning at 20:56:25 ***************************************
+2016-12-30 20:56:25.788  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-30 20:56:25.790  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-30 20:56:25.790  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : excluding ads containing any of: 
+2016-12-30 20:56:25.792  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : Running scan for 2 base urls
+2016-12-30 20:56:25.794  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.wo http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-30 20:56:25.798  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.zi http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-30 20:58:25.803  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : *** scaning at 20:58:25 ***************************************
+2016-12-30 20:58:25.805  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-30 20:58:25.807  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-30 20:58:25.807  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : excluding ads containing any of: 
+2016-12-30 20:58:25.810  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : Running scan for 2 base urls
+2016-12-30 20:58:25.812  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.wo http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-30 20:58:25.813  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.zi http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-30 21:00:25.819  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : *** scaning at 21:00:25 ***************************************
+2016-12-30 21:00:25.823  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-30 21:00:25.825  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-30 21:00:25.826  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : excluding ads containing any of: 
+2016-12-30 21:00:25.829  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : Running scan for 2 base urls
+2016-12-30 21:00:25.830  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.wo http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-30 21:00:25.832  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.zi http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-30 21:02:25.836  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : *** scaning at 21:02:25 ***************************************
+2016-12-30 21:02:25.838  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-30 21:02:25.840  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-30 21:02:25.840  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : excluding ads containing any of: 
+2016-12-30 21:02:25.842  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : Running scan for 2 base urls
+2016-12-30 21:02:25.844  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.wo http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-30 21:02:25.845  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.zi http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-30 21:04:25.848  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : *** scaning at 21:04:25 ***************************************
+2016-12-30 21:04:25.849  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-30 21:04:25.851  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-30 21:04:25.851  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : excluding ads containing any of: 
+2016-12-30 21:04:25.852  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : Running scan for 2 base urls
+2016-12-30 21:04:25.853  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.wo http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-30 21:04:25.855  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.zi http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-30 21:06:25.974  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : *** scaning at 21:06:25 ***************************************
+2016-12-30 21:06:26.024  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-30 21:06:26.026  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-30 21:06:26.026  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : excluding ads containing any of: 
+2016-12-30 21:06:26.033  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : Running scan for 2 base urls
+2016-12-30 21:06:26.176  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.wo http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-30 21:06:26.178  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.zi http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-30 21:07:01.811  INFO 11825 --- [main] adscraperApp.MailTest                    : Starting MailTest on sp-W271ELQ with PID 11825 (started by sp in /home/sp/dev/tool/eclipse/wsspring/adsniffer/adscraperApp)
+2016-12-30 21:07:01.813  INFO 11825 --- [main] adscraperApp.MailTest                    : No active profile set, falling back to default profiles: default
+2016-12-30 21:07:02.420  INFO 11825 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [app-config-test.xml]
+2016-12-30 21:07:02.668  INFO 11825 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [mail-config.xml]
+2016-12-30 21:07:02.734  INFO 11825 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [commonConfig.xml]
+2016-12-30 21:07:02.928  INFO 11825 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from URL [jar:file:/home/sp/dev/tool/eclipse/wsspring/adsniffer/IntegrationBySpring/target/integrationbyspring-0.0.1.jar!/scanner-config.xml]
+2016-12-30 21:07:03.226  INFO 11825 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-30 21:07:03.252  INFO 11825 --- [main] o.s.i.config.IntegrationRegistrar        : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2016-12-30 21:07:03.384  INFO 11825 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-30 21:07:03.389  INFO 11825 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-30 21:07:03.391  INFO 11825 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-30 21:07:03.409  INFO 11825 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2609b277: startup date [Fri Dec 30 21:07:03 CET 2016]; root of context hierarchy
+2016-12-30 21:07:04.022  INFO 11825 --- [main] o.s.b.f.c.PropertyPlaceholderConfigurer  : Loading properties file from class path resource [application.properties]
+2016-12-30 21:07:04.069  INFO 11825 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2016-12-30 21:07:04.071  INFO 11825 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2016-12-30 21:07:04.362  INFO 11825 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 
+2016-12-30 21:07:04.491  INFO 11825 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-30 21:07:04.591  INFO 11825 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'taskScheduler'
+2016-12-30 21:07:05.046  WARN 11825 --- [main] o.s.i.config.ReleaseStrategyFactoryBean  : No target supplied; falling back to SequenceSizeReleaseStrategy
+2016-12-30 21:07:05.438  INFO 11825 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-30 21:07:05.487  INFO 11825 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-30 21:07:05.881  INFO 11825 --- [cluster-ClusterId{value='5866be69721c9f2e3109281f', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:230}] to 127.0.0.1:27017
+2016-12-30 21:07:05.881  INFO 11825 --- [cluster-ClusterId{value='5866be69721c9f2e3109281e', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:231}] to 127.0.0.1:27017
+2016-12-30 21:07:05.884  INFO 11825 --- [cluster-ClusterId{value='5866be69721c9f2e3109281f', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=1478503}
+2016-12-30 21:07:05.884  INFO 11825 --- [cluster-ClusterId{value='5866be69721c9f2e3109281e', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=700961}
+2016-12-30 21:07:06.371  INFO 11825 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'scanScheduler'
+2016-12-30 21:07:06.406  INFO 11825 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-30 21:07:06.424  INFO 11825 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-30 21:07:06.426  INFO 11825 --- [cluster-ClusterId{value='5866be6a721c9f2e31092820', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:232}] to 127.0.0.1:27017
+2016-12-30 21:07:06.427  INFO 11825 --- [cluster-ClusterId{value='5866be6a721c9f2e31092820', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=666036}
+2016-12-30 21:07:06.439  INFO 11825 --- [cluster-ClusterId{value='5866be6a721c9f2e31092821', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:233}] to 127.0.0.1:27017
+2016-12-30 21:07:06.440  INFO 11825 --- [cluster-ClusterId{value='5866be6a721c9f2e31092821', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=679792}
+2016-12-30 21:07:06.475  INFO 11825 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-30 21:07:06.484  INFO 11825 --- [cluster-ClusterId{value='5866be6a721c9f2e31092822', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:234}] to 127.0.0.1:27017
+2016-12-30 21:07:06.489  INFO 11825 --- [cluster-ClusterId{value='5866be6a721c9f2e31092822', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=525627}
+2016-12-30 21:07:06.796  INFO 11825 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-12-30 21:07:06.797  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {http:outbound-gateway:html} as a subscriber to the 'getPageForUrlChannel' channel
+2016-12-30 21:07:06.797  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.getPageForUrlChannel' has 1 subscriber(s).
+2016-12-30 21:07:06.797  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started html
+2016-12-30 21:07:06.798  INFO 11825 --- [main] ProxyFactoryBean$MethodInvocationGateway : started systemEntryGateway
+2016-12-30 21:07:06.798  INFO 11825 --- [main] GatewayCompletableFutureProxyFactoryBean : started systemEntryGateway
+2016-12-30 21:07:06.798  INFO 11825 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#0
+2016-12-30 21:07:06.798  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain:waitToStartupFinishedAndSplit} as a subscriber to the 'systemEntry' channel
+2016-12-30 21:07:06.798  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 1 subscriber(s).
+2016-12-30 21:07:06.798  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started waitToStartupFinishedAndSplit
+2016-12-30 21:07:06.798  INFO 11825 --- [main] o.s.i.t.ContentEnricher$Gateway          : started org.springframework.integration.transformer.ContentEnricher$Gateway@56dfab87
+2016-12-30 21:07:06.799  INFO 11825 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#1
+2016-12-30 21:07:06.799  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain:scrapeMasterList} as a subscriber to the 'systemEntryAfterStartup' channel
+2016-12-30 21:07:06.799  INFO 11825 --- [main] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.systemEntryAfterStartup' has 1 subscriber(s).
+2016-12-30 21:07:06.799  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started scrapeMasterList
+2016-12-30 21:07:06.799  INFO 11825 --- [main] o.s.i.t.ContentEnricher$Gateway          : started org.springframework.integration.transformer.ContentEnricher$Gateway@715b886f
+2016-12-30 21:07:06.799  INFO 11825 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#2
+2016-12-30 21:07:06.799  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain:scrapeDetails} as a subscriber to the 'scrapeMasterListResultChannel' channel
+2016-12-30 21:07:06.799  INFO 11825 --- [main] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.scrapeMasterListResultChannel' has 1 subscriber(s).
+2016-12-30 21:07:06.799  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started scrapeDetails
+2016-12-30 21:07:06.800  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {recipient-list-router} as a subscriber to the 'scrapeResultChannel' channel
+2016-12-30 21:07:06.800  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.scrapeResultChannel' has 1 subscriber(s).
+2016-12-30 21:07:06.800  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2016-12-30 21:07:06.800  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'logEntryElements' channel
+2016-12-30 21:07:06.800  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logEntryElements' has 1 subscriber(s).
+2016-12-30 21:07:06.800  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2016-12-30 21:07:06.800  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'httpErrorChannel' channel
+2016-12-30 21:07:06.800  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.httpErrorChannel' has 1 subscriber(s).
+2016-12-30 21:07:06.801  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2016-12-30 21:07:06.801  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'discardedAdsChannel' channel
+2016-12-30 21:07:06.801  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.discardedAdsChannel' has 1 subscriber(s).
+2016-12-30 21:07:06.802  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2016-12-30 21:07:06.802  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'logInitialRun' channel
+2016-12-30 21:07:06.802  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logInitialRun' has 1 subscriber(s).
+2016-12-30 21:07:06.802  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#4
+2016-12-30 21:07:06.802  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'logPrematureMessages' channel
+2016-12-30 21:07:06.802  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 1 subscriber(s).
+2016-12-30 21:07:06.803  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#5
+2016-12-30 21:07:06.803  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'logLateMessages' channel
+2016-12-30 21:07:06.803  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logLateMessages' has 1 subscriber(s).
+2016-12-30 21:07:06.803  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#6
+2016-12-30 21:07:06.803  INFO 11825 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#4
+2016-12-30 21:07:06.803  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'historyChannel' channel
+2016-12-30 21:07:06.804  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.historyChannel' has 1 subscriber(s).
+2016-12-30 21:07:06.804  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#7
+2016-12-30 21:07:06.804  INFO 11825 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#5
+2016-12-30 21:07:06.804  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'logMessageChannel' channel
+2016-12-30 21:07:06.804  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logMessageChannel' has 1 subscriber(s).
+2016-12-30 21:07:06.804  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#8
+2016-12-30 21:07:06.805  INFO 11825 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#6
+2016-12-30 21:07:06.805  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'logPayloadChannel' channel
+2016-12-30 21:07:06.805  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPayloadChannel' has 1 subscriber(s).
+2016-12-30 21:07:06.805  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#9
+2016-12-30 21:07:06.805  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2016-12-30 21:07:06.805  INFO 11825 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 1 subscriber(s).
+2016-12-30 21:07:06.805  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2016-12-30 21:07:06.805  INFO 11825 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 1073741823
+2016-12-30 21:07:06.806  INFO 11825 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#3
+2016-12-30 21:07:06.810  INFO 11825 --- [main] o.s.i.endpoint.PollingConsumer           : started checkAndDeliver
+2016-12-30 21:07:06.820  INFO 11825 --- [main] adscraperApp.MailTest                    : Started MailTest in 6.243 seconds (JVM running for 7.693)
+2016-12-30 21:07:09.211  INFO 11825 --- [main] adScraper                                : testMail. sender: curiosa.globunznik@gmail.com, mailRecipient: curiosa.globunznik@gmail.com, from: vom Grausewitz
+2016-12-30 21:07:09.218  INFO 11825 --- [main] adScraper                                : mail to curiosa.globunznik@gmail.comad von nowhere.com 1234,- EUR/1 m2 m2 title
+2016-12-30 21:07:10.728  INFO 11825 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-30 21:07:10.738  INFO 11825 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6e43ddd6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@51d719bc, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2d38edfd, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1507c3c3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@655a01d8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c29fe36, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6614bd4b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4d266391, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7847ef2c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3b5c665c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@78e17a99, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@625a4ff]
+2016-12-30 21:07:10.979  INFO 11825 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:235}] to 127.0.0.1:27017
+2016-12-30 21:07:11.740  INFO 11825 --- [main] global                                   : creating bulk type: v2 key: t1 object: app.storage.KeyTypeValueStorageSpring@6342ff7f
+2016-12-30 21:07:11.747  INFO 11825 --- [main] global                                   : storing bulk type: v2 key: t1 object: app.storage.KeyTypeValueStorageSpring@6342ff7f
+2016-12-30 21:07:11.842  INFO 11825 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-30 21:07:11.846  INFO 11825 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@470d183, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7f9fc8bd, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@ea52184, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3e7b65d7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3c854752, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ddeaa5f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1a500561, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7f608e21, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6949e948, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@210d2a6c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3bec5821, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4086d8fb]
+2016-12-30 21:07:11.929  INFO 11825 --- [main] adscraperApp.ScanRunnerTest              : Starting ScanRunnerTest on sp-W271ELQ with PID 11825 (started by sp in /home/sp/dev/tool/eclipse/wsspring/adsniffer/adscraperApp)
+2016-12-30 21:07:11.929  INFO 11825 --- [main] adscraperApp.ScanRunnerTest              : No active profile set, falling back to default profiles: default
+2016-12-30 21:07:11.938  INFO 11825 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [app-config.xml]
+2016-12-30 21:07:11.974  INFO 11825 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [mail-config.xml]
+2016-12-30 21:07:12.004  INFO 11825 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [commonConfig.xml]
+2016-12-30 21:07:12.087  INFO 11825 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from URL [jar:file:/home/sp/dev/tool/eclipse/wsspring/adsniffer/IntegrationBySpring/target/integrationbyspring-0.0.1.jar!/scanner-config.xml]
+2016-12-30 21:07:12.225  INFO 11825 --- [main] o.s.i.config.IntegrationRegistrar        : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2016-12-30 21:07:12.247  INFO 11825 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-30 21:07:12.249  INFO 11825 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-30 21:07:12.250  INFO 11825 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2016-12-30 21:07:12.259  INFO 11825 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5f5effb0: startup date [Fri Dec 30 21:07:12 CET 2016]; root of context hierarchy
+2016-12-30 21:07:12.394  INFO 11825 --- [main] o.s.b.f.c.PropertyPlaceholderConfigurer  : Loading properties file from class path resource [application.properties]
+2016-12-30 21:07:12.399  INFO 11825 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2016-12-30 21:07:12.400  INFO 11825 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2016-12-30 21:07:12.430  INFO 11825 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 
+2016-12-30 21:07:12.449  INFO 11825 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sp/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2016-12-30 21:07:12.490  INFO 11825 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'taskScheduler'
+2016-12-30 21:07:12.746  WARN 11825 --- [main] o.s.i.config.ReleaseStrategyFactoryBean  : No target supplied; falling back to SequenceSizeReleaseStrategy
+2016-12-30 21:07:12.822  INFO 11825 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-12-30 21:07:12.850  INFO 11825 --- [cluster-ClusterId{value='5866be70721c9f2e31092827', description='null'}-127.0.0.1:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:7, serverValue:236}] to 127.0.0.1:27017
+2016-12-30 21:07:12.851  INFO 11825 --- [cluster-ClusterId{value='5866be70721c9f2e31092827', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, maxDocumentSize=16777216, roundTripTimeNanos=348638}
+2016-12-30 21:07:12.906  INFO 11825 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'scanScheduler'
+2016-12-30 21:07:12.939  INFO 11825 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:8, serverValue:237}] to 127.0.0.1:27017
+2016-12-30 21:07:13.253  INFO 11825 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-12-30 21:07:13.254  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {http:outbound-gateway:html} as a subscriber to the 'getPageForUrlChannel' channel
+2016-12-30 21:07:13.256  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.getPageForUrlChannel' has 1 subscriber(s).
+2016-12-30 21:07:13.256  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started html
+2016-12-30 21:07:13.256  INFO 11825 --- [main] ProxyFactoryBean$MethodInvocationGateway : started systemEntryGateway
+2016-12-30 21:07:13.256  INFO 11825 --- [main] GatewayCompletableFutureProxyFactoryBean : started systemEntryGateway
+2016-12-30 21:07:13.256  INFO 11825 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#0
+2016-12-30 21:07:13.256  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain:waitToStartupFinishedAndSplit} as a subscriber to the 'systemEntry' channel
+2016-12-30 21:07:13.256  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 1 subscriber(s).
+2016-12-30 21:07:13.257  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started waitToStartupFinishedAndSplit
+2016-12-30 21:07:13.257  INFO 11825 --- [main] o.s.i.t.ContentEnricher$Gateway          : started org.springframework.integration.transformer.ContentEnricher$Gateway@5f59ea8c
+2016-12-30 21:07:13.257  INFO 11825 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#1
+2016-12-30 21:07:13.257  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain:scrapeMasterList} as a subscriber to the 'systemEntryAfterStartup' channel
+2016-12-30 21:07:13.257  INFO 11825 --- [main] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.systemEntryAfterStartup' has 1 subscriber(s).
+2016-12-30 21:07:13.257  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started scrapeMasterList
+2016-12-30 21:07:13.257  INFO 11825 --- [main] o.s.i.t.ContentEnricher$Gateway          : started org.springframework.integration.transformer.ContentEnricher$Gateway@7b2ccba5
+2016-12-30 21:07:13.257  INFO 11825 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#2
+2016-12-30 21:07:13.257  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain:scrapeDetails} as a subscriber to the 'scrapeMasterListResultChannel' channel
+2016-12-30 21:07:13.257  INFO 11825 --- [main] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.scrapeMasterListResultChannel' has 1 subscriber(s).
+2016-12-30 21:07:13.257  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started scrapeDetails
+2016-12-30 21:07:13.257  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {recipient-list-router} as a subscriber to the 'scrapeResultChannel' channel
+2016-12-30 21:07:13.257  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.scrapeResultChannel' has 1 subscriber(s).
+2016-12-30 21:07:13.257  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2016-12-30 21:07:13.258  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'logEntryElements' channel
+2016-12-30 21:07:13.258  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logEntryElements' has 1 subscriber(s).
+2016-12-30 21:07:13.258  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2016-12-30 21:07:13.258  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'httpErrorChannel' channel
+2016-12-30 21:07:13.258  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.httpErrorChannel' has 1 subscriber(s).
+2016-12-30 21:07:13.258  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2016-12-30 21:07:13.258  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'discardedAdsChannel' channel
+2016-12-30 21:07:13.258  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.discardedAdsChannel' has 1 subscriber(s).
+2016-12-30 21:07:13.258  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2016-12-30 21:07:13.258  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'logInitialRun' channel
+2016-12-30 21:07:13.258  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logInitialRun' has 1 subscriber(s).
+2016-12-30 21:07:13.258  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#4
+2016-12-30 21:07:13.258  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'logPrematureMessages' channel
+2016-12-30 21:07:13.259  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 1 subscriber(s).
+2016-12-30 21:07:13.259  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#5
+2016-12-30 21:07:13.259  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'logLateMessages' channel
+2016-12-30 21:07:13.259  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logLateMessages' has 1 subscriber(s).
+2016-12-30 21:07:13.259  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#6
+2016-12-30 21:07:13.259  INFO 11825 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#4
+2016-12-30 21:07:13.259  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'historyChannel' channel
+2016-12-30 21:07:13.259  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.historyChannel' has 1 subscriber(s).
+2016-12-30 21:07:13.259  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#7
+2016-12-30 21:07:13.259  INFO 11825 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#5
+2016-12-30 21:07:13.259  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'logMessageChannel' channel
+2016-12-30 21:07:13.259  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logMessageChannel' has 1 subscriber(s).
+2016-12-30 21:07:13.259  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#8
+2016-12-30 21:07:13.259  INFO 11825 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#6
+2016-12-30 21:07:13.259  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'logPayloadChannel' channel
+2016-12-30 21:07:13.260  INFO 11825 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPayloadChannel' has 1 subscriber(s).
+2016-12-30 21:07:13.260  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#9
+2016-12-30 21:07:13.260  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2016-12-30 21:07:13.260  INFO 11825 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 1 subscriber(s).
+2016-12-30 21:07:13.260  INFO 11825 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2016-12-30 21:07:13.260  INFO 11825 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 1073741823
+2016-12-30 21:07:13.260  INFO 11825 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#3
+2016-12-30 21:07:13.270  INFO 11825 --- [main] o.s.i.endpoint.PollingConsumer           : started checkAndDeliver
+2016-12-30 21:07:13.276  INFO 11825 --- [main] adscraperApp.ScanRunnerTest              : Started ScanRunnerTest in 1.419 seconds (JVM running for 14.149)
+2016-12-30 21:07:13.294  INFO 11825 --- [main] app.server.ScanRunner                    : *** scaning at 21:07:13 ***************************************
+2016-12-30 21:07:13.300  INFO 11825 --- [main] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-30 21:07:13.302  INFO 11825 --- [main] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-30 21:07:13.343  INFO 11825 --- [main] app.server.ScanRunner                    : excluding ads containing any of: 
+2016-12-30 21:07:13.370  INFO 11825 --- [main] global                                   : creating bulk type: w.baz.wo key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@1b482cbf
+2016-12-30 21:07:13.380  INFO 11825 --- [main] global                                   : creating bulk type: w.baz.zi key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@38ee7a9d
+2016-12-30 21:07:13.383  INFO 11825 --- [main] app.server.ScanRunner                    : Running scan for 2 base urls
+2016-12-30 21:07:13.399  INFO 11825 --- [main] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.wo http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-30 21:07:13.402  INFO 11825 --- [main] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.zi http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-30 21:07:13.438  INFO 11825 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-30 21:07:13.450  INFO 11825 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@39de9bda, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@47148f3f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@52226e57, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1200458e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5fcd1c5f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3cc30dee, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7d528cf7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6dee8ae6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5af64ce0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7e7e962d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@17229821, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@e829999]
+2016-12-30 21:07:13.485  INFO 11825 --- [main] org.cg.ads.integration.LogActivator      : Scanning urlid motorradlUrl http://www.bazar.at/wien-brigittenau-motorraeder-mopeds-quads-anzeigen,dir,1,cId,8,fc,125,loc,125,o,1,tp,0
+2016-12-30 21:07:14.876  INFO 11825 --- [executor-2] global                                   : creating bulk type: motorradlUrl key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@4e61e5f4
+2016-12-30 21:07:14.877  INFO 11825 --- [executor-3] global                                   : creating bulk type: motorradlUrl key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@80fd6a4
+2016-12-30 21:07:14.877  INFO 11825 --- [executor-5] global                                   : creating bulk type: motorradlUrl key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@72fb44c6
+2016-12-30 21:07:14.913  INFO 11825 --- [executor-3] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:9, serverValue:238}] to 127.0.0.1:27017
+2016-12-30 21:07:14.926  INFO 11825 --- [executor-5] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:10, serverValue:239}] to 127.0.0.1:27017
+2016-12-30 21:07:16.801  INFO 11825 --- [scanScheduler-1] app.server.ScanRunner                    : *** scaning at 21:07:16 ***************************************
+2016-12-30 21:07:16.804  INFO 11825 --- [scanScheduler-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-30 21:07:16.807  INFO 11825 --- [scanScheduler-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-30 21:07:16.808  INFO 11825 --- [scanScheduler-1] app.server.ScanRunner                    : excluding ads containing any of: 
+2016-12-30 21:07:16.821  INFO 11825 --- [scanScheduler-1] app.server.ScanRunner                    : Running scan for 2 base urls
+2016-12-30 21:07:16.822  INFO 11825 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.wo http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-30 21:07:16.837  INFO 11825 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.zi http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-30 21:07:16.842  INFO 11825 --- [task-scheduler-2] adScraper                                : mail to curiosa.globunznik@gmail.comad von bazar.at  EUR/ m2 Rieju Spike 4, rot, fahrtüchtig, kein
+2016-12-30 21:07:17.181  INFO 11825 --- [task-scheduler-2] org.cg.ads.integration.LogActivator      : sent mail for:http://www.bazar.at/rieju-spike-4-rot-fahrtuechtig-kein-anzeigen-11365718.html
+2016-12-30 21:07:17.187  INFO 11825 --- [task-scheduler-2] adScraper                                : mail to curiosa.globunznik@gmail.comad von bazar.at 2450 EUR/ m2 Yamaha XJ 900 S Diversion
+2016-12-30 21:07:17.557  INFO 11825 --- [task-scheduler-2] org.cg.ads.integration.LogActivator      : sent mail for:http://www.bazar.at/yamaha-xj-900-s-diversion-anzeigen-11277004.html
+2016-12-30 21:07:17.560  INFO 11825 --- [task-scheduler-2] adScraper                                : mail to curiosa.globunznik@gmail.comad von bazar.at 1000 EUR/ m2 Quad 50ccm (Moped), Bj. 2014,
+2016-12-30 21:07:17.905  INFO 11825 --- [task-scheduler-2] org.cg.ads.integration.LogActivator      : sent mail for:http://www.bazar.at/quad-50ccm-moped-bj-2014-anzeigen-11422284.html
+2016-12-30 21:07:17.915  INFO 11825 --- [task-scheduler-2] adScraper                                : mail to curiosa.globunznik@gmail.comad von bazar.at 3900 EUR/ m2 Suzuki Bandit 1200, 1a Zustand - immer in
+2016-12-30 21:07:19.120  INFO 11825 --- [task-scheduler-2] org.cg.ads.integration.LogActivator      : sent mail for:http://www.bazar.at/suzuki-bandit-1200-1a-zustand-immer-in-anzeigen-3575037.html
+2016-12-30 21:07:19.121  INFO 11825 --- [task-scheduler-2] adScraper                                : mail to curiosa.globunznik@gmail.comad von bazar.at  EUR/ m2 Kawasaki Z650 F, Bj. 82, günstig.
+2016-12-30 21:07:19.457  INFO 11825 --- [task-scheduler-2] org.cg.ads.integration.LogActivator      : sent mail for:http://www.bazar.at/kawasaki-z650-f-bj-82-guenstig-anzeigen-11342933.html
+2016-12-30 21:07:19.463  INFO 11825 --- [task-scheduler-2] global                                   : storing bulk type: motorradlUrl key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@72fb44c6
+2016-12-30 21:07:19.498  INFO 11825 --- [task-scheduler-2] org.cg.ads.integration.LogActivator      : 5 mail sent for motorradlUrl
+2016-12-30 21:07:23.262  INFO 11825 --- [scanScheduler-1] app.server.ScanRunner                    : *** scaning at 21:07:23 ***************************************
+2016-12-30 21:07:23.267  INFO 11825 --- [scanScheduler-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-30 21:07:23.275  INFO 11825 --- [scanScheduler-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-30 21:07:23.276  INFO 11825 --- [scanScheduler-1] app.server.ScanRunner                    : excluding ads containing any of: 
+2016-12-30 21:07:23.279  INFO 11825 --- [scanScheduler-1] app.server.ScanRunner                    : Running scan for 2 base urls
+2016-12-30 21:07:23.284  INFO 11825 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.wo http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-30 21:07:23.286  INFO 11825 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.zi http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-30 21:07:33.520  INFO 11825 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@2609b277: startup date [Fri Dec 30 21:07:03 CET 2016]; root of context hierarchy
+2016-12-30 21:07:33.523  INFO 11825 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 1073741823
+2016-12-30 21:07:33.524  INFO 11825 --- [Thread-3] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@5f5effb0: startup date [Fri Dec 30 21:07:12 CET 2016]; root of context hierarchy
+2016-12-30 21:07:33.529  INFO 11825 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 1073741823
+2016-12-30 21:07:33.541  INFO 11825 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#3
+2016-12-30 21:07:33.542  INFO 11825 --- [Thread-3] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#3
+2016-12-30 21:07:33.542  INFO 11825 --- [Thread-3] o.s.i.endpoint.PollingConsumer           : stopped checkAndDeliver
+2016-12-30 21:07:33.567  INFO 11825 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-12-30 21:07:33.567  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : Removing {http:outbound-gateway:html} as a subscriber to the 'getPageForUrlChannel' channel
+2016-12-30 21:07:33.568  INFO 11825 --- [Thread-2] o.s.i.endpoint.PollingConsumer           : stopped checkAndDeliver
+2016-12-30 21:07:33.568  INFO 11825 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-12-30 21:07:33.568  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {http:outbound-gateway:html} as a subscriber to the 'getPageForUrlChannel' channel
+2016-12-30 21:07:33.569  INFO 11825 --- [Thread-3] o.s.integration.channel.DirectChannel    : Channel 'application:-1.getPageForUrlChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.570  INFO 11825 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.getPageForUrlChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.570  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped html
+2016-12-30 21:07:33.571  INFO 11825 --- [Thread-2] ProxyFactoryBean$MethodInvocationGateway : stopped systemEntryGateway
+2016-12-30 21:07:33.571  INFO 11825 --- [Thread-2] GatewayCompletableFutureProxyFactoryBean : stopped systemEntryGateway
+2016-12-30 21:07:33.571  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain:waitToStartupFinishedAndSplit} as a subscriber to the 'systemEntry' channel
+2016-12-30 21:07:33.571  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : stopped html
+2016-12-30 21:07:33.571  INFO 11825 --- [Thread-3] ProxyFactoryBean$MethodInvocationGateway : stopped systemEntryGateway
+2016-12-30 21:07:33.571  INFO 11825 --- [Thread-3] GatewayCompletableFutureProxyFactoryBean : stopped systemEntryGateway
+2016-12-30 21:07:33.571  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain:waitToStartupFinishedAndSplit} as a subscriber to the 'systemEntry' channel
+2016-12-30 21:07:33.572  INFO 11825 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 0 subscriber(s).
+2016-12-30 21:07:33.572  INFO 11825 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#0
+2016-12-30 21:07:33.572  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped waitToStartupFinishedAndSplit
+2016-12-30 21:07:33.572  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain:scrapeMasterList} as a subscriber to the 'systemEntryAfterStartup' channel
+2016-12-30 21:07:33.572  INFO 11825 --- [Thread-3] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 0 subscriber(s).
+2016-12-30 21:07:33.572  INFO 11825 --- [Thread-3] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#0
+2016-12-30 21:07:33.572  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : stopped waitToStartupFinishedAndSplit
+2016-12-30 21:07:33.572  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain:scrapeMasterList} as a subscriber to the 'systemEntryAfterStartup' channel
+2016-12-30 21:07:33.573  INFO 11825 --- [Thread-2] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.systemEntryAfterStartup' has 0 subscriber(s).
+2016-12-30 21:07:33.573  INFO 11825 --- [Thread-2] o.s.i.t.ContentEnricher$Gateway          : stopped org.springframework.integration.transformer.ContentEnricher$Gateway@56dfab87
+2016-12-30 21:07:33.573  INFO 11825 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#1
+2016-12-30 21:07:33.573  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped scrapeMasterList
+2016-12-30 21:07:33.573  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain:scrapeDetails} as a subscriber to the 'scrapeMasterListResultChannel' channel
+2016-12-30 21:07:33.573  INFO 11825 --- [Thread-3] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.systemEntryAfterStartup' has 0 subscriber(s).
+2016-12-30 21:07:33.573  INFO 11825 --- [Thread-3] o.s.i.t.ContentEnricher$Gateway          : stopped org.springframework.integration.transformer.ContentEnricher$Gateway@5f59ea8c
+2016-12-30 21:07:33.573  INFO 11825 --- [Thread-3] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#1
+2016-12-30 21:07:33.573  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : stopped scrapeMasterList
+2016-12-30 21:07:33.573  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain:scrapeDetails} as a subscriber to the 'scrapeMasterListResultChannel' channel
+2016-12-30 21:07:33.574  INFO 11825 --- [Thread-3] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.scrapeMasterListResultChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.574  INFO 11825 --- [Thread-3] o.s.i.t.ContentEnricher$Gateway          : stopped org.springframework.integration.transformer.ContentEnricher$Gateway@7b2ccba5
+2016-12-30 21:07:33.574  INFO 11825 --- [Thread-3] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#2
+2016-12-30 21:07:33.574  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : stopped scrapeDetails
+2016-12-30 21:07:33.574  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : Removing {recipient-list-router} as a subscriber to the 'scrapeResultChannel' channel
+2016-12-30 21:07:33.574  INFO 11825 --- [Thread-2] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.scrapeMasterListResultChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.574  INFO 11825 --- [Thread-2] o.s.i.t.ContentEnricher$Gateway          : stopped org.springframework.integration.transformer.ContentEnricher$Gateway@715b886f
+2016-12-30 21:07:33.574  INFO 11825 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#2
+2016-12-30 21:07:33.574  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped scrapeDetails
+2016-12-30 21:07:33.574  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {recipient-list-router} as a subscriber to the 'scrapeResultChannel' channel
+2016-12-30 21:07:33.574  INFO 11825 --- [Thread-3] o.s.integration.channel.DirectChannel    : Channel 'application:-1.scrapeResultChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.574  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2016-12-30 21:07:33.575  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'logEntryElements' channel
+2016-12-30 21:07:33.575  INFO 11825 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.scrapeResultChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.575  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2016-12-30 21:07:33.575  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'logEntryElements' channel
+2016-12-30 21:07:33.575  INFO 11825 --- [Thread-3] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logEntryElements' has 0 subscriber(s).
+2016-12-30 21:07:33.575  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2016-12-30 21:07:33.575  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'httpErrorChannel' channel
+2016-12-30 21:07:33.575  INFO 11825 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logEntryElements' has 0 subscriber(s).
+2016-12-30 21:07:33.575  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2016-12-30 21:07:33.575  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'httpErrorChannel' channel
+2016-12-30 21:07:33.576  INFO 11825 --- [Thread-3] o.s.integration.channel.DirectChannel    : Channel 'application:-1.httpErrorChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.576  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2016-12-30 21:07:33.576  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'discardedAdsChannel' channel
+2016-12-30 21:07:33.576  INFO 11825 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.httpErrorChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.576  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2016-12-30 21:07:33.576  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'discardedAdsChannel' channel
+2016-12-30 21:07:33.576  INFO 11825 --- [Thread-3] o.s.integration.channel.DirectChannel    : Channel 'application:-1.discardedAdsChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.576  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2016-12-30 21:07:33.576  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'logInitialRun' channel
+2016-12-30 21:07:33.576  INFO 11825 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.discardedAdsChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.577  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2016-12-30 21:07:33.577  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'logInitialRun' channel
+2016-12-30 21:07:33.577  INFO 11825 --- [Thread-3] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logInitialRun' has 0 subscriber(s).
+2016-12-30 21:07:33.577  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#4
+2016-12-30 21:07:33.577  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'logPrematureMessages' channel
+2016-12-30 21:07:33.577  INFO 11825 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logInitialRun' has 0 subscriber(s).
+2016-12-30 21:07:33.577  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#4
+2016-12-30 21:07:33.577  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'logPrematureMessages' channel
+2016-12-30 21:07:33.579  INFO 11825 --- [Thread-3] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 0 subscriber(s).
+2016-12-30 21:07:33.580  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#5
+2016-12-30 21:07:33.580  INFO 11825 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 0 subscriber(s).
+2016-12-30 21:07:33.580  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#5
+2016-12-30 21:07:33.580  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'logLateMessages' channel
+2016-12-30 21:07:33.580  INFO 11825 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logLateMessages' has 0 subscriber(s).
+2016-12-30 21:07:33.580  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#6
+2016-12-30 21:07:33.581  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'historyChannel' channel
+2016-12-30 21:07:33.581  INFO 11825 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.historyChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.581  INFO 11825 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#4
+2016-12-30 21:07:33.581  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#7
+2016-12-30 21:07:33.581  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'logMessageChannel' channel
+2016-12-30 21:07:33.581  INFO 11825 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logMessageChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.581  INFO 11825 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#5
+2016-12-30 21:07:33.581  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#8
+2016-12-30 21:07:33.581  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'logPayloadChannel' channel
+2016-12-30 21:07:33.581  INFO 11825 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPayloadChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.581  INFO 11825 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#6
+2016-12-30 21:07:33.581  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#9
+2016-12-30 21:07:33.581  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2016-12-30 21:07:33.581  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'logLateMessages' channel
+2016-12-30 21:07:33.581  INFO 11825 --- [Thread-3] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logLateMessages' has 0 subscriber(s).
+2016-12-30 21:07:33.582  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#6
+2016-12-30 21:07:33.582  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'historyChannel' channel
+2016-12-30 21:07:33.582  INFO 11825 --- [Thread-3] o.s.integration.channel.DirectChannel    : Channel 'application:-1.historyChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.582  INFO 11825 --- [Thread-3] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#4
+2016-12-30 21:07:33.582  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#7
+2016-12-30 21:07:33.583  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'logMessageChannel' channel
+2016-12-30 21:07:33.583  INFO 11825 --- [Thread-3] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logMessageChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.583  INFO 11825 --- [Thread-3] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#5
+2016-12-30 21:07:33.583  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#8
+2016-12-30 21:07:33.583  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'logPayloadChannel' channel
+2016-12-30 21:07:33.583  INFO 11825 --- [Thread-3] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPayloadChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.583  INFO 11825 --- [Thread-3] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#6
+2016-12-30 21:07:33.583  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#9
+2016-12-30 21:07:33.583  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2016-12-30 21:07:33.584  INFO 11825 --- [Thread-2] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.584  INFO 11825 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
+2016-12-30 21:07:33.587  INFO 11825 --- [Thread-3] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 0 subscriber(s).
+2016-12-30 21:07:33.588  INFO 11825 --- [Thread-3] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
+2016-12-30 21:07:33.589  INFO 11825 --- [Thread-3] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'scanScheduler'
+2016-12-30 21:07:33.595  INFO 11825 --- [Thread-3] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:8, serverValue:237}] to 127.0.0.1:27017 because the pool has been closed.
+2016-12-30 21:07:33.598  INFO 11825 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'scanScheduler'
+2016-12-30 21:07:33.602  INFO 11825 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2016-12-30 21:07:33.603  INFO 11825 --- [Thread-3] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:10, serverValue:239}] to 127.0.0.1:27017 because the pool has been closed.
+2016-12-30 21:07:33.607  INFO 11825 --- [Thread-3] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:9, serverValue:238}] to 127.0.0.1:27017 because the pool has been closed.
+2016-12-30 21:07:33.619  INFO 11825 --- [Thread-3] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2016-12-30 21:07:33.622  INFO 11825 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService
+2016-12-30 21:07:33.625  INFO 11825 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService
+2016-12-30 21:08:26.183  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : *** scaning at 21:08:26 ***************************************
+2016-12-30 21:08:26.185  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-30 21:08:26.187  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-30 21:08:26.187  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : excluding ads containing any of: 
+2016-12-30 21:08:26.189  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : Running scan for 2 base urls
+2016-12-30 21:08:26.191  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.wo http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-30 21:08:26.193  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.zi http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-30 21:10:26.198  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : *** scaning at 21:10:26 ***************************************
+2016-12-30 21:10:26.200  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-30 21:10:26.204  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-30 21:10:26.204  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : excluding ads containing any of: 
+2016-12-30 21:10:26.207  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : Running scan for 2 base urls
+2016-12-30 21:10:26.208  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.wo http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-30 21:10:26.212  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.zi http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-30 21:12:26.305  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : *** scaning at 21:12:26 ***************************************
+2016-12-30 21:12:26.419  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-30 21:12:26.421  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-30 21:12:26.421  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : excluding ads containing any of: 
+2016-12-30 21:12:26.424  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : Running scan for 2 base urls
+2016-12-30 21:12:26.425  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.wo http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-30 21:12:26.426  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.zi http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
+2016-12-30 21:14:26.430  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : *** scaning at 21:14:26 ***************************************
+2016-12-30 21:14:26.432  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'suspended' not set: 0 result items found for setting suspended, should be 1
+2016-12-30 21:14:26.434  INFO 11189 --- [scanScheduler-1] adScraper                                : Setting 'neg' not set: 0 result items found for setting neg, should be 1
+2016-12-30 21:14:26.434  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : excluding ads containing any of: 
+2016-12-30 21:14:26.436  INFO 11189 --- [scanScheduler-1] app.server.ScanRunner                    : Running scan for 2 base urls
+2016-12-30 21:14:26.438  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.wo http://www.bazar.at/wien-wohnungen-miete-anzeigen,dir,1,cId,14,fc,9,loc,9,o,1,ref,2,ret,5,tp,0,at,1922
+2016-12-30 21:14:26.441  INFO 11189 --- [scanScheduler-1] org.cg.ads.integration.LogActivator      : Scanning urlid w.baz.zi http://www.bazar.at/wien-zimmer-wgs-anzeigen,dir,1,cId,16,fc,9,loc,9,o,1,ref,2,ret,5,tp,0
