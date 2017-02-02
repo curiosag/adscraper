@@ -1,0 +1,1047 @@
+2017-01-13 19:45:31.026  INFO 7870 --- [main] adscraperApp.ScanRunnerTest              : Starting ScanRunnerTest on sm-ncdell with PID 7870 (started by sm in /home/sm/dev/tool/eclipse/wsspring/adsniffer/adscraperApp)
+2017-01-13 19:45:31.027  INFO 7870 --- [main] adscraperApp.ScanRunnerTest              : No active profile set, falling back to default profiles: default
+2017-01-13 19:45:31.156  INFO 7870 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [app-config.xml]
+2017-01-13 19:45:31.262  INFO 7870 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [mail-config.xml]
+2017-01-13 19:45:31.286  INFO 7870 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [commonConfig.xml]
+2017-01-13 19:45:31.398  INFO 7870 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from URL [jar:file:/home/sm/dev/tool/eclipse/wsspring/adsniffer/IntegrationBySpring/target/integrationbyspring-0.0.1.jar!/scanner-config.xml]
+2017-01-13 19:45:31.516  INFO 7870 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sm/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2017-01-13 19:45:31.518  INFO 7870 --- [main] o.s.i.config.IntegrationRegistrar        : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2017-01-13 19:45:31.564  INFO 7870 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2017-01-13 19:45:31.564  INFO 7870 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2017-01-13 19:45:31.565  INFO 7870 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2017-01-13 19:45:31.569  INFO 7870 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@35399441: startup date [Fri Jan 13 19:45:31 CET 2017]; root of context hierarchy
+2017-01-13 19:45:31.803  INFO 7870 --- [main] o.s.b.f.c.PropertyPlaceholderConfigurer  : Loading properties file from class path resource [application.properties]
+2017-01-13 19:45:31.821  INFO 7870 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2017-01-13 19:45:31.822  INFO 7870 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2017-01-13 19:45:31.869  INFO 7870 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 
+2017-01-13 19:45:31.923  INFO 7870 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sm/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2017-01-13 19:45:31.978  INFO 7870 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'taskScheduler'
+2017-01-13 19:45:32.279  WARN 7870 --- [main] o.s.i.config.ReleaseStrategyFactoryBean  : No target supplied; falling back to SequenceSizeReleaseStrategy
+2017-01-13 19:45:32.443  INFO 7870 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-01-13 19:45:32.468  INFO 7870 --- [cluster-ClusterId{value='5879204cacb29a1ebec5871a', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server 127.0.0.1:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128) ~[mongodb-driver-core-3.2.2.jar:na]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_111]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_111]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_111]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongodb-driver-core-3.2.2.jar:na]
+	... 3 common frames omitted
+
+2017-01-13 19:45:32.670  INFO 7870 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'scanScheduler'
+2017-01-13 19:45:32.716  INFO 7870 --- [main] org.mongodb.driver.cluster               : No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]}. Waiting for 30000 ms before timing out
+2017-01-13 19:46:02.718  WARN 7870 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'app.server.CommandHandler#0' defined in class path resource [app-config.xml]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [app.server.CommandHandler]: Constructor threw exception; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+2017-01-13 19:46:02.719  INFO 7870 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'scanScheduler'
+2017-01-13 19:46:02.726  INFO 7870 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2017-01-13 19:46:02.727  INFO 7870 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService
+2017-01-13 19:46:02.735 ERROR 7870 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'app.server.CommandHandler#0' defined in class path resource [app-config.xml]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [app.server.CommandHandler]: Constructor threw exception; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:279) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1148) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1050) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:111) [spring-boot-test-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [app.server.CommandHandler]: Constructor threw exception; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:154) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:122) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:271) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	... 43 common frames omitted
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:369) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:101) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:63) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:201) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.operation.CountOperation.execute(CountOperation.java:206) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.operation.CountOperation.execute(CountOperation.java:53) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.Mongo.execute(Mongo.java:772) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.Mongo$2.execute(Mongo.java:759) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.DBCollection.getCount(DBCollection.java:962) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.DBCollection.getCount(DBCollection.java:937) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.DBCollection.getCount(DBCollection.java:931) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.DBCollection.getCount(DBCollection.java:914) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.DBCollection.getCount(DBCollection.java:885) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.DBCollection.count(DBCollection.java:812) ~[mongodb-driver-3.2.2.jar:na]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.count(SimpleMongoRepository.java:148) ~[spring-data-mongodb-1.9.5.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:503) ~[spring-data-commons-1.12.5.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:488) ~[spring-data-commons-1.12.5.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:460) ~[spring-data-commons-1.12.5.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:61) ~[spring-data-commons-1.12.5.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213) ~[spring-aop-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at com.sun.proxy.$Proxy52.count(Unknown Source) ~[na:na]
+	at app.storage.Repos.getRepoItem(Repos.java:70) ~[classes/:na]
+	at app.storage.Repos.getItems(Repos.java:40) ~[classes/:na]
+	at app.server.CommandHandler.<init>(CommandHandler.java:55) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_111]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_111]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:142) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	... 45 common frames omitted
+
+2017-01-13 19:46:02.738 ERROR 7870 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5cee5251] to prepare test instance [adscraperApp.ScanRunnerTest@35267fd4]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) ~[spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189) ~[spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131) ~[spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230) ~[spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'app.server.CommandHandler#0' defined in class path resource [app-config.xml]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [app.server.CommandHandler]: Constructor threw exception; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:279) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1148) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1050) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:111) ~[spring-boot-test-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) ~[spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	... 26 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [app.server.CommandHandler]: Constructor threw exception; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:154) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:122) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:271) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	... 43 common frames omitted
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:369) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:101) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:63) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:201) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.operation.CountOperation.execute(CountOperation.java:206) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.operation.CountOperation.execute(CountOperation.java:53) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.Mongo.execute(Mongo.java:772) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.Mongo$2.execute(Mongo.java:759) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.DBCollection.getCount(DBCollection.java:962) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.DBCollection.getCount(DBCollection.java:937) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.DBCollection.getCount(DBCollection.java:931) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.DBCollection.getCount(DBCollection.java:914) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.DBCollection.getCount(DBCollection.java:885) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.DBCollection.count(DBCollection.java:812) ~[mongodb-driver-3.2.2.jar:na]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.count(SimpleMongoRepository.java:148) ~[spring-data-mongodb-1.9.5.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:503) ~[spring-data-commons-1.12.5.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:488) ~[spring-data-commons-1.12.5.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:460) ~[spring-data-commons-1.12.5.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:61) ~[spring-data-commons-1.12.5.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213) ~[spring-aop-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at com.sun.proxy.$Proxy52.count(Unknown Source) ~[na:na]
+	at app.storage.Repos.getRepoItem(Repos.java:70) ~[classes/:na]
+	at app.storage.Repos.getItems(Repos.java:40) ~[classes/:na]
+	at app.server.CommandHandler.<init>(CommandHandler.java:55) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_111]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_111]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:142) ~[spring-beans-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	... 45 common frames omitted
+
+2017-01-13 19:46:02.754  INFO 7870 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-13 19:46:02.755  INFO 7870 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4047d2d9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@48d293ee, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@146dcfe6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@22587507, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5c77ba8f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@660f0c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7a0ef219, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1b1f5012, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7add323c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4a734c04, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4760f169, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@261ea657]
+2017-01-13 19:46:02.783  INFO 7870 --- [main] adscraperApp.IntegrationTest             : Starting IntegrationTest on sm-ncdell with PID 7870 (started by sm in /home/sm/dev/tool/eclipse/wsspring/adsniffer/adscraperApp)
+2017-01-13 19:46:02.783  INFO 7870 --- [main] adscraperApp.IntegrationTest             : No active profile set, falling back to default profiles: default
+2017-01-13 19:46:02.785  INFO 7870 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [app-config-test.xml]
+2017-01-13 19:46:02.792  INFO 7870 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [mail-config.xml]
+2017-01-13 19:46:02.799  INFO 7870 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [commonConfig.xml]
+2017-01-13 19:46:02.896  INFO 7870 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from URL [jar:file:/home/sm/dev/tool/eclipse/wsspring/adsniffer/IntegrationBySpring/target/integrationbyspring-0.0.1.jar!/scanner-config.xml]
+2017-01-13 19:46:02.958  INFO 7870 --- [main] o.s.i.config.IntegrationRegistrar        : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2017-01-13 19:46:02.963  INFO 7870 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2017-01-13 19:46:02.963  INFO 7870 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2017-01-13 19:46:02.964  INFO 7870 --- [main] o.s.integration.config.xml.ChainParser   : It is useful to provide an explicit 'id' attribute on 'chain' elements to simplify the identification of child elements in logs etc.
+2017-01-13 19:46:02.965  INFO 7870 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7e642b88: startup date [Fri Jan 13 19:46:02 CET 2017]; root of context hierarchy
+2017-01-13 19:46:03.048  INFO 7870 --- [main] o.s.b.f.c.PropertyPlaceholderConfigurer  : Loading properties file from class path resource [application.properties]
+2017-01-13 19:46:03.052  INFO 7870 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2017-01-13 19:46:03.052  INFO 7870 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2017-01-13 19:46:03.072  INFO 7870 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 
+2017-01-13 19:46:03.084  INFO 7870 --- [main] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from URL [jar:file:/home/sm/.m2/repository/org/springframework/integration/spring-integration-core/4.3.5.RELEASE/spring-integration-core-4.3.5.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2017-01-13 19:46:03.112  INFO 7870 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'taskScheduler'
+2017-01-13 19:46:03.274  WARN 7870 --- [main] o.s.i.config.ReleaseStrategyFactoryBean  : No target supplied; falling back to SequenceSizeReleaseStrategy
+2017-01-13 19:46:03.309  INFO 7870 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-01-13 19:46:03.311  INFO 7870 --- [cluster-ClusterId{value='5879206bacb29a1ebec5871b', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server 127.0.0.1:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128) ~[mongodb-driver-core-3.2.2.jar:na]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_111]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_111]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_111]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongodb-driver-core-3.2.2.jar:na]
+	... 3 common frames omitted
+
+2017-01-13 19:46:03.312  INFO 7870 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-01-13 19:46:03.313  INFO 7870 --- [cluster-ClusterId{value='5879206bacb29a1ebec5871c', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server 127.0.0.1:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128) ~[mongodb-driver-core-3.2.2.jar:na]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_111]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_111]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_111]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongodb-driver-core-3.2.2.jar:na]
+	... 3 common frames omitted
+
+2017-01-13 19:46:03.349  INFO 7870 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'scanScheduler'
+2017-01-13 19:46:03.356  INFO 7870 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-01-13 19:46:03.357  INFO 7870 --- [cluster-ClusterId{value='5879206bacb29a1ebec5871d', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server 127.0.0.1:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128) ~[mongodb-driver-core-3.2.2.jar:na]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_111]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_111]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_111]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongodb-driver-core-3.2.2.jar:na]
+	... 3 common frames omitted
+
+2017-01-13 19:46:03.359  INFO 7870 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-01-13 19:46:03.361  INFO 7870 --- [cluster-ClusterId{value='5879206bacb29a1ebec5871e', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server 127.0.0.1:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128) ~[mongodb-driver-core-3.2.2.jar:na]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_111]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_111]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_111]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongodb-driver-core-3.2.2.jar:na]
+	... 3 common frames omitted
+
+2017-01-13 19:46:03.378  INFO 7870 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-01-13 19:46:03.379  INFO 7870 --- [cluster-ClusterId{value='5879206bacb29a1ebec5871f', description='null'}-127.0.0.1:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server 127.0.0.1:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128) ~[mongodb-driver-core-3.2.2.jar:na]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_111]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_111]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_111]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_111]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongodb-driver-core-3.2.2.jar:na]
+	... 3 common frames omitted
+
+2017-01-13 19:46:03.472  INFO 7870 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-01-13 19:46:03.472  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {http:outbound-gateway:html} as a subscriber to the 'getPageForUrlChannel' channel
+2017-01-13 19:46:03.472  INFO 7870 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.getPageForUrlChannel' has 1 subscriber(s).
+2017-01-13 19:46:03.472  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started html
+2017-01-13 19:46:03.472  INFO 7870 --- [main] ProxyFactoryBean$MethodInvocationGateway : started systemEntryGateway
+2017-01-13 19:46:03.473  INFO 7870 --- [main] GatewayCompletableFutureProxyFactoryBean : started systemEntryGateway
+2017-01-13 19:46:03.473  INFO 7870 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#0
+2017-01-13 19:46:03.473  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain:waitToStartupFinishedAndSplit} as a subscriber to the 'systemEntry' channel
+2017-01-13 19:46:03.473  INFO 7870 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 1 subscriber(s).
+2017-01-13 19:46:03.473  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started waitToStartupFinishedAndSplit
+2017-01-13 19:46:03.473  INFO 7870 --- [main] o.s.i.t.ContentEnricher$Gateway          : started org.springframework.integration.transformer.ContentEnricher$Gateway@31120021
+2017-01-13 19:46:03.473  INFO 7870 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#1
+2017-01-13 19:46:03.473  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain:scrapeMasterList} as a subscriber to the 'systemEntryAfterStartup' channel
+2017-01-13 19:46:03.473  INFO 7870 --- [main] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.systemEntryAfterStartup' has 1 subscriber(s).
+2017-01-13 19:46:03.473  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started scrapeMasterList
+2017-01-13 19:46:03.473  INFO 7870 --- [main] o.s.i.t.ContentEnricher$Gateway          : started org.springframework.integration.transformer.ContentEnricher$Gateway@3df1a1ac
+2017-01-13 19:46:03.474  INFO 7870 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#2
+2017-01-13 19:46:03.474  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain:scrapeDetails} as a subscriber to the 'scrapeMasterListResultChannel' channel
+2017-01-13 19:46:03.474  INFO 7870 --- [main] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.scrapeMasterListResultChannel' has 1 subscriber(s).
+2017-01-13 19:46:03.474  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started scrapeDetails
+2017-01-13 19:46:03.474  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {recipient-list-router} as a subscriber to the 'scrapeResultChannel' channel
+2017-01-13 19:46:03.474  INFO 7870 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.scrapeResultChannel' has 1 subscriber(s).
+2017-01-13 19:46:03.474  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2017-01-13 19:46:03.474  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'logEntryElements' channel
+2017-01-13 19:46:03.474  INFO 7870 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logEntryElements' has 1 subscriber(s).
+2017-01-13 19:46:03.474  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2017-01-13 19:46:03.474  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'httpErrorChannel' channel
+2017-01-13 19:46:03.474  INFO 7870 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.httpErrorChannel' has 1 subscriber(s).
+2017-01-13 19:46:03.474  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2017-01-13 19:46:03.474  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'discardedAdsChannel' channel
+2017-01-13 19:46:03.475  INFO 7870 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.discardedAdsChannel' has 1 subscriber(s).
+2017-01-13 19:46:03.475  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2017-01-13 19:46:03.475  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'logInitialRun' channel
+2017-01-13 19:46:03.475  INFO 7870 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logInitialRun' has 1 subscriber(s).
+2017-01-13 19:46:03.475  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#4
+2017-01-13 19:46:03.475  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'logPrematureMessages' channel
+2017-01-13 19:46:03.475  INFO 7870 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 1 subscriber(s).
+2017-01-13 19:46:03.475  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#5
+2017-01-13 19:46:03.475  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {transformer} as a subscriber to the 'logLateMessages' channel
+2017-01-13 19:46:03.475  INFO 7870 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logLateMessages' has 1 subscriber(s).
+2017-01-13 19:46:03.475  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#6
+2017-01-13 19:46:03.475  INFO 7870 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#4
+2017-01-13 19:46:03.475  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'historyChannel' channel
+2017-01-13 19:46:03.475  INFO 7870 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.historyChannel' has 1 subscriber(s).
+2017-01-13 19:46:03.475  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#7
+2017-01-13 19:46:03.476  INFO 7870 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#5
+2017-01-13 19:46:03.476  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'logMessageChannel' channel
+2017-01-13 19:46:03.476  INFO 7870 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logMessageChannel' has 1 subscriber(s).
+2017-01-13 19:46:03.476  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#8
+2017-01-13 19:46:03.476  INFO 7870 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#6
+2017-01-13 19:46:03.476  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {chain} as a subscriber to the 'logPayloadChannel' channel
+2017-01-13 19:46:03.476  INFO 7870 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPayloadChannel' has 1 subscriber(s).
+2017-01-13 19:46:03.476  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started org.springframework.integration.config.ConsumerEndpointFactoryBean#9
+2017-01-13 19:46:03.476  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2017-01-13 19:46:03.476  INFO 7870 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 1 subscriber(s).
+2017-01-13 19:46:03.476  INFO 7870 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2017-01-13 19:46:03.476  INFO 7870 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 1073741823
+2017-01-13 19:46:03.476  INFO 7870 --- [main] o.s.i.handler.MessageHandlerChain        : started org.springframework.integration.handler.MessageHandlerChain#3
+2017-01-13 19:46:03.478  INFO 7870 --- [main] o.s.i.endpoint.PollingConsumer           : started checkAndDeliver
+2017-01-13 19:46:03.481  INFO 7870 --- [main] adscraperApp.IntegrationTest             : Started IntegrationTest in 0.722 seconds (JVM running for 33.097)
+2017-01-13 19:46:03.511  INFO 7870 --- [main] org.cg.ads.integration.LogActivator      : Scanning urlid motorradlUrl http://www.bazar.at/wien-brigittenau-motorraeder-mopeds-quads-anzeigen,dir,1,cId,8,fc,125,loc,125,o,1,tp,0
+2017-01-13 19:46:05.446  INFO 7870 --- [executor-2] global                                   : creating bulk type: motorradlUrl key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@5e70e7a3
+2017-01-13 19:46:05.448  INFO 7870 --- [executor-3] global                                   : creating bulk type: motorradlUrl key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@19043a49
+2017-01-13 19:46:05.449  INFO 7870 --- [executor-5] global                                   : creating bulk type: motorradlUrl key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@3d49f361
+2017-01-13 19:46:05.451  INFO 7870 --- [executor-4] global                                   : creating bulk type: motorradlUrl key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@578b9796
+2017-01-13 19:46:05.453  INFO 7870 --- [executor-6] global                                   : creating bulk type: motorradlUrl key: HistoryBulkItem object: app.storage.KeyTypeValueStorageSpring@233b6d26
+2017-01-13 19:46:05.468  INFO 7870 --- [executor-3] org.mongodb.driver.cluster               : No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]}. Waiting for 30000 ms before timing out
+2017-01-13 19:46:05.468  INFO 7870 --- [executor-5] org.mongodb.driver.cluster               : No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]}. Waiting for 30000 ms before timing out
+2017-01-13 19:46:05.468  INFO 7870 --- [executor-4] org.mongodb.driver.cluster               : No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]}. Waiting for 30000 ms before timing out
+2017-01-13 19:46:05.468  INFO 7870 --- [executor-6] org.mongodb.driver.cluster               : No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]}. Waiting for 30000 ms before timing out
+2017-01-13 19:46:05.469  INFO 7870 --- [executor-2] org.mongodb.driver.cluster               : No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]}. Waiting for 30000 ms before timing out
+2017-01-13 19:46:23.484  INFO 7870 --- [scanScheduler-1] app.server.ScanRunner                    : *** scaning at 19:46:23 ***************************************
+2017-01-13 19:46:23.488  INFO 7870 --- [scanScheduler-1] org.mongodb.driver.cluster               : No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]}. Waiting for 30000 ms before timing out
+2017-01-13 19:46:23.517  INFO 7870 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-13 19:46:23.518  INFO 7870 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3238e2aa, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2c7db926, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2577a95d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1668919e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@63300c4b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@22c53d82, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3a6045c6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@68d6d775, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@b67cc70, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@45c9b3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@38b3f208, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6680f714]
+2017-01-13 19:46:23.523  INFO 7870 --- [main] adScraper                                : testMail. sender: curiosa.globunznik@gmail.com, mailRecipient: curiosa.globunznik@gmail.com, from: vom Grausewitz
+2017-01-13 19:46:23.524  INFO 7870 --- [main] adScraper                                : mail to curiosa.globunznik@gmail.comad von nowhere.com 1234,- EUR/1 m2 m2 title
+2017-01-13 19:46:24.054 ERROR 7870 --- [main] adScraper                                : Exception: com.sun.mail.smtp.SMTPSendFailedException Message: 550-5.7.1 [217.149.163.111       1] Our system has detected an unusual rate of
+550-5.7.1 unsolicited mail originating from your IP address. To protect our
+550-5.7.1 users from spam, mail sent from your IP address has been blocked.
+550-5.7.1 Please visit
+550-5.7.1  https://support.google.com/mail/?p=UnsolicitedIPError to review our
+550 5.7.1 Bulk Email Senders Guidelines. r17si12131902wra.223 - gsmtp
+
+2017-01-13 19:46:24.060  INFO 7870 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-13 19:46:24.062  INFO 7870 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2703d91, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5be052ca, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2007435e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@da28d03, org.springframework.test.context.transaction.TransactionalTestExecutionListener@ebda593, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5792c08c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4d157493, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@54c622a7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@37348491, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@76e3b45b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@10b4e7f8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@75023c53]
+2017-01-13 19:46:24.067  INFO 7870 --- [main] org.mongodb.driver.cluster               : No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]}. Waiting for 30000 ms before timing out
+2017-01-13 19:46:35.476 ERROR 7870 --- [executor-6] o.s.integration.handler.LoggingHandler   : org.springframework.messaging.MessageHandlingException: Expression evaluation failed: ! T(org.cg.history.History).instance().find(headers['urlId'], headers['detailUrl']); nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at org.springframework.integration.util.AbstractExpressionEvaluator.evaluateExpression(AbstractExpressionEvaluator.java:143)
+	at org.springframework.integration.handler.ExpressionEvaluatingMessageProcessor.processMessage(ExpressionEvaluatingMessageProcessor.java:72)
+	at org.springframework.integration.filter.AbstractMessageProcessingSelector.accept(AbstractMessageProcessingSelector.java:62)
+	at org.springframework.integration.filter.MessageFilter.doHandleRequestMessage(MessageFilter.java:161)
+	at org.springframework.integration.handler.AbstractReplyProducingPostProcessingMessageHandler.handleRequestMessage(AbstractReplyProducingPostProcessingMessageHandler.java:46)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:109)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.handler.MessageHandlerChain$1.send(MessageHandlerChain.java:129)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:115)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:45)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:105)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutput(AbstractMessageProducingHandler.java:292)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.produceOutput(AbstractMessageProducingHandler.java:212)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutputs(AbstractMessageProducingHandler.java:129)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:115)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.handler.MessageHandlerChain$1.send(MessageHandlerChain.java:129)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:115)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:45)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:105)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutput(AbstractMessageProducingHandler.java:292)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.produceOutput(AbstractMessageProducingHandler.java:212)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutputs(AbstractMessageProducingHandler.java:129)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:115)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.handler.MessageHandlerChain.handleMessageInternal(MessageHandlerChain.java:110)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:116)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:148)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.access$000(UnicastingDispatcher.java:53)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher$3.run(UnicastingDispatcher.java:129)
+	at org.springframework.integration.util.ErrorHandlingTaskExecutor$1.run(ErrorHandlingTaskExecutor.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:77)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2118)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindOneInternal(MongoTemplate.java:1908)
+	at org.springframework.data.mongodb.core.MongoTemplate.doFindOne(MongoTemplate.java:1716)
+	at org.springframework.data.mongodb.core.MongoTemplate.findOne(MongoTemplate.java:586)
+	at org.springframework.data.mongodb.repository.query.MongoQueryExecution$SingleEntityExecution.execute(MongoQueryExecution.java:166)
+	at org.springframework.data.mongodb.repository.query.MongoQueryExecution$ResultProcessingExecution.execute(MongoQueryExecution.java:345)
+	at org.springframework.data.mongodb.repository.query.AbstractMongoQuery.execute(AbstractMongoQuery.java:91)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:482)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:460)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy52.findByKeyAndType(Unknown Source)
+	at app.storage.KeyTypeValueStorageSpring.getItem(KeyTypeValueStorageSpring.java:37)
+	at app.storage.KeyTypeValueStorageSpring.get(KeyTypeValueStorageSpring.java:41)
+	at org.cg.history.HistoryRingBuffer.load(HistoryRingBuffer.java:81)
+	at org.cg.history.HistoryRingBuffer.<init>(HistoryRingBuffer.java:40)
+	at org.cg.history.HistoryRingBuffer.create(HistoryRingBuffer.java:23)
+	at org.cg.history.History.urlBuffer(History.java:43)
+	at org.cg.history.History.find(History.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.expression.spel.support.ReflectiveMethodExecutor.execute(ReflectiveMethodExecutor.java:113)
+	at org.springframework.expression.spel.ast.MethodReference.getValueInternal(MethodReference.java:102)
+	at org.springframework.expression.spel.ast.MethodReference.access$000(MethodReference.java:49)
+	at org.springframework.expression.spel.ast.MethodReference$MethodValueRef.getValue(MethodReference.java:347)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:88)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:170)
+	at org.springframework.expression.spel.ast.OperatorNot.getValueInternal(OperatorNot.java:47)
+	at org.springframework.expression.spel.ast.OperatorNot.getValueInternal(OperatorNot.java:36)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getTypedValue(SpelNodeImpl.java:131)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:330)
+	at org.springframework.integration.util.AbstractExpressionEvaluator.evaluateExpression(AbstractExpressionEvaluator.java:169)
+	at org.springframework.integration.util.AbstractExpressionEvaluator.evaluateExpression(AbstractExpressionEvaluator.java:128)
+	... 34 more
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:369)
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:101)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71)
+	at com.mongodb.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:63)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:210)
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:482)
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:79)
+	at com.mongodb.Mongo.execute(Mongo.java:772)
+	at com.mongodb.Mongo$2.execute(Mongo.java:759)
+	at com.mongodb.DBCollection.findOne(DBCollection.java:777)
+	at com.mongodb.DBCollection.findOne(DBCollection.java:747)
+	at com.mongodb.DBCollection.findOne(DBCollection.java:694)
+	at org.springframework.data.mongodb.core.MongoTemplate$FindOneCallback.doInCollection(MongoTemplate.java:2169)
+	at org.springframework.data.mongodb.core.MongoTemplate$FindOneCallback.doInCollection(MongoTemplate.java:2153)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindOneInternal(MongoTemplate.java:1905)
+	... 71 more
+
+2017-01-13 19:46:35.477 ERROR 7870 --- [executor-4] o.s.integration.handler.LoggingHandler   : org.springframework.messaging.MessageHandlingException: Expression evaluation failed: ! T(org.cg.history.History).instance().find(headers['urlId'], headers['detailUrl']); nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at org.springframework.integration.util.AbstractExpressionEvaluator.evaluateExpression(AbstractExpressionEvaluator.java:143)
+	at org.springframework.integration.handler.ExpressionEvaluatingMessageProcessor.processMessage(ExpressionEvaluatingMessageProcessor.java:72)
+	at org.springframework.integration.filter.AbstractMessageProcessingSelector.accept(AbstractMessageProcessingSelector.java:62)
+	at org.springframework.integration.filter.MessageFilter.doHandleRequestMessage(MessageFilter.java:161)
+	at org.springframework.integration.handler.AbstractReplyProducingPostProcessingMessageHandler.handleRequestMessage(AbstractReplyProducingPostProcessingMessageHandler.java:46)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:109)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.handler.MessageHandlerChain$1.send(MessageHandlerChain.java:129)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:115)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:45)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:105)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutput(AbstractMessageProducingHandler.java:292)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.produceOutput(AbstractMessageProducingHandler.java:212)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutputs(AbstractMessageProducingHandler.java:129)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:115)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.handler.MessageHandlerChain$1.send(MessageHandlerChain.java:129)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:115)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:45)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:105)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutput(AbstractMessageProducingHandler.java:292)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.produceOutput(AbstractMessageProducingHandler.java:212)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutputs(AbstractMessageProducingHandler.java:129)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:115)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.handler.MessageHandlerChain.handleMessageInternal(MessageHandlerChain.java:110)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:116)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:148)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.access$000(UnicastingDispatcher.java:53)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher$3.run(UnicastingDispatcher.java:129)
+	at org.springframework.integration.util.ErrorHandlingTaskExecutor$1.run(ErrorHandlingTaskExecutor.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:77)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2118)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindOneInternal(MongoTemplate.java:1908)
+	at org.springframework.data.mongodb.core.MongoTemplate.doFindOne(MongoTemplate.java:1716)
+	at org.springframework.data.mongodb.core.MongoTemplate.findOne(MongoTemplate.java:586)
+	at org.springframework.data.mongodb.repository.query.MongoQueryExecution$SingleEntityExecution.execute(MongoQueryExecution.java:166)
+	at org.springframework.data.mongodb.repository.query.MongoQueryExecution$ResultProcessingExecution.execute(MongoQueryExecution.java:345)
+	at org.springframework.data.mongodb.repository.query.AbstractMongoQuery.execute(AbstractMongoQuery.java:91)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:482)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:460)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy52.findByKeyAndType(Unknown Source)
+	at app.storage.KeyTypeValueStorageSpring.getItem(KeyTypeValueStorageSpring.java:37)
+	at app.storage.KeyTypeValueStorageSpring.get(KeyTypeValueStorageSpring.java:41)
+	at org.cg.history.HistoryRingBuffer.load(HistoryRingBuffer.java:81)
+	at org.cg.history.HistoryRingBuffer.<init>(HistoryRingBuffer.java:40)
+	at org.cg.history.HistoryRingBuffer.create(HistoryRingBuffer.java:23)
+	at org.cg.history.History.urlBuffer(History.java:43)
+	at org.cg.history.History.find(History.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.expression.spel.support.ReflectiveMethodExecutor.execute(ReflectiveMethodExecutor.java:113)
+	at org.springframework.expression.spel.ast.MethodReference.getValueInternal(MethodReference.java:102)
+	at org.springframework.expression.spel.ast.MethodReference.access$000(MethodReference.java:49)
+	at org.springframework.expression.spel.ast.MethodReference$MethodValueRef.getValue(MethodReference.java:347)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:88)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:170)
+	at org.springframework.expression.spel.ast.OperatorNot.getValueInternal(OperatorNot.java:47)
+	at org.springframework.expression.spel.ast.OperatorNot.getValueInternal(OperatorNot.java:36)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getTypedValue(SpelNodeImpl.java:131)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:330)
+	at org.springframework.integration.util.AbstractExpressionEvaluator.evaluateExpression(AbstractExpressionEvaluator.java:169)
+	at org.springframework.integration.util.AbstractExpressionEvaluator.evaluateExpression(AbstractExpressionEvaluator.java:128)
+	... 34 more
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:369)
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:101)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71)
+	at com.mongodb.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:63)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:210)
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:482)
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:79)
+	at com.mongodb.Mongo.execute(Mongo.java:772)
+	at com.mongodb.Mongo$2.execute(Mongo.java:759)
+	at com.mongodb.DBCollection.findOne(DBCollection.java:777)
+	at com.mongodb.DBCollection.findOne(DBCollection.java:747)
+	at com.mongodb.DBCollection.findOne(DBCollection.java:694)
+	at org.springframework.data.mongodb.core.MongoTemplate$FindOneCallback.doInCollection(MongoTemplate.java:2169)
+	at org.springframework.data.mongodb.core.MongoTemplate$FindOneCallback.doInCollection(MongoTemplate.java:2153)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindOneInternal(MongoTemplate.java:1905)
+	... 71 more
+
+2017-01-13 19:46:35.477 ERROR 7870 --- [executor-5] o.s.integration.handler.LoggingHandler   : org.springframework.messaging.MessageHandlingException: Expression evaluation failed: ! T(org.cg.history.History).instance().find(headers['urlId'], headers['detailUrl']); nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at org.springframework.integration.util.AbstractExpressionEvaluator.evaluateExpression(AbstractExpressionEvaluator.java:143)
+	at org.springframework.integration.handler.ExpressionEvaluatingMessageProcessor.processMessage(ExpressionEvaluatingMessageProcessor.java:72)
+	at org.springframework.integration.filter.AbstractMessageProcessingSelector.accept(AbstractMessageProcessingSelector.java:62)
+	at org.springframework.integration.filter.MessageFilter.doHandleRequestMessage(MessageFilter.java:161)
+	at org.springframework.integration.handler.AbstractReplyProducingPostProcessingMessageHandler.handleRequestMessage(AbstractReplyProducingPostProcessingMessageHandler.java:46)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:109)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.handler.MessageHandlerChain$1.send(MessageHandlerChain.java:129)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:115)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:45)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:105)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutput(AbstractMessageProducingHandler.java:292)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.produceOutput(AbstractMessageProducingHandler.java:212)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutputs(AbstractMessageProducingHandler.java:129)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:115)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.handler.MessageHandlerChain$1.send(MessageHandlerChain.java:129)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:115)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:45)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:105)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutput(AbstractMessageProducingHandler.java:292)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.produceOutput(AbstractMessageProducingHandler.java:212)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutputs(AbstractMessageProducingHandler.java:129)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:115)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.handler.MessageHandlerChain.handleMessageInternal(MessageHandlerChain.java:110)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:116)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:148)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.access$000(UnicastingDispatcher.java:53)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher$3.run(UnicastingDispatcher.java:129)
+	at org.springframework.integration.util.ErrorHandlingTaskExecutor$1.run(ErrorHandlingTaskExecutor.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:77)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2118)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindOneInternal(MongoTemplate.java:1908)
+	at org.springframework.data.mongodb.core.MongoTemplate.doFindOne(MongoTemplate.java:1716)
+	at org.springframework.data.mongodb.core.MongoTemplate.findOne(MongoTemplate.java:586)
+	at org.springframework.data.mongodb.repository.query.MongoQueryExecution$SingleEntityExecution.execute(MongoQueryExecution.java:166)
+	at org.springframework.data.mongodb.repository.query.MongoQueryExecution$ResultProcessingExecution.execute(MongoQueryExecution.java:345)
+	at org.springframework.data.mongodb.repository.query.AbstractMongoQuery.execute(AbstractMongoQuery.java:91)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:482)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:460)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy52.findByKeyAndType(Unknown Source)
+	at app.storage.KeyTypeValueStorageSpring.getItem(KeyTypeValueStorageSpring.java:37)
+	at app.storage.KeyTypeValueStorageSpring.get(KeyTypeValueStorageSpring.java:41)
+	at org.cg.history.HistoryRingBuffer.load(HistoryRingBuffer.java:81)
+	at org.cg.history.HistoryRingBuffer.<init>(HistoryRingBuffer.java:40)
+	at org.cg.history.HistoryRingBuffer.create(HistoryRingBuffer.java:23)
+	at org.cg.history.History.urlBuffer(History.java:43)
+	at org.cg.history.History.find(History.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.expression.spel.support.ReflectiveMethodExecutor.execute(ReflectiveMethodExecutor.java:113)
+	at org.springframework.expression.spel.ast.MethodReference.getValueInternal(MethodReference.java:102)
+	at org.springframework.expression.spel.ast.MethodReference.access$000(MethodReference.java:49)
+	at org.springframework.expression.spel.ast.MethodReference$MethodValueRef.getValue(MethodReference.java:347)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:88)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:170)
+	at org.springframework.expression.spel.ast.OperatorNot.getValueInternal(OperatorNot.java:47)
+	at org.springframework.expression.spel.ast.OperatorNot.getValueInternal(OperatorNot.java:36)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getTypedValue(SpelNodeImpl.java:131)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:330)
+	at org.springframework.integration.util.AbstractExpressionEvaluator.evaluateExpression(AbstractExpressionEvaluator.java:169)
+	at org.springframework.integration.util.AbstractExpressionEvaluator.evaluateExpression(AbstractExpressionEvaluator.java:128)
+	... 34 more
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:369)
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:101)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71)
+	at com.mongodb.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:63)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:210)
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:482)
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:79)
+	at com.mongodb.Mongo.execute(Mongo.java:772)
+	at com.mongodb.Mongo$2.execute(Mongo.java:759)
+	at com.mongodb.DBCollection.findOne(DBCollection.java:777)
+	at com.mongodb.DBCollection.findOne(DBCollection.java:747)
+	at com.mongodb.DBCollection.findOne(DBCollection.java:694)
+	at org.springframework.data.mongodb.core.MongoTemplate$FindOneCallback.doInCollection(MongoTemplate.java:2169)
+	at org.springframework.data.mongodb.core.MongoTemplate$FindOneCallback.doInCollection(MongoTemplate.java:2153)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindOneInternal(MongoTemplate.java:1905)
+	... 71 more
+
+2017-01-13 19:46:35.477 ERROR 7870 --- [executor-3] o.s.integration.handler.LoggingHandler   : org.springframework.messaging.MessageHandlingException: Expression evaluation failed: ! T(org.cg.history.History).instance().find(headers['urlId'], headers['detailUrl']); nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at org.springframework.integration.util.AbstractExpressionEvaluator.evaluateExpression(AbstractExpressionEvaluator.java:143)
+	at org.springframework.integration.handler.ExpressionEvaluatingMessageProcessor.processMessage(ExpressionEvaluatingMessageProcessor.java:72)
+	at org.springframework.integration.filter.AbstractMessageProcessingSelector.accept(AbstractMessageProcessingSelector.java:62)
+	at org.springframework.integration.filter.MessageFilter.doHandleRequestMessage(MessageFilter.java:161)
+	at org.springframework.integration.handler.AbstractReplyProducingPostProcessingMessageHandler.handleRequestMessage(AbstractReplyProducingPostProcessingMessageHandler.java:46)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:109)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.handler.MessageHandlerChain$1.send(MessageHandlerChain.java:129)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:115)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:45)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:105)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutput(AbstractMessageProducingHandler.java:292)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.produceOutput(AbstractMessageProducingHandler.java:212)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutputs(AbstractMessageProducingHandler.java:129)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:115)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.handler.MessageHandlerChain$1.send(MessageHandlerChain.java:129)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:115)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:45)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:105)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutput(AbstractMessageProducingHandler.java:292)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.produceOutput(AbstractMessageProducingHandler.java:212)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutputs(AbstractMessageProducingHandler.java:129)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:115)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.handler.MessageHandlerChain.handleMessageInternal(MessageHandlerChain.java:110)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:116)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:148)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.access$000(UnicastingDispatcher.java:53)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher$3.run(UnicastingDispatcher.java:129)
+	at org.springframework.integration.util.ErrorHandlingTaskExecutor$1.run(ErrorHandlingTaskExecutor.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:77)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2118)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindOneInternal(MongoTemplate.java:1908)
+	at org.springframework.data.mongodb.core.MongoTemplate.doFindOne(MongoTemplate.java:1716)
+	at org.springframework.data.mongodb.core.MongoTemplate.findOne(MongoTemplate.java:586)
+	at org.springframework.data.mongodb.repository.query.MongoQueryExecution$SingleEntityExecution.execute(MongoQueryExecution.java:166)
+	at org.springframework.data.mongodb.repository.query.MongoQueryExecution$ResultProcessingExecution.execute(MongoQueryExecution.java:345)
+	at org.springframework.data.mongodb.repository.query.AbstractMongoQuery.execute(AbstractMongoQuery.java:91)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:482)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:460)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy52.findByKeyAndType(Unknown Source)
+	at app.storage.KeyTypeValueStorageSpring.getItem(KeyTypeValueStorageSpring.java:37)
+	at app.storage.KeyTypeValueStorageSpring.get(KeyTypeValueStorageSpring.java:41)
+	at org.cg.history.HistoryRingBuffer.load(HistoryRingBuffer.java:81)
+	at org.cg.history.HistoryRingBuffer.<init>(HistoryRingBuffer.java:40)
+	at org.cg.history.HistoryRingBuffer.create(HistoryRingBuffer.java:23)
+	at org.cg.history.History.urlBuffer(History.java:43)
+	at org.cg.history.History.find(History.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.expression.spel.support.ReflectiveMethodExecutor.execute(ReflectiveMethodExecutor.java:113)
+	at org.springframework.expression.spel.ast.MethodReference.getValueInternal(MethodReference.java:102)
+	at org.springframework.expression.spel.ast.MethodReference.access$000(MethodReference.java:49)
+	at org.springframework.expression.spel.ast.MethodReference$MethodValueRef.getValue(MethodReference.java:347)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:88)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:170)
+	at org.springframework.expression.spel.ast.OperatorNot.getValueInternal(OperatorNot.java:47)
+	at org.springframework.expression.spel.ast.OperatorNot.getValueInternal(OperatorNot.java:36)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getTypedValue(SpelNodeImpl.java:131)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:330)
+	at org.springframework.integration.util.AbstractExpressionEvaluator.evaluateExpression(AbstractExpressionEvaluator.java:169)
+	at org.springframework.integration.util.AbstractExpressionEvaluator.evaluateExpression(AbstractExpressionEvaluator.java:128)
+	... 34 more
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:369)
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:101)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71)
+	at com.mongodb.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:63)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:210)
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:482)
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:79)
+	at com.mongodb.Mongo.execute(Mongo.java:772)
+	at com.mongodb.Mongo$2.execute(Mongo.java:759)
+	at com.mongodb.DBCollection.findOne(DBCollection.java:777)
+	at com.mongodb.DBCollection.findOne(DBCollection.java:747)
+	at com.mongodb.DBCollection.findOne(DBCollection.java:694)
+	at org.springframework.data.mongodb.core.MongoTemplate$FindOneCallback.doInCollection(MongoTemplate.java:2169)
+	at org.springframework.data.mongodb.core.MongoTemplate$FindOneCallback.doInCollection(MongoTemplate.java:2153)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindOneInternal(MongoTemplate.java:1905)
+	... 71 more
+
+2017-01-13 19:46:35.477 ERROR 7870 --- [executor-2] o.s.integration.handler.LoggingHandler   : org.springframework.messaging.MessageHandlingException: Expression evaluation failed: ! T(org.cg.history.History).instance().find(headers['urlId'], headers['detailUrl']); nested exception is org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at org.springframework.integration.util.AbstractExpressionEvaluator.evaluateExpression(AbstractExpressionEvaluator.java:143)
+	at org.springframework.integration.handler.ExpressionEvaluatingMessageProcessor.processMessage(ExpressionEvaluatingMessageProcessor.java:72)
+	at org.springframework.integration.filter.AbstractMessageProcessingSelector.accept(AbstractMessageProcessingSelector.java:62)
+	at org.springframework.integration.filter.MessageFilter.doHandleRequestMessage(MessageFilter.java:161)
+	at org.springframework.integration.handler.AbstractReplyProducingPostProcessingMessageHandler.handleRequestMessage(AbstractReplyProducingPostProcessingMessageHandler.java:46)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:109)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.handler.MessageHandlerChain$1.send(MessageHandlerChain.java:129)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:115)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:45)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:105)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutput(AbstractMessageProducingHandler.java:292)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.produceOutput(AbstractMessageProducingHandler.java:212)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutputs(AbstractMessageProducingHandler.java:129)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:115)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.handler.MessageHandlerChain$1.send(MessageHandlerChain.java:129)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:115)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:45)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:105)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutput(AbstractMessageProducingHandler.java:292)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.produceOutput(AbstractMessageProducingHandler.java:212)
+	at org.springframework.integration.handler.AbstractMessageProducingHandler.sendOutputs(AbstractMessageProducingHandler.java:129)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:115)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.handler.MessageHandlerChain.handleMessageInternal(MessageHandlerChain.java:110)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:127)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:116)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:148)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.access$000(UnicastingDispatcher.java:53)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher$3.run(UnicastingDispatcher.java:129)
+	at org.springframework.integration.util.ErrorHandlingTaskExecutor$1.run(ErrorHandlingTaskExecutor.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:77)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2118)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindOneInternal(MongoTemplate.java:1908)
+	at org.springframework.data.mongodb.core.MongoTemplate.doFindOne(MongoTemplate.java:1716)
+	at org.springframework.data.mongodb.core.MongoTemplate.findOne(MongoTemplate.java:586)
+	at org.springframework.data.mongodb.repository.query.MongoQueryExecution$SingleEntityExecution.execute(MongoQueryExecution.java:166)
+	at org.springframework.data.mongodb.repository.query.MongoQueryExecution$ResultProcessingExecution.execute(MongoQueryExecution.java:345)
+	at org.springframework.data.mongodb.repository.query.AbstractMongoQuery.execute(AbstractMongoQuery.java:91)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:482)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:460)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy52.findByKeyAndType(Unknown Source)
+	at app.storage.KeyTypeValueStorageSpring.getItem(KeyTypeValueStorageSpring.java:37)
+	at app.storage.KeyTypeValueStorageSpring.get(KeyTypeValueStorageSpring.java:41)
+	at org.cg.history.HistoryRingBuffer.load(HistoryRingBuffer.java:81)
+	at org.cg.history.HistoryRingBuffer.<init>(HistoryRingBuffer.java:40)
+	at org.cg.history.HistoryRingBuffer.create(HistoryRingBuffer.java:23)
+	at org.cg.history.History.urlBuffer(History.java:43)
+	at org.cg.history.History.find(History.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.expression.spel.support.ReflectiveMethodExecutor.execute(ReflectiveMethodExecutor.java:113)
+	at org.springframework.expression.spel.ast.MethodReference.getValueInternal(MethodReference.java:129)
+	at org.springframework.expression.spel.ast.MethodReference.access$000(MethodReference.java:49)
+	at org.springframework.expression.spel.ast.MethodReference$MethodValueRef.getValue(MethodReference.java:347)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:88)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:170)
+	at org.springframework.expression.spel.ast.OperatorNot.getValueInternal(OperatorNot.java:47)
+	at org.springframework.expression.spel.ast.OperatorNot.getValueInternal(OperatorNot.java:36)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getTypedValue(SpelNodeImpl.java:131)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:330)
+	at org.springframework.integration.util.AbstractExpressionEvaluator.evaluateExpression(AbstractExpressionEvaluator.java:169)
+	at org.springframework.integration.util.AbstractExpressionEvaluator.evaluateExpression(AbstractExpressionEvaluator.java:128)
+	... 34 more
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:369)
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:101)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71)
+	at com.mongodb.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:63)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:210)
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:482)
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:79)
+	at com.mongodb.Mongo.execute(Mongo.java:772)
+	at com.mongodb.Mongo$2.execute(Mongo.java:759)
+	at com.mongodb.DBCollection.findOne(DBCollection.java:777)
+	at com.mongodb.DBCollection.findOne(DBCollection.java:747)
+	at com.mongodb.DBCollection.findOne(DBCollection.java:694)
+	at org.springframework.data.mongodb.core.MongoTemplate$FindOneCallback.doInCollection(MongoTemplate.java:2169)
+	at org.springframework.data.mongodb.core.MongoTemplate$FindOneCallback.doInCollection(MongoTemplate.java:2153)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindOneInternal(MongoTemplate.java:1905)
+	... 71 more
+
+2017-01-13 19:46:53.489  INFO 7870 --- [scanScheduler-1] adScraper                                : Setting 'suspended' not set: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+2017-01-13 19:46:53.491  INFO 7870 --- [scanScheduler-1] org.mongodb.driver.cluster               : No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]}. Waiting for 30000 ms before timing out
+2017-01-13 19:46:54.077  INFO 7870 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7e642b88: startup date [Fri Jan 13 19:46:02 CET 2017]; root of context hierarchy
+2017-01-13 19:46:54.081  INFO 7870 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 1073741823
+2017-01-13 19:46:54.082  INFO 7870 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#3
+2017-01-13 19:46:54.082  INFO 7870 --- [Thread-2] o.s.i.endpoint.PollingConsumer           : stopped checkAndDeliver
+2017-01-13 19:46:54.082  INFO 7870 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2017-01-13 19:46:54.082  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {http:outbound-gateway:html} as a subscriber to the 'getPageForUrlChannel' channel
+2017-01-13 19:46:54.082  INFO 7870 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.getPageForUrlChannel' has 0 subscriber(s).
+2017-01-13 19:46:54.083  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped html
+2017-01-13 19:46:54.083  INFO 7870 --- [Thread-2] ProxyFactoryBean$MethodInvocationGateway : stopped systemEntryGateway
+2017-01-13 19:46:54.083  INFO 7870 --- [Thread-2] GatewayCompletableFutureProxyFactoryBean : stopped systemEntryGateway
+2017-01-13 19:46:54.083  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain:waitToStartupFinishedAndSplit} as a subscriber to the 'systemEntry' channel
+2017-01-13 19:46:54.083  INFO 7870 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.systemEntry' has 0 subscriber(s).
+2017-01-13 19:46:54.083  INFO 7870 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#0
+2017-01-13 19:46:54.083  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped waitToStartupFinishedAndSplit
+2017-01-13 19:46:54.083  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain:scrapeMasterList} as a subscriber to the 'systemEntryAfterStartup' channel
+2017-01-13 19:46:54.083  INFO 7870 --- [Thread-2] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.systemEntryAfterStartup' has 0 subscriber(s).
+2017-01-13 19:46:54.083  INFO 7870 --- [Thread-2] o.s.i.t.ContentEnricher$Gateway          : stopped org.springframework.integration.transformer.ContentEnricher$Gateway@31120021
+2017-01-13 19:46:54.083  INFO 7870 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#1
+2017-01-13 19:46:54.084  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped scrapeMasterList
+2017-01-13 19:46:54.084  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain:scrapeDetails} as a subscriber to the 'scrapeMasterListResultChannel' channel
+2017-01-13 19:46:54.084  INFO 7870 --- [Thread-2] o.s.integration.channel.ExecutorChannel  : Channel 'application:-1.scrapeMasterListResultChannel' has 0 subscriber(s).
+2017-01-13 19:46:54.084  INFO 7870 --- [Thread-2] o.s.i.t.ContentEnricher$Gateway          : stopped org.springframework.integration.transformer.ContentEnricher$Gateway@3df1a1ac
+2017-01-13 19:46:54.084  INFO 7870 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#2
+2017-01-13 19:46:54.084  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped scrapeDetails
+2017-01-13 19:46:54.084  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {recipient-list-router} as a subscriber to the 'scrapeResultChannel' channel
+2017-01-13 19:46:54.087  INFO 7870 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.scrapeResultChannel' has 0 subscriber(s).
+2017-01-13 19:46:54.087  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2017-01-13 19:46:54.087  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'logEntryElements' channel
+2017-01-13 19:46:54.087  INFO 7870 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logEntryElements' has 0 subscriber(s).
+2017-01-13 19:46:54.088  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+2017-01-13 19:46:54.088  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'httpErrorChannel' channel
+2017-01-13 19:46:54.088  INFO 7870 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.httpErrorChannel' has 0 subscriber(s).
+2017-01-13 19:46:54.088  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+2017-01-13 19:46:54.088  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'discardedAdsChannel' channel
+2017-01-13 19:46:54.088  INFO 7870 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.discardedAdsChannel' has 0 subscriber(s).
+2017-01-13 19:46:54.088  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+2017-01-13 19:46:54.088  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'logInitialRun' channel
+2017-01-13 19:46:54.088  INFO 7870 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logInitialRun' has 0 subscriber(s).
+2017-01-13 19:46:54.088  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#4
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'logPrematureMessages' channel
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPrematureMessages' has 0 subscriber(s).
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#5
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {transformer} as a subscriber to the 'logLateMessages' channel
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logLateMessages' has 0 subscriber(s).
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#6
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'historyChannel' channel
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.historyChannel' has 0 subscriber(s).
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#4
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#7
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'logMessageChannel' channel
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logMessageChannel' has 0 subscriber(s).
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#5
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#8
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {chain} as a subscriber to the 'logPayloadChannel' channel
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.integration.channel.DirectChannel    : Channel 'application:-1.logPayloadChannel' has 0 subscriber(s).
+2017-01-13 19:46:54.089  INFO 7870 --- [Thread-2] o.s.i.handler.MessageHandlerChain        : stopped org.springframework.integration.handler.MessageHandlerChain#6
+2017-01-13 19:46:54.090  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#9
+2017-01-13 19:46:54.090  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2017-01-13 19:46:54.090  INFO 7870 --- [Thread-2] o.s.i.channel.PublishSubscribeChannel    : Channel 'application:-1.errorChannel' has 0 subscriber(s).
+2017-01-13 19:46:54.090  INFO 7870 --- [Thread-2] o.s.i.endpoint.EventDrivenConsumer       : stopped _org.springframework.integration.errorLogger
+2017-01-13 19:46:54.096  INFO 7870 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'scanScheduler'
+2017-01-13 19:46:54.097  INFO 7870 --- [scanScheduler-1] app.server.ScanRunner                    : excluding ads containing any of: 
+2017-01-13 19:46:54.098  INFO 7870 --- [scanScheduler-1] org.mongodb.driver.cluster               : No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=127.0.0.1:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]}. Waiting for 30000 ms before timing out
+2017-01-13 19:46:54.099 ERROR 7870 --- [scanScheduler-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task.
+
+org.springframework.data.mongodb.UncategorizedMongoDbException: Interrupted while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}; nested exception is com.mongodb.MongoInterruptedException: Interrupted while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:107) ~[spring-data-mongodb-1.9.5.RELEASE.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2118) ~[spring-data-mongodb-1.9.5.RELEASE.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:1961) ~[spring-data-mongodb-1.9.5.RELEASE.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:1767) ~[spring-data-mongodb-1.9.5.RELEASE.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:1750) ~[spring-data-mongodb-1.9.5.RELEASE.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:624) ~[spring-data-mongodb-1.9.5.RELEASE.jar:na]
+	at org.springframework.data.mongodb.repository.query.MongoQueryExecution$CollectionExecution.execute(MongoQueryExecution.java:70) ~[spring-data-mongodb-1.9.5.RELEASE.jar:na]
+	at org.springframework.data.mongodb.repository.query.MongoQueryExecution$ResultProcessingExecution.execute(MongoQueryExecution.java:345) ~[spring-data-mongodb-1.9.5.RELEASE.jar:na]
+	at org.springframework.data.mongodb.repository.query.AbstractMongoQuery.execute(AbstractMongoQuery.java:91) ~[spring-data-mongodb-1.9.5.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:482) ~[spring-data-commons-1.12.5.RELEASE.jar:na]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:460) ~[spring-data-commons-1.12.5.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:61) ~[spring-data-commons-1.12.5.RELEASE.jar:na]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213) ~[spring-aop-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at com.sun.proxy.$Proxy52.findByType(Unknown Source) ~[na:na]
+	at app.storage.SettingsStorageSpring.getSettingsByType(SettingsStorageSpring.java:40) ~[classes/:na]
+	at org.cg.hub.Settings.getSettingsByType(Settings.java:88) ~[adscraper-0.0.1.jar:na]
+	at app.server.ScanRunner.run(ScanRunner.java:52) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_111]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_111]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_111]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_111]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) [na:1.8.0_111]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_111]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) [na:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_111]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_111]
+Caused by: com.mongodb.MongoInterruptedException: Interrupted while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:121) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:63) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:210) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:482) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.operation.FindOperation.execute(FindOperation.java:79) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.Mongo.execute(Mongo.java:772) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.Mongo$2.execute(Mongo.java:759) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.DBCursor.initializeCursor(DBCursor.java:851) ~[mongodb-driver-3.2.2.jar:na]
+	at com.mongodb.DBCursor.hasNext(DBCursor.java:152) ~[mongodb-driver-3.2.2.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:1947) ~[spring-data-mongodb-1.9.5.RELEASE.jar:na]
+	... 31 common frames omitted
+Caused by: java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1326) ~[na:1.8.0_111]
+	at java.util.concurrent.CountDownLatch.await(CountDownLatch.java:277) ~[na:1.8.0_111]
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:111) ~[mongodb-driver-core-3.2.2.jar:na]
+	... 42 common frames omitted
+
+2017-01-13 19:46:54.101  INFO 7870 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2017-01-13 19:46:54.102  INFO 7870 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService
