@@ -112,7 +112,8 @@ public final class SiteScraperJSoup implements SiteScraper, IMasterPageScraper, 
 		for (HttpResult<ScrapedValues> httpResult : HttpUtil.getDocsAsync(ads))
 			if (httpResult.success()) {
 				ScrapedValues scrapedValues = httpResult.input().thingWithUrl();
-				result.add(extractorAdDetails().apply(httpResult.document(), scrapedValues));
+				if (httpResult.document() != null)
+					result.add(extractorAdDetails().apply(httpResult.document(), scrapedValues));
 			}
 
 		return result;

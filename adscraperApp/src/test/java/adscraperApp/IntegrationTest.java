@@ -37,13 +37,17 @@ public class IntegrationTest {
 		
 	  	List<ScrapingBaseUrl> items = new ArrayList<ScrapingBaseUrl>();
 
-	  	items.add(new ScrapingBaseUrl("motorradlUrl",
-				"http://www.bazar.at/wien-brigittenau-motorraeder-mopeds-quads-anzeigen,dir,1,cId,8,fc,125,loc,125,o,1,tp,0", false, new ArrayList<String>()));
+//	  	items.add(new ScrapingBaseUrl("motorradlUrl",
+	  	//				"http://www.bazar.at/wien-brigittenau-motorraeder-mopeds-quads-anzeigen,dir,1,cId,8,fc,125,loc,125,o,1,tp,0", false, new ArrayList<String>()));
 
+	  	items.add(new ScrapingBaseUrl("willhaben",
+				"https://www.willhaben.at/iad/immobilien/mietwohnungen/mietwohnung-angebote?areaId=900&sort=0&periode=0&PRICE_TO=500&page=3&rows=30&view=", false, new ArrayList<String>()));
+
+	  	
 	  	
     	entry.trigger(items);
 		try {
-			Thread.sleep(20000);
+			Thread.sleep(15000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

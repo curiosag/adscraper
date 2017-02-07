@@ -45,8 +45,10 @@
 		<property name="location" value="classpath:application.properties" />
 	</bean>
 
+<!-- mapped-request-headers="" -->
 	<int-http:outbound-gateway id="html" url="{url}"
 		request-channel="getPageForUrlChannel" http-method="GET"
+		
 		expected-response-type="java.lang.String" charset="UTF-8"
 		reply-timeout="${ads.httpTimeout}">
 		<int-http:uri-variable name="url" expression="payload" />
