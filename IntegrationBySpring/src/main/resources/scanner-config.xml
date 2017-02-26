@@ -46,12 +46,11 @@
 	</bean>
 
 <!-- mapped-request-headers="" -->
-	<int-http:outbound-gateway id="html" url="{url}"
+	<int-http:outbound-gateway id="html" url-expression="payload"
 		request-channel="getPageForUrlChannel" http-method="GET"
 		
 		expected-response-type="java.lang.String" charset="UTF-8"
 		reply-timeout="${ads.httpTimeout}">
-		<int-http:uri-variable name="url" expression="payload" />
 	</int-http:outbound-gateway>
 
 
