@@ -22,4 +22,4 @@ echo $(java -version)
 
 cd $OPENSHIFT_REPO_DIR
 
-mvn package -s .openshift/settings.xml  --toolchains toolchains.xml -DskipTests=true # pre-installed maven has no --global-toolchains option
+mvn clean package -s .openshift/settings.xml  --toolchains toolchains.xml -DskipTests=true # pre-installed maven has no --global-toolchains option

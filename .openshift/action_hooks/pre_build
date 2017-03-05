@@ -18,6 +18,5 @@ if [ ! -d $m2dir ]; then
 	mkdir $m2dir
 fi
 
-mvn clean
 
 
