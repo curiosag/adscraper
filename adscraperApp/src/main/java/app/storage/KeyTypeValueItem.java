@@ -1,16 +1,23 @@
 package app.storage;
 
-public class KeyTypeValueItem extends KeyValueItem {
-	public String type;
+import javax.persistence.Id;
 
+public class KeyTypeValueItem {
+	@Id
+	public String type;
+	public String id;
+	public String key;
+	public String value;
+		
 	public KeyTypeValueItem(){
 		super();
 	}
 	
 	public KeyTypeValueItem(String key, String type, String value){
-		super(key, value);
-		this.type = type;		
+		super();
+		this.key = key;
+		this.type = type;
+		this.value = value;
 	}
 
-	
 }
