@@ -11,11 +11,6 @@
 		<artifactId>ads</artifactId>
 		<version>0.1.0</version>
 	</parent>
-	<properties>
-		<java.version>1.8</java.version>
-		<maven.compiler.source>${java.version}</maven.compiler.source>
-		<maven.compiler.target>${java.version}</maven.compiler.target>
-	</properties>
 	<build>
 		<plugins>
 
@@ -72,7 +67,26 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-toolchains-plugin</artifactId>
+				<version>1.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>toolchain</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<toolchains>
+						<jdk>
+							<version>${java.version}</version>
+							<vendor>sun</vendor>
+						</jdk>
+					</toolchains>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
