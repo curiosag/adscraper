@@ -10,7 +10,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.Repository;
-import org.springframework.data.repository.support.Repositories;
 
 
 @SuppressWarnings({ "rawtypes", "unchecked" })
@@ -31,8 +30,7 @@ public class Repos implements ApplicationContextAware {
 	public List<RepositoryItem> getItems() {
 		// give no access to instances without prior knowledge of domain classes
 		// return correct number of repos, though
-		Repositories r = new Repositories(context);
-
+		
 		List<RepositoryItem> result = new ArrayList<RepositoryItem>();
 		for (Repository item : get()) {
 			if (item instanceof CrudRepository) {

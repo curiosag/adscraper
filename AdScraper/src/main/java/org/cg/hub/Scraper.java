@@ -82,12 +82,12 @@ public final class Scraper {
 
 	public final void execute() {
 
-		if (Settings.instance().get(Const.SETTING_SWITCH_SUSPENDED).or("").length() > 0) {
+		if (Settings.instance().get(Const.SETTING_SWITCH_SUSPENDED).orElse("").length() > 0) {
 			Log.info("Appsetting *suspended* set. Aborting execution.");
 			return;
 		}
 
-		String[] excludedTerms = Settings.instance().get("neg").or(excludedTermsSubstandard).split(listDelimiter);
+		String[] excludedTerms = Settings.instance().get("neg").orElse(excludedTermsSubstandard).split(listDelimiter);
 		Log.info("using excluded terms: " + Arrays.toString(excludedTerms));
 
 		execute(Const.CONCURRENT, getScrapings(excludedTerms));

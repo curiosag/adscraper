@@ -7,6 +7,7 @@ import org.cg.ads.advalues.ValueKind;
 import org.cg.adscraper.factory.StorageFactory;
 import org.cg.base.Check;
 import org.cg.base.IKeyTypeValueStorage;
+import org.cg.base.IKeyValueStorage;
 
 public final class HistoryRingBuffer {
 
@@ -15,19 +16,12 @@ public final class HistoryRingBuffer {
 	private final String entityKind = "HistoryBulkItem";
 	private List<String> cache;
 
-	private IKeyTypeValueStorage storage;
+	private IKeyValueStorage storage;
 
 	public static HistoryRingBuffer create(String urlId) {
 		Check.notEmpty(urlId);
 
 		return new HistoryRingBuffer(urlId);
-	}
-
-	private String getKey(String urlId) {
-		if (urlId.startsWith(urlId))
-			return urlId;
-		else
-			return entityKind + "." + urlId;
 	}
 
 	private HistoryRingBuffer() {
@@ -36,7 +30,7 @@ public final class HistoryRingBuffer {
 
 	private HistoryRingBuffer(String urlId) {
 		this();
-		storage = StorageFactory.get().createKeyTypeValueStorage().of(entityKind, getKey(urlId));
+		storage = StorageFactory.get().createKeyValueStorage().of(entityKind + '_' + urlId);
 		cache = load(MAX_HISTORY_ITEMS);
 	}
 

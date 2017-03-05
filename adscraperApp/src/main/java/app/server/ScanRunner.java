@@ -38,13 +38,13 @@ public class ScanRunner {
 
 		Dispatch.setUp(mailDeliveryFactory.createMailDelivery());
 		LOG.info("*** scaning at " + dateFormat.format(new Date()) + " ***************************************");
-		if (Settings.instance().get(Const.SETTING_SWITCH_SUSPENDED).or("").length() > 0) {
+		if (Settings.instance().get(Const.SETTING_SWITCH_SUSPENDED).orElse("").length() > 0) {
 			LOG.info("***suspended*** set, no scan");
 			return;
 		}
 
 		List<String> negTerms = Arrays.asList(
-				Settings.instance().get("neg").transform(x -> x == null ? null : x.split(",")).or(new String[0]));
+				Settings.instance().get("neg").map(x -> x == null ? null : x.split(",")).orElse(new String[0]));
 
 		LOG.info("excluding ads containing any of: " + negTerms.stream().reduce("", (x, y) -> x + ", " + y));
 

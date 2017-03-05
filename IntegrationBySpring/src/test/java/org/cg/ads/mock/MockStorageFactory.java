@@ -13,6 +13,7 @@ import org.cg.base.HistoryItem;
 import org.cg.base.IHistoricalDetailStorage;
 import org.cg.base.IHistoryStorage;
 import org.cg.base.IKeyTypeValueStorage;
+import org.cg.base.IKeyValueStorage;
 import org.cg.base.ISettingsStorage;
 
 public class MockStorageFactory implements IStorageFactory {
@@ -108,6 +109,33 @@ public class MockStorageFactory implements IStorageFactory {
 
 			@Override
 			public void del(String keyValue) {				
+			}};
+	}
+
+	@Override
+	public IKeyValueStorage createKeyValueStorage() {
+		return new IKeyValueStorage(){
+
+			@Override
+			public IKeyValueStorage of(String key) {
+				return null;
+			}
+
+			@Override
+			public void clear() {				
+			}
+
+			@Override
+			public void clearAll() {
+			}
+
+			@Override
+			public String get() {
+				return null;
+			}
+
+			@Override
+			public void save(String value) {
 			}};
 	}
 }

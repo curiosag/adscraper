@@ -12,8 +12,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 import junit.framework.Assert;
 
 import org.cg.adscraper.factory.*;
-import org.cg.adscraper.test.storage.StorageTests;
+import org.cg.adscraper.test.StorageTests;
 import org.cg.base.IKeyTypeValueStorage;
+
 
 @SuppressWarnings("deprecation")
 @RunWith(SpringRunner.class)
@@ -29,6 +30,7 @@ public class StorageTestsSpring {
 	public void setUp() {
 		StorageFactory.setUp(factory);
 		StorageFactory.get().createKeyTypeValueStorage().clearAll();
+		StorageFactory.get().createKeyValueStorage().clearAll();
 	}
 
 	@After
@@ -50,7 +52,7 @@ public class StorageTestsSpring {
 		test.testSettingsByType();
 	}
 	
-	//@Test
+	@Test
 	public void testBigValue(){
 		test.testSettingsByType();
 		IKeyTypeValueStorage fat = StorageFactory.get().createKeyTypeValueStorage().of("fatUrls", "fatUrlsKey");

@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.cg.base.ISettingsStorage;
 
+
 public class SettingsStorageSpring implements ISettingsStorage {
 
 	KeyTypeValueItemRepository repo;

@@ -14,6 +14,8 @@ import java.util.List;
 
 import org.cg.ads.SystemEntryGateway;
 import org.cg.ads.integration.ScrapingBaseUrl;
+import org.cg.adscraper.factory.IStorageFactory;
+import org.cg.adscraper.factory.StorageFactory;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -24,8 +26,14 @@ public class IntegrationTest {
 	@Autowired
 	SystemEntryGateway entry;
 	
+	
+	@Autowired
+	IStorageFactory factory;
+	
 	@Before
 	public void setUp() {
+		StorageFactory.setUp(factory);
+		StorageFactory.get().createKeyTypeValueStorage().clearAll();
 	}
 
 	@After
@@ -41,7 +49,7 @@ public class IntegrationTest {
 	  	//				"http://www.bazar.at/wien-brigittenau-motorraeder-mopeds-quads-anzeigen,dir,1,cId,8,fc,125,loc,125,o,1,tp,0", false, new ArrayList<String>()));
 
 	  	items.add(new ScrapingBaseUrl("willhaben",
-				"https://www.willhaben.at/iad/immobilien/mietwohnungen/mietwohnung-angebote?areaId=900&sort=0&periode=0&PRICE_TO=500&page=3&rows=30&view=", false, new ArrayList<String>()));
+				"https://www.willhaben.at/iad/immobilien/mietwohnungen/mietwohnung-angebote?PROPERTY_TYPE=3&areaId=900&sort=0&rows=30&PRICE_TO=500&periode=0", false, new ArrayList<String>()));
 
 	  	
 	  	

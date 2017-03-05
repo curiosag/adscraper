@@ -5,16 +5,18 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Optional;
+
 import org.cg.ads.advalues.ScrapedValues;
+import org.cg.ads.advalues.ValueKind;
 import org.cg.ads.filterlist.FilterList;
+import org.cg.adscraper.exprFilter.ExprParserAdScraper;
+import org.cg.adscraper.exprFilter.ResultAdScraper;
 import org.cg.base.Check;
-//import org.cg.adscraper.exprFilter.*;
 import org.cg.base.Const;
 import org.cg.base.Log;
-import org.cg.base.MailSessionProperties;
 import org.cg.hub.Settings;
 
-import com.google.common.base.Optional;
 
 public class Dispatch {
 
@@ -60,28 +62,37 @@ public class Dispatch {
 
 	public void deliver(ScrapedValues ad) {
 		for (Target target : targets)
-			// if (passesRules(ad, target.rules))
-			getDelivery().sendMail(ad, target.email);
+			if (passesRules(ad, target.rules))
+				getDelivery().sendMail(ad, target.email);
 	}
-	/*
-	 * public boolean passesRules(ScrapedValues v, Map<String, String> rules) {
-	 * for (Entry<String, String> r : rules.entrySet()) if (!passesRule(v,
-	 * r.getKey(), r.getValue())) return false; return true; }
-	 * 
-	 * private boolean passesRule(ScrapedValues v, String ruleId, String rule) {
-	 * if (rule.equals(cInvalidRule)) { Log.warning(String.
-	 * format("invalid rule id '%s'encountered. Check dispatch setup.",
-	 * ruleId)); return false; }
-	 * Log.info(String.format("about to try to evaluate rule '%s'", rule));
-	 * ResultAdScraper evalResult = (new ExprParserAdScraper(v,
-	 * filters)).eval(rule); Log.info(String.format("rule evaluated", ruleId));
-	 * 
-	 * if (evalResult.msg.length() > 0)
-	 * Log.warning(String.format("Error evaluating dispatch rule '%s' \n", rule)
-	 * + evalResult.msg);
-	 * 
-	 * return evalResult.status.intValue() == 1; }
-	 */
+
+	public boolean passesRules(ScrapedValues v, Map<String, String> rules) {
+		for (Entry<String, String> r : rules.entrySet())
+			if (!passesRule(v, r.getKey(), r.getValue()))
+				return false;
+		return true;
+	}
+
+	private boolean passesRule(ScrapedValues v, String ruleId, String rule) {
+		if (rule.equals(cInvalidRule)) {
+			Log.warning(String.format("invalid rule id '%s'encountered. Check dispatch setup.", ruleId));
+			return false;
+		}
+		Log.info(String.format("about to try to evaluate rule '%s'", rule));
+		ResultAdScraper evalResult = (new ExprParserAdScraper(v, filters)).eval(rule);
+		Log.info(String.format("rule evaluated", ruleId));
+
+		if (evalResult.msg.length() > 0){
+			Log.warning(String.format("Error evaluating dispatch rule '%s' for %s\n", rule, getUrl(v)) + evalResult.msg);
+			return true;
+		}
+
+		return evalResult.status.intValue() == 1;
+	}
+
+	private Object getUrl(ScrapedValues v) {
+		return v.get(ValueKind.url).valueOrDefault();
+	}
 
 	private List<Target> createTargets() {
 		List<Target> result = new LinkedList<Target>();
