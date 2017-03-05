@@ -4,6 +4,7 @@ import org.cg.adscraper.factory.IStorageFactory;
 import org.cg.base.IHistoricalDetailStorage;
 import org.cg.base.IHistoryStorage;
 import org.cg.base.IKeyTypeValueStorage;
+import org.cg.base.IKeyValueStorage;
 import org.cg.base.ISettingsStorage;
 
 public abstract class SpringStorageFactory implements IStorageFactory {
@@ -35,6 +36,9 @@ public abstract class SpringStorageFactory implements IStorageFactory {
 	// a lookup method injection, since a new instance is needed per call, see commonConfig.xml
 	// http://docs.spring.io/spring/docs/3.0.0.M3/reference/html/ch04s03.html#beans-factory-method-injection
 
+	@Override
+	public abstract IKeyValueStorage createKeyValueStorage();
+	
 	@Override
 	public ISettingsStorage getSettingsStorage() {
 		return settingsStorageSpring;

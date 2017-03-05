@@ -12,9 +12,6 @@
 
 	<bean id="keyTypeValueStorageSpring" class="app.storage.KeyTypeValueStorageSpring"
 		scope="prototype" />
-	<bean id="keyValueStorageSpring" class="app.storage.KeyValueStorageSpring"
-		scope="prototype" />	
-		
 	<bean id="StorageFactory" class="app.storage.SpringStorageFactory">
 		<lookup-method name="createKeyTypeValueStorage" bean="keyTypeValueStorageSpring" />
 		<lookup-method name="createKeyValueStorage" bean="keyValueStorageSpring" />

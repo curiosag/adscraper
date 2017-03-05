@@ -3,6 +3,7 @@ package org.cg.hub;
 import java.util.AbstractMap;
 import java.util.AbstractMap.SimpleImmutableEntry;
 import java.util.Map.Entry;
+import java.util.Optional;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -21,8 +22,6 @@ import org.cg.base.ISettingsStorage;
 import org.cg.base.Log;
 import org.cg.common.util.CollectionUtil;
 import org.cg.util.debug.DebugUtilities;
-
-import com.google.common.base.Optional;
 
 public final class Settings implements ISettings {
 
@@ -54,7 +53,7 @@ public final class Settings implements ISettings {
 			settingValue = settingsStorage.get(settingName);
 		} catch (Exception e) { 
 			Log.info("Setting '" + settingName + "' not set: " + e.getMessage());
-			return Optional.absent();
+			return Optional.empty();
 		}
 		return Optional.of(settingValue);
 	}
@@ -188,7 +187,7 @@ public final class Settings implements ISettings {
 	 */
 	@Override
 	public Optional<String> getMappedItem(String key, Map<String, String> map, String mapDescription) {
-		Optional<String> result = Optional.fromNullable(map.get(key));
+		Optional<String> result = Optional.ofNullable(map.get(key));
 		if (!result.isPresent())
 			Log.info(String.format("Settings %s: key not found: %s", key, mapDescription));
 

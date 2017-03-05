@@ -42,7 +42,7 @@ public class RepositoriesTests {
 	@Test
 	public void testRepos() {
 		List<RepositoryItem> items = repos.getItems();
-		Assert.assertEquals(3, items.size());
+		Assert.assertEquals(4, items.size());
 		for (RepositoryItem r : repos.getItems())
 			System.out.println(String.format("repo %s item type %s size %d", r.repo.getClass().getName(), r._class.getName(), r.size));
 	}

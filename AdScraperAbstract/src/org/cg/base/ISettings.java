@@ -3,7 +3,7 @@ package org.cg.base;
 import java.util.AbstractMap;
 import java.util.List;
 import java.util.Map;
-import com.google.common.base.Optional;
+import java.util.Optional;
 
 public interface ISettings {
 

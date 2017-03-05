@@ -1,6 +1,5 @@
 package org.cg.hub;
 
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -37,7 +36,7 @@ public class StatisticsRenderer {
 		return String.format(digraphJSonTemplate, StringUtil.ToCsv(urlids, ","), StringUtil.ToCsv(urls, ","));
 	}
 
-	private String getAdStatPageData() {
+	public String getAdStatPageData() {
 
 		RenderingType jSon = RenderingType.dygraphJson;
 		List<DataPoint> points =AsDataPoints();
