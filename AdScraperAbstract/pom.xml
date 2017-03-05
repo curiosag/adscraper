@@ -4,6 +4,13 @@
 	<groupId>org.cg.ads</groupId>
 	<artifactId>AdScraperAbstract</artifactId>
 	<version>0.1</version>
+	
+	<parent>
+		<groupId>org.springframework</groupId>
+		<artifactId>ads</artifactId>
+		<version>0.1.0</version>
+	</parent>
+	
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
