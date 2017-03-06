@@ -107,7 +107,6 @@ public class Dispatch {
 																													// ->
 																													// dispatch
 																													// definition
-
 		for (Entry<String, String> d : dispatches.entrySet()) {
 			String[] ruleElements = d.getValue().split(";");
 
