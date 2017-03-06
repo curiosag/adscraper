@@ -76,7 +76,7 @@ public class Dispatch {
 	private boolean passesRule(ScrapedValues v, String ruleId, String rule) {
 		if (rule.equals(cInvalidRule)) {
 			Log.warning(String.format("invalid rule id '%s'encountered. Check dispatch setup.", ruleId));
-			return false;
+			return true;
 		}
 		Log.info(String.format("about to try to evaluate rule '%s'", rule));
 		ResultAdScraper evalResult = (new ExprParserAdScraper(v, filters)).eval(rule);
