@@ -7,5 +7,5 @@ echo $(java -version)
 
 cd $OPENSHIFT_REPO_DIR
 echo "main class can't be found? main class name changed, but not mainClass - maven-jar-plugin in pom?"
-nohup java adscraperApp/target/adscraperapp-0.1.0.jar --server.port=${OPENSHIFT_DIY_PORT} --server.address=${OPENSHIFT_DIY_IP}
+nohup java -jar adscraperApp/target/adscraperapp-0.1.0.jar --server.port=${OPENSHIFT_DIY_PORT} --server.address=${OPENSHIFT_DIY_IP}
 
