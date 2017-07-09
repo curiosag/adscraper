@@ -1,5 +1,6 @@
 package org.cg.adscraper.exprFilter
 
+import org.cg.scala.ast._
 import org.cg.scala.expressionparser._
 
 

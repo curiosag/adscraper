@@ -1,4 +1,5 @@
 package org.cg.scala.expressionparser
+import org.cg.scala.ast._
 
 trait ExprEvaluator[T] {
   def evalConst(const: Id): T

@@ -1,7 +1,6 @@
 package org.cg.scala.expressionparser
 
-import collection.JavaConversions._
-import org.cg.scala.expressionparser._
+import org.cg.scala.ast._
 
 trait EvalEnvironment {
     def evalFunc(funcName: Id, params: List[Token]): EvalResult[Boolean]

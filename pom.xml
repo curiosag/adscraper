@@ -18,6 +18,7 @@
 		<module>AdScraperAbstract</module>
 		<module>ftcShared</module>
 		<module>JavaCommon</module>
+		<module>ast</module>
 		<module>expressionparser</module>
 		<module>AdScraperExpressionFilter</module>
 		<module>AdScraper</module>

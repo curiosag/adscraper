@@ -1,13 +1,8 @@
 package org.cg.scala.expressionparser
 
 import scala.util.parsing.combinator.syntactical._;
+import org.cg.scala.ast._
 
-sealed class Token(val token: String)
-{
-  def value() = token
-}
-
-case class Id(override val token: String) extends Token(token)
 case class Num(override val token: String) extends Token(token)
 case class Op(override val token: String) extends Token(token)
 

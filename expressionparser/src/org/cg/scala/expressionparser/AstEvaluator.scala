@@ -1,10 +1,5 @@
 package org.cg.scala.expressionparser
-
-sealed abstract class AstNode
-
-case class AstStructuralNonTerminal(name: String, children: List[AstNode]) extends AstNode
-case class AstNonTerminal(symbol: Token, children: List[AstNode]) extends AstNode
-case class AstTerminal(symbol: Token) extends AstNode
+import org.cg.scala.ast._
 
 object AstEvaluator extends ExprEvaluator[AstNode] {
   

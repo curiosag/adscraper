@@ -109,6 +109,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.cg.scala.comp</groupId>
+			<artifactId>ast</artifactId>
+			<version>0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.cg.scala.comp</groupId>
 			<artifactId>expressionparser</artifactId>
 			<version>0.1</version>
 		</dependency>

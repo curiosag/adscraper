@@ -1,15 +1,16 @@
 package app.server;
 
-import java.util.Date;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-import app.Const;
+import java.util.Date;
 
 @Controller
+@RequestMapping("/console" )
 public class WebConsoleController {
 
 	private final CommandHandler handler;
@@ -17,12 +18,18 @@ public class WebConsoleController {
 	public WebConsoleController(CommandHandler handler) {
 		this.handler = handler;
 	}
-	
-    @RequestMapping("/console")
-    public String greeting(@RequestParam(value="cmd", required=true, defaultValue=Const.NOCMD) String cmd, Model model) {
-    	
-    	System.out.println("console served at " + (new Date()).toString());
-        model.addAttribute("consoleReply", handler.hdlCmd(cmd));
+
+    @RequestMapping(method={RequestMethod.GET})
+    public String get(@ModelAttribute WebConsoleFormData formData, Model model) {
+    	 System.out.println("console served at " + (new Date()).toString());
+    	 return "console";
+    }
+
+    @RequestMapping(method={RequestMethod.POST})
+    public String post(@ModelAttribute WebConsoleFormData formData, Model model, BindingResult result) {
+        System.out.println("console served at " + (new Date()).toString());
+
+        handler.hdlCmd(formData.getCmd(), formData);
         return "console";
     }
 

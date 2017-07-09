@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+import app.data.DataTable;
+import app.data.ObjectToDataTableTransformer;
 import org.cg.base.Const;
 import org.cg.base.Log;
 import org.cg.base.MailSessionProperties;
@@ -30,295 +32,304 @@ import app.storage.RepositoryItem;
 @SuppressWarnings("unused")
 public class CommandHandler {
 
-	@Value("${logging.file}")
-	private String loggingFile;
-	
-	@Autowired
-	ScanRunner scanRunner;
-	
-	private String[] adminUserCommands = { "clip", "m", "set", "unset", "p", "x" };
+    @Value("${logging.file}")
+    private String loggingFile;
 
-	private String[] adminUsers = { "curiosa.globunznik@gmail.com" };
+    @Autowired
+    ScanRunner scanRunner;
 
-	private final List<RepositoryItem> repos;
-	private final MailSessionProperties mailSessionProperties;
+    private String[] adminUserCommands = {"clip", "m", "set", "unset", "p", "x"};
 
-	private Collector<RepositoryItem, ?, List<RepositoryItem>> coll() {
-		return Collectors.toList();
-	}
+    private String[] adminUsers = {"curiosa.globunznik@gmail.com"};
 
-	private boolean isAdminUser() {
-		return true;
-	}
+    private final List<RepositoryItem> repos;
+    private final MailSessionProperties mailSessionProperties;
 
-	public CommandHandler(Repos repos, MailSessionProperties mailSessionProperties) {
-		this.repos = repos.getItems();
-		this.mailSessionProperties = mailSessionProperties;
-	}
+    private Collector<RepositoryItem, ?, List<RepositoryItem>> coll() {
+        return Collectors.toList();
+    }
 
-	private boolean isAdminCmd(String cmd) {
-		for (String s : adminUserCommands)
-			if (s.equals(cmd))
-				return true;
-		return false;
-	}
+    private boolean isAdminUser() {
+        return true;
+    }
 
-	public String hdlCmd(String input) throws IllegalArgumentException {
-		System.out.println(String.format("cmd: '%s'",  input));
-		if (input == null || input.length() == 0 || input.equals(app.Const.NOCMD))
-			return "that's not a command";
+    public CommandHandler(Repos repos, MailSessionProperties mailSessionProperties) {
+        this.repos = repos.getItems();
+        this.mailSessionProperties = mailSessionProperties;
+    }
 
-		String[] tokens = input.split("\\s");
-		
-		String cmd = tokens[0];
-		String arg = null;
-		if (tokens.length > 1)
-			arg = tokens[1];
-			
-		try {
-			switch (cmd) {
+    private boolean isAdminCmd(String cmd) {
+        for (String s : adminUserCommands)
+            if (s.equals(cmd))
+                return true;
+        return false;
+    }
 
-			case "suspend": {
-				return Settings.instance().set("switch:" + Const.SETTING_SWITCH_SUSPENDED + "=true");
-			}
+    public void hdlCmd(String input, WebConsoleFormData formData) throws IllegalArgumentException {
+        Object result = hdlCmd(input);
 
-			case "resume": {
-				Settings.instance().del(Const.SETTING_SWITCH_SUSPENDED);
-				return "unsuspended";
-			}
+        if (result instanceof String)
+            formData.setReply((String) result);
 
-			case "migHist": {
-				return "not implemented";
-			}
+        if (result instanceof DataTable)
+            formData.setDataTable((DataTable) result);
+    }
 
-			case "2ft": {
-				return "not implemented";
-			}
+    private Object hdlCmd(String input) throws IllegalArgumentException {
+        System.out.println(String.format("cmd: '%s'", input));
+        if (input == null || input.length() == 0 || input.equals(app.Const.NOCMD))
+            return "that's not a command";
 
-			case "clip":
-				return clip(input);
+        String[] tokens = input.split("\\s");
 
-			case "h":
-			case "help":
-				return helpText();
+        String cmd = tokens[0];
+        String arg = null;
+        if (tokens.length > 1)
+            arg = tokens[1];
 
-			case "k":
-				return hdlKind();
+        try {
+            switch (cmd) {
 
-			case "l":
-				return hdlLog(arg, loggingFile);
+                case "suspend": {
+                    return Settings.instance().set("switch:" + Const.SETTING_SWITCH_SUSPENDED + "=true");
+                }
 
-			case "m":
-				return new MailDelivery(mailSessionProperties).testMail();
+                case "resume": {
+                    Settings.instance().del(Const.SETTING_SWITCH_SUSPENDED);
+                    return "unsuspended";
+                }
 
-			case "f":
-				return new MailDelivery(mailSessionProperties).testFormat();
+                case "migHist": {
+                    return "not implemented";
+                }
 
-			case "set":
-				return Settings.instance().set(input.substring(4)) + "<br/><br/>" + getSettingsView();
+                case "2ft": {
+                    return "not implemented";
+                }
 
-			case "unset": {
-				Settings.instance().del(input.substring(6));
-				return getSettingsView();
-			}
+                case "clip":
+                    return clip(input);
 
-			case "p":
-				return purge(input);
+                case "h":
+                case "help":
+                    return helpText();
 
-			case "stat":
-				return getStatPage();
+                case "k":
+                    return hdlKind();
 
-			case "s":
-				return getHttp(input);
+                case "l":
+                    return hdlLog(arg, loggingFile);
 
-			case "t": {
-				return "t";
-			}
-			case "v":
-				return hdlView(input.substring(2));
-			case "csv":
-				return "not implemented";
+                case "m":
+                    return new MailDelivery(mailSessionProperties).testMail();
 
-			case "x": {
-				scanRunner.run();
-				return "Triggered scan";
-			}
+                case "f":
+                    return new MailDelivery(mailSessionProperties).testFormat();
 
-			default:
-				return "Command not recognized: " + input;
-			}
+                case "set":
+                    return Settings.instance().set(input.substring(4)) + "<br/><br/>" + getSettingsView();
 
-		} catch (Exception e) {
-			Log.logException(e, Const.ADD_STACK_TRACE);
-			return e.getClass().getName() + " " + e.getMessage() + " " + Throwables.getStackTraceAsString(e);
-		}
-	}
+                case "unset": {
+                    Settings.instance().del(input.substring(6));
+                    return getSettingsView();
+                }
 
-	
-	private String getSettingsView() {
-		return hdlView("KeyTypeValueItem");
-	}
+                case "p":
+                    return purge(input);
 
-	private String hdlLog(String arg, String loggingFile) {
-		if (loggingFile == null)
-			return "no log file defined";
-		
-		File f = new File(loggingFile);
-		if (! f.exists())
-			return "file does not exist: " + loggingFile;
-		
-		int num = 0;
-		try {
-		  num = Integer.valueOf(arg);
-		} catch (Exception e) {
-			num = 100;
-		}
-		
-		String[] lines = FileUtil.readFromFile(loggingFile).split("\n");
-		StringBuilder sb = new StringBuilder();
-		sb.append("<div class=\"log\">");
-		for (int i = 0; i < Math.min(num, lines.length); i++) {
-			sb.append(lines[(lines.length -1) - i]);
-			sb.append("<br/>");
-		}
-		sb.append("</div>");
-		return sb.toString();
-	}
+                case "stat":
+                    return getStatPage();
 
-	private String hdlKind() {
-		return StringUtil.toCsv(repos.stream().map(x -> x._class.getSimpleName()).collect(Collectors.toList()), "\n");
-	}
+                case "s":
+                    return getHttp(input);
 
-	@SuppressWarnings("unchecked")
-	private String hdlView(String kind) {
-		List<RepositoryItem> c = repos.stream().filter(x -> x._class.getSimpleName().equals(kind))
-				.collect(Collectors.toList());
-		String result = "";
-		if (c.size() > 0) {
-			result = new ObjectRenderer().renderTable(getN(c.get(0).repo.findAll(), 25));
-		}
-		
-		return result;
-	}
+                case "t": {
+                    return "t";
+                }
+                case "v":
+                    return hdlView(input.substring(2));
+                case "csv":
+                    return "not implemented";
 
-	private<T> List<T> getN(Iterable<T> all, int i) {
-		ArrayList<T> result = new ArrayList<T>();
-		for (T t : all) {
-			if (result.size() == i)
-				break;
-			result.add(t);
-		}
-		return result;
-	}
+                case "x": {
+                    scanRunner.run();
+                    return "Triggered scan";
+                }
 
-	private String getHttp(String input) {
-		String[] tokens = input.split("\\s");
+                default:
+                    return "Command not recognized: " + input;
+            }
 
-		if (tokens.length != 2)
-			return "usage: get [url]";
+        } catch (Exception e) {
+            Log.logException(e, Const.ADD_STACK_TRACE);
+            return e.getClass().getName() + " " + e.getMessage() + " " + Throwables.getStackTraceAsString(e);
+        }
+    }
 
-		String result = HttpUtil.getHtmlInputString(tokens[1]);
-		if (result != null)
-			result = result.replace("<img", "<iiimg");
-		return result;
-	}
 
-	public static String clip(String input) {
-		String[] tokens = input.split("\\s");
+    private DataTable getSettingsView() {
+        return hdlView("KeyTypeValueItem");
+    }
 
-		if (tokens.length != 3)
-			return "usage: clip [urlId] [number]";
-		try {
-			int num = Integer.parseInt(tokens[2]);
-			return History.instance().clip(tokens[1], num);
-		} catch (Exception e) {
-			return e.getClass().getName() + "\n" + e.getMessage();
-		}
+    private String hdlLog(String arg, String loggingFile) {
+        if (loggingFile == null)
+            return "no log file defined";
 
-	}
+        File f = new File(loggingFile);
+        if (!f.exists())
+            return "file does not exist: " + loggingFile;
 
-	private static String purge(String input) {
-		String[] tokens = input.split("\\s");
+        int num = 0;
+        try {
+            num = Integer.valueOf(arg);
+        } catch (Exception e) {
+            num = 100;
+        }
 
-		if (tokens.length != 2)
-			return "usage: purge [entityKind]";
+        String[] lines = FileUtil.readFromFile(loggingFile).split("\n");
+        StringBuilder sb = new StringBuilder();
+        sb.append("<div class=\"log\">");
+        for (int i = 0; i < Math.min(num, lines.length); i++) {
+            sb.append(lines[(lines.length - 1) - i]);
+            sb.append("<br/>");
+        }
+        sb.append("</div>");
+        return sb.toString();
+    }
 
-		return "not implemented";
-	}
+    private String hdlKind() {
+        return StringUtil.toCsv(repos.stream().map(x -> x._class.getSimpleName()).collect(Collectors.toList()), "\n");
+    }
+    @SuppressWarnings("unchecked")
+    private DataTable hdlView(String kind) {
+        List<RepositoryItem> c = repos.stream().filter(x -> x._class.getSimpleName().equals(kind))
+                .collect(Collectors.toList());
 
-	private String htmlBr(String text) {
-		return text + "<br>";
-	}
+        if (c.size() > 0) {
+            return new ObjectToDataTableTransformer(getN(c.get(0).repo.findAll(), 25)).getDataTable();
+        }
 
-	private String htmlB(String text) {
-		return "<b>" + text + "</b>";
-	}
+        return null;
+    }
 
-	private String htmlBlank(int number) {
-		String result = "";
-		for (int i = 0; i <= number; i++)
-			result = result + "&nbsp;";
-		return result;
-	}
+    private <T> List<T> getN(Iterable<T> all, int i) {
+        ArrayList<T> result = new ArrayList<T>();
+        for (T t : all) {
+            if (result.size() == i)
+                break;
+            result.add(t);
+        }
+        return result;
+    }
 
-	private String helpText() {
-		StringBuilder result = new StringBuilder();
-		result.append(htmlB("ehm...")).append(htmlBr("")).append(htmlBr(""));
-		result.append("'h' or 'help': this Text.").append(htmlBr("")).append(htmlBr(""));
-		result.append(htmlBr(htmlBr("'stat': opens scraper statistics page in new tab")));
-		result.append(htmlBr(htmlBr(
-				"'clip [urlId] [n]' ... clips n items for urlId from history ring buffer (but not from permanent history)")));
+    private String getHttp(String input) {
+        String[] tokens = input.split("\\s");
 
-		result.append(htmlBr("'set [settingtype]:[settingname]=[setting-Value]' ... define settings"))
-				.append(htmlBr(""));
-		result.append("unset [settingname]   ... delete it ").append(htmlBr("")).append(htmlBr(""));
+        if (tokens.length != 2)
+            return "usage: get [url]";
 
-		result.append(htmlBlank(4)).append("Example:").append(htmlBr("")).append(htmlBr(""));
-		result.append(htmlBlank(4)).append("set url:bazar.at=http://www.bazar.at/wien-wohnungen-anzeigen,dir,1,cId")
-				.append(htmlBr("")).append(htmlBr(""));
+        String result = HttpUtil.getHtmlInputString(tokens[1]);
+        if (result != null)
+            result = result.replace("<img", "<iiimg");
+        return result;
+    }
 
-		result.append(htmlBr(htmlBr("'f': show html format of notification emails")));
-		result.append(htmlBr(htmlBr("'k': list existing entity kinds")));
-		result.append(htmlBr(htmlBr("'l': show last log lines")));
+    public static String clip(String input) {
+        String[] tokens = input.split("\\s");
 
-		result.append(htmlBr(htmlBr("'m': send test mail")));
-		result.append(htmlBr(htmlBr("'p [entityKind]': purge all entities of kind entityKind")));
+        if (tokens.length != 3)
+            return "usage: clip [urlId] [number]";
+        try {
+            int num = Integer.parseInt(tokens[2]);
+            return History.instance().clip(tokens[1], num);
+        } catch (Exception e) {
+            return e.getClass().getName() + "\n" + e.getMessage();
+        }
 
-		result.append(htmlBr(htmlBr("'v [entityKind]': display entities of kind entityKind")));
-		result.append(htmlBr(htmlBr("'csv [entityKind]': like above, but as csv")));
+    }
 
-		result.append(htmlBr(htmlBr("'x': execute one round of scraping immediately")));
+    private static String purge(String input) {
+        String[] tokens = input.split("\\s");
 
-		result.append(htmlBr(htmlBr("'2ft': load detail ad history into fusion tables")));
+        if (tokens.length != 2)
+            return "usage: purge [entityKind]";
 
-		result.append(htmlBr(htmlBr("use up/down arrow keys to scroll in command history")));
-		result.append(htmlBr(htmlBr("")));
-		result.append(htmlBr(htmlBr("SWITCHES:")));
-		result.append(htmlBr(htmlBr("misc:suspended  ... scan function terminates without scanning")));
-		result.append(htmlBr(htmlBr("misc:ftRelay  ... pass on detail history to fusion tables")));
-		result.append(htmlBr(htmlBr(
-				"pred:dictionary  ... dictionary csv for ad status prediction. entries of form <frequency>,<term>; NULL for empty dict.")));
-		result.append(htmlBr(htmlBr("pred:theta  ... theta csv for ad status prediction. entries separated by ';'")));
-		result.append(htmlBr(
-				htmlBr("pred:killers  ... killer terms indicating fraud for prediction. entries separated by ';'")));
+        return "not implemented";
+    }
 
-		result.append(htmlBr(htmlBr("filter:filterId=filterTerm[,<filterTerm>]*")));
-		result.append(htmlBr(htmlBr(
-				"rule:ruleId=rule[;rule]*  where rule is an expression like: 150 <= prize <= 450 & size > 0 & passes(description, filterId)")));
-		result.append(htmlBr(htmlBr("dispatchRule:ruleId=emailId;ruleId")));
+    private String htmlBr(String text) {
+        return text + "<br>";
+    }
 
-		return result.toString();
-	}
+    private String htmlB(String text) {
+        return "<b>" + text + "</b>";
+    }
 
-	private String getStatPage() {
-		String q = "\"";
+    private String htmlBlank(int number) {
+        String result = "";
+        for (int i = 0; i <= number; i++)
+            result = result + "&nbsp;";
+        return result;
+    }
 
-		String a = "<div id=" + q + "graphdiv" + q + "></div>" + "<script type=" + q + "text/javascript" + q + ">"
-				+ "  g = new Dygraph(" + "    document.getElementById(" + q + "graphdiv" + q + ")," + q
-				+ "Date,Temperature" + q + ");" + "</script>" + q;
+    private String helpText() {
+        StringBuilder result = new StringBuilder();
+        result.append(htmlB("ehm...")).append(htmlBr("")).append(htmlBr(""));
+        result.append("'h' or 'help': this Text.").append(htmlBr("")).append(htmlBr(""));
+        result.append(htmlBr(htmlBr("'stat': opens scraper statistics page in new tab")));
+        result.append(htmlBr(htmlBr(
+                "'clip [urlId] [n]' ... clips n items for urlId from history ring buffer (but not from permanent history)")));
 
-		return "Nein!";
+        result.append(htmlBr("'set [settingtype]:[settingname]=[setting-Value]' ... define settings"))
+                .append(htmlBr(""));
+        result.append("unset [settingname]   ... delete it ").append(htmlBr("")).append(htmlBr(""));
 
-	}
+        result.append(htmlBlank(4)).append("Example:").append(htmlBr("")).append(htmlBr(""));
+        result.append(htmlBlank(4)).append("set url:bazar.at=http://www.bazar.at/wien-wohnungen-anzeigen,dir,1,cId")
+                .append(htmlBr("")).append(htmlBr(""));
+
+        result.append(htmlBr(htmlBr("'f': show html format of notification emails")));
+        result.append(htmlBr(htmlBr("'k': list existing entity kinds")));
+        result.append(htmlBr(htmlBr("'l': show last log lines")));
+
+        result.append(htmlBr(htmlBr("'m': send test mail")));
+        result.append(htmlBr(htmlBr("'p [entityKind]': purge all entities of kind entityKind")));
+
+        result.append(htmlBr(htmlBr("'v [entityKind]': display entities of kind entityKind")));
+        result.append(htmlBr(htmlBr("'csv [entityKind]': like above, but as csv")));
+
+        result.append(htmlBr(htmlBr("'x': execute one round of scraping immediately")));
+
+        result.append(htmlBr(htmlBr("'2ft': load detail ad history into fusion tables")));
+
+        result.append(htmlBr(htmlBr("use up/down arrow keys to scroll in command history")));
+        result.append(htmlBr(htmlBr("")));
+        result.append(htmlBr(htmlBr("SWITCHES:")));
+        result.append(htmlBr(htmlBr("misc:suspended  ... scan function terminates without scanning")));
+        result.append(htmlBr(htmlBr("misc:ftRelay  ... pass on detail history to fusion tables")));
+        result.append(htmlBr(htmlBr(
+                "pred:dictionary  ... dictionary csv for ad status prediction. entries of form <frequency>,<term>; NULL for empty dict.")));
+        result.append(htmlBr(htmlBr("pred:theta  ... theta csv for ad status prediction. entries separated by ';'")));
+        result.append(htmlBr(
+                htmlBr("pred:killers  ... killer terms indicating fraud for prediction. entries separated by ';'")));
+
+        result.append(htmlBr(htmlBr("filter:filterId=filterTerm[,<filterTerm>]*")));
+        result.append(htmlBr(htmlBr(
+                "rule:ruleId=rule[;rule]*  where rule is an expression like: 150 <= prize <= 450 & size > 0 & passes(description, filterId)")));
+        result.append(htmlBr(htmlBr("dispatchRule:ruleId=emailId;ruleId")));
+
+        return result.toString();
+    }
+
+    private String getStatPage() {
+        String q = "\"";
+
+        String a = "<div id=" + q + "graphdiv" + q + "></div>" + "<script type=" + q + "text/javascript" + q + ">"
+                + "  g = new Dygraph(" + "    document.getElementById(" + q + "graphdiv" + q + ")," + q
+                + "Date,Temperature" + q + ");" + "</script>" + q;
+
+        return "Nein!";
+
+    }
 
 }

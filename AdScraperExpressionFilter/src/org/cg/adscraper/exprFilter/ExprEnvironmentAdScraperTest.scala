@@ -1,14 +1,16 @@
 package org.cg.adscraper.exprFilter
 
 import org.scalatest.junit.JUnitSuite
+
 import scala.collection.mutable.ListBuffer
 import org.junit.Assert._
 import org.junit.Test
 import org.junit.Before
-
-import org.cg.ads.advalues._;
-import org.cg.ads.filterlist._;
+import org.cg.ads.advalues._
+import org.cg.ads.filterlist._
 import java.util.ArrayList
+
+import org.cg.scala.ast.Id
 
 import scala.util.parsing.combinator
 import org.cg.scala.expressionparser._

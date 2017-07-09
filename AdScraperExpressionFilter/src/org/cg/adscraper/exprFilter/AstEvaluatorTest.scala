@@ -1,5 +1,7 @@
 package org.cg.adscraper.exprFilter
 
+import org.cg.scala.ast.{Ast2Dot, AstNode}
+
 import scala.util.parsing.combinator.Parsers
 import org.scalatest.junit.JUnitSuite
 import org.junit.Assert._

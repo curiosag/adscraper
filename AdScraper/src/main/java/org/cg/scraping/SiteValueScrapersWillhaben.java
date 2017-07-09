@@ -5,37 +5,34 @@ import org.cg.base.Check;
 
 public final class SiteValueScrapersWillhaben implements SiteValueScrapers {
 
-	public boolean canHandle(String url) {
-		Check.notNull(url);
-		return url.startsWith("https://www.willhaben.at");
-	}
-	
-	public String masterListSelector() {
-		return ".content-section";
-	}
+    public boolean canHandle(String url) {
+        Check.notNull(url);
+        return url.startsWith("https://www.willhaben.at");
+    }
 
-	public ValuesScraper extractorAdList() {
-		ValuesScraper result = new ValuesScraper();
-		result.add(ValueScraperJSoup.create(ValueKind.detailLink, "a", "href"));
-		result.add(ValueScraperJSoup.create(ValueKind.title, "[itemprop=name]"));
-		
-		result.add(ValueScraperJSoup.create(ValueKind.prize, ".pull-right"));
-		result.add(ValueScraperJSoup.create(ValueKind.size, ".desc-left"));
-		result.add(ValueScraperJSoup.create(ValueKind.location, ".address-lg"));
-		result.add(ValueScraperJSoup.create(ValueKind.description, ".description"));
-		  
-		return result;
-	}
+    public String masterListSelector() {
+        return ".content-section";
+    }
 
-	public ValuesScraper extractorAdDetails() {
-		ValuesScraper result = new ValuesScraper();
-		
-		
-		result.add(ValueScraperJSoup.create(ValueKind.phone, ".dl-horizontal :matchesOwn(Telefon) + dd", true));
-		result.add(ValueScraperJSoup.create(ValueKind.agent, ".dl-horizontal :matchesOwn(Firma) + dd"));
-		result.add(ValueScraperJSoup.create(ValueKind.deposit, ":matchesOwn(Kaution) + span"));
-		
-		return result;
-	}
+    public ValuesScraper extractorAdList() {
+        ValuesScraper result = new ValuesScraper();
+        result.add(ValueScraperJSoup.create(ValueKind.detailLink, "a", "href"));
+        result.add(ValueScraperJSoup.create(ValueKind.title, "[itemprop=name]"));
+
+        result.add(ValueScraperJSoup.create(ValueKind.size, ".desc-left"));
+        result.add(ValueScraperJSoup.create(ValueKind.location, ".address-lg"));
+        result.add(ValueScraperJSoup.create(ValueKind.description, ".description"));
+
+        return result;
+    }
+
+    public ValuesScraper extractorAdDetails() {
+        ValuesScraper result = new ValuesScraper();
+
+        result.add(ValueScraperRegex.create(ValueKind.prize, "\"price\":\"([^\".]*)\"", 1));
+         result.add(ValueScraperRegex.create(ValueKind.phone, "\\{\"name\":\"contactphone\",\"value\":\"([0-9\\/-])\"\\},", 1));
+        result.add(ValueScraperRegex.create(ValueKind.deposit, "\\{\"name\":\"additionalcostdeposit\",\"value\":\"€*\\s*([^}.]*)\"\\},", 1));
+        return result;
+    }
 
 }

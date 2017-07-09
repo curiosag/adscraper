@@ -53,6 +53,11 @@
 	</build>
 	<dependencies>
 		<dependency>
+			<groupId>org.cg.scala.comp</groupId>
+			<artifactId>ast</artifactId>
+			<version>0.1</version>
+		</dependency>
+		<dependency>
 			<groupId>org.cg.ads</groupId>
 			<artifactId>AdScraperAbstract</artifactId>
 			<version>0.1</version>

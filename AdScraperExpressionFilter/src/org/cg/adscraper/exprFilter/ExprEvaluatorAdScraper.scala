@@ -1,12 +1,12 @@
 package org.cg.adscraper.exprFilter
 
-import org.cg.ads.advalues.ScrapedValues
-import org.cg.ads.filterlist.FilterList
 import com.google.common.base.Optional
-import org.cg.ads.advalues.ValueKind
-import org.cg.ads.advalues.InterpretedValue
-import collection.JavaConversions._
+import org.cg.ads.advalues.{ScrapedValues, ValueKind}
+import org.cg.ads.filterlist.FilterList
+import org.cg.scala.ast.{Id, Token}
 import org.cg.scala.expressionparser._
+
+import scala.collection.JavaConversions._
 
 class ExprEvaluatorAdScraper(scraped: ScrapedValues, f: FilterList) extends BooleanEvaluator(new AdScraperEnvironment(scraped, f))
 
