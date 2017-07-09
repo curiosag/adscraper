@@ -1,4 +1,4 @@
-package org.cg.scala.expressionparser
+package org.cg.scala.ast
 
 abstract class Labelled {
   val label: Int

@@ -1,4 +1,4 @@
-package org.cg.scala.expressionparser
+package org.cg.scala.ast
 
 private class Part(val structure: String, val labels: String) {
   def combined = "%s\n\n%s\n".format(structure, labels)
