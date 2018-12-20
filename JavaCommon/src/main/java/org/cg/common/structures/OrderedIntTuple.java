@@ -1,8 +1,5 @@
 package org.cg.common.structures;
 
-import org.cg.common.structures.IntTuple;
-import org.cg.common.structures.OrderedIntTuple;
-
 public class OrderedIntTuple extends IntTuple {
 
 	public final boolean swap;

@@ -1,38 +1,26 @@
 package app.server;
 
+import app.ScrapingBaseUrl;
+import org.cg.dispatch.Dispatch;
+import org.cg.history.History;
+import org.cg.hub.Settings;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.cg.ads.SystemEntryGateway;
-import org.cg.ads.integration.ScrapingBaseUrl;
-import org.cg.adscraper.factory.StorageFactory;
+import java.util.logging.Logger;
 import org.cg.base.Const;
-import org.cg.dispatch.Dispatch;
-import org.cg.history.History;
-import org.cg.hub.Settings;
-import app.storage.SpringStorageFactory;
 
 public class ScanRunner {
-	private static final Log LOG = LogFactory.getLog(ScanRunner.class);
+	private static final Logger LOG = Logger.getLogger(ScanRunner.class.getSimpleName());
 
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
-	SystemEntryGateway entry;
 	MailDeliveryFactory mailDeliveryFactory;
 
 	private List<ScrapingBaseUrl> items = new ArrayList<ScrapingBaseUrl>();
-
-	// use the esoteric gatewayProxyFactory
-	public ScanRunner(SystemEntryGateway entry, SpringStorageFactory storageFactory,
-			MailDeliveryFactory mailDeliveryFactory) {
-		this.entry = entry;
-		StorageFactory.setUp(storageFactory);
-		this.mailDeliveryFactory = mailDeliveryFactory;
-	}
 
 	public synchronized void run() {
 
@@ -54,7 +42,6 @@ public class ScanRunner {
 
 		LOG.info(String.format("Running scan for %d base urls", items.size()));
 
-		entry.trigger(items);
 	}
 
 }

@@ -1,7 +1,5 @@
 package org.cg.common.structures;
 
-import org.cg.common.structures.IntTuple;
-
 public class IntTuple {
 
 	public final int i1;

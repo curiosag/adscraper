@@ -1,60 +1,39 @@
 package app.server;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-
 import app.data.DataTable;
-import app.data.ObjectToDataTableTransformer;
+import com.google.common.base.Throwables;
 import org.cg.base.Const;
 import org.cg.base.Log;
 import org.cg.base.MailSessionProperties;
 import org.cg.common.io.FileUtil;
-import org.cg.common.util.CollectionUtil;
-import org.cg.common.util.StringUtil;
 import org.cg.dispatch.MailDelivery;
 import org.cg.history.History;
-import org.cg.hub.Scraper;
 import org.cg.hub.Settings;
-import org.cg.rendering.ObjectRenderer;
 import org.cg.util.http.HttpUtil;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
 
-import com.google.common.base.Throwables;
-
-import app.storage.Repos;
-import app.storage.RepositoryItem;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressWarnings("unused")
 public class CommandHandler {
 
-    @Value("${logging.file}")
-    private String loggingFile;
+    private String loggingFile ="ads.log";
 
-    @Autowired
     ScanRunner scanRunner;
 
     private String[] adminUserCommands = {"clip", "m", "set", "unset", "p", "x"};
 
     private String[] adminUsers = {"curiosa.globunznik@gmail.com"};
 
-    private final List<RepositoryItem> repos;
     private final MailSessionProperties mailSessionProperties;
 
-    private Collector<RepositoryItem, ?, List<RepositoryItem>> coll() {
-        return Collectors.toList();
-    }
 
     private boolean isAdminUser() {
         return true;
     }
 
-    public CommandHandler(Repos repos, MailSessionProperties mailSessionProperties) {
-        this.repos = repos.getItems();
+    public CommandHandler(MailSessionProperties mailSessionProperties) {
         this.mailSessionProperties = mailSessionProperties;
     }
 
@@ -198,17 +177,10 @@ public class CommandHandler {
     }
 
     private String hdlKind() {
-        return StringUtil.toCsv(repos.stream().map(x -> x._class.getSimpleName()).collect(Collectors.toList()), "\n");
+        return null;
     }
     @SuppressWarnings("unchecked")
     private DataTable hdlView(String kind) {
-        List<RepositoryItem> c = repos.stream().filter(x -> x._class.getSimpleName().equals(kind))
-                .collect(Collectors.toList());
-
-        if (c.size() > 0) {
-            return new ObjectToDataTableTransformer(getN(c.get(0).repo.findAll(), 25)).getDataTable();
-        }
-
         return null;
     }
 

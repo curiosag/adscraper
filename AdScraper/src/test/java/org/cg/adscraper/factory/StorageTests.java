@@ -1,22 +1,18 @@
-package org.cg.adscraper.test;
+package org.cg.adscraper.factory;
 
-
-import static org.junit.Assert.*;
+import org.cg.ads.advalues.ScrapedValue;
+import org.cg.ads.advalues.ScrapedValues;
+import org.cg.ads.advalues.ValueKind;
+import org.cg.base.Check;
+import org.cg.base.ISettingsStorage;
+import org.cg.history.History;
 
 import java.util.AbstractMap.SimpleImmutableEntry;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-
-import org.cg.ads.advalues.ScrapedValue;
-import org.cg.ads.advalues.ScrapedValues;
-import org.cg.ads.advalues.ValueKind;
-import org.cg.adscraper.factory.StorageFactory;
-import org.cg.base.Check;
-import org.cg.base.ISettingsStorage;
-import org.cg.history.History;
-import org.junit.Assert;
+import static org.junit.Assert.*;
 
 public class StorageTests {
 
@@ -44,7 +40,7 @@ public class StorageTests {
 		
 		History h = History.instance();
 		
-		Assert.assertEquals(0, h.size("url1"));
+		assertEquals(0, h.size("url1"));
 		
 		ArrayList<ScrapedValues> adsUrl1 = new ArrayList<ScrapedValues>();
 		adsUrl1.add(createAdWrapper("a"));
@@ -57,7 +53,7 @@ public class StorageTests {
 		String urlId2 = "url2";
 		
 		h.add(urlId1, adsUrl1);
-		Assert.assertEquals(2, h.size("url1"));
+		assertEquals(2, h.size("url1"));
 		
 		h.flush(urlId1);
 

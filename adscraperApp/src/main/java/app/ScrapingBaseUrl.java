@@ -1,4 +1,4 @@
-package org.cg.ads.integration;
+package app;
 
 import java.util.List;
 

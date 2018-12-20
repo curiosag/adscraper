@@ -7,11 +7,6 @@ public class Check {
 		throw new RuntimeException(msg);
 	}
 	
-	public static void fail(Exception e)
-	{
-		throw new RuntimeException(String.format("Exception class: message:", e.getClass().getName(), e.getMessage()));
-	}
-	
 	public static void notNull(Object o) {
 		if (o == null)
 			fail("unexpected null value");

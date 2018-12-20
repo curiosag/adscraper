@@ -2,50 +2,50 @@ package org.cg.base;
 
 import java.text.SimpleDateFormat;
 
-public final class Const {
+public interface Const {
 
-	public static final int secsDeltaViennaTime = 2 * 60 * 60;
-	
-	public static final	boolean MULTIPLE_RESULT_ELEMENTS = true;
-	public static final int DEBUG_SAMPLES = 5;
-	
-	public static final String SETTINGTYPE_URL = "url";
-	public static final String SETTINGTYPE_MAIL = "mail";
-	public static final String SETTINGTYPE_SWITCHES = "switch";
-	public static final String SETTINGTYPE_INTERN = "intern";
-	public static final String SETTINGTYPE_FILTER = "filter";
-	public static final String SETTINGTYPE_RULE = "rule";
-	public static final String SETTINGTYPE_DISPATCHRULE = "dispatchRule";
+    int secsDeltaViennaTime = 2 * 60 * 60;
 
-	public static final String SETTING_DICTIONARY_CONTENT = "dictionary";
-	public static final String SETTING_PREDICTION_THETA = "theta";
-	public static final String SETTING_PREDICTION_KILLERTERMS = "killers";
+    boolean MULTIPLE_RESULT_ELEMENTS = true;
+    int DEBUG_SAMPLES = 5;
 
-	public static final String SETTING_SWITCH_SUSPENDED = "suspended";
-	
-	public static final String ENTITY_KIND_APPSETTING = "AppSetting";
-	public static final String ENTITY_KIND_HISTORYITEM = "HistoryItem";
-	public static final String ENTITY_KIND_STATISTICALDATA= "StatisticalData";
-	
-	public static String ENTITYPROP_URLID = "urlId";
-	public static String ENTITYPROP_DATE = "date";
-	public static String ENTITYPROP_WEEKDAY = "weekday";
-	public static String ENTITYPROP_HOUR = "hour";
-	public static String ENTITYPROP_URLGRAZED = "urlGrazed";	
-	public static String ENTITYPROP_STATDATA = "statisticalData";			
-	
-	
-	public static final String SCRAPING_EVENTTYPE_INFO = "info";
-	
-	public static final boolean ADD_STACK_TRACE = true;
-	public static final boolean STACK_TRACE = true;
-	
-	public static final String LOGKEY= "adScraper";
-	public static final int HTTP_TIMEOUT = 7000;
-	public static final boolean CONCURRENT = true;
-	public static final boolean SUCCESS = true;
+    String SETTINGTYPE_URL = "url";
+    String SETTINGTYPE_MAIL = "mail";
+    String SETTINGTYPE_SWITCHES = "switch";
+    String SETTINGTYPE_INTERN = "intern";
+    String SETTINGTYPE_FILTER = "filter";
+    String SETTINGTYPE_RULE = "rule";
+    String SETTINGTYPE_DISPATCHRULE = "dispatchRule";
 
-	
-	public static SimpleDateFormat dateFmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-	
+    String SETTING_DICTIONARY_CONTENT = "dictionary";
+    String SETTING_PREDICTION_THETA = "theta";
+    String SETTING_PREDICTION_KILLERTERMS = "killers";
+
+    String SETTING_SWITCH_SUSPENDED = "suspended";
+
+    String ENTITY_KIND_APPSETTING = "AppSetting";
+    String ENTITY_KIND_HISTORYITEM = "HistoryItem";
+    String ENTITY_KIND_STATISTICALDATA = "StatisticalData";
+
+    String ENTITYPROP_URLID = "urlId";
+    String ENTITYPROP_DATE = "date";
+    String ENTITYPROP_WEEKDAY = "weekday";
+    String ENTITYPROP_HOUR = "hour";
+    String ENTITYPROP_URLGRAZED = "urlGrazed";
+    String ENTITYPROP_STATDATA = "statisticalData";
+
+
+    String SCRAPING_EVENTTYPE_INFO = "info";
+
+    boolean ADD_STACK_TRACE = true;
+    boolean STACK_TRACE = true;
+
+    String LOGKEY = "adScraper";
+    int HTTP_TIMEOUT = 7000;
+    boolean CONCURRENT = true;
+    boolean SUCCESS = true;
+
+
+    SimpleDateFormat dateFmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
 }

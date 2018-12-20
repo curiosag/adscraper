@@ -1,0 +1,11 @@
+
+
+docker 	images			...	 list all images
+	rmi			... 	remove image
+
+
+	run -it <imagename> sh ... runs image and shell opens
+
+	docker build . -t curiosag/adsniffer ... build an image from directory . with tag
+
+sudo docker run -p 8080:8080  curiosag/adsniffer	... run image and map port

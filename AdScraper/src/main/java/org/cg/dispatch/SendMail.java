@@ -50,8 +50,7 @@ public final class SendMail {
 	
 	public synchronized void send(String adminEmail, String recipient,
 			String from, String subject, String content, boolean asHtml)
-			throws UnsupportedEncodingException, AddressException,
-			MessagingException {
+			throws UnsupportedEncodingException, MessagingException {
 
 		Check.notEmpty(adminEmail);
 		Check.notEmpty(recipient);
