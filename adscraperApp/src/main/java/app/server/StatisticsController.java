@@ -1,6 +1,6 @@
 package app.server;
 
-import org.cg.hub.StatisticsRenderer;
+import org.cg.processor.StatisticsRenderer;
 
 public class StatisticsController {
 

@@ -52,26 +52,22 @@
 					</execution>
 				</executions>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-toolchains-plugin</artifactId>
-				<version>1.1</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>toolchain</goal>
-						</goals>
-					</execution>
-				</executions>
+				<artifactId>maven-jar-plugin</artifactId>
 				<configuration>
-					<toolchains>
-						<jdk>
-							<version>${java.version}</version>
-							<vendor>sun</vendor>
-						</jdk>
-					</toolchains>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>app.AdScraperApplication</mainClass>
+							<classpathPrefix>dependency/</classpathPrefix>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+						</manifest>
+					</archive>
 				</configuration>
 			</plugin>
+
 		</plugins>
 	</build>
 	<dependencies>

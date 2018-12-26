@@ -1,28 +1,19 @@
 package org.cg.history;
 
+import org.cg.ads.advalues.ScrapedValues;
+import org.cg.base.Check;
+
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.List;
-
-import org.cg.ads.advalues.ScrapedValues;
-import org.cg.adscraper.factory.StorageFactory;
-import org.cg.base.Check;
-import org.cg.base.IHistoricalDetailStorage;
-import org.cg.base.IHistoryStorage;
 
 public final class History {
 
 	private static History instance;
 	private Dictionary<String, HistoryRingBuffer> urlBuffers = new Hashtable<String, HistoryRingBuffer>();
 
-	private final IHistoryStorage historyStorage;
-	private final IHistoricalDetailStorage historicalDetailStorage;
-	
-	
 	private History() {
 		super();
-		historyStorage = StorageFactory.get().getHistoryStorage();
-		historicalDetailStorage = StorageFactory.get().getHistoricalDetailStorage(); 
 	}
 
 	public final static synchronized History instance() {
@@ -52,8 +43,6 @@ public final class History {
 		HistoryRingBuffer u = urlBuffer(urlId);
 		u.store(ads);
 
-		for (ScrapedValues ad : ads)
-			historyStorage.store(urlId, ad);
 	}
 
 	public final void add(String urlId, ScrapedValues ad) {
@@ -61,21 +50,6 @@ public final class History {
 		Check.notNull(ad);
 		
 		urlBuffer(urlId).store(ad);
-		historyStorage.store(urlId, ad);
-		
-	}
-
-	public void addDetails(ScrapedValues ad) {
-		historicalDetailStorage.store(ad);
-	}
-	
-	public final void flush(String urlId) {
-		Check.notEmpty(urlId);
-		Check.isTrue(findBuffer(urlId));
-		
-		urlBuffer(urlId).flush();
-		
-		historicalDetailStorage.flush();	
 	}
 
 	public final boolean find(String urlId, String url) {
@@ -85,14 +59,6 @@ public final class History {
 		return urlBuffer(urlId).find(url);
 	};
 
-	public final String clip(String urlId, int num) {
-		Check.notEmpty(urlId);
-		
-		String result = "clipped " + Integer.toString(urlBuffer(urlId).clip(num));
-		urlBuffer(urlId).flush();
-		return result;
-	}
-
 	public final int size(String urlId) {
 		Check.notEmpty(urlId);
 		
@@ -100,11 +66,8 @@ public final class History {
 	}
 
 	public final void reset() {
-		urlBuffers = new Hashtable<String, HistoryRingBuffer>();
+		urlBuffers = new Hashtable<>();
 	}
 	
-	private boolean findBuffer(String urlId){
-		return urlBuffers.get(urlId) != null;
-	}
-	
+
 }

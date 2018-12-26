@@ -21,7 +21,6 @@ public final class SiteValueScrapersJobWohnen implements SiteValueScrapers  {
 		result.add(ValueScraperJSoup.create(ValueKind.title, "td:eq(2) a"));
 		result.add(ValueScraperJSoup.create(ValueKind.size, "td:eq(4)"));
 		result.add(ValueScraperJSoup.create(ValueKind.prize, "td:eq(5)"));
-		result.add(ValueScraperJSoup.create(ValueKind.transferMoney, "td:eq(6)"));
 		
 		return result;
 	}

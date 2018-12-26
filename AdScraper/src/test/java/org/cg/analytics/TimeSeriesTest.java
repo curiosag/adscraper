@@ -1,16 +1,7 @@
 package org.cg.analytics;
 
-import static org.junit.Assert.*;
-
-import java.io.FileReader;
-import java.io.IOException;
-import java.text.ParseException;
-import java.util.LinkedList;
-import java.util.List;
-
+import com.google.common.collect.Lists;
 import org.cg.analytics.WeekDayDistribution.aggItem;
-import org.cg.base.Const;
-import org.cg.common.io.FileUtil;
 import org.cg.common.util.CollectionUtil;
 import org.cg.util.list.ListUtil;
 import org.joda.time.DateTime;
@@ -18,8 +9,10 @@ import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.junit.Test;
 
-import com.google.common.collect.Lists;
-import com.opencsv.CSVReader;
+import java.util.LinkedList;
+import java.util.List;
+
+import static org.junit.Assert.*;
 
 @SuppressWarnings("boxing")
 public class TimeSeriesTest {
@@ -71,21 +64,21 @@ public class TimeSeriesTest {
 	@Test
 	public void testBigData() {
 
-		try {
-			try (CSVReader reader = new CSVReader(new FileReader(FileUtil.pwd() + "/TestData/adHistory.csv"))) {
-				TimeSeries s = new TimeSeries(TimeIntervalType.day);
-				String[] fields;
-				while ((fields = reader.readNext()) != null && fields.length == 4) {
-					s.add(new DataPoint(new DateTime(Const.dateFmt.parse(fields[1])), Rendering
-							.urlToDimension(fields[2])));
-				}
-				s.addSumPerInterval();
-				FileUtil.writeToFile(Rendering.get(RenderingType.dygraphJson, new WeekDayDistribution(s)), FileUtil.pwd()
-						+ "/TestData/hgen.csv");
-			}
-		} catch (IOException | ParseException e) {
-			fail(e.getMessage());
-		}
+//		try {
+//			try (CSVReader reader = new CSVReader(new FileReader(FileUtil.pwd() + "/TestData/adHistory.csv"))) {
+//				TimeSeries s = new TimeSeries(TimeIntervalType.day);
+//				String[] fields;
+//				while ((fields = reader.readNext()) != null && fields.length == 4) {
+//					s.add(new DataPoint(new DateTime(Const.dateFmt.parse(fields[1])), Rendering
+//							.urlToDimension(fields[2])));
+//				}
+//				s.addSumPerInterval();
+//				FileUtil.writeToFile(Rendering.get(RenderingType.dygraphJson, new WeekDayDistribution(s)), FileUtil.pwd()
+//						+ "/TestData/hgen.csv");
+//			}
+//		} catch (IOException | ParseException e) {
+//			fail(e.getMessage());
+//		}
 	}
 
 	//@Test

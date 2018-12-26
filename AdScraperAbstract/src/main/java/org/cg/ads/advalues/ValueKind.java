@@ -2,12 +2,11 @@ package org.cg.ads.advalues;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import com.google.common.base.Optional;
+import java.util.Optional;
 
 public enum ValueKind {
-	statusPredicted, url, detailLink, timestamp, title, description, size, rooms, phone, contact, prize, location, heating, limitationDuration, buildingType, overallState,
-	agent, deposit, transferMoney, misc1, misc2, misc3;
+	url, detailLink, timestamp, title, description, size, rooms, phone, contact, prize, location, heating, limitationDuration,
+	agent, deposit, valid;
 	
 	private static Map<String, ValueKind> valMap = new HashMap<String, ValueKind>(); 
 	static {
@@ -15,8 +14,8 @@ public enum ValueKind {
 			valMap.put(v.name(), v);
 	}
 	
-	public static Optional<ValueKind> getValueOf(String kind) 
+	public static Optional<ValueKind> getValueOf(String kind)
 	{
-		return Optional.fromNullable(valMap.get(kind));
+		return Optional.ofNullable(valMap.get(kind));
 	} 
 }

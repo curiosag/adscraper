@@ -1,9 +1,8 @@
-package org.cg.hub;
+package org.cg.processor;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import org.cg.adscraper.factory.StorageFactory;
 import org.cg.analytics.DataPoint;
 import org.cg.analytics.Rendering;
 import org.cg.analytics.RenderingType;
@@ -12,7 +11,6 @@ import org.cg.analytics.TimeSeries;
 import org.cg.analytics.WeekDayDistribution;
 import org.cg.base.HistoryItem;
 import org.cg.common.util.StringUtil;
-import org.cg.hub.Settings;
 import org.cg.util.enums.EnumUtil;
 import org.joda.time.DateTime;
 
@@ -29,10 +27,10 @@ public class StatisticsRenderer {
 		List<String> urlids = new LinkedList<String>();
 		List<String> urls = new LinkedList<String>();
 
-		for (SimpleImmutableEntry<String, String> e : Settings.instance().getSettingsByType(org.cg.base.Const.SETTINGTYPE_URL)) {
-			urlids.add(StringUtil.quote(e.getKey()));
-			urls.add(StringUtil.quote(e.getValue()));
-		}
+	//	for (SimpleImmutableEntry<String, String> e : Settings.instance().getSettingsByType(org.cg.base.Const.SETTINGTYPE_URL)) {
+		//		urlids.add(StringUtil.quote(e.getKey()));
+//			urls.add(StringUtil.quote(e.getValue()));
+//		}
 		return String.format(digraphJSonTemplate, StringUtil.ToCsv(urlids, ","), StringUtil.ToCsv(urls, ","));
 	}
 
@@ -55,7 +53,7 @@ public class StatisticsRenderer {
 	public List<DataPoint> AsDataPoints() {
 		LinkedList<DataPoint> result = new LinkedList<DataPoint>();
 		
-		List<HistoryItem> hist = StorageFactory.get().getHistoryStorage().get(Integer.MAX_VALUE);
+		List<HistoryItem> hist = null; //StorageFactory.get().getHistoryStorage().get(Integer.MAX_VALUE);
 		
 		for (HistoryItem h : hist) {
 			String dimension = Rendering.urlToDimension(h.urlGrazed);

@@ -9,8 +9,6 @@ import org.cg.base.Check;
 import org.cg.base.Const;
 import org.cg.base.LangId;
 import org.cg.base.Log;
-import org.cg.base.MailSessionProperties;
-import org.cg.hub.Settings;
 import org.cg.util.debug.DebugUtilities;
 import org.cg.util.http.HttpUtil;
 
@@ -19,12 +17,10 @@ import com.google.common.collect.Lists;
 
 public final class MailDelivery implements IMailDelivery {
 
-	private final boolean asHtml = true;
-	private final String sender;
+	private final String sender = "curiosa.globunznik@gmail.com";
 	private SendMail sendMail;
 	
 	public MailDelivery(MailSessionProperties properties) {
-		this.sender = properties.sender;
 		this.sendMail = new SendMail(properties);
 	}
 	
@@ -42,16 +38,14 @@ public final class MailDelivery implements IMailDelivery {
 
 		for (ScrapedValue v : ad.get())
 			if (mandatoyElements.indexOf(v.elementId()) > -1)
-				s.append(String.format("<b>%s:</b>%s<br>", Language.translate(v.elementId().name(), LangId.german),
-						ad.valueOrDefault(v.elementId())));
+				s.append(String.format("<b>%s:</b>%s<br>", v.elementId().name(), ad.valueOrDefault(v.elementId())));
 
 		s.append("</table>");
 		s.append("<br><br>");
 
 		for (ScrapedValue v : ad.get())
 			if (mandatoyElements.indexOf(v.elementId()) == -1)
-				s.append(String.format("<b>%s:</b>%s<br>", Language.translate(v.elementId().name(), LangId.german),
-						ad.valueOrDefault(v.elementId())));
+				s.append(String.format("<b>%s:</b>%s<br>", v.elementId().name(), ad.valueOrDefault(v.elementId())));
 
 		s.append("<br><br>");
 
@@ -83,23 +77,6 @@ public final class MailDelivery implements IMailDelivery {
 				.format("<b>HEADER</b><br><br>%s<br><b><br>BODY SMS FORMATTED</b><br><br>%s<br><br><b>BODY MAIL FORMATTED</b><br>%ss",
 						headerFormatted(testAd), bodySmsFormatted(testAd), bodyMailFormatted(testAd));
 	}
-
-	/* (non-Javadoc)
-	 * @see org.cg.dispatch.IMailDelivery#sendMail(org.cg.ads.advalues.ScrapedValues)
-	 */
-	
-	public final void sendMail(ScrapedValues ad) {
-		Check.notNull(ad);
-
-		List<String> mailIds = Settings.instance().getKeysByType(Const.SETTINGTYPE_MAIL);
-
-		if (mailIds.size() == 0)
-			Log.info("no mail recipients defined");
-
-		for (String mailId : mailIds)
-			sendMail(ad, Settings.instance().get(mailId).get());
-
-	}
 	
 	@Override
 	public String sendMail(ScrapedValues ad, String mailRecipient) {
@@ -108,7 +85,7 @@ public final class MailDelivery implements IMailDelivery {
 		String result = null;
 		try {
 			Log.info("mail to " + mailRecipient + "ad von " + from + " " + headerFormatted(ad));
-			sendMail.send(sender, mailRecipient, "ad von " + from, headerFormatted(ad), bodyMailFormatted(ad), asHtml);
+			sendMail.send(sender, mailRecipient, "ad von " + from, headerFormatted(ad), bodyMailFormatted(ad), true);
 		} catch (Exception e) {
 			result = e.getMessage() + "\n" + result;
 			Log.logException(e, !Const.ADD_STACK_TRACE);

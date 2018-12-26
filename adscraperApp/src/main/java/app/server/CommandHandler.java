@@ -4,11 +4,9 @@ import app.data.DataTable;
 import com.google.common.base.Throwables;
 import org.cg.base.Const;
 import org.cg.base.Log;
-import org.cg.base.MailSessionProperties;
+import org.cg.dispatch.MailSessionProperties;
 import org.cg.common.io.FileUtil;
 import org.cg.dispatch.MailDelivery;
-import org.cg.history.History;
-import org.cg.hub.Settings;
 import org.cg.util.http.HttpUtil;
 
 import java.io.File;
@@ -19,8 +17,6 @@ import java.util.List;
 public class CommandHandler {
 
     private String loggingFile ="ads.log";
-
-    ScanRunner scanRunner;
 
     private String[] adminUserCommands = {"clip", "m", "set", "unset", "p", "x"};
 
@@ -70,11 +66,11 @@ public class CommandHandler {
             switch (cmd) {
 
                 case "suspend": {
-                    return Settings.instance().set("switch:" + Const.SETTING_SWITCH_SUSPENDED + "=true");
+                    return ""; //Settings.instance().set("switch:" + Const.SETTING_SWITCH_SUSPENDED + "=true");
                 }
 
                 case "resume": {
-                    Settings.instance().del(Const.SETTING_SWITCH_SUSPENDED);
+                    //Settings.instance().del(Const.SETTING_SWITCH_SUSPENDED);
                     return "unsuspended";
                 }
 
@@ -106,10 +102,10 @@ public class CommandHandler {
                     return new MailDelivery(mailSessionProperties).testFormat();
 
                 case "set":
-                    return Settings.instance().set(input.substring(4)) + "<br/><br/>" + getSettingsView();
+                    return "";//Settings.instance().set(input.substring(4)) + "<br/><br/>" + getSettingsView();
 
                 case "unset": {
-                    Settings.instance().del(input.substring(6));
+                    //Settings.instance().del(input.substring(6));
                     return getSettingsView();
                 }
 
@@ -131,7 +127,6 @@ public class CommandHandler {
                     return "not implemented";
 
                 case "x": {
-                    scanRunner.run();
                     return "Triggered scan";
                 }
 
@@ -213,7 +208,7 @@ public class CommandHandler {
             return "usage: clip [urlId] [number]";
         try {
             int num = Integer.parseInt(tokens[2]);
-            return History.instance().clip(tokens[1], num);
+            return "gibts ned";
         } catch (Exception e) {
             return e.getClass().getName() + "\n" + e.getMessage();
         }

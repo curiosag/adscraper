@@ -22,43 +22,41 @@ public final class ScrapedValues implements WithUrl<ScrapedValues> {
 		return interpreted;
 	}
 	
-	public final boolean isEmpty() {
+	public boolean isEmpty() {
 		return values.isEmpty();
 	}
 	
-	public final boolean has(ValueKind id) {
+	public boolean has(ValueKind id) {
 		Check.notNull(id);
-
 		return values.get(id) != null;
 	}
 
 	public final ScrapedValue get(ValueKind id) {
 		Check.notNull(id);
-
 		Check.isTrue(has(id));
 		return values.get(id);
 	}
 
-	public final String valueOrDefault(ValueKind id) {
+	public String valueOrDefault(ValueKind id) {
 		Check.notNull(id);
-
 		return get(id).valueOrDefault();
 	}
 	
-	public final void add(ScrapedValue value) {
+	public void add(ScrapedValue value) {
 		Check.isFalse(has(value.elementId()));
 		values.put(value.elementId(), value);
 	}
 
-	public final void set(ValueKind id, String value) {
+	public ScrapedValues set(ValueKind id, String value) {
 		if (!has(id)) {
-			Log.warning(String.format("setting unexpected ValueKind %s to %s", id.name(), value));
 			add(ScrapedValue.create(id, value));
-		} else
+		} else {
 			get(id).set(value);
+		}
+		return this;
 	}
 
-	public final Iterable<ScrapedValue> get() {
+	public Iterable<ScrapedValue> get() {
 		return java.util.Collections.list(values.elements());
 	}
 
@@ -98,6 +96,4 @@ public final class ScrapedValues implements WithUrl<ScrapedValues> {
 		return get(ValueKind.url).valueOrDefault();
 	}
 
-	
-	
 }

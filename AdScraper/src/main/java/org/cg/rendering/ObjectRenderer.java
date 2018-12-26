@@ -5,7 +5,6 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
-import org.apache.commons.lang3.exception.ExceptionUtils;
 
 public class ObjectRenderer {
 
@@ -56,7 +55,7 @@ public class ObjectRenderer {
 				renderTableRow(sb, o);
 			}
 		} catch (Exception e) {
-			return e.getMessage() + '\n' + ExceptionUtils.getStackTrace(e);
+			return e.getMessage();
 		}
 		sb.append(tableClose);
 		return sb.toString();

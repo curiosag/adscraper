@@ -28,7 +28,6 @@ public class FileUtil {
 		try {
 			try (PrintWriter w = new PrintWriter(fileName)) {
 				w.write(s);
-				w.close();
 			}
 			return true;
 		} catch (FileNotFoundException e) {
