@@ -1,7 +1,8 @@
 package org.cg.base;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.logging.Logger;
-import com.google.common.base.Throwables;
 
 public class Log {
 	private static Logger instance;
@@ -45,8 +46,12 @@ public class Log {
 		Check.notNull(e);
 
 		severe(String.format("Exception: %s Message: %s", e.getClass().getName(), e.getMessage()));
-		if (addStackTrace)
-			severe(Throwables.getStackTraceAsString(e));
+		if (addStackTrace) {
+			StringWriter writer = new StringWriter();
+			PrintWriter printWriter= new PrintWriter(writer);
+			e.printStackTrace(printWriter);
+			severe(writer.toString());
+		}
 	}
 
 	public static void logStrings(Iterable<String> strings) {

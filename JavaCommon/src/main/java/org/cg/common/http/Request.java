@@ -73,7 +73,7 @@ public class Request {
 			in.close();
 		}
 
-		return new HttpResult(HttpStatus.decode(responseCode).or(HttpStatus.SC_METHOD_FAILURE), response.toString());
+		return new HttpResult(HttpStatus.decode(responseCode).orElse(HttpStatus.SC_METHOD_FAILURE), response.toString());
 	}
 
 }

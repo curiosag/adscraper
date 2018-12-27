@@ -1,25 +1,25 @@
 package org.cg.base;
 
-import com.google.common.base.Preconditions;
-
 public class Check {
 
-	public static void notNull(Object o) {
-		Preconditions.checkNotNull(o);
-	}
+    public static void notNull(Object o) {
+        if (o == null) fail();
+    }
 
-	public static void notEmpty(String s) {
-		notNull(s);
+    public static void notEmpty(String s) {
+        notNull(s);
+        if (s.length() == 0) fail();
+    }
 
-		Preconditions.checkState(!s.isEmpty());
-	}
+    public static void isTrue(boolean b) {
+        if (!b) fail();
+    }
 
-	public static void isTrue(boolean b) {
-		Preconditions.checkState(b);
-	}
+    public static void isFalse(boolean b) {
+        isTrue(!b);
+    }
 
-	public static void isFalse(boolean b) {
-		isTrue(!b);
-	}
-
+    private static void fail() {
+        throw new IllegalStateException();
+    }
 }

@@ -1,10 +1,9 @@
 package org.cg.ads.advalues;
 
 import java.text.DecimalFormat;
+import java.util.Optional;
 
 import org.cg.base.Log;
-
-import com.google.common.base.Optional;
 
 public class InterpretedValue {
 
@@ -23,7 +22,7 @@ public class InterpretedValue {
 		if (sVal.isPresent())
 			return getNumber(sVal.get());
 		else
-			return Optional.absent();
+			return Optional.empty();
 	}
 
 	public double asNumberOrDefault() {
@@ -35,11 +34,11 @@ public class InterpretedValue {
 		if (raw.isPresent())
 			return Optional.of(normString(raw.valueOrDefault()));
 		else
-			return Optional.absent();
+			return Optional.empty();
 	}
 
 	public String asStringOrDefault() {
-		return asString().or("");
+		return asString().orElse("");
 	}
 
 	public static InterpretedValue create(ScrapedValue v) {
@@ -54,7 +53,7 @@ public class InterpretedValue {
 
 	public static Optional<Double> getNumber(String scrapedValue) {
 		if (scrapedValue == null)
-			return Optional.absent();
+			return Optional.empty();
 
 		scrapedValue = scrapedValue.trim();
 		if (scrapedValue.endsWith(","))
@@ -65,7 +64,7 @@ public class InterpretedValue {
 					.doubleValue()));
 		} catch (Exception e) {
 			Log.info("Error decoding number from string: " + scrapedValue.toString());
-			return Optional.absent();
+			return Optional.empty();
 		}
 
 	}

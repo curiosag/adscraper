@@ -16,6 +16,9 @@ import java.util.stream.Collectors;
 
 public final class Processor {
 
+    private static final String TRUE = "true";
+    private static final String FALSE = "false";
+
     public void process(String urlId, String url, List<String> excludedTerms) {
         Check.notEmpty(url);
 
@@ -28,21 +31,21 @@ public final class Processor {
         History history = History.instance();
         boolean dispatch = history.size(urlId) > 0;
 
-        Collection<ScrapedValues> newAds = scraper.get().get(url, i -> !history.find(urlId, i.url()));
-        Log.info(String.format("found %s new ads for %s", Integer.toString(newAds.size()), urlId));
+        Collection<ScrapedValues> ads = scraper.get().get(url, i -> !history.find(urlId, i.url()));
+        Log.info(String.format("found %s new ads for %s", Integer.toString(ads.size()), urlId));
 
-        newAds.forEach(ad -> {
+        ads.forEach(ad -> {
             Log.debug(ad.toString());
             history.add(urlId, ad);
             validate(ad, excludedTerms);
         });
 
-        newAds.stream()
-                .filter(ad -> "false".equals(ad.get(ValueKind.valid).valueOrDefault()))
+        ads.stream()
+                .filter(ad -> FALSE.equals(ad.get(ValueKind.valid).valueOrDefault()))
                 .forEach(ad -> Log.info("excluded: " + ad.valueOrDefault(ValueKind.url)));
 
-        List<ScrapedValues> valid = newAds.stream()
-                .filter(ad -> "true".equals(ad.get(ValueKind.valid).valueOrDefault()))
+        List<ScrapedValues> valid = ads.stream()
+                .filter(ad -> TRUE.equals(ad.get(ValueKind.valid).valueOrDefault()))
                 .collect(Collectors.toList());
 
         dispatch(urlId, dispatch, valid);
@@ -73,14 +76,13 @@ public final class Processor {
         return false;
     }
 
-    private static ScrapedValues validate(ScrapedValues ad, List<String> excludedTerms) {
+    private static void validate(ScrapedValues ad, List<String> excludedTerms) {
         ad.set(ValueKind.valid,
                 ad.get(ValueKind.prize).isPresent() && ad.get(ValueKind.description).isPresent()
                         && !containsAny((ad.valueOrDefault(ValueKind.title) + ad.valueOrDefault(ValueKind.description)).toLowerCase(),
-                        excludedTerms) ? "true" : "false"
+                        excludedTerms) ? TRUE : FALSE
         );
 
-        return ad;
     }
 
 }

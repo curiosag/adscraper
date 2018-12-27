@@ -2,7 +2,7 @@ package org.cg.ads.advalues;
 
 import org.cg.base.Check;
 
-import com.google.common.base.Optional;
+import java.util.Optional;
 
 public class ScrapedValue {
 
@@ -29,7 +29,7 @@ public class ScrapedValue {
 	};
 
 	public final String valueOrDefault() {
-		return rawValue.or("");
+		return rawValue.orElse("");
 	}
 
 	public final boolean isPresent() {
@@ -38,14 +38,14 @@ public class ScrapedValue {
 	
 	public void set(String value)
 	{
-		rawValue = Optional.fromNullable(value);
+		rawValue = Optional.ofNullable(value);
 	}
 
 	public static final ScrapedValue create(ValueKind id, String value) {
 		Optional<String> optional;
 		
 		if (value == null || value.trim().length() == 0)
-			optional = Optional.absent();
+			optional = Optional.empty();
 		else
 			optional = Optional.of(value);
 		

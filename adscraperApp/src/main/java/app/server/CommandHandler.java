@@ -1,7 +1,6 @@
 package app.server;
 
 import app.data.DataTable;
-import com.google.common.base.Throwables;
 import org.cg.base.Const;
 import org.cg.base.Log;
 import org.cg.dispatch.MailSessionProperties;
@@ -136,7 +135,7 @@ public class CommandHandler {
 
         } catch (Exception e) {
             Log.logException(e, Const.ADD_STACK_TRACE);
-            return e.getClass().getName() + " " + e.getMessage() + " " + Throwables.getStackTraceAsString(e);
+            return e.getClass().getName() + " " + e.getMessage();
         }
     }
 

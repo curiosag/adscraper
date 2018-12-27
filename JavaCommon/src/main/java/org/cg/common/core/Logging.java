@@ -1,13 +1,13 @@
 package org.cg.common.core;
 
-import com.google.common.base.Optional;
+import java.util.Optional;
 
 public interface Logging {
-	public void Info(String info);
-	public void Error(String error);
+	void Info(String info);
+	void Error(String error);
 	
-	public Optional<String> lastInfo();
-	public Optional<String> lastError();
+	Optional<String> lastInfo();
+	Optional<String> lastError();
 	
 }
 

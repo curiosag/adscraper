@@ -1,19 +1,16 @@
 package org.cg.dispatch;
 
-import java.util.List;
-
 import org.cg.ads.advalues.ScrapedValue;
 import org.cg.ads.advalues.ScrapedValues;
 import org.cg.ads.advalues.ValueKind;
 import org.cg.base.Check;
 import org.cg.base.Const;
-import org.cg.base.LangId;
 import org.cg.base.Log;
 import org.cg.util.debug.DebugUtilities;
 import org.cg.util.http.HttpUtil;
 
-import com.google.common.collect.Lists;
-
+import java.util.Arrays;
+import java.util.List;
 
 public final class MailDelivery implements IMailDelivery {
 
@@ -28,7 +25,7 @@ public final class MailDelivery implements IMailDelivery {
 	private String bodyMailFormatted(ScrapedValues ad) {
 		Check.notNull(ad);
 
-		List<ValueKind> mandatoyElements = Lists.newArrayList(ValueKind.title, ValueKind.prize, ValueKind.size,
+		List<ValueKind> mandatoyElements = Arrays.asList(ValueKind.title, ValueKind.prize, ValueKind.size,
 				ValueKind.rooms, ValueKind.phone, ValueKind.contact, ValueKind.description);
 
 		StringBuilder s = new StringBuilder();

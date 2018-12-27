@@ -2,13 +2,14 @@ package org.cg.common.util;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 import org.cg.common.check.Check;
 import org.cg.common.structures.OrderedIntTuple;
-
-import com.google.common.base.Joiner;
 
 public class StringUtil {
 
@@ -142,19 +143,13 @@ public class StringUtil {
 	}
 
 	public static <T> String toCsv(Iterable<T> items, String separator) {
-		return Joiner.on(separator).join(items);
-	}
-
-	public static <T> String ToCsv(Enumeration<T> items, String separator) {
-		return Joiner.on(separator).join(CollectionUtil.toList(items));
-	}
-
-	public static <T> String ToCsv(String[] items, String separator) {
-		return Joiner.on(separator).join(items);
+		ArrayList<String> list = new ArrayList<>();
+		items.forEach(i -> list.add(i.toString()));
+		return toCsv(list, separator);
 	}
 
 	public static String ToCsv(List<String> items, String separator) {
-		return Joiner.on(separator).join(items);
+		return String.join(separator, items);
 	}
 
 	public static String insert(String from, int pos, String val) {

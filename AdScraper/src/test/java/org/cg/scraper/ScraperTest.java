@@ -9,7 +9,6 @@ import org.cg.scraping.SiteScraper;
 import org.cg.scraping.SiteScraperFactory;
 import org.junit.Test;
 
-import com.google.common.base.Predicate;
 
 public class ScraperTest {
 

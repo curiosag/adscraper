@@ -1,14 +1,12 @@
 package org.cg.common.core;
 
 import java.util.Observable;
+import java.util.Optional;
 
-import com.google.common.base.Optional;
-
-import org.cg.common.core.Logging;
 
 public abstract class AbstractLogger extends Observable implements Logging{
 
-	private Optional <String> absent = Optional.absent();
+	private Optional<String> absent = Optional.empty();
 	private Optional <String> lastInfo = absent;
 	private Optional <String> lastError = absent;
 
@@ -18,14 +16,14 @@ public abstract class AbstractLogger extends Observable implements Logging{
 	@Override
 	public void Info(String info) {
 		hdlInfo(info);
-		lastInfo = Optional.fromNullable(info);
+		lastInfo = Optional.ofNullable(info);
 		hdlNotification();
 	}
 
 	@Override
 	public void Error(String error) {
 		hdlError(error);
-		lastError = Optional.fromNullable(error);
+		lastError = Optional.ofNullable(error);
 		hdlNotification();
 	}
 
