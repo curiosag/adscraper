@@ -1,4 +1,4 @@
-package org.cg.dispatch;
+package app.dispatch;
 
 import org.cg.ads.advalues.ScrapedValues;
 

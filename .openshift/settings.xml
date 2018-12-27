@@ -1,3 +1,0 @@
-<settings>
-    <localRepository>${OPENSHIFT_DATA_DIR}/.m2</localRepository>
-</settings>

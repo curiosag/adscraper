@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="prop">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="key" use="optional"/>
+          <xs:attribute type="xs:string" name="val" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="url">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="id" use="optional"/>
+          <xs:attribute type="xs:string" name="val" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="term">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="val" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="watching">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="id" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="recipient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="watching" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="email"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mailprops">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="prop" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="urls">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="url" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="filter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="term" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="recipients">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="recipient"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="settings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mailprops"/>
+        <xs:element ref="urls"/>
+        <xs:element ref="filter"/>
+        <xs:element ref="recipients"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

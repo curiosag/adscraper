@@ -1,4 +1,4 @@
-package org.cg.dispatch;
+package app.dispatch;
 
 import java.io.UnsupportedEncodingException;
 import javax.mail.Message;

@@ -1,4 +1,4 @@
-package org.cg.dispatch;
+package app.dispatch;
 
 import org.cg.ads.advalues.ScrapedValues;
 import org.cg.base.Check;
@@ -20,7 +20,7 @@ public class Dispatch {
         return delivery;
     }
 
-    private final List<String> targets = Arrays.asList("curiosa.globunznik@gmail.com");
+    private final List<String> targets = Arrays.asList("curiosa.globunznik@current.com");
 
     public void deliver(List<ScrapedValues> ads) {
         Log.info(String.format("about to deliver %d ads considering defined rules", ads.size()));
@@ -37,7 +37,7 @@ public class Dispatch {
 
     public static Dispatch instance() {
         if (instance == null)
-            instance = new Dispatch(new MailDelivery(MailSessionProperties.gmail()));
+            instance = new Dispatch(new MailDelivery(MailSessionProperties.current()));
 
         return instance;
     }

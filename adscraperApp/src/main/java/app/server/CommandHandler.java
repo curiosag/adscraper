@@ -3,9 +3,9 @@ package app.server;
 import app.data.DataTable;
 import org.cg.base.Const;
 import org.cg.base.Log;
-import org.cg.dispatch.MailSessionProperties;
+import app.dispatch.MailSessionProperties;
 import org.cg.common.io.FileUtil;
-import org.cg.dispatch.MailDelivery;
+import app.dispatch.MailDelivery;
 import org.cg.util.http.HttpUtil;
 
 import java.io.File;
@@ -19,7 +19,7 @@ public class CommandHandler {
 
     private String[] adminUserCommands = {"clip", "m", "set", "unset", "p", "x"};
 
-    private String[] adminUsers = {"curiosa.globunznik@gmail.com"};
+    private String[] adminUsers = {"curiosa.globunznik@current.com"};
 
     private final MailSessionProperties mailSessionProperties;
 

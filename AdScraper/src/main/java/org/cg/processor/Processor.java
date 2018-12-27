@@ -4,7 +4,6 @@ import org.cg.ads.advalues.ScrapedValues;
 import org.cg.ads.advalues.ValueKind;
 import org.cg.base.Check;
 import org.cg.base.Log;
-import org.cg.dispatch.Dispatch;
 import org.cg.history.History;
 import org.cg.scraping.SiteScraper;
 import org.cg.scraping.SiteScraperFactory;
@@ -12,15 +11,18 @@ import org.cg.scraping.SiteScraperFactory;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 public final class Processor {
 
     private static final String TRUE = "true";
     private static final String FALSE = "false";
+    Consumer<ScrapedValues> dispatcher;
 
-    public void process(String urlId, String url, List<String> excludedTerms) {
+    public void process(String urlId, String url, List<String> excludedTerms, Consumer<ScrapedValues> dispatcher) {
         Check.notEmpty(url);
+        this.dispatcher = dispatcher;
 
         Optional<SiteScraper> scraper = getScraper(url);
         if (!scraper.isPresent())
@@ -53,7 +55,7 @@ public final class Processor {
 
     private void dispatch(String urlId, boolean dispatch, List<ScrapedValues> valid) {
         if (dispatch) {
-            Dispatch.instance().deliver(valid);
+            valid.forEach(dispatcher::accept);
         } else {
             Log.info(String.format("initial execution for urlId %s, no recipients will be notified", urlId));
         }
