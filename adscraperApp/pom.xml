@@ -68,7 +68,7 @@
                         <configuration>
                             <tasks>
                                 <delete>
-                                    <fileset dir="target/dependency" includes="maven*,wagon*,surefire*,plexus*,junit*"/>
+                                    <fileset dir="target/dependency" includes="maven*,wagon*,surefire*,plexus*,junit*,scala*,jackrabbit*"/>
                                 </delete>
                             </tasks>
                         </configuration>
@@ -98,11 +98,6 @@
             <groupId>javax.mail</groupId>
             <artifactId>mail</artifactId>
             <version>1.4</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.persistence</groupId>
-            <artifactId>persistence-api</artifactId>
-            <version>1.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.cg.ad</groupId>
