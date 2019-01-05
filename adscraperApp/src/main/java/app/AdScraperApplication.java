@@ -4,6 +4,7 @@ import app.dispatch.Dispatch;
 import app.server.RudiHttpServer;
 import org.cg.ads.app.settings.Term;
 import org.cg.ads.app.settings.Url;
+import org.cg.common.util.Exc;
 import org.cg.history.History;
 import org.cg.processor.Processor;
 
@@ -16,16 +17,20 @@ import java.util.stream.Collectors;
 
 public class AdScraperApplication {
     private static final Logger LOG = Logger.getLogger(AdScraperApplication.class.getSimpleName());
-    private String LOCAL_SETTINGS = null;
+    private String LOCAL_SETTINGS = "settings.xml";
 
     public static void main(String[] args) {
         new AdScraperApplication().run();
     }
 
     public void run() {
-        settings();
-        rudi();
-        scan();
+        try {
+            settings();
+            rudi();
+            scan();
+        } catch (Exception e) {
+            LOG.severe("Adscraper died from " + e.getMessage() + "\r\n" + Exc.getStackTrace(e));
+        }
     }
 
     private void scan() {
@@ -37,20 +42,19 @@ public class AdScraperApplication {
                 settings.getUrls().getUrl().forEach(url -> new Processor().process(url.getId(), url.getVal(), filter, ad -> Dispatch.instance().deliver(ad)));
             }
             try {
-                if (Thread.interrupted())
-                {
+                if (Thread.interrupted()) {
                     return;
                 }
-                Thread.sleep(1000 * 10);
+                Thread.sleep(1000 * 120);
             } catch (InterruptedException e) {
                 run = false;
+                Thread.currentThread().interrupt();
             }
         }
     }
 
     private void settings() {
-        if (LOCAL_SETTINGS != null)
-        {
+        if (LOCAL_SETTINGS != null) {
             InputStream in = this.getClass().getClassLoader().getResourceAsStream("settings.xml");
             try {
                 Settings.getInstance().set(in);
@@ -61,7 +65,7 @@ public class AdScraperApplication {
     }
 
     private void rudi() {
-        RudiHttpServer rudi = new RudiHttpServer(1781);
+        RudiHttpServer rudi = new RudiHttpServer(8080);
 
         rudi.setGet(() -> {
             if (!Settings.getInstance().get().isPresent()) {

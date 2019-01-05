@@ -1,5 +1,7 @@
 package app;
 
+import org.cg.base.Check;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
@@ -28,6 +30,7 @@ public class Settings {
     }
 
     public void set(InputStream in) throws JAXBException {
+        Check.notNull(in);
         JAXBContext jaxbContext = JAXBContext.newInstance(org.cg.ads.app.settings.Settings.class);
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
         settings = (org.cg.ads.app.settings.Settings) jaxbUnmarshaller.unmarshal(in);

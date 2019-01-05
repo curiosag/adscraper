@@ -10,4 +10,4 @@
 
 	docker build . -t curiosag/adsniffer ... build an image from directory . with tag
 
-sudo docker run -p 8080:8080  curiosag/adsniffer	... run image and map port
+sudo docker run -p 1781:1781  curiosag/adsniffer	... run image and map port

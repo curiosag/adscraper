@@ -1,6 +1,7 @@
 package app.server;
 
 import org.cg.base.Check;
+import org.cg.common.util.Exc;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -50,7 +51,7 @@ public class RudiHttpServer implements Runnable {
                 }
             }
         } catch (Exception e) {
-            LOG.severe("Rudi died from " + e.getMessage());
+            LOG.severe("Rudi died from " + e.getMessage() + "\r\n" + Exc.getStackTrace(e));
         }
     }
 
