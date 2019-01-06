@@ -62,7 +62,7 @@ public final class MailDelivery implements IMailDelivery {
 		return String.format("Tel:%s %s", ad.valueOrDefault(ValueKind.phone), ad.valueOrDefault(ValueKind.description));
 	}
 
-	public final String testMail() {
+	public String testMail() {
 		Log.info(String.format("testMail. sender: %s, mailRecipient: %s, from: %s", sender, sender, "vom Grausewitz"));
 		sendMail(DebugUtilities.getTestAd(), sender);
 		return "sent";
@@ -81,7 +81,7 @@ public final class MailDelivery implements IMailDelivery {
 		String from = HttpUtil.baseUrl(ad.get(ValueKind.url).valueOrDefault()).replace("http://www.", "");
 		String result = null;
 		try {
-			Log.info("mail to " + mailRecipient + "ad von " + from + " " + headerFormatted(ad));
+			Log.info("mail to " + mailRecipient + ", ad von " + from + " " + headerFormatted(ad));
 			sendMail.send(sender, mailRecipient, "ad von " + from, headerFormatted(ad), bodyMailFormatted(ad), true);
 		} catch (Exception e) {
 			result = e.getMessage() + "\n" + result;

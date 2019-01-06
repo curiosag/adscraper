@@ -49,4 +49,9 @@ public final class HistoryRingBuffer {
 		return cache.size();
 	}
 
+	public void clip(int num){
+		for(int i = 0; i < num && ! cache.isEmpty(); i ++){
+			cache.remove(i);
+		}
+	}
 }

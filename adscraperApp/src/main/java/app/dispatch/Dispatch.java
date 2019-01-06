@@ -20,7 +20,12 @@ public class Dispatch {
         return delivery;
     }
 
-    private final List<String> targets = Arrays.asList("curiosa.globunznik@current.com");
+    private List<String> targets = Arrays.asList("curiosa.globunznik@gmail.com");
+
+    public Dispatch targets(List<String> targets){
+        this.targets = targets;
+        return this;
+    }
 
     public void deliver(List<ScrapedValues> ads) {
         Log.info(String.format("about to deliver %d ads considering defined rules", ads.size()));
@@ -31,6 +36,10 @@ public class Dispatch {
     public void deliver(ScrapedValues ad) {
         for (String target : targets)
             getDelivery().sendMail(ad, target);
+    }
+
+    public void testmail(){
+        ((MailDelivery) delivery).testMail();
     }
 
     private static Dispatch instance;

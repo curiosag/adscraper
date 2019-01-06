@@ -7,6 +7,8 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
+import java.util.*;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.logging.Logger;
@@ -22,9 +24,7 @@ public class RudiHttpServer implements Runnable {
         this.port = port;
     }
 
-    private Supplier<String> get = () -> "nope";
-    private Runnable del = () -> {
-    };
+    private Function<HttpHeader, String> hdl = whatever -> "";
     private Function<InputStream, Boolean> put = i -> false;
 
     public synchronized void start() {
@@ -41,7 +41,7 @@ public class RudiHttpServer implements Runnable {
         if (!running) {
             throw new IllegalStateException("Rudi won't run sans start.");
         }
-        try (ServerSocket serverSocket = new ServerSocket(port)){
+        try (ServerSocket serverSocket = new ServerSocket(port)) {
             serverSocket.setSoTimeout(1000);
             while (running && !Thread.interrupted()) {
                 try (Socket clientSocket = serverSocket.accept()) {
@@ -62,26 +62,17 @@ public class RudiHttpServer implements Runnable {
                     HttpHeader header = readHeader(in);
                     if ("POST".equals(header.method))
                         hdlPut(header.contentLength, in, out);
-                    else if ("GET".equals(header.method)) {
-                        hdlGet(out);
-                    } else if ("DELETE".equals(header.method)) {
-                        del.run();
-                        replyStatus(true, out);
-                    } else {
-                        out.write("HTTP/1.0 773 DOPE\r\n");
+                    else {
+                        String reply = hdl.apply(header);
+                        replyStatus(reply != null, out);
+                        if (reply != null) {
+                            out.write(reply);
+                        }
                     }
                 } catch (SocketTimeoutException ex) {
                     out.write("timeout");
                 }
             }
-        }
-    }
-
-    private void hdlGet(PrintWriter out) {
-        String reply = get.get();
-        replyStatus(reply != null, out);
-        if (reply != null) {
-            out.write(reply);
         }
     }
 
@@ -113,10 +104,9 @@ public class RudiHttpServer implements Runnable {
     }
 
     private HttpHeader readHeader(BufferedReader reader) throws IOException {
-        HttpHeader result = new HttpHeader();
         String headerLine = reader.readLine();
         LOG.info(headerLine);
-        result.method(getMethod(headerLine));
+        HttpHeader result = getHttpHeader(headerLine);
         while (!empty(headerLine)) {
             headerLine = reader.readLine();
             LOG.info(headerLine);
@@ -128,6 +118,50 @@ public class RudiHttpServer implements Runnable {
             }
         }
         return result;
+    }
+
+    private HttpHeader getHttpHeader(String headerLine) {
+        return new HttpHeader()
+                .method(getMethod(headerLine))
+                .path(getPath(headerLine))
+                .params(getParams(headerLine));
+
+    }
+
+    private Collection<String> getPath(String headerLine) {
+        ArrayList<String> result = new ArrayList<>();
+        getUrl(headerLine).ifPresent(url -> Arrays.asList(url.getPath().split("/")).stream()
+                .filter(i -> i != null && i.trim().length() > 0)
+                .forEach(result::add));
+        return result;
+    }
+
+    private Map<String, String> getParams(String headerLine) {
+        Map<String, String> result = new HashMap<>();
+        getUrl(headerLine).ifPresent(url ->
+                url.getParams().ifPresent(path ->
+                        Arrays.asList(path.split("&")).stream().forEach(
+                                i -> {
+                                    String[] param = i.split("=");
+                                    if (param.length < 2) {
+                                        result.put(param[0], "");
+                                    }
+                                    if (param.length >= 2) {
+                                        result.put(param[0], param[1]);
+                                    }
+                                }
+                        )));
+        return result;
+    }
+
+    private Optional<RudiUrl> getUrl(String headerLine) {
+        String[] items = headerLine.split(" ");
+        if (items.length >= 3) {
+            String[] parts = items[1].split("\\?");
+            RudiUrl result = new RudiUrl(parts[0], parts.length > 1 ? parts[1] : null);
+            return Optional.of(result);
+        }
+        return Optional.empty();
     }
 
     private String getMethod(String headerLine) {
@@ -161,9 +195,9 @@ public class RudiHttpServer implements Runnable {
         this.running = false;
     }
 
-    public synchronized void setGet(Supplier<String> get) {
-        Check.notNull(get);
-        this.get = get;
+    public synchronized void setHdl(Function<HttpHeader, String> hdl) {
+        Check.notNull(hdl);
+        this.hdl = hdl;
     }
 
     public synchronized void setPut(Function<InputStream, Boolean> put) {
@@ -171,8 +205,4 @@ public class RudiHttpServer implements Runnable {
         this.put = put;
     }
 
-    public void setDel(Runnable del) {
-        Check.notNull(del);
-        this.del = del;
-    }
 }

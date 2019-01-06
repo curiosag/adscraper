@@ -1,0 +1,100 @@
+{
+  "mailprops": {
+    "prop": [
+      {
+        "key": "username",
+        "val": "curiosa.globunznik@gmail.com"
+      },
+      {
+        "key": "pwd",
+        "val": "pfrzniklala"
+      },
+      {
+        "key": "port",
+        "val": "587"
+      },
+      {
+        "key": "host",
+        "val": "smtp.gmail.com"
+      },
+      {
+        "key": "security",
+        "val": "tls"
+      }
+    ]
+  },
+  "urls": {
+    "url": [
+      {
+        "id": "bazar1020",
+        "val": "http://www.bazar.at/wien-leopoldstadt-wohnungen-miete-anzeigen,dir,1,cId,14,fc,107,loc,107,ref,3,ret,6,tp,0,at,1922"
+      },
+      {
+        "id": "willhaben1020",
+        "val": "https://www.willhaben.at/iad/immobilien/mietwohnungen/mietwohnung-angebote?&PRICE_FROM=100&keyword=1020&PRICE_TO=500&areaId=900"
+      }
+    ]
+  },
+  "filter": {
+    "term": [
+      {
+        "val": "stunde"
+      },
+      {
+        "val": "hobbyr"
+      },
+      {
+        "val": "prober"
+      },
+      {
+        "val": "gemeinschaft"
+      },
+      {
+        "val": "woche"
+      },
+      {
+        "val": "sommer"
+      },
+      {
+        "val": "ferien"
+      },
+      {
+        "val": "pendler"
+      },
+      {
+        "val": "student"
+      },
+      {
+        "val": "tausch"
+      },
+      {
+        "val": "zwischenmiete"
+      },
+      {
+        "val": "suche"
+      },
+      {
+        "val": "mitbewohner"
+      },
+      {
+        "val": "vormerksch"
+      },
+      {
+        "val": "gemeinde"
+      }
+    ]
+  },
+  "recipients": {
+    "recipient": {
+      "email": "curiosa.globunznik@gmail.com",
+      "watching": [
+        {
+          "id": "bazar1020"
+        },
+        {
+          "id": "willhaben1020"
+        }
+      ]
+    }
+  }
+}

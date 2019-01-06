@@ -1,7 +1,6 @@
 package app.dispatch;
 
-import app.Settings;
-import org.cg.ads.app.settings.Mailprops;
+import app.settings.SettingsRepository;
 
 import java.util.Map;
 import java.util.Properties;
@@ -46,11 +45,11 @@ public class MailSessionProperties {
     }
 
     public static MailSessionProperties current() {
-        if (! Settings.getInstance().get().isPresent())
+        if (! SettingsRepository.getInstance().get().isPresent())
         {
             throw new IllegalStateException("settings not initialized");
         }
-        Map<String, String> props = Settings.getInstance().getMailProps();
+        Map<String, String> props = SettingsRepository.getInstance().getMailProps();
         return new MailSessionProperties(props.get("username"),
                 props.get("pwd"), props.get("host"), props.get("port"), props.get("security"));
     }
