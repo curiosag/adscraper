@@ -44,7 +44,6 @@ public class AdScraperApplication {
             if (SettingsRepository.getInstance().get().isPresent()) {
                 Settings settings = SettingsRepository.getInstance().get().get();
                 List<String> filter = settings.getFilter().getTerm().stream().map(Term::getVal).collect(Collectors.toList());
-                Dispatch.instance().targets(Collections.singletonList(settings.getRecipients().getRecipient().getEmail()));
                 settings.getUrls().getUrl().forEach(url -> new Processor().process(url.getId(), url.getVal(), filter, ad -> Dispatch.instance().deliver(ad)));
             }
             try {

@@ -20,7 +20,8 @@ public class Dispatch {
         return delivery;
     }
 
-    private List<String> targets = Arrays.asList("curiosa.globunznik@gmail.com");
+    private List<String> targets = Arrays.asList("curiosa.globunznik@gmail.com", "angela.pointinger@web.de");
+
 
     public Dispatch targets(List<String> targets){
         this.targets = targets;

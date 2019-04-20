@@ -7,7 +7,7 @@
       },
       {
         "key": "pwd",
-        "val": "pfrzniklala"
+        "val": "sauriassl"
       },
       {
         "key": "port",
@@ -30,8 +30,24 @@
         "val": "http://www.bazar.at/wien-leopoldstadt-wohnungen-miete-anzeigen,dir,1,cId,14,fc,107,loc,107,ref,3,ret,6,tp,0,at,1922"
       },
       {
+        "id": "bazar1200",
+        "val": "http://www.bazar.at/wien-brigittenau-wohnungen-miete-anzeigen,dir,1,cId,14,fc,125,loc,125,ref,3,ret,6,tp,0,at,1922"
+      },
+      {
+        "id": "bazar1230",
+        "val": "http://www.bazar.at/wien-donaustadt-wohnungen-miete-anzeigen,dir,1,cId,14,fc,127,loc,127,ref,3,ret,6,tp,0,at,1922"
+      },
+      {
         "id": "willhaben1020",
-        "val": "https://www.willhaben.at/iad/immobilien/mietwohnungen/mietwohnung-angebote?&PRICE_FROM=100&keyword=1020&PRICE_TO=500&areaId=900"
+        "val": "https://www.willhaben.at/iad/immobilien/mietwohnungen/mietwohnung-angebote?&PRICE_FROM=160&PRICE_TO=500&areaId=117224&parent_areaid=900"
+      },
+      {
+        "id": "willhaben1200",
+        "val": "https://www.willhaben.at/iad/immobilien/mietwohnungen/mietwohnung-angebote?&PRICE_FROM=160&PRICE_TO=500&areaId=117242&parent_areaid=900"
+      },
+      {
+        "id": "willhaben1230",
+        "val": "https://www.willhaben.at/iad/immobilien/mietwohnungen/mietwohnung-angebote?&PRICE_FROM=160&PRICE_TO=500&areaId=117244&parent_areaid=900"
       }
     ]
   },
