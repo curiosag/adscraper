@@ -1,17 +1,21 @@
 package org.cg.util.http;
 
-import com.gargoylesoftware.htmlunit.BrowserVersion;
-import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import org.apache.commons.io.IOUtils;
 import org.cg.ads.advalues.WithUrl;
 import org.cg.base.Check;
 import org.cg.base.Const;
 import org.cg.base.Log;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
@@ -20,6 +24,17 @@ import static org.cg.base.Idiom.no;
 
 
 public final class HttpUtil {
+
+    WebDriver driver = null;
+
+    private WebDriver getDriver() {
+        if (driver == null) {
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("headless");
+            driver = new ChromeDriver(options);
+        }
+        return driver;
+    }
 
     public static String baseUrl(String url) {
         Check.notNull(url);
@@ -36,40 +51,40 @@ public final class HttpUtil {
         return u.getProtocol() + "://" + u.getHost() + port;
     }
 
-    public static String getHtmlString(String url, boolean jsEnabled) {
-
-        java.util.logging.Logger.getLogger("com.gargoylesoftware").setLevel(java.util.logging.Level.SEVERE);
-
-        try (final WebClient webClient = new WebClient(BrowserVersion.FIREFOX_60)) {
-            webClient.getOptions().setJavaScriptEnabled(jsEnabled);
-            webClient.getOptions().setCssEnabled(jsEnabled);
-
-            webClient.waitForBackgroundJavaScript(60000);
-            HtmlPage page = ((HtmlPage) webClient.getPage(url));
-            return page.asXml();
-        } catch (Exception e) {
-            Log.logException(e, !Const.ADD_STACK_TRACE);
-            return null;
-        }
-    }
-
-
-    public static Document getJsoupDoc(String url, boolean jsEnabled) {
+    public Document getJsoupDoc(String url, boolean jsEnabled) {
         Check.notEmpty(url);
 
-        String s = getHtmlString(url, jsEnabled);
-        if (s != null) {
-            try {
+        try {
+            String s = jsEnabled ? getBySelenium(url) : getByUrlConnection(url);
+            if (s != null) {
                 return Jsoup.parse(s, url);
-            } catch (Exception e) {
-                Log.logException(e, Const.ADD_STACK_TRACE);
             }
+        } catch (Exception e) {
+            Log.logException(e, Const.ADD_STACK_TRACE);
         }
 
         return null;
     }
 
-    private static <T> HttpResult<T> getDoc(WithUrl<T> source, boolean jsEnabled) {
+    public String getByUrlConnection(String url) {
+        try {
+            HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
+            conn.setInstanceFollowRedirects(true);
+            conn.setConnectTimeout(Const.HTTP_TIMEOUT);
+            conn.connect();
+            return IOUtils.toString(conn.getInputStream(), StandardCharsets.UTF_8.name());
+        } catch (Exception e)
+        {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private synchronized String getBySelenium(String url) {
+        getDriver().get(url);
+        return getDriver().getPageSource();
+    }
+
+    private <T> HttpResult<T> getDoc(WithUrl<T> source, boolean jsEnabled) {
         try {
             return new HttpResult<T>(source, null, getJsoupDoc(source.url(), jsEnabled));
         } catch (Exception e) {
@@ -78,8 +93,8 @@ public final class HttpUtil {
         }
     }
 
-    public final static <T, V extends WithUrl<T>> Collection<HttpResult<T>> getDocs(Collection<V> sources, boolean jsEnabled) {
-        return sources.stream().parallel().map(source -> HttpUtil.getDoc(source, jsEnabled)).collect(Collectors.toList());
+    public <T, V extends WithUrl<T>> Collection<HttpResult<T>> getDocs(Collection<V> sources, boolean jsEnabled) {
+        return sources.stream().parallel().map(source -> getDoc(source, jsEnabled)).collect(Collectors.toList());
     }
 
 }

@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 
 public final class SiteScraperJSoup implements SiteScraper, IMasterPageScraper, IDetailPageScraper {
 
+    private HttpUtil httpUtil = new HttpUtil();
     private SiteValueScrapers extractions;
 
     private String masterListSelector() {
@@ -42,7 +43,7 @@ public final class SiteScraperJSoup implements SiteScraper, IMasterPageScraper, 
         Check.notNull(url);
         Check.notNull(canProcessDetail);
 
-        Document mainDoc = HttpUtil.getJsoupDoc(url, extractions.jsEnabled());
+        Document mainDoc = httpUtil.getJsoupDoc(url, extractions.jsEnabled());
 
         if (mainDoc != null) {
             List<ScrapedValues> masterListValues = scrapeMasterList(url, mainDoc.select(masterListSelector()));
@@ -72,11 +73,12 @@ public final class SiteScraperJSoup implements SiteScraper, IMasterPageScraper, 
                 .map(v -> addDetailLink(url, v))
                 .filter(Optional::isPresent)
                 .map(Optional::get)
+                .skip(extractions.skip())
                 .collect(Collectors.toList());
     }
 
     private Collection<ScrapedValues> scrapeDetails(Collection<ScrapedValues> ads) {
-        return HttpUtil.getDocs(ads, extractions.jsEnabled()).stream()
+        return httpUtil.getDocs(ads, extractions.jsEnabled()).stream()
                 .filter(httpResult -> httpResult.success() && httpResult.document() != null)
                 .map(httpResult -> extractorAdDetails().apply(httpResult.document(), httpResult.input().thingWithUrl()))
                 .collect(Collectors.toList());
