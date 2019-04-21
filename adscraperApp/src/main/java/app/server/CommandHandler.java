@@ -194,7 +194,7 @@ public class CommandHandler {
         if (tokens.length != 2)
             return "usage: get [url]";
 
-        String result = HttpUtil.getHtmlInputString(tokens[1]);
+        String result = HttpUtil.getHtmlString(tokens[1], false);
         if (result != null)
             result = result.replace("<img", "<iiimg");
         return result;

@@ -1,6 +1,8 @@
 package org.cg.util.http;
 
-import org.apache.commons.io.IOUtils;
+import com.gargoylesoftware.htmlunit.BrowserVersion;
+import com.gargoylesoftware.htmlunit.WebClient;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import org.cg.ads.advalues.WithUrl;
 import org.cg.base.Check;
 import org.cg.base.Const;
@@ -8,10 +10,6 @@ import org.cg.base.Log;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import java.io.BufferedInputStream;
-import java.io.DataInputStream;
-import java.io.IOException;
-import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Collection;
@@ -19,6 +17,7 @@ import java.util.stream.Collectors;
 
 import static org.cg.base.Const.STACK_TRACE;
 import static org.cg.base.Idiom.no;
+
 
 public final class HttpUtil {
 
@@ -37,88 +36,50 @@ public final class HttpUtil {
         return u.getProtocol() + "://" + u.getHost() + port;
     }
 
-    // 15-01-13 appengine threw an exception after bazar's one redirect
-    // it does not react to System.setProperty("http.maxRedirects", "1") either
-    // so here's a hack to follow 301 redirects
+    public static String getHtmlString(String url, boolean jsEnabled) {
 
-    private static HttpURLConnection getHttpConnection(URL url) throws IOException {
-        return (HttpURLConnection) url.openConnection();
-    }
+        java.util.logging.Logger.getLogger("com.gargoylesoftware").setLevel(java.util.logging.Level.SEVERE);
 
-    private static DataInputStream _getHtmlInputStream(String url, int level) {
-        if (level > 2) {
-            Log.severe("redirect loop encountered");
+        try (final WebClient webClient = new WebClient(BrowserVersion.FIREFOX_60)) {
+            webClient.getOptions().setJavaScriptEnabled(jsEnabled);
+            webClient.getOptions().setCssEnabled(jsEnabled);
+
+            webClient.waitForBackgroundJavaScript(60000);
+            HtmlPage page = ((HtmlPage) webClient.getPage(url));
+            return page.asXml();
+        } catch (Exception e) {
+            Log.logException(e, !Const.ADD_STACK_TRACE);
             return null;
-        } else
-            try {
-                URL url_ = new URL(url);
-                String host = url_.getHost();
-
-                HttpURLConnection conn = getHttpConnection(url_);
-                conn.setInstanceFollowRedirects(false);
-                conn.setConnectTimeout(Const.HTTP_TIMEOUT);
-
-                conn.connect();
-
-                if (conn.getResponseCode() != 301) {
-                    return new DataInputStream(new BufferedInputStream(conn.getInputStream()));
-                } else {
-                    String location = conn.getHeaderField("Location");
-                    return _getHtmlInputStream("http://" + host + location, level + 1);
-                }
-
-            } catch (Exception e) {
-                Log.logException(e, !Const.ADD_STACK_TRACE);
-                return null;
-            }
-    }
-
-    private static DataInputStream getHtmlInputStream(String url) {
-        return _getHtmlInputStream(url, 0);
-    }
-
-    public static String getHtmlInputString(String url) {
-        Check.notNull(url);
-
-        DataInputStream s = getHtmlInputStream(url);
-        if (s != null) {
-            try {
-                return IOUtils.toString(s);
-            } catch (IOException e) {
-                Log.logException(e, Const.ADD_STACK_TRACE);
-                return null;
-            }
         }
-        return null;
     }
 
-    public static Document getJsoupDoc(String url) {
+
+    public static Document getJsoupDoc(String url, boolean jsEnabled) {
         Check.notEmpty(url);
 
-        try (DataInputStream s = getHtmlInputStream(url)) {
-            if (s != null) {
-                try {
-                    return Jsoup.parse(s, "UTF-8", url);
-                } catch (IOException e) {
-                    Log.logException(e, Const.ADD_STACK_TRACE);
-                }
+        String s = getHtmlString(url, jsEnabled);
+        if (s != null) {
+            try {
+                return Jsoup.parse(s, url);
+            } catch (Exception e) {
+                Log.logException(e, Const.ADD_STACK_TRACE);
             }
-        } catch (IOException ignored) {
         }
+
         return null;
     }
 
-    private static <T> HttpResult<T> getDoc(WithUrl<T> source) {
+    private static <T> HttpResult<T> getDoc(WithUrl<T> source, boolean jsEnabled) {
         try {
-            return new HttpResult<T>(source, null, getJsoupDoc(source.url()));
+            return new HttpResult<T>(source, null, getJsoupDoc(source.url(), jsEnabled));
         } catch (Exception e) {
             Log.logException(e, no(STACK_TRACE));
             return new HttpResult<T>(source, e, null);
         }
     }
 
-    public final static <T, V extends WithUrl<T>> Collection<HttpResult<T>> getDocs(Collection<V> sources) {
-        return sources.stream().parallel().map(HttpUtil::getDoc).collect(Collectors.toList());
+    public final static <T, V extends WithUrl<T>> Collection<HttpResult<T>> getDocs(Collection<V> sources, boolean jsEnabled) {
+        return sources.stream().parallel().map(source -> HttpUtil.getDoc(source, jsEnabled)).collect(Collectors.toList());
     }
 
 }

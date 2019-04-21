@@ -15,6 +15,12 @@ public final class SiteValueScrapersJobWohnen implements SiteValueScrapers  {
 		return "[class=elist]:not(:contains(Diese Suche als Wohn-Agent speichern))";
 	}
 
+	@Override
+	public boolean jsEnabled() {
+		return false;
+	}
+
+
 	public ValuesScraper extractorAdList() {
 		ValuesScraper result = new ValuesScraper();
 		result.add(ValueScraperJSoup.create(ValueKind.detailLink, "td:eq(2) a", "href"));

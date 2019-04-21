@@ -18,6 +18,7 @@ public final class SiteScraperFactory {
 		addScraper(new SiteValueScrapersBazar());
 		addScraper(new SiteValueScrapersJobWohnen());
 		addScraper(new SiteValueScrapersWillhaben());
+		addScraper(new SiteValueScrapersImmobilienscout24());
 	}
 
 	public static final Optional<SiteScraper> get(String url) {

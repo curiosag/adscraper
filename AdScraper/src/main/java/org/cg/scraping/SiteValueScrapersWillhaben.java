@@ -14,6 +14,11 @@ public final class SiteValueScrapersWillhaben implements SiteValueScrapers {
         return ".content-section";
     }
 
+    @Override
+    public boolean jsEnabled() {
+        return false;
+    }
+
     public ValuesScraper extractorAdList() {
         ValuesScraper result = new ValuesScraper();
         result.add(ValueScraperJSoup.create(ValueKind.detailLink, "a", "href"));

@@ -42,7 +42,7 @@ public final class SiteScraperJSoup implements SiteScraper, IMasterPageScraper, 
         Check.notNull(url);
         Check.notNull(canProcessDetail);
 
-        Document mainDoc = HttpUtil.getJsoupDoc(url);
+        Document mainDoc = HttpUtil.getJsoupDoc(url, extractions.jsEnabled());
 
         if (mainDoc != null) {
             List<ScrapedValues> masterListValues = scrapeMasterList(url, mainDoc.select(masterListSelector()));
@@ -76,7 +76,7 @@ public final class SiteScraperJSoup implements SiteScraper, IMasterPageScraper, 
     }
 
     private Collection<ScrapedValues> scrapeDetails(Collection<ScrapedValues> ads) {
-        return HttpUtil.getDocs(ads).stream()
+        return HttpUtil.getDocs(ads, extractions.jsEnabled()).stream()
                 .filter(httpResult -> httpResult.success() && httpResult.document() != null)
                 .map(httpResult -> extractorAdDetails().apply(httpResult.document(), httpResult.input().thingWithUrl()))
                 .collect(Collectors.toList());
