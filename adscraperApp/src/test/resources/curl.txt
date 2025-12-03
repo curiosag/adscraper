@@ -1,0 +1,2 @@
+curl -X POST -d @./data.xml http://localhost:1781
+curl -X POST -d '<run><log encoding="hexBinary">4142430A</log><result>0</result><duration>2000</duration></run>' http://localhost:1781

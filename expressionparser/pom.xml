@@ -6,51 +6,11 @@
 	<version>0.1</version>
 
 	<parent>
-		<groupId>org.springframework</groupId>
+		<groupId>org.cg.ad</groupId>
 		<artifactId>ads</artifactId>
 		<version>0.1.0</version>
 	</parent>
 
-	<build>
-		<sourceDirectory>src</sourceDirectory>
-		<plugins>
-			<plugin>
-				<groupId>net.alchim31.maven</groupId>
-				<artifactId>scala-maven-plugin</artifactId>
-				<version>3.2.1</version>
-				<executions>
-					<execution>
-						<id>scala-compile</id>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>add-source</goal>
-							<goal>compile</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>scala-test-compile</id>
-						<phase>process-test-resources</phase>
-						<goals>
-							<goal>testCompile</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.6</version>
-				<configuration>
-					<archive>
-						<manifestEntries>
-							<mode>development</mode>
-							<url>${project.url}</url>
-						</manifestEntries>
-					</archive>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 	<dependencies>
 		<dependency>
 			<groupId>org.cg.scala.comp</groupId>
@@ -58,22 +18,9 @@
 			<version>0.1</version>
 		</dependency>
 		<dependency>
-			<groupId>org.cg.ads</groupId>
-			<artifactId>AdScraperAbstract</artifactId>
-			<version>0.1</version>
-		</dependency>
-		<!-- Classes will be found locally but NOT ON APPENGINE if scala versions -->
-		<!-- do not match for AdScraperExpressionFilter and scala-parser-combinators -->
-		<!-- org.scalatest:scalatest runs only locally, that's less an issue -->
-		<dependency>
-			<groupId>org.scala-lang</groupId>
-			<artifactId>scala-library</artifactId>
-			<version>${scala.version}</version>
-		</dependency>
-		<dependency>
 			<groupId>org.scala-lang.modules</groupId>
-			<artifactId>scala-parser-combinators_2.11</artifactId>
-			<version>1.0.4</version>
+			<artifactId>scala-parser-combinators_2.12</artifactId>
+			<version>1.1.1</version>
 		</dependency>
 	</dependencies>
 </project>

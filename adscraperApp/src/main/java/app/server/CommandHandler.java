@@ -1,60 +1,34 @@
 package app.server;
 
+import app.data.DataTable;
+import org.cg.base.Const;
+import org.cg.base.Log;
+import app.dispatch.MailSessionProperties;
+import org.cg.common.io.FileUtil;
+import app.dispatch.MailDelivery;
+import org.cg.util.http.HttpUtil;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-
-import app.data.DataTable;
-import app.data.ObjectToDataTableTransformer;
-import org.cg.base.Const;
-import org.cg.base.Log;
-import org.cg.base.MailSessionProperties;
-import org.cg.common.io.FileUtil;
-import org.cg.common.util.CollectionUtil;
-import org.cg.common.util.StringUtil;
-import org.cg.dispatch.MailDelivery;
-import org.cg.history.History;
-import org.cg.hub.Scraper;
-import org.cg.hub.Settings;
-import org.cg.rendering.ObjectRenderer;
-import org.cg.util.http.HttpUtil;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
-
-import com.google.common.base.Throwables;
-
-import app.storage.Repos;
-import app.storage.RepositoryItem;
 
 @SuppressWarnings("unused")
 public class CommandHandler {
 
-    @Value("${logging.file}")
-    private String loggingFile;
-
-    @Autowired
-    ScanRunner scanRunner;
+    private String loggingFile ="ads.log";
 
     private String[] adminUserCommands = {"clip", "m", "set", "unset", "p", "x"};
 
-    private String[] adminUsers = {"curiosa.globunznik@gmail.com"};
+    private String[] adminUsers = {"curiosa.globunznik@current.com"};
 
-    private final List<RepositoryItem> repos;
     private final MailSessionProperties mailSessionProperties;
 
-    private Collector<RepositoryItem, ?, List<RepositoryItem>> coll() {
-        return Collectors.toList();
-    }
 
     private boolean isAdminUser() {
         return true;
     }
 
-    public CommandHandler(Repos repos, MailSessionProperties mailSessionProperties) {
-        this.repos = repos.getItems();
+    public CommandHandler(MailSessionProperties mailSessionProperties) {
         this.mailSessionProperties = mailSessionProperties;
     }
 
@@ -91,11 +65,11 @@ public class CommandHandler {
             switch (cmd) {
 
                 case "suspend": {
-                    return Settings.instance().set("switch:" + Const.SETTING_SWITCH_SUSPENDED + "=true");
+                    return ""; //Settings.instance().set("switch:" + Const.SETTING_SWITCH_SUSPENDED + "=true");
                 }
 
                 case "resume": {
-                    Settings.instance().del(Const.SETTING_SWITCH_SUSPENDED);
+                    //Settings.instance().del(Const.SETTING_SWITCH_SUSPENDED);
                     return "unsuspended";
                 }
 
@@ -127,10 +101,10 @@ public class CommandHandler {
                     return new MailDelivery(mailSessionProperties).testFormat();
 
                 case "set":
-                    return Settings.instance().set(input.substring(4)) + "<br/><br/>" + getSettingsView();
+                    return "";//Settings.instance().set(input.substring(4)) + "<br/><br/>" + getSettingsView();
 
                 case "unset": {
-                    Settings.instance().del(input.substring(6));
+                    //Settings.instance().del(input.substring(6));
                     return getSettingsView();
                 }
 
@@ -152,7 +126,6 @@ public class CommandHandler {
                     return "not implemented";
 
                 case "x": {
-                    scanRunner.run();
                     return "Triggered scan";
                 }
 
@@ -162,7 +135,7 @@ public class CommandHandler {
 
         } catch (Exception e) {
             Log.logException(e, Const.ADD_STACK_TRACE);
-            return e.getClass().getName() + " " + e.getMessage() + " " + Throwables.getStackTraceAsString(e);
+            return e.getClass().getName() + " " + e.getMessage();
         }
     }
 
@@ -198,17 +171,10 @@ public class CommandHandler {
     }
 
     private String hdlKind() {
-        return StringUtil.toCsv(repos.stream().map(x -> x._class.getSimpleName()).collect(Collectors.toList()), "\n");
+        return null;
     }
     @SuppressWarnings("unchecked")
     private DataTable hdlView(String kind) {
-        List<RepositoryItem> c = repos.stream().filter(x -> x._class.getSimpleName().equals(kind))
-                .collect(Collectors.toList());
-
-        if (c.size() > 0) {
-            return new ObjectToDataTableTransformer(getN(c.get(0).repo.findAll(), 25)).getDataTable();
-        }
-
         return null;
     }
 
@@ -228,7 +194,7 @@ public class CommandHandler {
         if (tokens.length != 2)
             return "usage: get [url]";
 
-        String result = HttpUtil.getHtmlInputString(tokens[1]);
+        String result = new HttpUtil().getByUrlConnection(tokens[1]);
         if (result != null)
             result = result.replace("<img", "<iiimg");
         return result;
@@ -241,7 +207,7 @@ public class CommandHandler {
             return "usage: clip [urlId] [number]";
         try {
             int num = Integer.parseInt(tokens[2]);
-            return History.instance().clip(tokens[1], num);
+            return "gibts ned";
         } catch (Exception e) {
             return e.getClass().getName() + "\n" + e.getMessage();
         }

@@ -1,0 +1,13 @@
+
+    docker 	images			...	 list all images
+	rmi			            ... 	remove image
+
+
+	run -it <imagename> sh  ... runs image and shell opens
+
+
+    docker login --username=curiosag --email=curiosa.globunznik@gmail.com
+
+	docker build . -t curiosag/adsniffer ... build an image from directory . with tag
+
+sudo docker run -p 1781:1781  curiosag/adsniffer	... run image and map port

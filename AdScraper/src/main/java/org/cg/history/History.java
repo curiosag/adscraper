@@ -1,110 +1,83 @@
 package org.cg.history;
 
-import java.util.Dictionary;
-import java.util.Hashtable;
-import java.util.List;
-
 import org.cg.ads.advalues.ScrapedValues;
-import org.cg.adscraper.factory.StorageFactory;
 import org.cg.base.Check;
-import org.cg.base.IHistoricalDetailStorage;
-import org.cg.base.IHistoryStorage;
+
+import java.util.*;
 
 public final class History {
 
-	private static History instance;
-	private Dictionary<String, HistoryRingBuffer> urlBuffers = new Hashtable<String, HistoryRingBuffer>();
+    private static History instance;
+    private Dictionary<String, HistoryRingBuffer> urlBuffers = new Hashtable<String, HistoryRingBuffer>();
 
-	private final IHistoryStorage historyStorage;
-	private final IHistoricalDetailStorage historicalDetailStorage;
-	
-	
-	private History() {
-		super();
-		historyStorage = StorageFactory.get().getHistoryStorage();
-		historicalDetailStorage = StorageFactory.get().getHistoricalDetailStorage(); 
-	}
+    private History() {
+        super();
+    }
 
-	public final static synchronized History instance() {
-		if (instance == null) {
-			instance = new History();
-		}
-		return instance;
-	}
+    public final static synchronized History instance() {
+        if (instance == null) {
+            instance = new History();
+        }
+        return instance;
+    }
 
-	private HistoryRingBuffer urlBuffer(String urlId) {
-		Check.notEmpty(urlId);
+    public List<HistoryRingBuffer> getBuffers() {
+        List<HistoryRingBuffer> result = new ArrayList<>();
+        Enumeration<HistoryRingBuffer> elements = urlBuffers.elements();
+        while (elements.hasMoreElements()) {
+            result.add(elements.nextElement());
+        }
 
-		HistoryRingBuffer result = urlBuffers.get(urlId);
+        return result;
+    }
 
-		if (result != null)
-			return result;
-		else {
-			urlBuffers.put(urlId, HistoryRingBuffer.create(urlId));
-			return urlBuffer(urlId);
-		}
-	}
+    private HistoryRingBuffer urlBuffer(String urlId) {
+        Check.notEmpty(urlId);
 
-	public final void add(String urlId, List<ScrapedValues> ads) {
-		Check.notEmpty(urlId);
-		Check.notNull(ads);
-		
-		HistoryRingBuffer u = urlBuffer(urlId);
-		u.store(ads);
+        HistoryRingBuffer result = urlBuffers.get(urlId);
 
-		for (ScrapedValues ad : ads)
-			historyStorage.store(urlId, ad);
-	}
+        if (result != null)
+            return result;
+        else {
+            urlBuffers.put(urlId, HistoryRingBuffer.create(urlId));
+            return urlBuffer(urlId);
+        }
+    }
 
-	public final void add(String urlId, ScrapedValues ad) {
-		Check.notEmpty(urlId);
-		Check.notNull(ad);
-		
-		urlBuffer(urlId).store(ad);
-		historyStorage.store(urlId, ad);
-		
-	}
+    public final void add(String urlId, List<ScrapedValues> ads) {
+        Check.notEmpty(urlId);
+        Check.notNull(ads);
 
-	public void addDetails(ScrapedValues ad) {
-		historicalDetailStorage.store(ad);
-	}
-	
-	public final void flush(String urlId) {
-		Check.notEmpty(urlId);
-		Check.isTrue(findBuffer(urlId));
-		
-		urlBuffer(urlId).flush();
-		
-		historicalDetailStorage.flush();	
-	}
+        HistoryRingBuffer u = urlBuffer(urlId);
+        u.store(ads);
 
-	public final boolean find(String urlId, String url) {
-		Check.notEmpty(urlId);
-		Check.notEmpty(url);
-		
-		return urlBuffer(urlId).find(url);
-	};
+    }
 
-	public final String clip(String urlId, int num) {
-		Check.notEmpty(urlId);
-		
-		String result = "clipped " + Integer.toString(urlBuffer(urlId).clip(num));
-		urlBuffer(urlId).flush();
-		return result;
-	}
+    public final void add(String urlId, ScrapedValues ad) {
+        Check.notEmpty(urlId);
+        Check.notNull(ad);
 
-	public final int size(String urlId) {
-		Check.notEmpty(urlId);
-		
-		return urlBuffer(urlId).size();
-	}
+        urlBuffer(urlId).store(ad);
+    }
 
-	public final void reset() {
-		urlBuffers = new Hashtable<String, HistoryRingBuffer>();
-	}
-	
-	private boolean findBuffer(String urlId){
-		return urlBuffers.get(urlId) != null;
-	}
-	
+    public final boolean find(String urlId, String url) {
+        Check.notEmpty(urlId);
+        Check.notEmpty(url);
+
+        return urlBuffer(urlId).find(url);
+    }
+
+    ;
+
+    public final int size(String urlId) {
+        Check.notEmpty(urlId);
+
+        return urlBuffer(urlId).size();
+    }
+
+    public final void reset() {
+        urlBuffers = new Hashtable<>();
+    }
+
+
 }

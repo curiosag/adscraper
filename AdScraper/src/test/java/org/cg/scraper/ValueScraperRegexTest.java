@@ -1,19 +1,10 @@
 package org.cg.scraper;
 
-import com.google.common.base.Predicate;
 import org.cg.ads.advalues.ScrapedValue;
-import org.cg.ads.advalues.ScrapedValues;
 import org.cg.ads.advalues.ValueKind;
-import org.cg.scraping.SiteScraper;
-import org.cg.scraping.SiteScraperFactory;
 import org.cg.scraping.ValueScraperRegex;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.Collection;
-
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 
 public class ValueScraperRegexTest {
 

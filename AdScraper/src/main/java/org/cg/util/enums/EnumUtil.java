@@ -1,10 +1,9 @@
 package org.cg.util.enums;
 
 import java.util.HashMap;
+import java.util.Optional;
 
 import org.cg.common.check.Check;
-
-import com.google.common.base.Optional;
 
 public class EnumUtil {
 
@@ -18,7 +17,7 @@ public class EnumUtil {
 			renderingTypes.put(t.name(), t);
 
 		if (!renderingTypes.containsKey(s))
-			return Optional.absent();
+			return Optional.empty();
 		else
 			return Optional.of(renderingTypes.get(s));
 	}

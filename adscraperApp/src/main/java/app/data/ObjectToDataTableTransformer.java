@@ -1,7 +1,5 @@
 package app.data;
 
-import org.apache.commons.lang3.exception.ExceptionUtils;
-
 import java.lang.reflect.Field;
 import java.sql.Date;
 import java.text.SimpleDateFormat;

@@ -7,7 +7,7 @@ import org.cg.base.Log;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.google.common.base.Optional;
+import java.util.Optional;
 
 public class ValueScraperJSoup implements ValueScraper {
 
@@ -36,7 +36,7 @@ public class ValueScraperJSoup implements ValueScraper {
 		Check.notEmpty(selectExpression);
 
 		initBasics(id, selectExpression);
-		this.attribute = Optional.absent();
+		this.attribute = Optional.empty();
 	}
 
 	public ValueScraperJSoup(ValueKind id, String selectExpression, boolean multipleResultElements) {
@@ -44,7 +44,7 @@ public class ValueScraperJSoup implements ValueScraper {
 		Check.notEmpty(selectExpression);
 
 		initBasics(id, selectExpression);
-		this.attribute = Optional.absent();
+		this.attribute = Optional.empty();
 		this.multipleResultElements = multipleResultElements;
 	}
 

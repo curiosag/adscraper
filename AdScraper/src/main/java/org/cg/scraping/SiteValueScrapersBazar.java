@@ -11,8 +11,14 @@ public final class SiteValueScrapersBazar implements SiteValueScrapers {
 		return url.startsWith("http://www.bazar.at");
 	}
 
+
 	public String masterListSelector() {
 		return "[class^=result i]";
+	}
+
+	@Override
+	public boolean jsEnabled() {
+		return false;
 	}
 
 	public ValuesScraper extractorAdList() {

@@ -24,14 +24,8 @@ public class DebugUtilities {
 		result.add(ScrapedValue.create(ValueKind.location, "somewhere"));
 		result.add(ScrapedValue.create(ValueKind.heating, "hot or cold"));
 		result.add(ScrapedValue.create(ValueKind.limitationDuration, "befristed oder nicht"));
-		result.add(ScrapedValue.create(ValueKind.buildingType, "bautyp"));
-		result.add(ScrapedValue.create(ValueKind.overallState, "state"));
 		result.add(ScrapedValue.create(ValueKind.agent, "agency"));
 		result.add(ScrapedValue.create(ValueKind.deposit, "vieeel kaution"));
-		result.add(ScrapedValue.create(ValueKind.misc1, "zusatzinfo1"));
-		result.add(ScrapedValue.create(ValueKind.misc2, "zusatzinfo2"));
-		result.add(ScrapedValue.create(ValueKind.misc3, "zusatzinfo3"));
-	
 		return result;
 	
 	}

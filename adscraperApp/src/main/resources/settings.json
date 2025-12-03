@@ -1,0 +1,128 @@
+{
+  "mailprops": {
+    "prop": [
+      {
+        "key": "username",
+        "val": "curiosa.globunznik@gmail.com"
+      },
+      {
+        "key": "pwd",
+        "val": "sauriassl"
+      },
+      {
+        "key": "port",
+        "val": "587"
+      },
+      {
+        "key": "host",
+        "val": "smtp.gmail.com"
+      },
+      {
+        "key": "security",
+        "val": "tls"
+      }
+    ]
+  },
+  "urls": {
+    "url": [
+      {
+        "id": "bazar1020",
+        "val": "http://www.bazar.at/wien-leopoldstadt-wohnungen-miete-anzeigen,dir,1,cId,14,fc,107,loc,107,ref,3,ret,6,tp,0,at,1922"
+      },
+      {
+        "id": "bazar1200",
+        "val": "http://www.bazar.at/wien-brigittenau-wohnungen-miete-anzeigen,dir,1,cId,14,fc,125,loc,125,ref,3,ret,6,tp,0,at,1922"
+      },
+      {
+        "id": "bazar1230",
+        "val": "http://www.bazar.at/wien-donaustadt-wohnungen-miete-anzeigen,dir,1,cId,14,fc,127,loc,127,ref,3,ret,6,tp,0,at,1922"
+      },
+      {
+        "id": "willhaben1020",
+        "val": "https://www.willhaben.at/iad/immobilien/mietwohnungen/mietwohnung-angebote?&PRICE_FROM=160&PRICE_TO=500&areaId=117224&parent_areaid=900"
+      },
+      {
+        "id": "willhaben1200",
+        "val": "https://www.willhaben.at/iad/immobilien/mietwohnungen/mietwohnung-angebote?&PRICE_FROM=160&PRICE_TO=500&areaId=117242&parent_areaid=900"
+      },
+      {
+        "id": "willhaben1230",
+        "val": "https://www.willhaben.at/iad/immobilien/mietwohnungen/mietwohnung-angebote?&PRICE_FROM=160&PRICE_TO=500&areaId=117244&parent_areaid=900"
+      },
+      {
+        "id": "immoscout1020",
+        "val": "https://www.immobilienscout24.at/resultlist?useType=RESIDENTIAL&transferType=RENT&estateType=APARTMENT&price=500&spot=1020%20Wien&zipCode=1020&page=1&matchSubProperties=true&sort=LATEST"
+      },
+      {
+        "id": "immoscout1220",
+        "val": "https://www.immobilienscout24.at/resultlist?useType=RESIDENTIAL&transferType=RENT&estateType=APARTMENT&spot=1220%20Wien&zipCode=1220&price=500&page=1&matchSubProperties=true&sort=LATEST"
+      },
+      {
+        "id": "immoscout1230",
+        "val": "https://www.immobilienscout24.at/resultlist?useType=RESIDENTIAL&transferType=RENT&estateType=APARTMENT&spot=1230%20Wien&zipCode=1230&price=500&page=1&matchSubProperties=true&sort=LATEST"
+      }
+    ]
+  },
+  "filter": {
+    "term": [
+      {
+        "val": "stunde"
+      },
+      {
+        "val": "hobbyr"
+      },
+      {
+        "val": "prober"
+      },
+      {
+        "val": "gemeinschaft"
+      },
+      {
+        "val": "woche"
+      },
+      {
+        "val": "sommer"
+      },
+      {
+        "val": "ferien"
+      },
+      {
+        "val": "pendler"
+      },
+      {
+        "val": "student"
+      },
+      {
+        "val": "tausch"
+      },
+      {
+        "val": "zwischenmiete"
+      },
+      {
+        "val": "suche"
+      },
+      {
+        "val": "mitbewohner"
+      },
+      {
+        "val": "vormerksch"
+      },
+      {
+        "val": "gemeinde"
+      }
+    ]
+  },
+  "recipients": {
+    "recipient": {
+      "email": "curiosa.globunznik@gmail.com",
+      "watching": [
+        {
+          "id": "bazar1020"
+        },
+        {
+          "id": "willhaben1020"
+        }
+      ]
+    }
+  }
+}

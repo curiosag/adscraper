@@ -1,161 +1,100 @@
 package org.cg.util.http;
 
-import org.jsoup.*;
+import org.apache.commons.io.IOUtils;
+import org.cg.ads.advalues.WithUrl;
+import org.cg.base.Check;
+import org.cg.base.Const;
+import org.cg.base.Log;
+import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.HttpURLConnection;
+import java.nio.charset.StandardCharsets;
 import java.util.Collection;
-import java.util.LinkedList;
-import java.util.concurrent.ExecutionException;
+import java.util.stream.Collectors;
 
 import static org.cg.base.Const.STACK_TRACE;
-import static org.cg.base.Idiom.*;
+import static org.cg.base.Idiom.no;
 
-import java.io.*;
-
-import org.apache.commons.io.*;
-import org.cg.ads.advalues.WithUrl;
-import org.cg.base.*;
-import org.cg.util.parallel.Parallel;
-
-;
 
 public final class HttpUtil {
 
-	public final static String baseUrl(String url) {
-		Check.notNull(url);
+    WebDriver driver = null;
 
-		URL u;
+    private WebDriver getDriver() {
+        if (driver == null) {
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("headless");
+            driver = new ChromeDriver(options);
+        }
+        return driver;
+    }
 
-		try {
-			u = new URL(url);
-		} catch (MalformedURLException e) {
-			Log.logException(e, !Const.ADD_STACK_TRACE);
-			return null;
-		}
+    public static String baseUrl(String url) {
+        Check.notNull(url);
 
-		String port;
-		if (u.getPort() == -1)
-			port = "";
-		else
-			port = ":" + u.getPort();
+        URL u;
+        try {
+            u = new URL(url);
+        } catch (MalformedURLException e) {
+            Log.logException(e, !Const.ADD_STACK_TRACE);
+            return null;
+        }
 
-		return u.getProtocol() + "://" + u.getHost() + port;
-	}
+        String port = u.getPort() == -1 ? "" : ":" + u.getPort();
+        return u.getProtocol() + "://" + u.getHost() + port;
+    }
 
-	// 15-01-13 appengine threw an exception after bazar's one redirect
-	// it does not react to System.setProperty("http.maxRedirects", "1") either
-	// so here's a hack to follow 301 redirects
+    public Document getJsoupDoc(String url, boolean jsEnabled) {
+        Check.notEmpty(url);
 
-	private static HttpURLConnection getHttpConnection(URL url) throws IOException {
-		return (HttpURLConnection) url.openConnection();
-	}
+        try {
+            String s = jsEnabled ? getBySelenium(url) : getByUrlConnection(url);
+            if (s != null) {
+                return Jsoup.parse(s, url);
+            }
+        } catch (Exception e) {
+            Log.logException(e, Const.ADD_STACK_TRACE);
+        }
 
-	private static DataInputStream _getHtmlInputStream(String url, int level) {
-		if (level > 2) {
-			Log.severe("redirect loop encountered");
-			return null;
-		} else
-			try {
-				URL url_ = new URL(url);
-				String host = url_.getHost();
+        return null;
+    }
 
-				HttpURLConnection conn = getHttpConnection(url_);
-				conn.setInstanceFollowRedirects(false);
-				conn.setConnectTimeout(Const.HTTP_TIMEOUT);
+    public String getByUrlConnection(String url) {
+        try {
+            HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
+            conn.setInstanceFollowRedirects(true);
+            conn.setConnectTimeout(Const.HTTP_TIMEOUT);
+            conn.connect();
+            return IOUtils.toString(conn.getInputStream(), StandardCharsets.UTF_8.name());
+        } catch (Exception e)
+        {
+            throw new RuntimeException(e);
+        }
+    }
 
-				conn.connect();
+    private synchronized String getBySelenium(String url) {
+        getDriver().get(url);
+        return getDriver().getPageSource();
+    }
 
-				if (conn.getResponseCode() != 301) {
-					return new DataInputStream(new BufferedInputStream(conn.getInputStream()));
-				} else {
-					String location = conn.getHeaderField("Location");
-					return _getHtmlInputStream("http://" + host + location, level + 1);
-				}
+    private <T> HttpResult<T> getDoc(WithUrl<T> source, boolean jsEnabled) {
+        try {
+            return new HttpResult<T>(source, null, getJsoupDoc(source.url(), jsEnabled));
+        } catch (Exception e) {
+            Log.logException(e, no(STACK_TRACE));
+            return new HttpResult<T>(source, e, null);
+        }
+    }
 
-			} catch (Exception e) {
-				Log.logException(e, !Const.ADD_STACK_TRACE);
-				return null;
-			}
-			}
+    public <T, V extends WithUrl<T>> Collection<HttpResult<T>> getDocs(Collection<V> sources, boolean jsEnabled) {
+        return sources.stream().parallel().map(source -> getDoc(source, jsEnabled)).collect(Collectors.toList());
+    }
 
-	private static DataInputStream getHtmlInputStream(String url) {
-		return _getHtmlInputStream(url, 0);
-	}
-
-	public final static String getHtmlInputString(String url) {
-		Check.notNull(url);
-
-		DataInputStream s = getHtmlInputStream(url);
-		if (s != null) {
-			try {
-				return IOUtils.toString(s);
-			} catch (IOException e) {
-				Log.logException(e, Const.ADD_STACK_TRACE);
-				return null;
-			}
-		} else {
-			return null;
-		}
-	}
-	
-	public final static Document getJsoupDoc(String url) {
-		Check.notEmpty(url);
-
-		try {
-			try (DataInputStream s = getHtmlInputStream(url)) {
-				if (s != null) {
-					try {
-						return Jsoup.parse(s, "UTF-8", url);
-					} catch (IOException e) {
-						Log.logException(e, Const.ADD_STACK_TRACE);
-						return null;
-					}
-				}
-			}
-		} catch (IOException ioe) {
-		}
-		return null;
-	}
-
-	public final static Document getJsoupFromFile(String filePath, String baseUrl) {
-		return Jsoup.parse(filePath, "UTF-8");
-	}
-
-	private static <T> HttpResult<T> getDoc(WithUrl<T> source) {
-		HttpResult<T> result;
-		try {
-			result = new HttpResult<T>(source, null, getJsoupDoc(source.url()));
-		} catch (Exception e) {
-			Log.logException(e, no(STACK_TRACE));
-			result = new HttpResult<T>(source, e, null);
-		}
-		return result;
-	}
-
-	public final static <T, V extends WithUrl<T>> Collection<HttpResult<T>> getDocsAsync(Collection<V> sources) {
-
-		Collection<HttpResult<T>> result;
-		try {
-			result = new Parallel.ForEach<V, HttpResult<T>>(sources)
-					.apply(new Parallel.F<V, HttpResult<T>>() {
-						public HttpResult<T> apply(V u) {
-							return getDoc(u);
-						}
-					}).values();
-		} catch (InterruptedException | ExecutionException e) {
-			Log.logException(e, Const.ADD_STACK_TRACE);
-			result = new LinkedList<HttpResult<T>>();
-
-			for (WithUrl<T> source : sources)
-				result.add(new HttpResult<T>(source, e, null));
-		}
-		return result;
-	}
-
-	public final static <T> Collection<Wrap<Wrap<T, String>, Document>> wrapDocAsync(Collection<Wrap<T, String>> sourceUrls) {
-		return null;
-	}
 }
